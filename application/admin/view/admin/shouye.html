@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理系统</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/font.css">
+    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/weadmin.css">
+</head>
+
+<body>
+    <div class="weadmin-nav">
+        <a class="layui-btn layui-btn-sm" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
+		<i class="layui-icon" style="line-height:30px">ဂ</i></a>
+    </div>
+    <div class="weadmin-body">
+        <div class="layui-row">
+            
+        </div>
+        <table class="layui-table">
+            <thead>
+                <tr>
+                    <th>
+                        <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
+                    </th>
+                    <th>ID</th>
+                    <th>所属帖子</th>
+                    <th>标题</th>
+                    <th>首页置顶排序(正序)</th>
+            </thead>
+            <tbody>
+                {foreach $data as $key => $value}
+                <tr>
+                    <td>
+                        <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='{$value.id}'><i class="layui-icon">&#xe605;</i></div>
+                    </td>
+                    <td>{$value.id}</td>
+                    <td>{if $value['type']==1}DEAL{else}LIFESTYLE{/if}</td>
+                    <td>{$value.title}</td>
+                    <td class="caname" idz="{$value.id}" z_type="{$value.type}" style="cursor: pointer;">{$value.z_index}</td>
+                    
+                </tr>
+                {/foreach}
+            </tbody>
+        </table>
+        <div class="page">
+            <div>
+                {$list->render()}
+            </div>
+        </div>
+    </div>
+    <script src="__PUBLIC_ADMIN__/static/js/jquery.js" charset="utf-8"></script>
+    <script src="__PUBLIC_ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
+    <script src="__PUBLIC_ADMIN__/static/js/weadmin.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    layui.use(['layer','laydate'], function() {
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#start' //指定元素
+        });
+        laydate.render({
+            elem: '#end' //指定元素
+        });
+    });
+    function updateShelf(goods_id,statu){
+    	$.post("{:url('updateShelf')}",{goods_id:goods_id,status:statu},function(data){
+    		layer.msg(data.msg,{time:1000},function(){
+    			location.reload();
+    		})
+    	},'json');
+    }
+    // 批量删除
+    function delAllmarket(){
+        var data = tableCheck.getData();
+        layer.confirm('确认要删除吗？',function(index){
+            $.post("{:url('admin/market/delAllmarket')}",{id:data,table:'market'},function(response){
+                layer.msg(response.msg,{time:1000,icon:response.icon},function(){
+                    location.reload();
+                })
+            },'json');
+        });
+    }
+    // 单个删除
+    function delMes(id){
+        layer.confirm('确认要删除吗？',function(index){
+        $.post('/admin/message/delMes',{id:id},function(data){
+            layer.msg(data.msg,{icon:data.icon,time:1000},function(){
+                location.reload();
+            })
+        },'json');
+    });
+    }
+
+
+
+    $(function() {
+    //获取class为caname的元素
+    $(".caname").click(function() {
+    var td = $(this);
+    var txt = td.text();
+    var id=td.attr('idz');
+    var z_type=td.attr('z_type');
+    var input = $("<input style='width:30px;' idz='"+id+"' z_type='"+z_type+"' type='text' value='" + txt + "'/>");
+    td.html(input);
+    input.click(function() { return false; });
+    //获取焦点
+    input.trigger("focus");
+    //文本框失去焦点后提交内容，重新变为文本
+    input.blur(function() {
+    var newtxt = $(this).val();
+    var newid = $(this).attr('idz');
+    var z_type = $(this).attr('z_type');
+    //判断文本有没有修改
+    if (newtxt != txt) {
+    td.html(newtxt);
+        $.post("{:url('admin/admin/editLifestyleZindex')}",{id:newid,z_index:newtxt,z_type:z_type},function(response){
+            layer.msg(response.msg,{time:1000,icon:response.icon},function(){
+                location.reload();
+            })
+        },'json');
+    }
+    else
+    {
+    td.html(newtxt);
+    }
+    });
+    });
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+<!-- 左侧菜单开始 -->
+		<div class="left-nav">
+			<div id="side-nav">
+				<ul id="nav">
+					{foreach $menu_list_one as $menu_key => $menu_value}
+					{if($Think.session.admin.type || in_array($menu_value['id'],$menu_role))}
+					<li>
+						<a href="javascript:;">
+							<cite>{$menu_value['title']}</cite>
+							<i class="iconfont nav_right">&#xe697;</i>
+						</a>
+						<ul class="sub-menu">
+							{foreach $menu_list_two as $menu_key_two => $menu_value_two}
+							{if($menu_value_two['mid'] == $menu_value['id'] && ($Think.session.admin.type || in_array($menu_value_two['id'],$menu_role) ))}
+							<li>
+								<a _href="{$menu_value_two.action}">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>{$menu_value_two.title}</cite>
+								</a>
+							</li>
+							{/if}
+							{/foreach}
+						</ul>
+					</li>
+					{/if}
+					{/foreach}
+					<!-- <li>
+						<a href="javascript:;">
+							<i class="iconfont">&#xe705;</i>
+							<cite>帖子管理</cite>
+							<i class="iconfont nav_right">&#xe697;</i>
+						</a>
+						<ul class="sub-menu">
+							<li>
+								<a _href="{:url('admin/article/index')}">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>deal列表</cite>
+								</a>
+							</li>
+							<li>
+								<a _href="{:url('admin/article/lifestyle')}">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>liftstyle列表</cite>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<i class="iconfont">&#xe723;</i>
+							<cite>商品管理</cite>
+							<i class="iconfont nav_right">&#xe697;</i>
+						</a>
+						<ul class="sub-menu">
+							<li>
+								<a _href="{:url('admin/market/index')}">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>market列表</cite>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<i class="iconfont">&#xe723;</i>
+							<cite>订单管理</cite>
+							<i class="iconfont nav_right">&#xe697;</i>
+						</a>
+						<ul class="sub-menu">
+							<li>
+								<a _href="{:url('admin/order/index')}">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>订单列表</cite>
+								</a>
+							</li>
+							<li>
+								<a _href="{:url('admin/order/putforward')}">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>提现列表</cite>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<i class="iconfont">&#xe726;</i>
+							<cite>管理员管理</cite>
+							<i class="iconfont nav_right">&#xe697;</i>
+						</a>
+						<ul class="sub-menu">
+							<li>
+								<a _href="{:url('admin/admin/index')}">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>管理员列表</cite>
+								</a>
+							</li>
+							<li>
+								<a _href="{:url('admin/admin/role')}">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>角色管理</cite>
+								</a>
+							</li>
+							<li>
+								<a _href="{:url('admin/admin/permission')}">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>权限管理</cite>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<i class="iconfont">&#xe6ce;</i>
+							<cite>系统统计</cite>
+							<i class="iconfont nav_right">&#xe697;</i>
+						</a>
+						<ul class="sub-menu">
+							<li>
+								<a _href="./pages/echarts/echarts1.html">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>拆线图</cite>
+								</a>
+							</li>
+							<li>
+								<a _href="./pages/echarts/echarts2.html">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>柱状图</cite>
+								</a>
+							</li>
+							<li>
+								<a _href="./pages/echarts/echarts3.html">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>地图</cite>
+								</a>
+							</li>
+							<li>
+								<a _href="./pages/echarts/echarts4.html">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>饼图</cite>
+								</a>
+							</li>
+							<li>
+								<a _href="./pages/echarts/echarts5.html">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>雷达图</cite>
+								</a>
+							</li>
+							<li>
+								<a _href="./pages/echarts/echarts6.html">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>k线图</cite>
+								</a>
+							</li>
+							<li>
+								<a _href="./pages/echarts/echarts7.html">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>热力图</cite>
+								</a>
+							</li>
+							<li>
+								<a _href="./pages/echarts/echarts8.html">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>仪表图</cite>
+								</a>
+							</li>
+							<li>
+								<a _href="./pages/echarts/echarts9.html">
+									<i class="iconfont">&#xe6a7;</i>
+									<cite>地图DIY实例</cite>
+								</a>
+							</li>
+						</ul>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+		<!-- <div class="x-slide_left"></div> -->
+		<!-- 左侧菜单结束 -->

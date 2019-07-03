@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="UTF-8">
+    <title>后台管理系统</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/font.css">
+    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/weadmin.css">
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+    <div class="weadmin-body">
+        <form class="layui-form">
+          <div class="layui-form-item">
+              <label for="user_nickname" class="layui-form-label">
+                  申请人
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" disabled id="user_nickname"  required="" 
+                  autocomplete="off" value="{$voucher.user_nickname}" class="layui-input">
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label for="paypalcode" class="layui-form-label">
+                  Paypal账号
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" disabled value="{$voucher.paypalcode}" required="" 
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label for="paypalname" class="layui-form-label">
+                  Paypal姓名
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" disabled value="{$voucher.paypalname}"  required="" 
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+          
+          <div class="layui-form-item">
+              <label for="money" class="layui-form-label">
+                  提款金额
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" disabled value="{$voucher.money}"  required="" 
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+
+          <div class="layui-form-item">
+              <label class="layui-form-label">
+                  <span class="we-red">*</span>上传凭证
+              </label>
+              <div class="layui-upload" >
+                <button type="button" class="layui-btn" id="test2">选择上传图片</button> 
+                <div class="layui-inline layui-word-aux">
+                  <div class="upload-img-box" style="height: 150px;">
+                      {if $voucher.voucher}
+                          <dd class="upload-icon-img" style="width:150px;float:left;padding: 10px;">
+                            <div class="upload-pre-item">
+                              <i onclick="removeImg(this)" class="layui-icon"></i>
+                              <img src="{$voucher.voucher}" class="img" style="width:150px;float:left;">
+                              <input type="hidden" name="img" value="{$voucher.voucher}">
+                            </div>
+                          </dd>
+                      {/if}
+                  </div>
+                </div>
+          </div>
+
+          <div class="layui-form-item">
+            <label for="status" class="layui-form-label">
+                <span class="we-red">*</span>审核
+            </label>
+            <div class="layui-input-block">
+                <input type="radio" name="status" lay-filter="status" value="2" title="未审核" {if($voucher['status']==1)}checked="" {/if}> 
+                <input type="radio" name="status" lay-filter="status" value="2" title="已打款" {if($voucher['status']==2)}checked{/if}>  
+            </div>
+            <div class="layui-form-item">
+                <button class="layui-btn" lay-submit="" lay-filter="add">提交</button>
+                <input type="hidden" value="edit" name="act">
+                <input type="hidden" value="id" name="{$voucher.id}">
+            </div>
+          </div>
+          
+      </form>
+    </div>
+		<script src="__PUBLIC_ADMIN__/static/js/jquery.js" charset="utf-8"></script>
+    <script src="__PUBLIC_ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript">
+	    layui.use(['form','layer','upload'], function(){
+	      var form = layui.form,
+          upload = layui.upload;//上传图片
+	      	layer = layui.layer;
+        
+          
+          //监听提交
+        form.on('submit(add)', function(data){
+          console.log(data.field);
+          // 发异步，把数据提交给php
+           $.ajax({
+            url:"{:url('voucher',array('id'=>$voucher.id))}",
+            type:'post',
+            data:data.field,
+            dataType:'json',
+            success:function(res){
+              if(res.code == 1){
+                layer.alert("编辑成功", {icon: 6},function () {
+                  layer.close(layer.msg(''));
+                });
+              }else{
+                layer.alert("编辑失败", {icon: 6},function () {
+                  layer.close(layer.msg(''));
+                });
+              }
+            }
+          })
+          return false;
+        });
+
+          // 上传图片
+        var uploadInst = upload.render({
+          elem : '#test2',
+          accept : 'images',//指定允许上传时校验的文件类型，可选值有：images（图片）、file（所有文件）、video（视频）、audio（音频）
+          multiple : 'true',
+          url : '{:url("uploadimgs",array("userid"=>$voucher.userid))}',
+          auto:true,//自动上传
+            before: function(obj) {
+              layer.msg('图片上传中...', {
+                icon: 16,
+                shade: 0.6,
+                time: 0
+              })
+            },
+          done : function(res){
+            layer.close(layer.msg('上传成功！'));
+            $('.upload-img-box').html('<dd class="upload-icon-img" style="width:150px;float:left;padding: 10px;"><div class="upload-pre-item"><i onclick="deleteImg('+"'"+res.data.dir+"'"+','+"'"+res.data.file+"'"+',this)"   class="layui-icon" title="彻底删除"></i> <img src="' + res.data.src + '" class="img"  style="width:150px;float:left;"><input type="hidden" name="voucher" value="' + res.data.src + '" /></div></dd>');
+          },
+          error : function(){
+            layer.close(layer.msg('上传失败'));
+            //请求异常
+          }
+        });
+          
+        });
+      // 删除操作
+      function deleteImg(dir,file,obj){
+        layer.confirm("确认要删除吗，删除后不能恢复", { title: "删除确认" }, function (index) {
+          layer.close(index);
+          $.post("{:url('deleteImg')}", { dir:dir,file:file,width:300,height:300 }, function (data) {
+              layer.alert('操作完成', {
+                title: "删除操作",
+                btn: ['确定']
+              },
+              function (index, item) {
+                layer.close(index);
+                $(obj).parent().parent().remove();
+              });
+          }); 
+        });
+      }
+      // 移除图片
+      function removeImg(obj){
+        layer.confirm("确认要移除吗", { title: "移除确认" }, function (index) {
+          layer.close(index);
+            $(obj).parent().parent().remove();
+        }); 
+      }
+    </script>
+  </body>
+
+</html>
