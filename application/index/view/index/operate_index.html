@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>鲨鱼陪玩</title>
+    <link rel="stylesheet" href="/static/frame/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/frame/static/css/style.css">
+    <style>
+    #head_img {
+        margin-right: 10px
+    }
+    </style>
+</head>
+
+<body>
+    <!-- layout admin -->
+    <div class="layui-layout layui-layout-admin">
+        <!-- header -->
+        <div class="layui-header my-header">
+            <a href="/Operate">
+                <div class="my-header-logo">鲨鱼陪玩</div>
+            </a>
+            <!-- 顶部左侧添加选项卡监听 -->
+            <!-- <ul class="layui-nav my-header-user-nav" lay-filter="side-top-right">
+                <li class="layui-nav-item"><a href="javascript:;" href-url="demo/btn.html"><i class="layui-icon">&#xe621;</i>按钮</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="layui-icon">&#xe621;</i>基础</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" href-url="demo/btn.html"><i class="layui-icon">&#xe621;</i>按钮</a></dd>
+                        <dd><a href="javascript:;" href-url="demo/form.html"><i class="layui-icon">&#xe621;</i>表单333</a></dd>
+                    </dl>
+                </li>
+            </ul> -->
+            <!-- 顶部右侧添加选项卡监听 -->
+            <ul class="layui-nav my-header-user-nav" lay-filter="side-top-right">
+                <li class="layui-nav-item">
+                    <a class="name" href="javascript:;">
+                        <img id="head_img" src="{$data.head_img}" style="border-radius:40px;">{$data.account}</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" href-url="/admin/myinfo">基本资料</a></dd>
+                        <dd><a href="javascript:;" href-url="/admin/modify_pass">修改密码</a></dd>
+                        <hr>
+                        <dd><a href="javascript:;" onclick="exit()">安全退出</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <!-- side -->
+        <div class="layui-side my-side">
+            <div class="layui-side-scroll">
+                <!-- 左侧主菜单添加选项卡监听 -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="side-main">
+                    <li class="layui-nav-item"><a  href="javascript:;" href-url="{:url('Operate/user_information_list')}">用户信息</a></li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">主播管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" href-url="{:url('Operate/anchor_information_list')}">&nbsp;&nbsp;主播信息</a></dd>
+                        </dl>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" href-url="{:url('Operate/anchor_information_audit')}">&nbsp;&nbsp;主播审核</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">主播数据</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" href-url="{:url('Operate/this_month_list')}">&nbsp;&nbsp;本月统计</a></dd>
+                        </dl>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" href-url="{:url('Operate/last_month_list')}">&nbsp;&nbsp;上月统计</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">公会管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" href-url="{:url('Operate/guild_information_audit')}">&nbsp;&nbsp;公会审核</a></dd>
+                        </dl>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" href-url="{:url('Operate/guild_anchor_audit')}">&nbsp;&nbsp;主播审核</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- body -->
+        <div class="layui-body my-body">
+            <div class="layui-tab layui-tab-card my-tab" style="border:none" lay-filter="card" lay-allowClose="true">
+                <ul class="layui-tab-title" style="border-width: 2px">
+                    <li class="layui-this" lay-id="1"><span><i class="layui-icon layui-icon-home"></i>用户信息</span></li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                        <iframe id="iframe" src="{:url('Operate/user_information_list')}" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右键菜单 -->
+        <div class="my-dblclick-box none">
+            <table class="layui-tab dblclick-tab">
+                <tr class="card-refresh">
+                    <td><i class="layui-icon">&#x1002;</i>刷新当前标签</td>
+                </tr>
+                <tr class="card-close">
+                    <td><i class="layui-icon">&#x1006;</i>关闭当前标签</td>
+                </tr>
+                <tr class="card-close-all">
+                    <td><i class="layui-icon">&#x1006;</i>关闭所有标签</td>
+                </tr>
+            </table>
+        </div>
+        <script type="text/javascript" src="/static/frame/layui/layui.js"></script>
+        <script type="text/javascript" src="/static/frame/static/js/vip_comm.js"></script>
+        <!-- <script type="text/javascript" src="/static/js/index.js"></script> -->
+        <script type="text/javascript">
+            const exit = () => {
+                layuiPost("/login/exit", {}, (obj) => {
+                    if (obj.result) {
+                        window.location.href = obj.data;
+                    }
+                })
+            }
+        </script>
+</body>
+
+</html>
