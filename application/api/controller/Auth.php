@@ -12,11 +12,11 @@ class Auth extends Controller{
 
 	
     public function II($code=0,$msg='',$data=array()){
-    $arr=[
-        'code'  => $code,
-        'msg'   => $msg,
-        'data'  => $data
-    ];
-    echo json_encode($arr);die;
+        $arr=[
+            'code'  => $code,
+            'msg'   => $msg,
+            'data'  => $data
+        ];
+        echo json_encode($arr);die;
     }
 }
