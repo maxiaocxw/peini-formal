@@ -1,0 +1,162 @@
+---------------------------------------------------------------
+[ 2019-07-03T18:35:13+08:00 ] 127.0.0.1 GET /
+[ info ] www.peini.com/ [运行时间：0.204516s][吞吐率：4.89req/s] [内存消耗：3,585.31kb] [文件加载：52]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'purpose' => 'prefetch',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'socketlog' => 'SocketLog(tabid=38&client_id=1)',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; pgv_si=s8855225344; PHPSESSID=8mhuktb8dl3o3no3mege1l59k7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\Project\peini-formal\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\Project\peini-formal\public/../application/admin\view\index\index.html [ array (
+  0 => 'menu_role',
+  1 => 'menu_list_one',
+  2 => 'menu_list_two',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037560s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_role` [ RunTime:0.022683s ]
+[ sql ] [ SQL ] SELECT `role_permission` FROM `pn_role` WHERE  (  id = 1 ) LIMIT 1 [ RunTime:0.021827s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_menu` [ RunTime:0.033414s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_menu` WHERE  (  level = 1 and statu = 1 ) [ RunTime:0.020947s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_menu` WHERE  (  level = 2 and statu = 1 ) [ RunTime:0.020798s ]
+---------------------------------------------------------------
+[ 2019-07-03T18:35:13+08:00 ] 127.0.0.1 GET /
+[ info ] www.peini.com/ [运行时间：0.193246s][吞吐率：5.17req/s] [内存消耗：3,394.41kb] [文件加载：50]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'socketlog' => 'SocketLog(tabid=28&client_id=1)',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; pgv_si=s8855225344; PHPSESSID=8mhuktb8dl3o3no3mege1l59k7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\Project\peini-formal\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\Project\peini-formal\public/../application/admin\view\index\index.html [ array (
+  0 => 'menu_role',
+  1 => 'menu_list_one',
+  2 => 'menu_list_two',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032041s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_role` [ RunTime:0.026287s ]
+[ sql ] [ SQL ] SELECT `role_permission` FROM `pn_role` WHERE  (  id = 1 ) LIMIT 1 [ RunTime:0.022229s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_menu` [ RunTime:0.019549s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_menu` WHERE  (  level = 1 and statu = 1 ) [ RunTime:0.018761s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_menu` WHERE  (  level = 2 and statu = 1 ) [ RunTime:0.026133s ]
+---------------------------------------------------------------
+[ 2019-07-03T18:35:14+08:00 ] 127.0.0.1 GET /admin/index/welcome
+[ info ] www.peini.com/admin/index/welcome [运行时间：0.034362s][吞吐率：29.10req/s] [内存消耗：2,415.70kb] [文件加载：43]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'socketlog' => 'SocketLog(tabid=28&client_id=1)',
+  'referer' => 'http://www.peini.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; pgv_si=s8855225344; PHPSESSID=8mhuktb8dl3o3no3mege1l59k7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ E:\Project\peini-formal\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] E:\Project\peini-formal\public/../application/admin\view\index\welcome.html [ array (
+  0 => 'menu_role',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-03T18:35:48+08:00 ] 127.0.0.1 GET /api
+[ info ] www.peini.com/api [运行时间：0.027302s][吞吐率：36.63req/s] [内存消耗：2,107.53kb] [文件加载：38]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'socketlog' => 'SocketLog(tabid=28&client_id=1)',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; pgv_si=s8855225344; PHPSESSID=8mhuktb8dl3o3no3mege1l59k7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Index->index[ E:\Project\peini-formal\application\api\controller\Index.php ]
+[ info ] [ LOG ] INIT File
