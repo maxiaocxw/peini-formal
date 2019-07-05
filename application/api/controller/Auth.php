@@ -75,7 +75,7 @@ class Auth extends Controller{
             $this->II('100','参数错误');
         }
         if($this->sendSms($phone,$code)){
-            cache($phone,$code,30);
+            cache($phone,$code,1800);
             $this->II('200','发送成功');
         }else{
             $this->II('201','发送失败');
