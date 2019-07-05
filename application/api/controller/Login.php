@@ -13,7 +13,7 @@ class Login extends Auth{
 		if(!$this->code || !$this->phone){
 			$this->II('100','参数错误',array());
 		}
-		//$this->checkCode($this->phone,$this->code);
+		$this->checkCode($this->phone,$this->code);
 		$list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,token')->where('mobile='.$this->phone)->find();
 		if(!$list){
 			$newuid=$this->addUser();
@@ -22,6 +22,8 @@ class Login extends Auth{
 		if($list['status']==2){
 			$this->II('201','用户被封禁请联系管理员');
 		}
+		$list['birthday']=date('Y-m-d',$list['birthday']);
+		$list['addtime']=date('Y-m-d',$list['addtime']);
 		$this->II('200','请求成功',array('type'=>2,'info'=>$list));
 	}
 
