@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"D:\pei\public/../application/admin\view\gift\index.html";i:1562320944;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"D:\pei\public/../application/admin\view\gift\index.html";i:1562322841;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -37,7 +37,7 @@
 			</th>
 			<th>ID</th>
 			<th>礼物名称</th>
-			<th>礼物价格</th>
+			<th>礼物货币</th>
 			<th>礼物图片</th>
 			<th>排序</th>
 			<th>状态</th>

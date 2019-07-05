@@ -25113,13 +25113,20 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `pn_gift` [ RunTime:0.024040s ]
 [ sql ] [ SQL ] UPDATE `pn_gift`  SET `gid`=2,`status`=-1  WHERE  `gid` = 2 [ RunTime:0.025640s ]
 ---------------------------------------------------------------
+<<<<<<< HEAD
 [ 2019-07-05T18:33:06+08:00 ] 127.0.0.1 GET /
 [ info ] www.shayudj.com/ [运行时间：1.379598s][吞吐率：0.72req/s] [内存消耗：2,193.98kb] [文件加载：52]
 [ info ] [ LANG ] D:\phpserver\wwwroot\default\peini-formal\thinkphp\lang\zh-cn.php
+=======
+[ 2019-07-05T18:33:32+08:00 ] 127.0.0.1 POST /admin/gift/delall
+[ info ] www.csshayudj.com/admin/gift/delall [运行时间：0.379240s][吞吐率：2.64req/s] [内存消耗：1,951.07kb] [文件加载：49]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => '',
     1 => NULL,
     2 => NULL,
@@ -25165,11 +25172,51 @@
 [ 2019-07-05T18:33:07+08:00 ] 127.0.0.1 GET /admin/index/welcome
 [ info ] www.shayudj.com/admin/index/welcome [运行时间：0.193818s][吞吐率：5.16req/s] [内存消耗：1,442.55kb] [文件加载：43]
 [ info ] [ LANG ] D:\phpserver\wwwroot\default\peini-formal\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'gift',
+    2 => 'delall',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/admin/gift/index',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '21',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => 
+  array (
+    0 => '1',
+  ),
+  'table' => 'gift',
+)
+[ info ] [ RUN ] app\admin\controller\Gift->delAll[ D:\pei\application\admin\controller\Gift.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.181640s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_gift` [ RunTime:0.101619s ]
+[ sql ] [ SQL ] UPDATE `pn_gift`  SET `status`=-1  WHERE  `gid` IN (1) [ RunTime:0.052024s ]
+---------------------------------------------------------------
+[ 2019-07-05T18:33:33+08:00 ] 127.0.0.1 GET /admin/gift/index
+[ info ] www.csshayudj.com/admin/gift/index [运行时间：0.147678s][吞吐率：6.77req/s] [内存消耗：2,122.23kb] [文件加载：52]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
     1 => 'index',
     2 => 'welcome',
   ),
@@ -25184,11 +25231,29 @@
   'upgrade-insecure-requests' => '1',
   'connection' => 'keep-alive',
   'host' => 'www.shayudj.com',
+=======
+    1 => 'gift',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/admin/gift/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
   'content-length' => '',
   'content-type' => '',
 )
 [ info ] [ PARAM ] array (
 )
+<<<<<<< HEAD
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
@@ -25205,10 +25270,29 @@
 [ 2019-07-05T18:33:07+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
 [ info ] www.shayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.380174s][吞吐率：2.63req/s] [内存消耗：1,139.19kb] [文件加载：35]
 [ info ] [ LANG ] D:\phpserver\wwwroot\default\peini-formal\thinkphp\lang\zh-cn.php
+=======
+[ info ] [ RUN ] app\admin\controller\Gift->index[ D:\pei\application\admin\controller\Gift.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/admin\view\gift\index.html [ array (
+  0 => 'data',
+  1 => 'total',
+  2 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036377s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_gift` [ RunTime:0.023726s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pn_gift` LIMIT 1 [ RunTime:0.027562s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_gift` LIMIT 0,30 [ RunTime:0.024958s ]
+---------------------------------------------------------------
+[ 2019-07-05T18:33:33+08:00 ] 127.0.0.1 GET /admin/gift/111
+[ info ] www.csshayudj.com/admin/gift/111 [运行时间：0.056105s][吞吐率：17.82req/s] [内存消耗：1,348.40kb] [文件加载：42]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'admin',
     2 => 'static',
@@ -25221,10 +25305,27 @@
   'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
   'connection' => 'keep-alive',
   'host' => 'www.shayudj.com',
+=======
+    0 => 'admin',
+    1 => 'gift',
+    2 => '111',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/admin/gift/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
   'content-length' => '',
   'content-type' => '',
 )
 [ info ] [ PARAM ] array (
+<<<<<<< HEAD
   'css' => 'weadmin.css.map',
 )
 [ info ] [ LOG ] INIT File
@@ -25232,11 +25333,20 @@
 [ 2019-07-05T18:33:08+08:00 ] 127.0.0.1 GET /admin/cate/work
 [ info ] www.shayudj.com/admin/cate/work [运行时间：0.365970s][吞吐率：2.73req/s] [内存消耗：2,304.41kb] [文件加载：55]
 [ info ] [ LANG ] D:\phpserver\wwwroot\default\peini-formal\thinkphp\lang\zh-cn.php
+=======
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-05T18:37:12+08:00 ] 127.0.0.1 GET /admin/index/index
+[ info ] www.csshayudj.com/admin/index/index [运行时间：0.208488s][吞吐率：4.80req/s] [内存消耗：1,997.03kb] [文件加载：50]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
     1 => 'cate',
     2 => 'work',
   ),
@@ -25251,6 +25361,23 @@
   'upgrade-insecure-requests' => '1',
   'connection' => 'keep-alive',
   'host' => 'www.shayudj.com',
+=======
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/admin/auth/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
   'content-length' => '',
   'content-type' => '',
 )
@@ -25263,6 +25390,7 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
 [ info ] [ RUN ] app\admin\controller\Cate->work[ D:\phpserver\wwwroot\default\peini-formal\application\admin\controller\Cate.php ]
 [ info ] [ DB ] INIT mysql
 [ info ] [ VIEW ] D:\phpserver\wwwroot\default\peini-formal\public/../application/admin\view\cate\work.html [ array (
@@ -25280,11 +25408,32 @@
 [ 2019-07-05T18:33:08+08:00 ] 127.0.0.1 GET /admin/cate/game
 [ info ] www.shayudj.com/admin/cate/game [运行时间：0.345712s][吞吐率：2.89req/s] [内存消耗：2,307.67kb] [文件加载：55]
 [ info ] [ LANG ] D:\phpserver\wwwroot\default\peini-formal\thinkphp\lang\zh-cn.php
+=======
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\pei\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/admin\view\index\index.html [ array (
+  0 => 'menu_role',
+  1 => 'menu_list_one',
+  2 => 'menu_list_two',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036327s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_role` [ RunTime:0.024091s ]
+[ sql ] [ SQL ] SELECT `role_permission` FROM `pn_role` WHERE  (  id = 1 ) LIMIT 1 [ RunTime:0.025467s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_menu` [ RunTime:0.026144s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_menu` WHERE  (  level = 1 and statu = 1 ) [ RunTime:0.024786s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_menu` WHERE  (  level = 2 and statu = 1 ) [ RunTime:0.023608s ]
+---------------------------------------------------------------
+[ 2019-07-05T18:37:13+08:00 ] 127.0.0.1 GET /admin/index/welcome
+[ info ] www.csshayudj.com/admin/index/welcome [运行时间：0.048455s][吞吐率：20.64req/s] [内存消耗：1,319.87kb] [文件加载：41]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
     1 => 'cate',
     2 => 'game',
   ),
@@ -25299,6 +25448,22 @@
   'upgrade-insecure-requests' => '1',
   'connection' => 'keep-alive',
   'host' => 'www.shayudj.com',
+=======
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
   'content-length' => '',
   'content-type' => '',
 )
@@ -25311,6 +25476,7 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
 [ info ] [ RUN ] app\admin\controller\Cate->game[ D:\phpserver\wwwroot\default\peini-formal\application\admin\controller\Cate.php ]
 [ info ] [ DB ] INIT mysql
 [ info ] [ VIEW ] D:\phpserver\wwwroot\default\peini-formal\public/../application/admin\view\cate\game.html [ array (
@@ -25409,11 +25575,23 @@
 [ 2019-07-05T18:33:17+08:00 ] 127.0.0.1 GET /admin/tag/index
 [ info ] www.shayudj.com/admin/tag/index [运行时间：0.259606s][吞吐率：3.85req/s] [内存消耗：2,266.02kb] [文件加载：55]
 [ info ] [ LANG ] D:\phpserver\wwwroot\default\peini-formal\thinkphp\lang\zh-cn.php
+=======
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\pei\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/admin\view\index\welcome.html [ array (
+  0 => 'menu_role',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-05T18:37:13+08:00 ] 127.0.0.1 GET /admin/banner/bannerlist
+[ info ] www.csshayudj.com/admin/banner/bannerlist [运行时间：0.162374s][吞吐率：6.16req/s] [内存消耗：2,174.55kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
     1 => 'tag',
     2 => 'index',
   ),
@@ -25428,6 +25606,22 @@
   'upgrade-insecure-requests' => '1',
   'connection' => 'keep-alive',
   'host' => 'www.shayudj.com',
+=======
+    1 => 'banner',
+    2 => 'bannerlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
   'content-length' => '',
   'content-type' => '',
 )
@@ -25440,6 +25634,7 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
 [ info ] [ RUN ] app\admin\controller\Tag->index[ D:\phpserver\wwwroot\default\peini-formal\application\admin\controller\Tag.php ]
 [ info ] [ DB ] INIT mysql
 [ info ] [ VIEW ] D:\phpserver\wwwroot\default\peini-formal\public/../application/admin\view\tag\index.html [ array (
@@ -25484,6 +25679,23 @@
 [ 2019-07-05T18:33:22+08:00 ] 127.0.0.1 GET /admin/gift/index
 [ info ] www.shayudj.com/admin/gift/index [运行时间：0.266908s][吞吐率：3.75req/s] [内存消耗：2,257.35kb] [文件加载：54]
 [ info ] [ LANG ] D:\phpserver\wwwroot\default\peini-formal\thinkphp\lang\zh-cn.php
+=======
+[ info ] [ RUN ] app\admin\controller\Banner->Bannerlist[ D:\pei\application\admin\controller\Banner.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/admin\view\banner\bannerlist.html [ array (
+  0 => 'menu_role',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034297s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_banner` [ RunTime:0.025635s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pn_banner` WHERE  `status` <> '-1' LIMIT 1 [ RunTime:0.021499s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_banner` WHERE  `status` <> '-1' LIMIT 0,30 [ RunTime:0.021448s ]
+---------------------------------------------------------------
+[ 2019-07-05T18:37:13+08:00 ] 127.0.0.1 GET /admin/gift/index
+[ info ] www.csshayudj.com/admin/gift/index [运行时间：0.200542s][吞吐率：4.99req/s] [内存消耗：2,247.91kb] [文件加载：54]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -25494,6 +25706,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
   'cookie' => 'PHPSESSID=et1gemotj7bpflu04dmo2tbfns',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
@@ -25503,19 +25716,37 @@
   'upgrade-insecure-requests' => '1',
   'connection' => 'keep-alive',
   'host' => 'www.shayudj.com',
+=======
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
   'content-length' => '',
   'content-type' => '',
 )
 [ info ] [ PARAM ] array (
 )
+<<<<<<< HEAD
 [ info ] [ RUN ] app\admin\controller\Gift->index[ D:\phpserver\wwwroot\default\peini-formal\application\admin\controller\Gift.php ]
 [ info ] [ DB ] INIT mysql
 [ info ] [ VIEW ] D:\phpserver\wwwroot\default\peini-formal\public/../application/admin\view\gift\index.html [ array (
+=======
+[ info ] [ RUN ] app\admin\controller\Gift->index[ D:\pei\application\admin\controller\Gift.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/admin\view\gift\index.html [ array (
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
   0 => 'data',
   1 => 'total',
   2 => 'list',
 ) ]
 [ info ] [ LOG ] INIT File
+<<<<<<< HEAD
 [ sql ] [ DB ] CONNECT:[ UseTime:0.035154s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `pn_gift` [ RunTime:0.032950s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pn_gift` LIMIT 1 [ RunTime:0.021645s ]
@@ -25606,12 +25837,23 @@
 [ 2019-07-05T18:33:32+08:00 ] 127.0.0.1 GET /admin/cate/gametype
 [ info ] www.shayudj.com/admin/cate/gametype [运行时间：0.278595s][吞吐率：3.59req/s] [内存消耗：2,305.34kb] [文件加载：55]
 [ info ] [ LANG ] D:\phpserver\wwwroot\default\peini-formal\thinkphp\lang\zh-cn.php
+=======
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040020s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_gift` [ RunTime:0.023430s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pn_gift` LIMIT 1 [ RunTime:0.025986s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_gift` LIMIT 0,30 [ RunTime:0.026575s ]
+---------------------------------------------------------------
+[ 2019-07-05T18:37:13+08:00 ] 127.0.0.1 GET /admin/cate/work
+[ info ] www.csshayudj.com/admin/cate/work [运行时间：0.183253s][吞吐率：5.46req/s] [内存消耗：2,169.41kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
     1 => 'cate',
+<<<<<<< HEAD
     2 => 'gametype',
   ),
 )
@@ -25625,6 +25867,21 @@
   'upgrade-insecure-requests' => '1',
   'connection' => 'keep-alive',
   'host' => 'www.shayudj.com',
+=======
+    2 => 'work',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
   'content-length' => '',
   'content-type' => '',
 )
@@ -25637,15 +25894,22 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
 [ info ] [ RUN ] app\admin\controller\Cate->gametype[ D:\phpserver\wwwroot\default\peini-formal\application\admin\controller\Cate.php ]
 [ info ] [ DB ] INIT mysql
 [ info ] [ VIEW ] D:\phpserver\wwwroot\default\peini-formal\public/../application/admin\view\cate\gametype.html [ array (
+=======
+[ info ] [ RUN ] app\admin\controller\Cate->work[ D:\pei\application\admin\controller\Cate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/admin\view\cate\work.html [ array (
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
   0 => 'menu_role',
   1 => 'data',
   2 => 'total',
   3 => 'list',
 ) ]
 [ info ] [ LOG ] INIT File
+<<<<<<< HEAD
 [ sql ] [ DB ] CONNECT:[ UseTime:0.048816s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_type` [ RunTime:0.026878s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pn_game_type` LIMIT 1 [ RunTime:0.022555s ]
@@ -25681,6 +25945,16 @@
 [ 2019-07-05T18:33:35+08:00 ] 127.0.0.1 GET /admin/cate/game
 [ info ] www.shayudj.com/admin/cate/game [运行时间：0.181453s][吞吐率：5.51req/s] [内存消耗：2,181.59kb] [文件加载：53]
 [ info ] [ LANG ] D:\phpserver\wwwroot\default\peini-formal\thinkphp\lang\zh-cn.php
+=======
+[ sql ] [ DB ] CONNECT:[ UseTime:0.054033s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_work` [ RunTime:0.027795s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pn_work` LIMIT 1 [ RunTime:0.023853s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_work` ORDER BY `status` DESC,`addtime` DESC LIMIT 0,30 [ RunTime:0.026539s ]
+---------------------------------------------------------------
+[ 2019-07-05T18:37:13+08:00 ] 127.0.0.1 GET /admin/cate/game
+[ info ] www.csshayudj.com/admin/cate/game [运行时间：0.154232s][吞吐率：6.48req/s] [内存消耗：2,172.48kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -25691,6 +25965,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
   'cookie' => 'PHPSESSID=et1gemotj7bpflu04dmo2tbfns',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
@@ -25700,6 +25975,17 @@
   'upgrade-insecure-requests' => '1',
   'connection' => 'keep-alive',
   'host' => 'www.shayudj.com',
+=======
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
   'content-length' => '',
   'content-type' => '',
 )
@@ -25712,15 +25998,22 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
 [ info ] [ RUN ] app\admin\controller\Cate->game[ D:\phpserver\wwwroot\default\peini-formal\application\admin\controller\Cate.php ]
 [ info ] [ DB ] INIT mysql
 [ info ] [ VIEW ] D:\phpserver\wwwroot\default\peini-formal\public/../application/admin\view\cate\game.html [ array (
+=======
+[ info ] [ RUN ] app\admin\controller\Cate->game[ D:\pei\application\admin\controller\Cate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/admin\view\cate\game.html [ array (
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
   0 => 'menu_role',
   1 => 'data',
   2 => 'total',
   3 => 'list',
 ) ]
 [ info ] [ LOG ] INIT File
+<<<<<<< HEAD
 [ sql ] [ DB ] CONNECT:[ UseTime:0.038336s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.021605s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM pn_game g INNER JOIN `pn_game_type` `t` ON `g`.`tid`=`t`.`tid` LIMIT 1 [ RunTime:0.024322s ]
@@ -25783,11 +26076,22 @@
 [ 2019-07-05T18:33:39+08:00 ] 127.0.0.1 GET /admin/cate/interest
 [ info ] www.shayudj.com/admin/cate/interest [运行时间：0.207819s][吞吐率：4.81req/s] [内存消耗：2,304.61kb] [文件加载：55]
 [ info ] [ LANG ] D:\phpserver\wwwroot\default\peini-formal\thinkphp\lang\zh-cn.php
+=======
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036610s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.023688s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM pn_game g INNER JOIN `pn_game_type` `t` ON `g`.`tid`=`t`.`tid` LIMIT 1 [ RunTime:0.023734s ]
+[ sql ] [ SQL ] SELECT `g`.*,t.name as tname FROM pn_game g INNER JOIN `pn_game_type` `t` ON `g`.`tid`=`t`.`tid` ORDER BY `status` DESC,`addtime` DESC LIMIT 0,30 [ RunTime:0.026153s ]
+---------------------------------------------------------------
+[ 2019-07-05T18:37:13+08:00 ] 127.0.0.1 GET /admin/gift/111
+[ info ] www.csshayudj.com/admin/gift/111 [运行时间：0.038664s][吞吐率：25.86req/s] [内存消耗：1,348.40kb] [文件加载：42]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
     1 => 'cate',
     2 => 'interest',
   ),
@@ -25802,11 +26106,27 @@
   'upgrade-insecure-requests' => '1',
   'connection' => 'keep-alive',
   'host' => 'www.shayudj.com',
+=======
+    1 => 'gift',
+    2 => '111',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/admin/gift/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
   'content-length' => '',
   'content-type' => '',
 )
 [ info ] [ PARAM ] array (
 )
+<<<<<<< HEAD
 [ info ] [ SESSION ] INIT array (
   'id' => '',
   'var_session_id' => '',
@@ -26728,4 +27048,6 @@
 [ info ] [ RUN ] app\index\controller\Index->index[ D:\phpserver\wwwroot\default\peini-formal\application\index\controller\Index.php ]
 [ info ] [ VIEW ] D:\phpserver\wwwroot\default\peini-formal\public/../application/index\view\index\index.html [ array (
 ) ]
+=======
+>>>>>>> 81bf9ba3f5f3f0052a971121a770c1c03d4bb09d
 [ info ] [ LOG ] INIT File
