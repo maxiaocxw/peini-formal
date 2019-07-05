@@ -34,20 +34,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/admin/view/gift/add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-230">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="115">
+              <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/admin/view/gift/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="98" column="31" lean-forward="true" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
+            <state relative-caret-position="1012">
+              <caret line="62" column="89" lean-forward="true" selection-start-line="62" selection-start-column="89" selection-end-line="62" selection-end-column="89" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -69,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/application/admin/view/cate/work.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="887">
-              <caret line="126" column="95" lean-forward="true" selection-start-line="126" selection-start-column="95" selection-end-line="126" selection-end-column="95" />
+              <caret line="126" column="95" selection-start-line="126" selection-start-column="95" selection-end-line="126" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -128,9 +128,9 @@
         <option value="$PROJECT_DIR$/application/api/controller/Auth.php" />
         <option value="$PROJECT_DIR$/thinkphp/library/think/db/Query.php" />
         <option value="$PROJECT_DIR$/application/api/controller/Home.php" />
-        <option value="$PROJECT_DIR$/application/admin/view/gift/add.html" />
         <option value="$PROJECT_DIR$/application/admin/controller/Gift.php" />
         <option value="$PROJECT_DIR$/application/admin/view/gift/index.html" />
+        <option value="$PROJECT_DIR$/application/admin/view/gift/add.html" />
       </list>
     </option>
   </component>
@@ -138,9 +138,9 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1320" />
-    <option name="y" value="-112" />
-    <option name="width" value="1346" />
+    <option name="x" value="-1184" />
+    <option name="y" value="-286" />
+    <option name="width" value="1408" />
     <option name="height" value="688" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -244,15 +244,15 @@
       <workItem from="1562130672105" duration="1938000" />
       <workItem from="1562132683340" duration="9142000" />
       <workItem from="1562203103658" duration="3276000" />
-      <workItem from="1562235674612" duration="27445000" />
+      <workItem from="1562235674612" duration="28262000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41801000" />
+    <option name="totallyTimeSpent" value="42618000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2568" y="-112" width="2576" height="1416" extended-state="6" />
+    <frame x="-2568" y="-286" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.098569155" />
@@ -559,13 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/view/gift/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/controller/Gift.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="611">
@@ -579,18 +572,25 @@
     <entry file="file://$PROJECT_DIR$/application/admin/view/cate/work.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="887">
-          <caret line="126" column="95" lean-forward="true" selection-start-line="126" selection-start-column="95" selection-end-line="126" selection-end-column="95" />
+          <caret line="126" column="95" selection-start-line="126" selection-start-column="95" selection-end-line="126" selection-end-column="95" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/view/gift/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="98" column="31" lean-forward="true" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
+        <state relative-caret-position="1012">
+          <caret line="62" column="89" lean-forward="true" selection-start-line="62" selection-start-column="89" selection-end-line="62" selection-end-column="89" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/view/gift/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
         </state>
       </provider>
     </entry>
