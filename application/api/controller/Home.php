@@ -14,7 +14,7 @@ class Home extends Auth {
     //喜欢
     public function like(){
         $this->checkParam();
-        $this->checkToken();
+//        $this->checkToken();
         //接收参数
         $arr=input('post.');
         //分页数据
@@ -33,9 +33,15 @@ class Home extends Auth {
         foreach($data as $val){
             //查询用户信息
             $userInfo = DB::name('user')->where(['uid'=>$val['acceptuid'],'status'=>1,'type'=>2])->field('uid,username,birthday,headimg')->find();
-            $label = Db::name('label')->where(['uid'=>$userInfo['uid'],'status'=>1])->select();
+            $label = Db::name('label_user')
+                ->alias('labelUser')
+                ->join('label la','labelUser.lid = la.lid')
+                ->where(['labelUser.uid'=>$userInfo['uid'],'la.status'=>1])
+                ->field('name')
+                ->select();
             if(!empty($userInfo)){
                 $userData[] = [
+                    'uid'  => $userInfo['uid'],
                     'name'=>$userInfo['username'],
                     'birthday'=>$userInfo['birthday'],
                     'headimg' =>$userInfo['headimg'],
@@ -60,16 +66,40 @@ class Home extends Auth {
         $data = Db::name('video')->where([
             'status' => 1, #查询视频是否正常
             'isrecommend' => 2, #查询是否是推荐
-        ])->order('order ASC')->page($page,$limit)->field('videourl,img')->select();
+        ])->order('order ASC')->page($page,$limit)->field('uid,videourl,img')->select();
+
+        //初始化数组
+        $userData = [];
+        foreach($data as $val){
+            //查询用户数据
+            $userInfo = Db::name('user')->where(['uid'=>$val['uid'],'status'=>1])->field('uid,username,headimg')->find();
+            //查询标签数据
+            $label = Db::name('label_user')
+                        ->alias('labelUser')
+                        ->join('label la','labelUser.lid = la.lid')
+                        ->where(['labelUser.uid'=>$userInfo['uid'],'la.status'=>1])
+                        ->field('name')
+                        ->select();
+            if(!empty($userInfo)){
+                $userData[] = [
+                    'uid'  => $userInfo['uid'],
+                    'name'  => $userInfo['username'],
+                    'headimg' => $userInfo['headimg'],
+                    'videourl' => $val['videourl'],
+                    'img'   => $val['img'],
+                    'label' => $label
+                ];
+            }
+        }
 
         //返回数据
-        $this->II('200','请求成功',$data);
+        $this->II('200','请求成功',$userData);
     }
 
     //栏目
     public function column(){
         //查询数据
-        $data = Db::name('game')->where('status=1')->select();
+        $data = Db::name('game')->where('status=1')->field('gid,name,img,info')->select();
         //返回数据
         $this->II('200','请求成功',$data);
     }
@@ -86,9 +116,33 @@ class Home extends Auth {
         $data = Db::name('video')->where([
             'status' => 1, #查询视频是否正常
             'isrecommend' => 1, #查询是否是推荐
-        ])->page($page,$limit)->field('videourl,img')->select();
+        ])->page($page,$limit)->field('uid,videourl,img')->select();
+        //初始化数组
+        $userData = [];
+        foreach($data as $val) {
+            //查询用户数据
+            $userInfo = Db::name('user')->where(['uid' => $val['uid'], 'status' => 1])->field('uid,username,headimg')->find();
+            //查询标签数据
+            $label = Db::name('label_user')
+                ->alias('labelUser')
+                ->join('label la', 'labelUser.lid = la.lid')
+                ->where(['labelUser.uid' => $userInfo['uid'], 'la.status' => 1])
+                ->field('name')
+                ->select();
+            if (!empty($userInfo)) {
+                $userData[] = [
+                    'uid'  => $userInfo['uid'],
+                    'name' => $userInfo['username'],
+                    'headimg' => $userInfo['headimg'],
+                    'videourl' => $val['videourl'],
+                    'img' => $val['img'],
+                    'label' => $label
+                ];
+            }
+        }
+
         //返回数据
-        $this->II('200','请求成功',$data);
+        $this->II('200','请求成功',$userData);
     }
 
 }
