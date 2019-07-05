@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"D:\pei\public/../application/admin\view\gift\index.html";i:1562316870;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"D:\pei\public/../application/admin\view\gift\index.html";i:1562320944;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -60,14 +60,21 @@
 					<span class="layui-btn layui-btn-danger layui-btn-xs">正常</span></td>
 				<?php elseif($value['status'] == 2): ?>
 					<span class="layui-btn layui-btn-danger layui-btn-xs">禁用</span></td>
+				<?php elseif($value['status'] == -1): ?>
+					<span class="layui-btn layui-btn-danger layui-btn-xs">已删除</span></td>
 				<?php endif; ?>
 			</td>
 			<td>
 				<?=date('Y-m-d H:i:s',$value['addtime'])?>
 			</td>
 			<td class="td-manage">
-				<a title="修改"  href="/admin/gift/update/gid/<?php echo $value['gid']; ?>"><button class="layui-btn layui-btn-danger layui-btn-sm">修改</button></a>
+				<?php if(($value['status'] == 1)): ?>
+				<a onclick="updateWork(<?php echo $value['gid']; ?>,-1)" href="javascript:;" title="禁用"><button class="layui-btn layui-btn-danger layui-btn-sm">禁用</button></a>
+				<?php else: ?>
+				<a onclick="updateWork(<?php echo $value['gid']; ?>,1)" href="javascript:;" title="启用"><button class="layui-btn layui-btn-normal layui-btn-sm">启用</button></a>
+				<?php endif; ?>
 			</td>
+
 		</tr>
 		<?php endforeach; ?>
 		</tbody>
@@ -96,7 +103,7 @@
 	function delAll(){
 		var data = tableCheck.getData();
 		layer.confirm('确认要删除吗？',function(index){
-			$.post("<?php echo url('admin/admin/delAll'); ?>",{id:data,table:'admin'},function(response){
+			$.post("<?php echo url('admin/gift/delAll'); ?>",{id:data,table:'gift'},function(response){
 				layer.msg(response.msg,{time:1000,icon:response.icon},function(){
 					location.reload();
 				})
@@ -104,17 +111,9 @@
 		});
 	}
 
-	function delAdmin(id){
-		$.post('/admin/admin/delAdmin',{id:id},function(data){
-			layer.msg(data.msg,{icon:data.icon,time:1000},function(){
-				location.reload();
-			})
-		},'json');
-	}
-
-	function updateAdmin(id, statu) {
-		$.post("<?php echo url('update'); ?>", { id: id, status: statu }, function(data) {
-			layer.msg(data.msg, { time: 1000 }, function() {
+	function updateWork(id, status) {
+		$.post("<?php echo url('admin/gift/update'); ?>", { gid: id, status: status }, function(data) {
+			layer.msg(data.msg, { time: 1000, data:icon }, function() {
 				location.reload();
 			})
 		}, 'json');

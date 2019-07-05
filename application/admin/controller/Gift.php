@@ -33,26 +33,98 @@ class Gift extends Controller{
 
         $data = input('post.');
         if(empty($data['name'])){
-            echo "<script>alert('名称不能为空')</script>";
+            echo json_encode(['code' => 1,'msg' => '礼物名称不能为空','icon' => 2]);
         }
 
         if(empty($data['price'])){
-            echo "<script>alert('名称不能为空')</script>";
-        }
-
-        if(empty($data['img'])){
-            echo "<script>alert('名称不能为空')</script>";
+            echo json_encode(['code' => 1,'msg' => '礼物价格不能为空','icon' => 2]);
         }
 
         if(empty($data['order'])){
-            echo "<script>alert('名称不能为空')</script>";
+            echo json_encode(['code' => 1,'msg' => '排序不能为空','icon' => 2]);
         }
 
-        if(empty($data['status'])){
-            echo "<script>alert('名称不能为空')</script>";
+        $game_data['name'] = $data['name'];
+        $game_data['price'] = $data['price'];
+        $game_data['img'] = $data['img'];
+        $game_data['order'] = $data['order'];
+        $game_data['status'] = $data['status'];
+        $game_data['addtime'] = time();
+        $result = Db::name('gift')->insert($game_data);
+        if($result){
+            echo json_encode(['code' => 0,'msg' => '添加成功','icon' => 6]);
+        }else{
+            echo json_encode(['code' => 1,'msg' => '添加失败','icon' => 2]);
         }
-
 
     }
+
+
+    //图片上传
+    public function UploadImage(){
+        $file = $_FILES['file'];
+        if( is_uploaded_file( $file['tmp_name'] ) ){
+            $path = './uploads/game';
+            if( !file_exists($path) ){
+                mkdir( $path,0777,true );
+                chmod( $path, 777 );
+            }
+            //新文件名  避免文件名相同覆盖
+            $uniname = md5( uniqid( microtime(true), true ) );
+            //获取上传文件的后缀名
+            $ext = pathinfo( $file['name'], PATHINFO_EXTENSION );
+            //拼接要上传的完整的路径名称
+            $destination = $path.'/'.$uniname.'.'.$ext;
+            if( move_uploaded_file( $file['tmp_name'], $destination ) ){
+                echo json_encode(['code' => 0,'msg' => '上传成功','icon' => 1,'src'=>$destination]);
+            }else{
+                echo json_encode(['code' => 1,'msg' => '上传失败','icon' => 2]);
+            }
+        }else{
+            echo json_encode(['code' => 1,'msg' => '上传失败','icon' => 2]);
+        }
+    }
+
+
+
+    //删除
+    public function delAll(){
+
+        if(input('?post.table')){
+            $id = input('post.id/a');
+            if(empty($id)){
+                echo json_encode(['code' => 1,'msg' => '请选择数据','icon' =>2]);
+                exit;
+            }else{
+                $where['gid'] = array('IN',implode(',', $id));
+                $game_data['status'] = -1;
+                $result =Db::name(trim(input('post.table')))->where($where)->update($game_data);
+                if($result){
+                    echo json_encode(['code' => 0,'msg' => '删除成功','icon' => 1]);
+                }else{
+                    echo json_encode(['code' => 1,'msg' => '删除失败','icon' => 2]);
+                }
+            }
+        }else{
+            echo json_encode(['code' => 1,'msg' =>'禁止非法操作','icon' => 3]);
+        }
+
+    }
+
+
+    //修改
+    public function update(){
+        if(request()->isPost()){
+            $data = input('post.');
+            $where['gid'] = $data['gid'];
+            $result = Db::name('gift')->where($where)->update($data);
+            if($result){
+                echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
+            }else{
+                echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
+            }
+        }
+    }
+
 
 }
