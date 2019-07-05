@@ -14,7 +14,7 @@ class Home extends Auth {
     //喜欢
     public function like(){
         $this->checkParam();
-//        $this->checkToken();
+        $this->checkToken();
         //接收参数
         $arr=input('post.');
         //分页数据
