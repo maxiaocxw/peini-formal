@@ -34,8 +34,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/api/controller/Home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+            <state relative-caret-position="460">
+              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/api/controller/Auth.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -99,9 +108,9 @@
         <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/../phpStudy/PHPTutorial/nginx/conf/nginx.conf" />
         <option value="$PROJECT_DIR$/application/api/controller/AppHome.php" />
-        <option value="$PROJECT_DIR$/application/api/controller/Home.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/application/api/controller/Auth.php" />
+        <option value="$PROJECT_DIR$/application/api/controller/Home.php" />
       </list>
     </option>
   </component>
@@ -159,6 +168,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pei\application\api\controller" />
       <recent name="D:\pei" />
       <recent name="D:\pei\application\admin" />
       <recent name="D:\pei\application\app1" />
@@ -189,15 +199,16 @@
       <workItem from="1562130672105" duration="1938000" />
       <workItem from="1562132683340" duration="9142000" />
       <workItem from="1562203103658" duration="3276000" />
-      <workItem from="1562235674612" duration="13005000" />
+      <workItem from="1562235674612" duration="14875000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27361000" />
+    <option name="totallyTimeSpent" value="29231000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2568" y="-112" width="2576" height="1416" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.098569155" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -392,18 +403,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/api/controller/Auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2057">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <element signature="e#36#57#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="552">
+          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/api/controller/Home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+        <state relative-caret-position="460">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
       </provider>
     </entry>

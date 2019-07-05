@@ -43,10 +43,7 @@ class Home extends Auth {
                 ];
             }
         }
-        //返回数据
-        if(empty($userData)){
-            $this->II('101','暂无数据哦！！！',array());
-        }
+
         $this->II('200','请求成功',$userData);
     }
 
@@ -65,10 +62,6 @@ class Home extends Auth {
             'isrecommend' => 2, #查询是否是推荐
         ])->order('order ASC')->page($page,$limit)->field('videourl,img')->select();
 
-
-        if(empty($data)){
-            $this->II('101','暂无数据哦！！！',array());
-        }
         //返回数据
         $this->II('200','请求成功',$data);
     }
@@ -77,9 +70,6 @@ class Home extends Auth {
     public function column(){
         //查询数据
         $data = Db::name('game')->where('status=1')->select();
-        if(empty($data)){
-            $this->II('101','暂无数据哦！！！',array());
-        }
         //返回数据
         $this->II('200','请求成功',$data);
     }
@@ -97,10 +87,6 @@ class Home extends Auth {
             'status' => 1, #查询视频是否正常
             'isrecommend' => 1, #查询是否是推荐
         ])->page($page,$limit)->field('videourl,img')->select();
-
-        if(empty($data)){
-            $this->II('101','暂无数据哦！！！',array());
-        }
         //返回数据
         $this->II('200','请求成功',$data);
     }
