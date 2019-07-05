@@ -1,0 +1,108 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: csq
+ * Date: 2019/7/4
+ * Time: 17:35
+ */
+namespace app\api\controller;
+
+use think\Db;
+
+class Home extends Auth {
+
+    //喜欢
+    public function like(){
+        $this->checkParam();
+        $this->checkToken();
+        //接收参数
+        $arr=input('post.');
+        //分页数据
+        $limit = 10;
+        //判断page参数存不存在
+        $page = isset($arr['page']) ? $arr['page'] : 1;
+        //查询关注人数
+        $data = Db::name('like')->where(
+            [
+                'uid'   => $arr['uid'],
+                'status'  => 1
+            ]
+        )->field('acceptuid')->page($page,$limit)->select();
+        //用户信息
+        $userData = [];
+        foreach($data as $val){
+            //查询用户信息
+            $userInfo = DB::name('user')->where(['uid'=>$val['acceptuid'],'status'=>1,'type'=>2])->field('uid,username,birthday,headimg')->find();
+            $label = Db::name('label')->where(['uid'=>$userInfo['uid'],'status'=>1])->select();
+            if(!empty($userInfo)){
+                $userData[] = [
+                    'name'=>$userInfo['username'],
+                    'birthday'=>$userInfo['birthday'],
+                    'headimg' =>$userInfo['headimg'],
+                    'label' => $label
+                ];
+            }
+        }
+        //返回数据
+        if(empty($userData)){
+            $this->II('101','暂无数据哦！！！',array());
+        }
+        $this->II('200','请求成功',$userData);
+    }
+
+    //推荐
+    public function recommend(){
+        $this->checkParam();
+        //接收参数
+        $arr=input('post.');
+        //分页数据
+        $limit = 10;
+        //判断page参数存不存在
+        $page = isset($arr['page']) ? $arr['page'] : 1;
+        //推荐数据
+        $data = Db::name('video')->where([
+            'status' => 1, #查询视频是否正常
+            'isrecommend' => 2, #查询是否是推荐
+        ])->order('order ASC')->page($page,$limit)->field('videourl,img')->select();
+
+
+        if(empty($data)){
+            $this->II('101','暂无数据哦！！！',array());
+        }
+        //返回数据
+        $this->II('200','请求成功',$data);
+    }
+
+    //栏目
+    public function column(){
+        //查询数据
+        $data = Db::name('game')->where('status=1')->select();
+        if(empty($data)){
+            $this->II('101','暂无数据哦！！！',array());
+        }
+        //返回数据
+        $this->II('200','请求成功',$data);
+    }
+
+    //首页数据
+    public function homeData(){
+        $this->checkParam();
+        $arr=input('post.');
+        //分页数据
+        $limit = 10;
+        //判断page参数存不存在
+        $page = isset($arr['page']) ? $arr['page'] : 1;
+        //推荐数据
+        $data = Db::name('video')->where([
+            'status' => 1, #查询视频是否正常
+            'isrecommend' => 1, #查询是否是推荐
+        ])->page($page,$limit)->field('videourl,img')->select();
+
+        if(empty($data)){
+            $this->II('101','暂无数据哦！！！',array());
+        }
+        //返回数据
+        $this->II('200','请求成功',$data);
+    }
+
+}
