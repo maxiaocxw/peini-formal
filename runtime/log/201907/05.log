@@ -2347,3 +2347,698 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.036206s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.024009s ]
 [ sql ] [ SQL ] SELECT `uid`,`username`,`type`,`status`,`sex`,`mobile`,`birthday`,`info`,`headimg`,`level`,`addtime`,`token` FROM `pn_user` WHERE  (  mobile=15124032521 ) LIMIT 1 [ RunTime:0.021296s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:29:53+08:00 ] 127.0.0.1 POST /api/home/recommend
+[ info ] www.csshayudj.com/api/home/recommend [运行时间：0.255819s][吞吐率：3.91req/s] [内存消耗：1,891.88kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'recommend',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'b10b0e9b-cae8-4531-a6aa-2245d045c5ab',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->recommend[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035612s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.025600s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 1  AND `isrecommend` = 2 ORDER BY `order` ASC LIMIT 0,10 [ RunTime:0.034007s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.022863s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg` FROM `pn_user` WHERE  `uid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.023206s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label_user` [ RunTime:0.023369s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 2  AND `la`.`status` = 1 [ RunTime:0.026324s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:30:11+08:00 ] 127.0.0.1 POST /api/home/recommend
+[ info ] www.csshayudj.com/api/home/recommend [运行时间：0.196851s][吞吐率：5.08req/s] [内存消耗：1,891.13kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'recommend',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '3fa733bc-480f-43ee-8ce7-6cab91a254e0',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->recommend[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033138s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.022635s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 1  AND `isrecommend` = 2 ORDER BY `order` ASC LIMIT 0,10 [ RunTime:0.024564s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.024194s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg` FROM `pn_user` WHERE  `uid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.021774s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label_user` [ RunTime:0.020884s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 2  AND `la`.`status` = 1 [ RunTime:0.021020s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:32:33+08:00 ] 127.0.0.1 POST /api/home/recommend
+[ info ] www.csshayudj.com/api/home/recommend [运行时间：0.229064s][吞吐率：4.37req/s] [内存消耗：1,891.20kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'recommend',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '8ee25e7d-ce57-40db-8899-f72e4b6817b9',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->recommend[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034752s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.025858s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 1  AND `isrecommend` = 2 ORDER BY `order` ASC LIMIT 0,10 [ RunTime:0.027528s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.022726s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg` FROM `pn_user` WHERE  `uid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.022513s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label_user` [ RunTime:0.022925s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 2  AND `la`.`status` = 1 [ RunTime:0.023392s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:32:53+08:00 ] 127.0.0.1 POST /api/home/recommend
+[ info ] www.csshayudj.com/api/home/recommend [运行时间：0.102517s][吞吐率：9.75req/s] [内存消耗：1,889.32kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'recommend',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '5928013e-3b24-44ae-bf47-93782ad742e1',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->recommend[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034797s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.022964s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:33:07+08:00 ] 127.0.0.1 POST /api/home/recommend
+[ info ] www.csshayudj.com/api/home/recommend [运行时间：0.272363s][吞吐率：3.67req/s] [内存消耗：1,891.23kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'recommend',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'a39fdecc-4ff8-43ca-aead-330da2a30697',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->recommend[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.047281s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.036148s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 1  AND `isrecommend` = 2 ORDER BY `order` ASC LIMIT 0,10 [ RunTime:0.028937s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.026684s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg` FROM `pn_user` WHERE  `uid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.027430s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label_user` [ RunTime:0.031627s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 2  AND `la`.`status` = 1 [ RunTime:0.025312s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:34:49+08:00 ] 127.0.0.1 POST /api/home/recommend
+[ info ] www.csshayudj.com/api/home/recommend [运行时间：0.258033s][吞吐率：3.88req/s] [内存消耗：1,893.15kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'recommend',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'a5e5e1b0-4fd5-404f-96fe-63d77ecfbe93',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->recommend[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.038206s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.024321s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 1  AND `isrecommend` = 2 ORDER BY `order` ASC LIMIT 0,10 [ RunTime:0.027498s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.027525s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.032875s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label_user` [ RunTime:0.030876s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 1  AND `la`.`status` = 1 [ RunTime:0.033759s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:35:48+08:00 ] 127.0.0.1 POST /api/home/recommend
+[ info ] www.csshayudj.com/api/home/recommend [运行时间：0.133493s][吞吐率：7.49req/s] [内存消耗：1,885.48kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'recommend',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '7a09238b-a8a9-4094-abfb-6f4cb3178a8c',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->recommend[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.039799s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.027333s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 1  AND `isrecommend` = 2 ORDER BY `order` ASC LIMIT 0,10 [ RunTime:0.024148s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:36:09+08:00 ] 127.0.0.1 POST /api/home/recommend
+[ info ] www.csshayudj.com/api/home/recommend [运行时间：0.274790s][吞吐率：3.64req/s] [内存消耗：1,895.41kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'recommend',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'b4211fbc-15b1-44e1-b299-60b822a21bdd',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->recommend[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040775s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.023070s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 1  AND `isrecommend` = 2 ORDER BY `order` ASC LIMIT 0,10 [ RunTime:0.023796s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.025467s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.024276s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label_user` [ RunTime:0.029045s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 1  AND `la`.`status` = 1 [ RunTime:0.023801s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg` FROM `pn_user` WHERE  `uid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.023686s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 2  AND `la`.`status` = 1 [ RunTime:0.024936s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:36:14+08:00 ] 127.0.0.1 POST /api/home/recommend
+[ info ] www.csshayudj.com/api/home/recommend [运行时间：0.309184s][吞吐率：3.23req/s] [内存消耗：1,895.41kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'recommend',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '9fba528f-80c0-4700-8373-756060fcce18',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->recommend[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.052126s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.028324s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 1  AND `isrecommend` = 2 ORDER BY `order` ASC LIMIT 0,10 [ RunTime:0.025906s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.022516s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.022188s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label_user` [ RunTime:0.025074s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 1  AND `la`.`status` = 1 [ RunTime:0.022271s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg` FROM `pn_user` WHERE  `uid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.036835s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 2  AND `la`.`status` = 1 [ RunTime:0.027926s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:39:18+08:00 ] 127.0.0.1 POST /api/home/recommend
+[ info ] www.csshayudj.com/api/home/recommend [运行时间：1.024794s][吞吐率：0.98req/s] [内存消耗：1,895.41kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'recommend',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'a28ed07d-da10-4e00-9038-cfa3b51aee79',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->recommend[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.130350s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.134389s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 1  AND `isrecommend` = 2 ORDER BY `order` ASC LIMIT 0,10 [ RunTime:0.194286s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.207840s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.139317s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label_user` [ RunTime:0.038225s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 1  AND `la`.`status` = 1 [ RunTime:0.037657s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg` FROM `pn_user` WHERE  `uid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.062386s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 2  AND `la`.`status` = 1 [ RunTime:0.026555s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:39:41+08:00 ] 127.0.0.1 POST /api/home/recommend
+[ info ] www.csshayudj.com/api/home/recommend [运行时间：0.294448s][吞吐率：3.40req/s] [内存消耗：1,895.41kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'recommend',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'd1044917-d236-4a15-a80c-6023cce44ae3',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->recommend[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042525s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.025010s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 1  AND `isrecommend` = 2 ORDER BY `order` ASC LIMIT 0,10 [ RunTime:0.023729s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.031080s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.026235s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label_user` [ RunTime:0.026247s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 1  AND `la`.`status` = 1 [ RunTime:0.026919s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg` FROM `pn_user` WHERE  `uid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.029153s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 2  AND `la`.`status` = 1 [ RunTime:0.023704s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:41:48+08:00 ] 127.0.0.1 POST /api/home/homeData
+[ info ] www.csshayudj.com/api/home/homeData [运行时间：0.132617s][吞吐率：7.54req/s] [内存消耗：1,133.75kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'homeData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '5d2d298e-2133-4630-ac4d-59438e3f6a26',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)[D:\pei\application\api\controller\Home.php:140]
+---------------------------------------------------------------
+[ 2019-07-05T15:42:19+08:00 ] 127.0.0.1 POST /api/home/homeData
+[ info ] www.csshayudj.com/api/home/homeData [运行时间：0.115855s][吞吐率：8.63req/s] [内存消耗：1,887.40kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'homeData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'b6a3a7ea-f8d6-4fce-acf9-504613fb41db',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->homeData[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035112s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.022997s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 1  AND `isrecommend` = 1 LIMIT 0,10 [ RunTime:0.025460s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:42:35+08:00 ] 127.0.0.1 POST /api/home/homeData
+[ info ] www.csshayudj.com/api/home/homeData [运行时间：0.122703s][吞吐率：8.15req/s] [内存消耗：1,887.40kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'homeData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'eb6cb46e-5447-45b3-9624-45ed9f3b8d39',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->homeData[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035511s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.022734s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 1  AND `isrecommend` = 1 LIMIT 0,10 [ RunTime:0.025041s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:42:41+08:00 ] 127.0.0.1 POST /api/home/homeData
+[ info ] www.csshayudj.com/api/home/homeData [运行时间：0.137524s][吞吐率：7.27req/s] [内存消耗：1,887.40kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'homeData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '1e8814eb-9a37-41f1-9b06-bdc3a9ca6e8a',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->homeData[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040893s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.026556s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 1  AND `isrecommend` = 1 LIMIT 0,10 [ RunTime:0.025889s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:43:05+08:00 ] 127.0.0.1 POST /api/home/homeData
+[ info ] www.csshayudj.com/api/home/homeData [运行时间：0.184403s][吞吐率：5.42req/s] [内存消耗：1,893.79kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'homeData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '3b49fef7-696d-4738-be72-4a97b8934c58',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->homeData[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.038333s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.024773s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 1  AND `isrecommend` = 1 LIMIT 0,10 [ RunTime:0.029921s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.023569s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.024322s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:43:13+08:00 ] 127.0.0.1 POST /api/home/homeData
+[ info ] www.csshayudj.com/api/home/homeData [运行时间：0.247091s][吞吐率：4.05req/s] [内存消耗：1,895.66kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'homeData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '8ac73d04-63fe-474d-934b-79c68acdf20a',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->homeData[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.046516s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.027473s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 1  AND `isrecommend` = 1 LIMIT 0,10 [ RunTime:0.034860s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.027169s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.025386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label_user` [ RunTime:0.026695s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 1  AND `la`.`status` = 1 [ RunTime:0.023365s ]
+---------------------------------------------------------------
+[ 2019-07-05T15:54:13+08:00 ] 127.0.0.1 POST /api/home/like
+[ info ] www.csshayudj.com/api/home/like [运行时间：0.027685s][吞吐率：36.12req/s] [内存消耗：1,272.70kb] [文件加载：38]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'like',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '50',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '01b7d777-ad0a-4ac6-ab89-153b75e94dd5',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '1',
+  'page' => '1',
+  'sign' => '8ef42d5d09ef169e9b9964910c2abe88',
+)
+[ info ] [ RUN ] app\api\controller\Home->like[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-05T15:54:25+08:00 ] 127.0.0.1 POST /api/home/like
+[ info ] www.csshayudj.com/api/home/like [运行时间：0.294326s][吞吐率：3.40req/s] [内存消耗：1,898.73kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'like',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '50',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '36ceba3f-ce00-44f4-8b92-cfe49e2b3be0',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '1',
+  'page' => '1',
+  'sign' => '8ef42d5d09ef169e9b9964910c2abe88',
+)
+[ info ] [ RUN ] app\api\controller\Home->like[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.050581s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_like` [ RunTime:0.024786s ]
+[ sql ] [ SQL ] SELECT `acceptuid` FROM `pn_like` WHERE  `uid` = 1  AND `status` = 1 LIMIT 0,10 [ RunTime:0.032249s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.024864s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.023577s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label_user` [ RunTime:0.025386s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 1  AND `la`.`status` = 1 [ RunTime:0.027937s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg` FROM `pn_user` WHERE  `uid` = 2  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.023459s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 2  AND `la`.`status` = 1 [ RunTime:0.025050s ]
