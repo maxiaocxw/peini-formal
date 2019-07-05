@@ -23,8 +23,6 @@ class Auth extends Controller{
             'data'  => $data
         ];
         echo json_encode($arr);die;
-<<<<<<< HEAD
-=======
     }
 
     /**
@@ -59,11 +57,10 @@ class Auth extends Controller{
     public function checkToken(){
         $uid=input('post.uid');
         $token=input('post.token');
-        if(Db::name('user')->where('token='$token.' and uid='.$uid)->find()){
+        if(Db::name('user')->where('token='.$token.' and uid='.$uid)->find()){
             return true;
         }else{
             $this->II('103','token错误',array());
         }
->>>>>>> 210dc8cdb6c19ef6bbb4ce99b7e7a63a84a15609
     }
 }
