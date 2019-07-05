@@ -72,13 +72,13 @@ class Auth extends Controller{
         $phone=input('post.phone');
         $code=mt_rand(100000,999999);
         if(!$phone){
-            $this->II('100','参数错误',array());
+            $this->II('100','参数错误');
         }
         if($this->sendSms($phone,$code)){
             cache($phone,$code,30);
-            json_echo(200,'发送成功');
+            $this->II('200','发送成功');
         }else{
-            json_echo(501,'发送失败,请稍后重试');
+            $this->II('201','发送失败');
         }
     }
 

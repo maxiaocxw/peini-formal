@@ -14,7 +14,7 @@ class Login extends Auth{
 			$this->II('100','参数错误',array());
 		}
 		//$this->checkCode($this->phone,$this->code);
-		$list=Db::name('user')->where('mobile='.$this->phone)->find();
+		$list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,token')->where('mobile='.$this->phone)->find();
 		if(!$list){
 			$newuid=$this->addUser();
 			$this->II('200','请求成功',array('type'=>1,'info'=>$this->getUserInfo($newuid)));
@@ -42,5 +42,5 @@ class Login extends Auth{
 			$this->II('500','内部错误');
 		}
 	}
-	
+
 }

@@ -2197,3 +2197,153 @@
 [ info ] [ PARAM ] array (
 )
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-05T11:38:12+08:00 ] 127.0.0.1 GET /upload/20190705//a78e36f4cf37e9f8c5dcc0e8c5b250a2.jp
+[ info ] www.peini.com/upload/20190705//a78e36f4cf37e9f8c5dcc0e8c5b250a2.jp [运行时间：0.036439s][吞吐率：27.44req/s] [内存消耗：1,826.42kb] [文件加载：35]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'upload',
+    1 => '20190705',
+    2 => 'a78e36f4cf37e9f8c5dcc0e8c5b250a2.jp',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'socketlog' => 'SocketLog(tabid=2&client_id=1)',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; PHPSESSID=gdhceofj6pjn37m0ns8fa2bt30',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-05T11:38:14+08:00 ] 127.0.0.1 GET /admin/index/index
+[ info ] www.peini.com/admin/index/index [运行时间：0.221609s][吞吐率：4.51req/s] [内存消耗：3,588.58kb] [文件加载：52]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'socketlog' => 'SocketLog(tabid=2&client_id=1)',
+  'referer' => 'http://www.peini.com/admin/auth/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; PHPSESSID=gdhceofj6pjn37m0ns8fa2bt30',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\Project\peini-formal\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\Project\peini-formal\public/../application/admin\view\index\index.html [ array (
+  0 => 'menu_role',
+  1 => 'menu_list_one',
+  2 => 'menu_list_two',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.041125s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_role` [ RunTime:0.024064s ]
+[ sql ] [ SQL ] SELECT `role_permission` FROM `pn_role` WHERE  (  id = 1 ) LIMIT 1 [ RunTime:0.024639s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_menu` [ RunTime:0.021747s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_menu` WHERE  (  level = 1 and statu = 1 ) [ RunTime:0.023451s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_menu` WHERE  (  level = 2 and statu = 1 ) [ RunTime:0.022004s ]
+---------------------------------------------------------------
+[ 2019-07-05T11:38:14+08:00 ] 127.0.0.1 GET /admin/index/welcome
+[ info ] www.peini.com/admin/index/welcome [运行时间：0.058033s][吞吐率：17.23req/s] [内存消耗：2,415.70kb] [文件加载：43]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'socketlog' => 'SocketLog(tabid=2&client_id=1)',
+  'referer' => 'http://www.peini.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; PHPSESSID=gdhceofj6pjn37m0ns8fa2bt30',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ E:\Project\peini-formal\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] E:\Project\peini-formal\public/../application/admin\view\index\welcome.html [ array (
+  0 => 'menu_role',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-05T11:45:32+08:00 ] 127.0.0.1 POST /api/login
+[ info ] www.peini.com/api/login [运行时间：0.129168s][吞吐率：7.74req/s] [内存消耗：3,156.17kb] [文件加载：46]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => '9235ad62-a18b-4f5c-a536-64392b519942',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------918285261515838991300202',
+  'content-length' => '415',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '15124032521',
+  'code' => '798551',
+  'sign' => 'bf295ce956a89489f570ec96964afa8c',
+)
+[ info ] [ RUN ] app\api\controller\Login->index[ E:\Project\peini-formal\application\api\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036206s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.024009s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`type`,`status`,`sex`,`mobile`,`birthday`,`info`,`headimg`,`level`,`addtime`,`token` FROM `pn_user` WHERE  (  mobile=15124032521 ) LIMIT 1 [ RunTime:0.021296s ]
