@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"D:\pei\public/../application/admin\view\gift\index.html";i:1562322841;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"D:\pei\public/../application/admin\view\gift\index.html";i:1562404390;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -67,12 +67,8 @@
 			<td>
 				<?=date('Y-m-d H:i:s',$value['addtime'])?>
 			</td>
-			<td class="td-manage">
-				<?php if(($value['status'] == 1)): ?>
-				<a onclick="updateWork(<?php echo $value['gid']; ?>,-1)" href="javascript:;" title="禁用"><button class="layui-btn layui-btn-danger layui-btn-sm">禁用</button></a>
-				<?php else: ?>
-				<a onclick="updateWork(<?php echo $value['gid']; ?>,1)" href="javascript:;" title="启用"><button class="layui-btn layui-btn-normal layui-btn-sm">启用</button></a>
-				<?php endif; ?>
+			<td>
+				
 			</td>
 
 		</tr>

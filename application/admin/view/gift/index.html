@@ -24,7 +24,7 @@
 </div>
 <div class="weadmin-body">
 	<div class="weadmin-block">
-		<button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
+		<button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>删除</button>
 		<a title="修改"  href="/admin/gift/add"><button class="layui-btn admin_add"><i class="layui-icon"></i>添加礼物</button></a>
 		<span class="fr" style="line-height:40px">共有数据：{$total} 条</span>
 	</div>
@@ -67,11 +67,7 @@
 				<?=date('Y-m-d H:i:s',$value['addtime'])?>
 			</td>
 			<td class="td-manage">
-				{if($value['status'] == 1)}
-				<a onclick="updateWork({$value['gid']},-1)" href="javascript:;" title="禁用"><button class="layui-btn layui-btn-danger layui-btn-sm">禁用</button></a>
-				{else}
-				<a onclick="updateWork({$value['gid']},1)" href="javascript:;" title="启用"><button class="layui-btn layui-btn-normal layui-btn-sm">启用</button></a>
-				{/if}
+				<a title="修改" href="/admin/gift/"><button class="layui-btn layui-btn-danger layui-btn-sm">修改</button></a>
 			</td>
 
 		</tr>
