@@ -76,7 +76,6 @@
                 elem: '#test1',
                 url: "/admin/cate/UploadImage",
                 done: function(res) {
-                    console.log(res);
                     if(res.code == 0){
                         var p_src = "http://www.shayudj.com"+res.src;
                         $("#demo1").attr('src', p_src);
@@ -103,6 +102,8 @@
                                 return false;
                             }
                         });
+                    }else{
+                        layer.msg(response.msg, { time: 1000, icon: response.icon });
                     }
                 }, 'json');
             }
