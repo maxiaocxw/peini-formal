@@ -11,9 +11,6 @@ class EditInformation extends Auth{
 	public function index(){
 		if($this->params){
             unset($this->params['sign']);
-			if(!$this->params['uid']){
-				$this->II('100','参数错误');
-			}
 			$this->params['updatetime']=time();
             if($this->params['birthday']){
                 $this->params['birthday']=strtotime($this->params['birthday']);

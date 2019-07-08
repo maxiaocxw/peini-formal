@@ -25,26 +25,36 @@ class Auth extends Controller{
     }
 
     /**
-     * 校验签名
+     * 校验签名和参数
      */
     public function checkParam($param=''){
-        $arr=input('post.');
-        if(empty($arr['sign'])){
-            $this->II('102','参数错误',array());
-        }
-        $sign=$arr['sign'];
-        unset($arr['sign']);
-        $str='';
-        ksort($arr);
-        reset($arr);
-        foreach ($arr as $key => $value) {
-            $str.=$key.'='.$value.'&';
-        }
-        $str=trim($str,'&').'peini';
-        if($sign==md5($str)){
-            return true;
+        if(!$param){
+            $arr=input('post.');
+            if(empty($arr['sign'])){
+                $this->II('100','参数错误',array());
+            }
+            $sign=$arr['sign'];
+            unset($arr['sign']);
+            $str='';
+            ksort($arr);
+            reset($arr);
+            foreach ($arr as $key => $value) {
+                $str.=$key.'='.$value.'&';
+            }
+            $str=trim($str,'&').'peini';
+            if($sign==md5($str)){
+                return true;
+            }else{
+                $this->II('101','签名错误',array());
+            }
         }else{
-            $this->II('101','签名错误',array());
+            $param=explode(',',$param);
+            foreach($param as $k=>$v){
+                if(!input('post.'.$v)){
+                    $this->II('100','参数错误');
+                }
+            }
+            return true;
         }
     }
 
@@ -142,7 +152,7 @@ class Auth extends Controller{
 
     //获取用户信息
     public function getUserInfo($uid){
-        $list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,token')->where('uid='.$uid)->find();
+        $list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,token,currency')->where('uid='.$uid)->find();
         $list['birthday']=date('Y-m-d',$list['birthday']);
         $list['addtime']=date('Y-m-d',$list['addtime']);
         return $list;

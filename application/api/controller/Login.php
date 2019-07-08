@@ -7,14 +7,12 @@ class Login extends Auth{
 		$this->checkParam();
 		$this->code = input('post.code')?input('post.code'):0;
 		$this->phone = input('post.phone')?input('post.phone'):0;
+		$this->checkParam('code,phone');
 	}
 
 	public function index(){
-		if(!$this->code || !$this->phone){
-			$this->II('100','参数错误',array());
-		}
 		$this->checkCode($this->phone,$this->code);
-		$list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,token')->where('mobile='.$this->phone)->find();
+		$list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,token,currency')->where('mobile='.$this->phone)->find();
 		if(!$list){
 			$newuid=$this->addUser();
 			$this->II('200','请求成功',array('type'=>1,'info'=>$this->getUserInfo($newuid)));
