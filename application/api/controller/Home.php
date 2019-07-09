@@ -44,7 +44,7 @@ class Home extends Auth {
                     'uid'  => $userInfo['uid'],
                     'name'=>$userInfo['username'],
                     'birthday'=>$userInfo['birthday'],
-                    'headimg' =>$userInfo['headimg'],
+                    'headimg' =>'cdn.lanyushiting.com/'.$userInfo['headimg'],
                     'label' => $label
                 ];
             }
@@ -84,8 +84,8 @@ class Home extends Auth {
                 $userData[] = [
                     'uid'  => $userInfo['uid'],
                     'name'  => $userInfo['username'],
-                    'headimg' => $userInfo['headimg'],
-                    'videourl' => $val['videourl'],
+                    'headimg' =>  'cdn.lanyushiting.com/'.$userInfo['headimg'],
+                    'videourl' =>  'cdn.lanyushiting.com/'.$val['videourl'],
                     'img'   => $val['img'],
                     'label' => $label
                 ];
@@ -132,9 +132,9 @@ class Home extends Auth {
             if (!empty($userInfo)) {
                 $userData[] = [
                     'uid'  => $userInfo['uid'],
-                    'name' => $userInfo['username'],
-                    'headimg' => $userInfo['headimg'],
-                    'videourl' => $val['videourl'],
+                    'name' =>$userInfo['username'],
+                    'headimg' =>  'cdn.lanyushiting.com/'.$userInfo['headimg'],
+                    'videourl' =>  'cdn.lanyushiting.com/'.$val['videourl'],
                     'img' => $val['img'],
                     'label' => $label
                 ];

@@ -37,7 +37,6 @@ class Qiniu{
      * @return string
      */
     public function upload($prefix,$suffix,$filePath){
-
         //字符串
         $fileResource = fopen($filePath, 'r');
         $fileString =  fread($fileResource, filesize($filePath));

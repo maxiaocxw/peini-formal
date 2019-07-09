@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"D:\pei\public/../application/admin\view\gift\index.html";i:1562404390;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"D:\pei\public/../application/admin\view\gift\index.html";i:1562404500;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -25,7 +25,7 @@
 </div>
 <div class="weadmin-body">
 	<div class="weadmin-block">
-		<button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
+		<button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>删除</button>
 		<a title="修改"  href="/admin/gift/add"><button class="layui-btn admin_add"><i class="layui-icon"></i>添加礼物</button></a>
 		<span class="fr" style="line-height:40px">共有数据：<?php echo $total; ?> 条</span>
 	</div>
@@ -67,8 +67,8 @@
 			<td>
 				<?=date('Y-m-d H:i:s',$value['addtime'])?>
 			</td>
-			<td>
-				
+			<td class="td-manage">
+				<a title="修改" href="/admin/gift/"><button class="layui-btn layui-btn-danger layui-btn-sm">修改</button></a>
 			</td>
 
 		</tr>

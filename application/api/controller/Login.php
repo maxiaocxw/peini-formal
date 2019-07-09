@@ -4,10 +4,10 @@ use app\api\controller\Auth;
 use think\Db;
 class Login extends Auth{
 	public function _initialize(){
-		$this->checkParam();
-		$this->code = input('post.code')?input('post.code'):0;
-		$this->phone = input('post.phone')?input('post.phone'):0;
-		$this->checkParam('code,phone');
+//		$this->checkParam();
+//		$this->code = input('post.code')?input('post.code'):0;
+//		$this->phone = input('post.phone')?input('post.phone'):0;
+//		$this->checkParam('code,phone');
 	}
 
 	public function index(){
