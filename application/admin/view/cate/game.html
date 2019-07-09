@@ -71,6 +71,7 @@
                     {/if}
                     </td>
                     <td class="td-manage">
+                        <a title="修改"  href="/admin/cate/updateGames/gid/{$value['gid']}"><button class="layui-btn layui-btn-normal layui-btn-sm">修改</button></a>
                         {if($value['status'] == 1)}
                         <a onclick="updateInterest({$value['gid']},-1)" href="javascript:;" title="禁用"><button class="layui-btn layui-btn-danger layui-btn-sm">禁用</button></a>
                         {else}

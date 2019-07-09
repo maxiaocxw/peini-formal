@@ -79,6 +79,7 @@
                     {/if}
                     </td>
                     <td class="td-manage">
+                        <a title="修改"  href="/admin/cate/updateWorks/wid/{$value['wid']}"><button class="layui-btn layui-btn-normal layui-btn-sm">修改</button></a>
                         {if($value['status'] == 1)}
                         <a onclick="updateWork({$value['wid']},-1)" href="javascript:;" title="禁用"><button class="layui-btn layui-btn-danger layui-btn-sm">禁用</button></a>
                         {else}
@@ -125,6 +126,14 @@
     //修改状态
     function updateWork(id, status) {
         $.post("{:url('admin/cate/updateWork')}", { wid: id, status: status }, function(data) {
+            layer.msg(data.msg, { time: 1000, data:icon }, function() {
+                location.reload();
+            })
+        }, 'json');
+    }
+    //修改数据信息
+    function updateWorks(id) {
+        $.post("{:url('admin/cate/updateWorks')}", { wid: id }, function(data) {
             layer.msg(data.msg, { time: 1000, data:icon }, function() {
                 location.reload();
             })
