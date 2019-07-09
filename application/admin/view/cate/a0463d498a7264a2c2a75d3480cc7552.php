@@ -1,0 +1,60 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"D:\pei\public/../application/admin\view\tag\update.html";i:1562323072;}*/ ?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-WeAdmin Frame型后台管理系统-WeAdmin 1.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="/static/admin/static/css/font.css">
+    <link rel="stylesheet" href="/static/admin/static/css/weadmin.css">
+</head>
+
+<body>
+    <div class="weadmin-body">
+        <form class="layui-form" action="/admin/tag/updatedo" method="post">
+            <div class="layui-form-item">
+                <input type="hidden" name="lid" value="<?php echo $list['lid']; ?>">
+                <label for="name" class="layui-form-label">
+                    标签名
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="name" name="name" value="<?php echo $list['name']; ?>" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="L_repass" class="layui-form-label">
+                </label>
+                <button class="layui-btn" tyoe="submit" >修改</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="/admin/tag/index"><button type="button" class="layui-btn">返回</button></a>
+            </div>
+        </form>
+    </div>
+    <script src="/static/admin/lib/layui/layui.js" charset="utf-8"></script>
+    <script src="/static/admin/static/js/jquery.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    layui.extend({
+        admin: '/static/admin/static/js/admin'
+    });
+    layui.use(['form', 'layer', 'admin', 'upload'], function() {
+        var form = layui.form,
+            admin = layui.admin,
+            layer = layui.layer;
+            upload = layui.upload,
+
+            upload.render({
+                elem: '#test1',
+                url: "/admin/tag/editUploadImage",
+                done: function(res) {
+                    console.log(res.data.src);
+                    $("#demo1").attr('src', res.data.src);
+                    $(".thumb").attr('value', res.data.src);
+                }
+            });
+    });
+    </script>
+</body>
+
+</html>

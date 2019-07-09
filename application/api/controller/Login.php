@@ -4,10 +4,10 @@ use app\api\controller\Auth;
 use think\Db;
 class Login extends Auth{
 	public function _initialize(){
-		$this->checkParam();
-		$this->code = input('post.code')?input('post.code'):0;
-		$this->phone = input('post.phone')?input('post.phone'):0;
-		$this->checkParam('code,phone');
+//		$this->checkParam();
+//		$this->code = input('post.code')?input('post.code'):0;
+//		$this->phone = input('post.phone')?input('post.phone'):0;
+//		$this->checkParam('code,phone');
 	}
 
 	public function index(){
@@ -22,6 +22,7 @@ class Login extends Auth{
 		}
 		$list['birthday']=date('Y-m-d',$list['birthday']);
 		$list['addtime']=date('Y-m-d',$list['addtime']);
+		$list['qiniuToken'] = (new Qiniu())->getToken();
 		$this->II('200','请求成功',array('type'=>2,'info'=>$list));
 	}
 

@@ -1,0 +1,94 @@
+---------------------------------------------------------------
+[ 2019-07-08T17:32:02+08:00 ] 127.0.0.1 POST /api/Orderlist
+[ info ] www.peini.com/api/Orderlist [运行时间：0.045722s][吞吐率：21.87req/s] [内存消耗：2,140.02kb] [文件加载：38]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Orderlist',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'd9d1e6af-365b-46f9-9188-a77808a79cf0',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------353737629085644998513430',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '4',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-08T17:32:09+08:00 ] 127.0.0.1 POST /api/Orderlist
+[ info ] www.peini.com/api/Orderlist [运行时间：0.144974s][吞吐率：6.90req/s] [内存消耗：3,147.38kb] [文件加载：46]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Orderlist',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'a1f4866f-f69f-4cef-b740-25fa59100977',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------823862481567452350758536',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '4',
+)
+[ info ] [ RUN ] app\api\controller\Orderlist->index[ E:\Project\peini-formal\application\api\controller\Orderlist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036592s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_order` [ RunTime:0.026037s ]
+[ sql ] [ SQL ] SELECT `id`,`tranno`,`uid`,`pid`,`amount`,`num`,`gid`,`status` FROM `pn_game_order` WHERE  (  uid=4 or pid=4 ) ORDER BY `addtime` DESC LIMIT 0,10 [ RunTime:0.024324s ]
+---------------------------------------------------------------
+[ 2019-07-08T17:32:20+08:00 ] 127.0.0.1 POST /api/Orderlist
+[ info ] www.peini.com/api/Orderlist [运行时间：0.133460s][吞吐率：7.49req/s] [内存消耗：3,147.38kb] [文件加载：46]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Orderlist',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => '9349da68-fc48-48d5-9dc3-2f00c3e30972',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------660400886558245608057471',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ RUN ] app\api\controller\Orderlist->index[ E:\Project\peini-formal\application\api\controller\Orderlist.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031674s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_order` [ RunTime:0.030501s ]
+[ sql ] [ SQL ] SELECT `id`,`tranno`,`uid`,`pid`,`amount`,`num`,`gid`,`status` FROM `pn_game_order` WHERE  (  uid=3 or pid=3 ) ORDER BY `addtime` DESC LIMIT 0,10 [ RunTime:0.020304s ]
