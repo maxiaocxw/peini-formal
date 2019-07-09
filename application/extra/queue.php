@@ -10,8 +10,8 @@
 // +----------------------------------------------------------------------
 
 return [
-    //'connector'=>'redis',
-     'connector'=>'sync',
+    'connector'=>'redis',
+    //'connector'=>'sync',
     'expire'     => 0,
     'default'    => 'default',
     'host'       => '127.0.0.1',

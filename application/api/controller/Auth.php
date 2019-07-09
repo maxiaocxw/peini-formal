@@ -160,4 +160,31 @@ class Auth extends Controller{
         $list['addtime']=date('Y-m-d',$list['addtime']);
         return $list;
     }
+
+    /**
+     * 添加队列任务
+     *
+     * @param string $job_name 队列执行的类路径 不带走类fire方法 带@方法 走类@的方法
+     * @param array $data 传入数据
+     * @param mixed $queue_name 队列名 null 或字符串
+     * @param integer $delay  延迟执行的时间  单位秒
+     * @return void
+     */
+    public function push_job($job_name, $data, $queue_name = null, $delay = 0){
+        trace($queue_name);
+        config('default_return_type', 'json');
+        $class_name = \strstr($job_name, '@', true);
+        if(class_exists($class_name)){
+            if($delay > 0){
+                $ret = \think\Queue::later($delay, $job_name, $data, $queue_name);
+            }else{
+                trace($job_name);
+                $ret = \think\Queue::push($job_name, $data, $queue_name);;
+            }
+            trace(sprintf("加入任务%s, 时间%s", $job_name, time()));
+            return $ret;
+        }
+        return $this->error('job类 '.$job_name.'不存在');
+    
+    }
 }

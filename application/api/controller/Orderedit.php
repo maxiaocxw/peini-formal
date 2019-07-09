@@ -18,7 +18,7 @@ class OrderEdit extends Auth{
 		$this->isOver();
 		if(Db::name('game_order')->where('id='.$this->id)->update(array('status'=>2,'receivetime'=>time()))){
 			//添加定时任务
-
+			$this->push_job('app\api\controller\Update@updateOrderStatus', ['id'=>$this->id,'type'=>1], $queue_name = null, $delay = 60);
 			$this->II('200','接单成功');
 		}else{
 			$this->II('201','接单失败');
@@ -36,7 +36,7 @@ class OrderEdit extends Auth{
 			//修改状态为已取消
 			Db::name('game_order')->where('id='.$this->id)->update(array('status'=>6));
 			//增加余额
-			Db::name('user')->where('uid='.$uid)->update(array('currency'=>$user_moeny+$user['amount']));
+			Db::name('user')->where('uid='.$user['uid'])->update(array('currency'=>$user_moeny+$user['amount']));
 			Db::commit();
 			$this->II('200','取消成功');
 		} catch (\Exception $e) {
@@ -45,10 +45,32 @@ class OrderEdit extends Auth{
 		}
 	}
 
+	//评论
+	public function putComment(){
+		$this->checkParam('score,tagids');
+		$score=input('post.score');
+		$tagids=input('post.tagids');
+		if(Db::name('comment')->insert(array(
+			'uid'		=>		$this->uid,
+			'orderid'	=>		$this->id,
+			'score'		=>		$score,
+			'tagids'	=>		$tagids,
+			'addtime'	=>		time()
+		))){
+			Db::name('game_order')->where('id='.$this->id)->update(array('status'=>4));
+			$this->II('200','评论成功');
+		}else{
+			$this->II('201','评论失败');
+		}
+	}
+
 	public function isOver(){
 		if(Db::name('game_order')->where('pid='.$this->uid.' and status=2')->value('id')){
 			$this->II('201','还有订单未完成，不能接单');
 		}else{
+			if(Db::name('game_order')->where('id='.$this->id)->value('status')==2){
+				$this->II('201','已经接单请勿重复操作');
+			}
 			return true;
 		}
 	}

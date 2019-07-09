@@ -1,8 +1,7 @@
 <?php
 namespace app\api\controller;
-use app\api\controller\Auth;
 use think\Request;
-class Index extends Auth{
+class Index {
 	public function index(){
 
 		$this->checkParam();
@@ -12,4 +11,5 @@ class Index extends Auth{
 	public function welcome(){
 		return $this->fetch();
 	}
+
 }
