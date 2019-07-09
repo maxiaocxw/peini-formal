@@ -1253,3 +1253,632 @@
   'css' => 'weadmin.css.map',
 )
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-06T18:18:50+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.038762s][吞吐率：25.80req/s] [内存消耗：1,039.85kb] [文件加载：31]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '25651f84-b6af-4c31-aa31-04eaf805a9d6',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-06T18:27:03+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.164238s][吞吐率：6.09req/s] [内存消耗：1,141.02kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'e0e8ca1e-b513-492e-b13f-980996c3f132',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]main(): Failed opening required '../../../extend/php-sdk/autoload.php' (include_path='.;C:\php\pear')[D:\pei\application\api\controller\Qiniu.php:9]
+---------------------------------------------------------------
+[ 2019-07-06T18:27:28+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.029967s][吞吐率：33.37req/s] [内存消耗：1,141.02kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'e61e2910-0698-43d1-a419-2017d05d8718',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]main(): Failed opening required '../../../extend/php-sdk/autoload.php' (include_path='.;C:\php\pear')[D:\pei\application\api\controller\Qiniu.php:9]
+---------------------------------------------------------------
+[ 2019-07-06T18:33:36+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.086727s][吞吐率：11.53req/s] [内存消耗：1,135.72kb] [文件加载：36]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '06131161-9ca7-4ae3-9f19-70e4545b95af',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'Qiniu\Auth' not found[D:\pei\application\api\controller\Qiniu.php:20]
+---------------------------------------------------------------
+[ 2019-07-06T19:01:40+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.035444s][吞吐率：28.21req/s] [内存消耗：1,040.83kb] [文件加载：31]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '9ff37819-08ff-4cc2-9fbd-2f710794e371',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-06T19:03:04+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.034396s][吞吐率：29.07req/s] [内存消耗：1,141.21kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'cb20b08c-7c9a-485c-a3c5-1dfe911a208e',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]main(): Failed opening required 'D:\pei\application\api\controller../../../extend/php-sdk/autoload.php' (include_path='.;C:\php\pear')[D:\pei\application\api\controller\Qiniu.php:9]
+---------------------------------------------------------------
+[ 2019-07-06T19:07:14+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.029269s][吞吐率：34.17req/s] [内存消耗：1,136.02kb] [文件加载：36]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '1a914a9b-b9f2-439b-b70a-e103bea46832',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'Qiniu\Auth' not found[D:\pei\application\api\controller\Qiniu.php:21]
+---------------------------------------------------------------
+[ 2019-07-06T19:07:37+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.074252s][吞吐率：13.47req/s] [内存消耗：1,349.21kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '7396e0f0-9e17-4b07-a49b-4cf6c5d05190',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Call to undefined method app\api\controller\Auth::uploadToken()[D:\pei\application\api\controller\Qiniu.php:22]
+---------------------------------------------------------------
+[ 2019-07-06T19:10:08+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.043716s][吞吐率：22.87req/s] [内存消耗：1,136.05kb] [文件加载：36]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '3e7cf8fb-bc3a-4de3-bba7-10ba0db20759',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'think\qiniu\Auth' not found[D:\pei\application\api\controller\Qiniu.php:21]
+---------------------------------------------------------------
+[ 2019-07-06T19:10:24+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.028719s][吞吐率：34.82req/s] [内存消耗：1,135.98kb] [文件加载：36]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '7e447131-b7f1-4c73-9534-59a22e2df037',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'Auth' not found[D:\pei\application\api\controller\Qiniu.php:20]
+---------------------------------------------------------------
+[ 2019-07-06T19:10:44+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.022919s][吞吐率：43.63req/s] [内存消耗：1,136.04kb] [文件加载：36]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'dcaa58a3-d418-4113-a26b-a5d7863e946d',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'Auth' not found[D:\pei\application\api\controller\Qiniu.php:20]
+---------------------------------------------------------------
+[ 2019-07-06T19:10:53+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.030632s][吞吐率：32.65req/s] [内存消耗：1,040.88kb] [文件加载：31]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'c86db048-0e5d-4ba9-a840-ad78e894541f',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-06T19:12:01+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.030987s][吞吐率：32.27req/s] [内存消耗：1,136.04kb] [文件加载：36]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '30eec03a-7204-461f-b8e9-f0840bcb1236',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'Auth' not found[D:\pei\application\api\controller\Qiniu.php:20]
+---------------------------------------------------------------
+[ 2019-07-06T19:12:13+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.040162s][吞吐率：24.90req/s] [内存消耗：1,040.88kb] [文件加载：31]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'fab8f213-c74b-4b8d-9d89-c7dad5023c2a',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-06T19:13:37+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.029278s][吞吐率：34.16req/s] [内存消耗：1,141.53kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '412d20a4-3fa9-475e-b406-4ca088e797ba',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [64]app\api\controller\Qiniu::getToken(): Failed opening required '../../../vendor/php-sdk/autoload.php' (include_path='.;C:\php\pear')[D:\pei\application\api\controller\Qiniu.php:16]
+---------------------------------------------------------------
+[ 2019-07-06T19:13:48+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.021781s][吞吐率：45.91req/s] [内存消耗：1,141.53kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '7a2b54a7-ee6f-4e50-9f91-ff657d5757ea',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [64]app\api\controller\Qiniu::getToken(): Failed opening required '../../vendor/php-sdk/autoload.php' (include_path='.;C:\php\pear')[D:\pei\application\api\controller\Qiniu.php:16]
+---------------------------------------------------------------
+[ 2019-07-06T19:14:01+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.024549s][吞吐率：40.74req/s] [内存消耗：1,141.34kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '6895ec65-926e-4441-b11d-667785f1fa05',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [64]app\api\controller\Qiniu::getToken(): Failed opening required '/../vendor/php-sdk/autoload.php' (include_path='.;C:\php\pear')[D:\pei\application\api\controller\Qiniu.php:16]
+---------------------------------------------------------------
+[ 2019-07-06T19:15:32+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.025485s][吞吐率：39.24req/s] [内存消耗：1,170.69kb] [文件加载：39]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '4c3e7425-32ae-4b2c-81bf-9e3aea4b441f',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'Auth' not found[D:\pei\application\api\controller\Qiniu.php:20]
+---------------------------------------------------------------
+[ 2019-07-06T19:16:00+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.023553s][吞吐率：42.46req/s] [内存消耗：1,077.56kb] [文件加载：34]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'eb14f08c-794e-4c98-a0b5-9d50b959964c',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-06T19:17:16+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.041551s][吞吐率：24.07req/s] [内存消耗：1,383.92kb] [文件加载：46]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '9c7e9347-5334-4995-90dd-3ddf50ed2327',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Call to undefined method app\api\controller\Auth::uploadToken()[D:\pei\application\api\controller\Qiniu.php:21]
+---------------------------------------------------------------
+[ 2019-07-06T19:17:45+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.041566s][吞吐率：24.06req/s] [内存消耗：1,170.69kb] [文件加载：39]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '475255ae-327e-492a-a307-50fc9a1af4a9',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'Auth' not found[D:\pei\application\api\controller\Qiniu.php:20]
+---------------------------------------------------------------
+[ 2019-07-06T19:18:09+08:00 ] 127.0.0.1 GET /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.135044s][吞吐率：7.40req/s] [内存消耗：1,149.44kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'd513b574-0ea2-4ff9-acbb-89ce98b8e108',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File

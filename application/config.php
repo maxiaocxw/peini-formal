@@ -244,5 +244,14 @@ return [
         'appkey' => '1260888528',
         'appsecret' => '6cc832b73f6505062bfd09aefd0ac880',
         'callback_url' => 'https://beimei.oyaoyin.com/index/auth/weiboLogin',
-    ]
+    ],
+    //七牛相关配置
+    'qiniu' => [
+        //七牛公钥
+        'accessKey' => "dAXgggwdtiDx9rlvCPN8mkuEzyjJd2NyRTzUjBQA",
+        //七牛私钥
+        'secretKey' => "G0eUscgVJ28wI1yLHgC3IULHQC7F0YkRjheYHguu",
+        //七牛bucket
+        'bucket' => 'peini'
+    ],
 ];

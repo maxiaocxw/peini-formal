@@ -9,4 +9,12 @@
 // | Author: yunwuxin <448901948@qq.com>
 // +----------------------------------------------------------------------
 
-return [];
+return [
+    //七牛公钥
+    $accessKey = "dAXgggwdtiDx9rlvCPN8mkuEzyjJd2NyRTzUjBQA",
+    //七牛私钥
+    $secretKey  = "G0eUscgVJ28wI1yLHgC3IULHQC7F0YkRjheYHguu",
+    //七牛bucket
+    $bucket = 'peini'
+
+];

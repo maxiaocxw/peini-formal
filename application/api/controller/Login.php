@@ -24,6 +24,7 @@ class Login extends Auth{
 		}
 		$list['birthday']=date('Y-m-d',$list['birthday']);
 		$list['addtime']=date('Y-m-d',$list['addtime']);
+		$list['qiniuToken'] = (new Qiniu())->getToken();
 		$this->II('200','请求成功',array('type'=>2,'info'=>$list));
 	}
 
