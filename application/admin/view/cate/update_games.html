@@ -51,12 +51,11 @@
                 <select name="tid" lay-verify="required" autocomplete="off" class="layui-select">
                     <option value="">请选择分类</option>
                     {foreach $gametype_data as $key => $v}
-<!--                    <option value="{$v.tid}" >{$v.name}</option>-->
-                        {eq name="{$v.tid}" value="$data.tid"}
+                        {if($v.tid eq $data.tid)}
                         <option value="{$v.tid}" selected>{$v.name}</option>
                         {else/}
                         <option value="{$v.tid}">{$v.name}</option>
-                        {/eq}
+                        {/if}
                     {/foreach}
                 </select>
             </div>
