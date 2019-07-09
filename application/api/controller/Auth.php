@@ -69,6 +69,9 @@ class Auth extends Controller{
         if(empty($token)){
             $this->II('104','缺少token',array());
         }
+        if(empty($uid)){
+            $this->II('104','缺少uid',array());
+        }
         if(Db::name('user')->where("token='".$token."' and uid=".$uid)->find()){
             return true;
         }else{
