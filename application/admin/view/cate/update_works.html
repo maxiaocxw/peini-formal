@@ -25,7 +25,7 @@
         </div>
         <div class="layui-form-item">
             <button class="layui-btn" lay-submit="" lay-filter="upda">修改</button>
-            &nbsp;&nbsp;&nbsp;&nbsp;<a href="/admin/cate/interest"><button type="button" class="layui-btn">返回</button></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="/admin/cate/work"><button type="button" class="layui-btn">返回</button></a>
         </div>
     </form>
 </div>
@@ -53,6 +53,8 @@
                             return false;
                         }
                     });
+                }else{
+                    layer.msg(response.msg, { time: 1000, icon: response.icon });
                 }
             }, 'json');
             //发异步，把数据提交给php

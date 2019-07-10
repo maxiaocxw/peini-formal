@@ -1,11 +1,37 @@
 <?php
 namespace app\admin\controller;
 use app\admin\controller\Auth;
+use app\api\controller\Qiniu;
 use think\Db;
 use think\Request;
 use think\Session;
 
 class Cate extends Auth{
+    public function _initialize(){
+        $this->url='http://cdn.lanyushiting.com/';
+    }
+
+    //七牛图片上传
+    public function qinui_upload(){
+        $qiniu = new Qiniu();
+        $file = $_FILES['file'];
+        if( is_uploaded_file( $file['tmp_name'] ) ){
+            //获取文件路径和文件后缀名
+            $ext = pathinfo( $file['name'], PATHINFO_EXTENSION );
+            //调用方法将图片上传到七牛
+            $qiniu_res = $qiniu->upload( 'image', $ext, $file['tmp_name'] );
+            //判断结果并返回完整路径
+            if( $qiniu_res ){
+                //将结果转化成数组获取key
+                $qiniu_arr = json_decode( $qiniu_res , true );
+                echo json_encode(['code' => 0,'msg' => '上传成功','icon' => 1,'src'=>$this->url.$qiniu_arr['key']]);
+            }else{
+                echo json_encode(['code' => 1,'msg' => '上传失败','icon' => 2]);
+            }
+        }else{
+            echo json_encode(['code' => 1,'msg' => '上传错误','icon' => 2]);
+        }
+    }
 
     //职业展示
     public function work(){
@@ -87,12 +113,23 @@ class Cate extends Auth{
     }
     public function updateWorksDo(){
         $req=input('post.');
-        $res = Db::name('work')->where('wid='.$req['wid'])->update($req);
-        if( $res ){
-            echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
+        if( $req ){
+            $work_name = Db::name('work')->where( [ 'name'=>$req['name'], 'status'=>1 ] )->find();
+            if( $work_name ){
+                echo json_encode(['code' => 1,'msg' => '职业存在','icon' =>2]);
+            }else{
+                $res = Db::name('work')->where('wid='.$req['wid'])->update($req);
+                if( $res ){
+                    echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
+                }else{
+                    echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
+                }
+            }
+
         }else{
-            echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
+            echo (['code' => 1,'msg' => '参数错误','icon' =>2]);
         }
+
     }
 
 
@@ -177,12 +214,23 @@ class Cate extends Auth{
     }
     public function updateInterestsDo(){
         $req=input('post.');
-        $res = Db::name('interest')->where('nid='.$req['nid'])->update($req);
-        if( $res ){
-            echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
+        if( $req ){
+            $insterest_name = Db::name('work')->where( [ 'name'=>$req['name'], 'status'=>1 ] )->find();
+            if( $insterest_name ){
+                echo json_encode(['code' => 1,'msg' => '兴趣存在','icon' =>2]);
+            }else{
+                $res = Db::name('interest')->where('nid='.$req['nid'])->update($req);
+                if( $res ){
+                    echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
+                }else{
+                    echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
+                }
+            }
+
         }else{
-            echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
+            echo (['code' => 1,'msg' => '参数错误','icon' =>2]);
         }
+
     }
 
 
@@ -274,35 +322,21 @@ class Cate extends Auth{
     }
     public function updateGamesDo(){
         $req=input('post.');
-        $res = Db::name('game')->where('gid='.$req['gid'])->update($req);
-        if( $res ){
-            echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
-        }else{
-            echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
-        }
-    }
-    //游戏图片上传
-    public function UploadImage(){
-        $file = $_FILES['file'];
-        if( is_uploaded_file( $file['tmp_name'] ) ){
-            $path = './uploads/game';
-            if( !file_exists($path) ){
-                mkdir( $path,0777,true );
-                chmod( $path, 777 );
-            }
-            //新文件名  避免文件名相同覆盖
-            $uniname = md5( uniqid( microtime(true), true ) );
-            //获取上传文件的后缀名
-            $ext = pathinfo( $file['name'], PATHINFO_EXTENSION );
-            //拼接要上传的完整的路径名称
-            $destination = $path.'/'.$uniname.'.'.$ext;
-            if( move_uploaded_file( $file['tmp_name'], $destination ) ){
-                echo json_encode(['code' => 0,'msg' => '上传成功','icon' => 1,'src'=>$destination]);
+        if( $req ){
+            //判断名称是否存在
+            $game_name = Db::name('game')->where(['name'=>$req['name'],'stauts'=>1])->find();
+            if( $game_name ){
+                echo json_encode(['code'=>1,'msg'=>'游戏名称已存在','icon'=>2]);
             }else{
-                echo json_encode(['code' => 1,'msg' => '上传失败','icon' => 2]);
+                $res = Db::name('game')->where('gid='.$req['gid'])->update($req);
+                if( $res ){
+                    echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
+                }else{
+                    echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
+                }
             }
         }else{
-            echo json_encode(['code' => 1,'msg' => '上传失败','icon' => 2]);
+            echo (['code' => 1,'msg' => '参数错误','icon' =>2]);
         }
     }
 
@@ -388,11 +422,20 @@ class Cate extends Auth{
     }
     public function updateGametypesDo(){
         $req=input('post.');
-        $res = Db::name('game_type')->where('tid='.$req['tid'])->update($req);
-        if( $res ){
-            echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
+        if( $req ){
+            $type_name = Db::name('game_type')->where( ['name'=>$req['name'], 'status'=>1] )->find();
+            if( $type_name ){
+                echo json_encode(['code' => 1,'msg' => '分类已存在','icon' =>2]);
+            }else{
+                $res = Db::name('game_type')->where('tid='.$req['tid'])->update($req);
+                if( $res ){
+                    echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
+                }else{
+                    echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
+                }
+            }
         }else{
-            echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
+            echo json_encode(['code' => 1,'msg' => '参数错误','icon' =>2]);
         }
     }
 
@@ -505,11 +548,22 @@ class Cate extends Auth{
     }
     public function updateGamepricesDo(){
         $req=input('post.');
-        $res = Db::name('game_price')->where('pid='.$req['pid'])->update($req);
-        if( $res ){
-            echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
+        if( $req ){
+            //判断该游戏下的价格是否存在
+            $game_price = Db::name('game_price')->where( ['gid'=>$req['gid'], 'price'=>$req['price'], 'status'=>1] )->find();
+            if( $game_price ){
+                echo json_encode(['code' => 1,'msg' => '价格存在！','icon' =>2]);
+            }else{
+                $res = Db::name('game_price')->where('pid='.$req['pid'])->update($req);
+                if( $res ){
+                    echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
+                }else{
+                    echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
+                }
+            }
+
         }else{
-            echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
+            echo (['code' => 1,'msg' => '参数错误','icon' =>2]);
         }
     }
 }
