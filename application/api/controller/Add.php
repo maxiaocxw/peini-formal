@@ -10,13 +10,19 @@ namespace app\api\controller;
 
 use think\Db;
 
+/**
+ * 用户上传视频接口
+ * Class Add
+ * @package app\api\controller
+ */
 class Add extends Auth{
 
+    //添加视频
     public function addVideo(){
         //参数验证
         $this->checkParam();
         //token验证
-//        $this->checkToken();
+        $this->checkToken();
         //获取post传递过来的值
         $post = input('post.');
         //用户id

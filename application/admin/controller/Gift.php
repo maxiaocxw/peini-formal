@@ -116,6 +116,7 @@ class Gift extends Controller{
     public function update(){
         if(request()->isPost()){
             $data = input('post.');
+            var_dump($data);exit;
             $where['gid'] = $data['gid'];
             $result = Db::name('gift')->where($where)->update($data);
             if($result){

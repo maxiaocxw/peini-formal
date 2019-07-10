@@ -9,7 +9,10 @@ class Update {
 	}
 	public function updateOrderStatus($job,$data){
 		if($data['type']==1){
+			$order=Db::name('game_order')->field('pid,amount')->where('id='.$data['id'])->find();
+			$currency=Db::name('user')->where('uid='.$order['pid'])->value('currency');
 			if (Db::name('game_order')->where('id='.$data['id'])->update(array('status'=>3))) {
+				Db::name('user')->where('uid='.$order['pid'])->update(array('currency'=>$currency+$order['amount']));
 	            $job->delete();
 	        } else {
 	            $try_nums = $job->attempts();
