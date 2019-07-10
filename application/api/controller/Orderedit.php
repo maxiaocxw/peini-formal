@@ -7,7 +7,7 @@ class OrderEdit extends Auth{
 	public function _initialize(){
 		$this->checkParam();
 		$this->checkToken();
-		$this->uid = input('post.uid')?input('post.uid'):0;//普通用户id
+		$this->uid = input('post.uid')?input('post.uid'):0;//用户id
 		$this->id = input('post.id')?input('post.id'):0;//订单id
 		$this->checkParam('id');
 	}
@@ -16,9 +16,12 @@ class OrderEdit extends Auth{
 	public function putOrder(){
 		//判断当前是否有未完成订单
 		$this->isOver();
+		//判断是不是陪玩
+		$this->isPeiwan();
 		if(Db::name('game_order')->where('id='.$this->id)->update(array('status'=>2,'receivetime'=>time()))){
+			$num=Db::name('game_order')->where('id='.$this->id)->value('num');
 			//添加定时任务
-			$this->push_job('app\api\controller\Update@updateOrderStatus', ['id'=>$this->id,'type'=>1], $queue_name = null, $delay = 60);
+			$this->push_job('app\api\controller\Update@updateOrderStatus', ['id'=>$this->id,'type'=>1], $queue_name = null, $delay = $num*3600);
 			$this->II('200','接单成功');
 		}else{
 			$this->II('201','接单失败');
@@ -88,6 +91,14 @@ class OrderEdit extends Auth{
 		}else{
 			$this->II('201','取消失败');
 		}
+	}
+
+	public function isPeiwan(){
+		$type=Db::name('user')->where('uid='.$this->uid)->value('type');
+		if($type==1){
+			$this->II('201','用户不能操作接单');
+		}
+		return true;
 	}
 
 }
