@@ -12703,3 +12703,1807 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_order` [ RunTime:0.084636s ]
 [ sql ] [ SQL ] SELECT sum(amount) as amount FROM `pn_game_order` WHERE  (  pid=4 and status=3 or status=4 ) LIMIT 1 [ RunTime:0.084075s ]
 >>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
+---------------------------------------------------------------
+[ 2019-07-11T16:25:09+08:00 ] 127.0.0.1 POST /api/pay/index
+[ info ] www.csshayudj.com/api/pay/index [运行时间：0.037650s][吞吐率：26.56req/s] [内存消耗：1,268.36kb] [文件加载：38]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '2e0e55c8-a4c7-4c8d-95fe-4db7cc103963',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Pay->index[ D:\pei\application\api\controller\Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-11T16:25:11+08:00 ] 127.0.0.1 POST /api/pay/index
+[ info ] www.csshayudj.com/api/pay/index [运行时间：0.029641s][吞吐率：33.74req/s] [内存消耗：1,268.36kb] [文件加载：38]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '0274cdcf-0b32-4571-813c-8b03cfd40f31',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Pay->index[ D:\pei\application\api\controller\Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-11T16:26:26+08:00 ] 127.0.0.1 POST /api/pay/index
+[ info ] www.csshayudj.com/api/pay/index [运行时间：0.021715s][吞吐率：46.05req/s] [内存消耗：1,268.26kb] [文件加载：38]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '13893c8b-05a1-4719-bd92-214355bd0dd1',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Pay->index[ D:\pei\application\api\controller\Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-11T17:13:52+08:00 ] 127.0.0.1 POST /api/pay/add
+[ info ] www.csshayudj.com/api/pay/add [运行时间：0.221692s][吞吐率：4.51req/s] [内存消耗：2,001.83kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '478',
+  'content-type' => 'multipart/form-data; boundary=--------------------------537795901066941636517650',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '69a404c9-611d-479e-bcba-a61aa93106d7',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '2',
+  'money' => '1000',
+  'pay_type' => '1',
+  'uid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pay->add[ D:\pei\application\api\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.060324s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_allow_recharge` [ RunTime:0.027067s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'status = 1 ) LIMIT 1' at line 1[D:\pei\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2019-07-11T17:14:58+08:00 ] 127.0.0.1 POST /api/pay/add
+[ info ] www.csshayudj.com/api/pay/add [运行时间：0.276929s][吞吐率：3.61req/s] [内存消耗：1,886.57kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '478',
+  'content-type' => 'multipart/form-data; boundary=--------------------------897701440010827526476139',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '7aced42a-87b2-4a56-b8c5-180ac9004249',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '2',
+  'money' => '1000',
+  'pay_type' => '1',
+  'uid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pay->add[ D:\pei\application\api\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.146153s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_allow_recharge` [ RunTime:0.025765s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_allow_recharge` WHERE  `aid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.069744s ]
+---------------------------------------------------------------
+[ 2019-07-11T17:15:42+08:00 ] 127.0.0.1 POST /api/pay/add
+[ info ] www.csshayudj.com/api/pay/add [运行时间：0.371755s][吞吐率：2.69req/s] [内存消耗：1,897.20kb] [文件加载：46]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '476',
+  'content-type' => 'multipart/form-data; boundary=--------------------------441770030684026050772148',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '4ae7cf87-d593-42a9-a279-122eb384b153',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '2',
+  'money' => '50',
+  'pay_type' => '1',
+  'uid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pay->add[ D:\pei\application\api\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.101558s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_allow_recharge` [ RunTime:0.025625s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_allow_recharge` WHERE  `aid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.077377s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_recharge_order` [ RunTime:0.024407s ]
+[ sql ] [ SQL ] INSERT INTO `pn_recharge_order` (`aid` , `tranno` , `uid` , `money` , `paystatus` , `status` , `type` , `addtime`) VALUES (2 , '2019071110199535' , 1 , 50 , 0 , 0 , 1 , 1562836542) [ RunTime:0.082118s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_recharge_order` WHERE  (  tranno=2019071110199535 ) LIMIT 1 [ RunTime:0.024668s ]
+---------------------------------------------------------------
+[ 2019-07-11T17:26:03+08:00 ] 127.0.0.1 GET /admin
+[ info ] www.csshayudj.com/admin [运行时间：3.865203s][吞吐率：0.26req/s] [内存消耗：2,193.49kb] [文件加载：52]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\pei\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/admin\view\index\index.html [ array (
+  0 => 'menu_role',
+  1 => 'menu_list_one',
+  2 => 'menu_list_two',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:3.444305s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_role` [ RunTime:0.026209s ]
+[ sql ] [ SQL ] SELECT `role_permission` FROM `pn_role` WHERE  (  id = 1 ) LIMIT 1 [ RunTime:0.090559s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_menu` [ RunTime:0.023638s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_menu` WHERE  (  level = 1 and statu = 1 ) [ RunTime:0.101973s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_menu` WHERE  (  level = 2 and statu = 1 ) [ RunTime:0.024570s ]
+---------------------------------------------------------------
+[ 2019-07-11T17:26:03+08:00 ] 127.0.0.1 GET /admin/index/welcome
+[ info ] www.csshayudj.com/admin/index/welcome [运行时间：0.118813s][吞吐率：8.42req/s] [内存消耗：1,437.88kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\pei\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/admin\view\index\welcome.html [ array (
+  0 => 'menu_role',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-11T17:26:05+08:00 ] 127.0.0.1 GET /admin/user/index
+[ info ] www.csshayudj.com/admin/user/index [运行时间：1.493129s][吞吐率：0.67req/s] [内存消耗：2,184.61kb] [文件加载：57]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\User->index[ D:\pei\application\admin\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/admin\view\user\index.html [ array (
+  0 => 'menu_role',
+  1 => 'data',
+  2 => 'total',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.154584s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.028145s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pn_user` WHERE  (   status!=-1 ) LIMIT 1 [ RunTime:0.063913s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_user` WHERE  (   status!=-1 ) LIMIT 0,30 [ RunTime:0.196219s ]
+[ error ] [8]未定义数组索引: email[D:\pei\runtime\temp\accf38159dbbd6a38c1cf9aa2d7c7445.php:63]
+---------------------------------------------------------------
+[ 2019-07-11T17:26:07+08:00 ] 127.0.0.1 GET /admin/approve/index
+[ info ] www.csshayudj.com/admin/approve/index [运行时间：1.862377s][吞吐率：0.54req/s] [内存消耗：2,149.98kb] [文件加载：52]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'approve',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Approve->index[ D:\pei\application\admin\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/admin\view\approve\index.html [ array (
+  0 => 'data',
+  1 => 'total',
+  2 => 'listInfo',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.044910s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.046497s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pn_approve` LIMIT 1 [ RunTime:0.029497s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_approve` ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.058241s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_playinfo` [ RunTime:0.031662s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_playinfo` WHERE  (  uid=1 ) [ RunTime:0.063295s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.694300s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_game` WHERE  (  gid=1 ) LIMIT 1 [ RunTime:0.107640s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_game` WHERE  (  gid=2 ) LIMIT 1 [ RunTime:0.061753s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_game` WHERE  (  gid=3 ) LIMIT 1 [ RunTime:0.220983s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.032120s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  `lid` IN (1,2,3) [ RunTime:0.046001s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_playinfo` WHERE  (  uid=1 ) [ RunTime:0.024580s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_game` WHERE  (  gid=1 ) LIMIT 1 [ RunTime:0.048950s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_game` WHERE  (  gid=2 ) LIMIT 1 [ RunTime:0.026293s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_game` WHERE  (  gid=3 ) LIMIT 1 [ RunTime:0.025494s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  `lid` IN (1,2,3) [ RunTime:0.049495s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_playinfo` WHERE  (  uid=4 ) [ RunTime:0.025383s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_game` WHERE  (  gid=1 ) LIMIT 1 [ RunTime:0.055208s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_game` WHERE  (  gid=2 ) LIMIT 1 [ RunTime:0.024821s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_game` WHERE  (  gid=3 ) LIMIT 1 [ RunTime:0.062631s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  `lid` IN (1,2,3) [ RunTime:0.024461s ]
+---------------------------------------------------------------
+[ 2019-07-11T18:44:29+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.556838s][吞吐率：1.80req/s] [内存消耗：1,136.00kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-11T19:17:42+08:00 ] 127.0.0.1 GET /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.114794s][吞吐率：8.71req/s] [内存消耗：1,361.50kb] [文件加载：44]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------476200693325277840524176',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'a7246d65-d9d9-47ce-8af6-d485811d4cc9',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: gid[D:\pei\application\api\controller\Game.php:18]
+---------------------------------------------------------------
+[ 2019-07-11T19:18:01+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.037223s][吞吐率：26.87req/s] [内存消耗：1,267.45kb] [文件加载：38]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------584887648846964779918784',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '7d062354-e2d1-4a69-8a8e-2801d100dec0',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-11T19:18:06+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.033394s][吞吐率：29.95req/s] [内存消耗：1,857.88kb] [文件加载：46]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------707226861721732965154502',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'be75483f-1eab-4852-9977-35edbae93702',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-11T19:18:18+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.185281s][吞吐率：5.40req/s] [内存消耗：1,975.52kb] [文件加载：50]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------558647356640533130979277',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '10bf4fd7-6816-4bb9-9991-009f0217c0ad',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.055044s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.085886s ]
+[ error ] [0]查询表达式错误:gameid[D:\pei\thinkphp\library\think\db\Builder.php:343]
+---------------------------------------------------------------
+[ 2019-07-11T19:20:06+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.168229s][吞吐率：5.94req/s] [内存消耗：1,975.84kb] [文件加载：50]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------332137306874455204191061',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '8504b3c8-6ce8-4586-a42d-132f2c77912d',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.039255s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.083900s ]
+[ error ] [0]查询表达式错误:gameid[D:\pei\thinkphp\library\think\db\Builder.php:343]
+---------------------------------------------------------------
+[ 2019-07-11T19:20:50+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.517506s][吞吐率：1.93req/s] [内存消耗：1,975.88kb] [文件加载：50]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------913320598402902629668059',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '6b7c9942-92ee-4f61-83df-d31a9b4e7ceb',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.208986s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.248775s ]
+[ error ] [0]查询表达式错误:gameid[D:\pei\thinkphp\library\think\db\Builder.php:343]
+---------------------------------------------------------------
+[ 2019-07-11T19:21:01+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.191305s][吞吐率：5.23req/s] [内存消耗：1,975.88kb] [文件加载：50]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------574830335274411123444794',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '1804db60-60f0-454b-919c-06ae6d6a7920',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.060131s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.085817s ]
+[ error ] [0]查询表达式错误:gameid[D:\pei\thinkphp\library\think\db\Builder.php:343]
+---------------------------------------------------------------
+[ 2019-07-11T19:22:37+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.195630s][吞吐率：5.11req/s] [内存消耗：1,975.93kb] [文件加载：50]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------707195021216958655539045',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '3edbc368-1052-408f-a5e1-eb49d6441705',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.086215s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.054049s ]
+[ error ] [0]查询表达式错误:gameid[D:\pei\thinkphp\library\think\db\Builder.php:343]
+---------------------------------------------------------------
+[ 2019-07-11T19:22:50+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.159837s][吞吐率：6.26req/s] [内存消耗：1,975.61kb] [文件加载：50]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------883524862585586797231310',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'f51e2193-7e7d-4e9d-a5f2-078bbd62e217',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.095089s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.025482s ]
+[ error ] [0]查询表达式错误:gameid[D:\pei\thinkphp\library\think\db\Builder.php:343]
+---------------------------------------------------------------
+[ 2019-07-11T19:23:07+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.280074s][吞吐率：3.57req/s] [内存消耗：1,941.17kb] [文件加载：52]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------530084436971636536744897',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '88c7ff83-765d-4a62-814e-5bf4ddc80afe',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.201248s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'peini.approve' doesn't exist[D:\pei\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2019-07-11T19:24:06+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.224784s][吞吐率：4.45req/s] [内存消耗：1,975.62kb] [文件加载：50]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------834120685714942581361046',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'd6c8920c-d6ff-4264-8059-f7392f8f9b56',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.100279s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.083533s ]
+[ error ] [0]查询表达式错误:gameid[D:\pei\thinkphp\library\think\db\Builder.php:343]
+---------------------------------------------------------------
+[ 2019-07-11T19:26:41+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.239453s][吞吐率：4.18req/s] [内存消耗：1,975.45kb] [文件加载：50]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------497210247864946921678193',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '47ee28d1-4cba-4c88-8853-2e565fcc6425',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.107482s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.081978s ]
+[ error ] [0]查询表达式错误:gameid[D:\pei\thinkphp\library\think\db\Builder.php:343]
+---------------------------------------------------------------
+[ 2019-07-11T19:27:38+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.440964s][吞吐率：2.27req/s] [内存消耗：1,884.63kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------184004046089497242447649',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '431c858f-21e6-4d9c-929d-7cb61d255c8f',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.252996s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.151953s ]
+---------------------------------------------------------------
+[ 2019-07-11T19:27:52+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.400864s][吞吐率：2.49req/s] [内存消耗：1,942.51kb] [文件加载：47]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------066265571837295769807406',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'e43b9613-4f51-4441-8ada-34f458a0fccf',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035143s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.243746s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_approve` [ RunTime:0.085581s ]
+---------------------------------------------------------------
+[ 2019-07-11T19:28:49+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.152069s][吞吐率：6.58req/s] [内存消耗：1,975.30kb] [文件加载：50]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------676611295641438589077121',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'e120d7d5-2295-4527-8dec-0f25f6773417',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036137s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.064063s ]
+[ error ] [0]查询表达式错误:gameid[D:\pei\thinkphp\library\think\db\Builder.php:343]
+---------------------------------------------------------------
+[ 2019-07-11T19:31:05+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.191340s][吞吐率：5.23req/s] [内存消耗：1,945.39kb] [文件加载：47]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------148567254336041188101056',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '5fd4fa9a-ef9e-41cb-8320-9e923871e3fc',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036258s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.084364s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.028057s ]
+---------------------------------------------------------------
+[ 2019-07-11T19:31:30+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.427009s][吞吐率：2.34req/s] [内存消耗：1,939.43kb] [文件加载：47]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------995010681752825581421842',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'c2856ec7-3d91-47d6-a8e3-dd4161bfc821',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.103822s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.267700s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.026107s ]
+---------------------------------------------------------------
+[ 2019-07-11T19:40:08+08:00 ] 127.0.0.1 POST /api/home/recommend
+[ info ] www.csshayudj.com/api/home/recommend [运行时间：0.445447s][吞吐率：2.24req/s] [内存消耗：1,897.57kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'recommend',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '26664677-3192-410f-8967-6c8f218aae8e',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->recommend[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.039125s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.206489s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 1  AND `isrecommend` = 2 ORDER BY `order` ASC LIMIT 0,10 [ RunTime:0.025366s ]
+---------------------------------------------------------------
+[ 2019-07-11T19:44:57+08:00 ] 127.0.0.1 POST /api/home/recommend
+[ info ] www.csshayudj.com/api/home/recommend [运行时间：0.801122s][吞吐率：1.25req/s] [内存消耗：1,921.52kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'recommend',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '1350600f-39e8-4da9-b2f9-15c77d774389',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'content-type' => 'application/x-www-form-urlencoded',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sign' => 'ba83f699e146e62be2993457cc144280',
+)
+[ info ] [ RUN ] app\api\controller\Home->recommend[ D:\pei\application\api\controller\Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036850s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.211164s ]
+[ sql ] [ SQL ] SELECT `uid`,`videourl`,`img` FROM `pn_video` WHERE  `status` = 2  AND `isrecommend` = 2 ORDER BY `order` ASC LIMIT 0,10 [ RunTime:0.024937s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.245631s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.023192s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label_user` [ RunTime:0.026033s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_label_user` `labelUser` INNER JOIN `pn_label` `la` ON `labelUser`.`lid`=`la`.`lid` WHERE  `labelUser`.`uid` = 1  AND `la`.`status` = 1 [ RunTime:0.168855s ]
+---------------------------------------------------------------
+[ 2019-07-11T19:53:51+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.138942s][吞吐率：7.20req/s] [内存消耗：1,137.78kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------285372676022187283859950',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '9f2ab8cb-2ebc-4654-aab8-7951ee9dadf1',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected 'Db' (T_STRING)[D:\pei\application\api\controller\Game.php:30]
+---------------------------------------------------------------
+[ 2019-07-11T19:54:08+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：1.408331s][吞吐率：0.71req/s] [内存消耗：1,991.88kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------534066284797078155966441',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '7acdbde6-473d-4d59-99c2-717415c4039b',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.180339s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.022833s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.163795s ]
+[ error ] [2]Illegal offset type[D:\pei\thinkphp\library\think\db\Query.php:1289]
+---------------------------------------------------------------
+[ 2019-07-11T19:54:43+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.710229s][吞吐率：1.41req/s] [内存消耗：1,908.45kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------942040943661520891041652',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '1e46c966-4d24-4aaf-8c04-06816a1f7b6d',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.153441s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.022359s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.169732s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.082605s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 4  AND `status` = 2  AND `type` = 2 LIMIT 1 [ RunTime:0.056305s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.038901s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` IS NULL LIMIT 1 [ RunTime:0.067989s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 2  AND `type` = 2 LIMIT 1 [ RunTime:0.022532s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` IS NULL LIMIT 1 [ RunTime:0.062189s ]
+---------------------------------------------------------------
+[ 2019-07-11T19:55:07+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.436758s][吞吐率：2.29req/s] [内存消耗：1,906.34kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------211180646268457440649708',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '01feb429-b3b2-4e22-9b7e-56d2eafbb722',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098035s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.024137s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.142069s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.022497s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 4  AND `status` = 2  AND `type` = 2 LIMIT 1 [ RunTime:0.103671s ]
+---------------------------------------------------------------
+[ 2019-07-11T19:56:47+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：4.136259s][吞吐率：0.24req/s] [内存消耗：1,906.07kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------178969327824169169519409',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '1f240db7-e617-4023-9230-00a0decfc721',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.441228s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.556613s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.711941s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.392055s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 2  AND `type` = 2 LIMIT 1 [ RunTime:0.990534s ]
+---------------------------------------------------------------
+[ 2019-07-11T20:12:22+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.623133s][吞吐率：1.60req/s] [内存消耗：1,906.50kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------014823258879830656416549',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '8895cfaa-a381-41e1-92a9-a7133ec4347a',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.116207s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.026744s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.205825s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.026045s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.202601s ]
+---------------------------------------------------------------
+[ 2019-07-11T20:12:30+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.442062s][吞吐率：2.26req/s] [内存消耗：1,907.16kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------973618173003561964556585',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '777ecad3-b4fe-42e4-b962-759dfc698699',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.079859s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.081582s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.026530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.025751s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.088211s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.024845s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` = 1 LIMIT 1 [ RunTime:0.086528s ]
+---------------------------------------------------------------
+[ 2019-07-11T20:15:55+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.404472s][吞吐率：2.47req/s] [内存消耗：2,002.48kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------335549624439896939466668',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '052d150c-8043-47f1-a5ba-c58789bffa94',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.041756s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.071961s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.067011s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.025796s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.059588s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.025213s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` = 1 LIMIT 1 [ RunTime:0.061389s ]
+[ error ] [8]未定义数组下标: 1[D:\pei\application\api\controller\Game.php:60]
+---------------------------------------------------------------
+[ 2019-07-11T20:16:23+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.519338s][吞吐率：1.93req/s] [内存消耗：1,911.50kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------980545441507271645979597',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '6a53ec79-75ca-4ce6-95df-480c8464f5b2',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098316s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.113902s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.023047s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.086138s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.023399s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.106435s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` = 1 LIMIT 1 [ RunTime:0.027038s ]
+---------------------------------------------------------------
+[ 2019-07-11T20:19:03+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.683871s][吞吐率：1.46req/s] [内存消耗：1,910.35kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------811760768595702047611992',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'd6f4eaf0-d080-4665-ab89-c8bb8fe7232e',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033388s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.138498s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.127307s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.085508s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.078376s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.026835s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` = 1 LIMIT 1 [ RunTime:0.065007s ]
+---------------------------------------------------------------
+[ 2019-07-11T20:19:33+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.517350s][吞吐率：1.93req/s] [内存消耗：1,910.49kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------926845015951747682395855',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '40ebe026-59f6-4f76-a81a-237f46f5a09e',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.100880s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.090091s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.027766s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.088865s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.023986s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.023973s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` = 1 LIMIT 1 [ RunTime:0.093603s ]
+---------------------------------------------------------------
+[ 2019-07-11T20:19:44+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.574702s][吞吐率：1.74req/s] [内存消耗：2,002.16kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------380285490361375370433874',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '93c8e2d3-e1e2-4149-9dc3-fd7643f93625',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.072159s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.103060s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.132366s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.043426s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.079516s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.071923s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` = 1 LIMIT 1 [ RunTime:0.022774s ]
+[ error ] [8]Array to string conversion[D:\pei\application\api\controller\Game.php:39]
+---------------------------------------------------------------
+[ 2019-07-11T20:20:03+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.319911s][吞吐率：3.13req/s] [内存消耗：1,910.49kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------200393087602910353031878',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'ffd79e2d-2eb7-400e-a9fc-7a2d03371257',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.039511s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.062520s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.022089s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.025531s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.051572s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.024612s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` = 1 LIMIT 1 [ RunTime:0.052037s ]
+---------------------------------------------------------------
+[ 2019-07-11T20:20:09+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.511342s][吞吐率：1.96req/s] [内存消耗：1,910.49kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------252404335610795532710220',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '251ee1ce-6a91-4bc4-a7ed-937ebb53e0da',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.104867s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.025897s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.117600s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.087258s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.025242s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.092141s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` = 1 LIMIT 1 [ RunTime:0.026443s ]
+---------------------------------------------------------------
+[ 2019-07-11T20:20:17+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.532201s][吞吐率：1.88req/s] [内存消耗：2,002.16kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------197049731491389289169091',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '31e393ac-dd03-42a1-b36b-f5b6b6c27d1a',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.050068s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.099214s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.029581s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.098290s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.024689s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.102916s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` = 1 LIMIT 1 [ RunTime:0.090937s ]
+[ error ] [8]Array to string conversion[D:\pei\application\api\controller\Game.php:39]
+---------------------------------------------------------------
+[ 2019-07-11T20:20:42+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.972438s][吞吐率：1.03req/s] [内存消耗：1,910.45kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------117843570074054210581100',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '5b565b39-ef9e-4d7f-a0f8-6eb5ad0924e6',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036788s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.147258s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.141170s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.150566s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.150076s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.148800s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` = 1 LIMIT 1 [ RunTime:0.148632s ]
+---------------------------------------------------------------
+[ 2019-07-11T20:21:09+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.615375s][吞吐率：1.63req/s] [内存消耗：1,910.70kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------908685896543062559549181',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '5862b7a9-0dd1-4cf7-ad46-2d1d744737a8',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.097146s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.025157s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.105127s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.027631s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.205026s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.024127s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` = 1 LIMIT 1 [ RunTime:0.089752s ]
+---------------------------------------------------------------
+[ 2019-07-11T20:24:59+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.456860s][吞吐率：2.19req/s] [内存消耗：1,911.56kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------949978196427829559921342',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '22347fe0-e985-48b7-9663-121a1a570ae9',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.066772s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.086271s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.025995s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.022867s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.089775s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.022365s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` = 1 LIMIT 1 [ RunTime:0.088559s ]
+---------------------------------------------------------------
+[ 2019-07-11T20:25:26+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.324824s][吞吐率：3.08req/s] [内存消耗：1,911.56kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------907087453427902200131608',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '29e63c0d-1d6b-4df8-9351-41882548e24b',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.041866s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.059778s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.023360s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.022865s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.051259s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.025174s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` = 1 LIMIT 1 [ RunTime:0.053955s ]
+---------------------------------------------------------------
+[ 2019-07-11T20:25:44+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.464027s][吞吐率：2.16req/s] [内存消耗：1,911.34kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------457344500567149279974259',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '04557f87-1020-49c5-898e-6bbcf1b5cf8d',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098005s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.022815s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.087572s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.023243s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.082378s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.027883s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` = 1 LIMIT 1 [ RunTime:0.093793s ]
+---------------------------------------------------------------
+[ 2019-07-11T20:25:50+08:00 ] 127.0.0.1 POST /api/game/index
+[ info ] www.csshayudj.com/api/game/index [运行时间：0.500487s][吞吐率：2.00req/s] [内存消耗：1,911.56kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'game',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------940604996647174108903333',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '62443a2d-0665-4960-8b0f-1f360b49a0cc',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.0',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Game->index[ D:\pei\application\api\controller\Game.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.063861s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.035694s ]
+[ sql ] [ SQL ] SELECT `id`,`uid` FROM `pn_approve` WHERE  `gameid` LIKE '%1%'  AND `status` = 2 [ RunTime:0.053616s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.022490s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`headimg`,`sex` FROM `pn_user` WHERE  `uid` = 1  AND `status` = 1  AND `type` = 2 LIMIT 1 [ RunTime:0.103067s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.092521s ]
+[ sql ] [ SQL ] SELECT `img` FROM `pn_video` WHERE  `status` = 2  AND `uid` = 1 LIMIT 1 [ RunTime:0.082496s ]

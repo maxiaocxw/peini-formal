@@ -17,7 +17,13 @@ class Pay extends Auth{
         $this->II('200','请求成功',$money);
     }
 
-    public function pay(){
+    private function pay($tran_no){
+
+        //根绝订单号查询充值钱数和支付方式
+        $info = Db::name('recharge_order')->where('tranno='.$tran_no)->find();
+        if(empty($info)){
+            $this->II('201','没有查询到订单信息',[]);
+        }
         //订单号
 
         //充值钱数
@@ -26,15 +32,42 @@ class Pay extends Auth{
 
     }
 
+    //添加订单
     public function add(){
         //添加数据到订单列表中
         $post = input('post.');
+        //根据传递过来的金额id做一下2次校验
+        $moneyInfo = Db::name('allow_recharge')->where([
+            'aid'   => $post['aid'],
+            'status' => 1
+        ])->find();
+        if($moneyInfo['money'] != $post['money']){
+            $this->II('201','充值金额错误',[]);
+        }
         //订单号
-
+        $tran_no = granTranNo();
         //支付类型
-
+        $pay_type = $post['pay_type'];
         //充值金额
-
+        $money = $post['money'];
         //用户id
+        $uid = $post['uid'];
+
+        //将数据添加到数据库中
+        $data = [
+            'aid' => $post['aid'],
+            'tranno' => $tran_no,
+            'uid' => $uid,
+            'money' => $money,
+            'paystatus' => 0,
+            'status'    => 0,
+            'type'      => $pay_type,
+            'addtime'   => time()
+        ];
+        $result = Db::name('recharge_order')->insert($data);
+        if($result){
+            $this->pay($tran_no);
+        }
+        $this->II('201','订单添失败',[]);
     }
 }

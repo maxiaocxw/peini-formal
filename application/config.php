@@ -270,5 +270,8 @@ return [
         'charset' => 'utf-8',
         //地址
         'gatewayUrl ' => 'https://openapi.alipay.com/gateway.do',
+        //订单最晚支付时长
+        'timeout_express' => '30m',
+        //
     ],
 ];

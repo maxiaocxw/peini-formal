@@ -371,3 +371,33 @@ function _array_column($input, $columnKey, $indexKey = null)
         return array_column($input, $columnKey, $indexKey);
     }
 }
+
+/**
+ * 生成订单号
+ * @return string
+ */
+function granTranNo(){
+    $str = date('Ymd').substr(implode(NULL, array_map('ord', str_split(substr(uniqid(), 7, 13), 1))), 0, 8);
+    return $str;
+}
+
+/**
+ * 计算年龄
+ * @param $birthday
+ * @return bool|false|int
+ */
+function birthday($birthday)
+{
+    $age = strtotime($birthday);
+    if ($age === false) {
+        return false;
+    }
+    list($y1, $m1, $d1) = explode("-", date("Y-m-d", $age));
+    $now = strtotime("now");
+    list($y2, $m2, $d2) = explode("-", date("Y-m-d", $now));
+    $age = $y2 - $y1;
+    if ((int)($m2 . $d2) < (int)($m1 . $d1))
+        $age -= 1;
+
+    return $age;
+}
