@@ -50,15 +50,25 @@ class OrderEdit extends Auth{
 
 	//评论
 	public function putComment(){
-		$this->checkParam('score,tagids');
+		$pid = input('post.pid')?input('post.pid'):0;//陪玩id
+		$gid = input('post.gid')?input('post.gid'):0;//游戏id
+		$isanonymity = input('post.isanonymity')?input('post.isanonymity'):1;//是否匿名  1否 2是
+		$this->checkParam('score,tagids,pid,gid,isanonymity');
 		$score=input('post.score');
 		$tagids=input('post.tagids');
+		//是否评论
+		if(Db::name('comment')->field('cid')->where('orderid='.$this->id)->find()){
+			$this->II('201','已经评论');
+		}
 		if(Db::name('comment')->insert(array(
 			'uid'		=>		$this->uid,
 			'orderid'	=>		$this->id,
 			'score'		=>		$score,
 			'tagids'	=>		$tagids,
-			'addtime'	=>		time()
+			'addtime'	=>		time(),
+			'pid'		=>		$pid,
+			'gid'		=>		$gid,
+			'isanonymity'=>		$isanonymity
 		))){
 			Db::name('game_order')->where('id='.$this->id)->update(array('status'=>4));
 			$this->II('200','评论成功');
