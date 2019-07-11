@@ -13,10 +13,9 @@ class Game extends Auth
 
     public function index()
     {
+        $this->checkParam();
         //获取游戏id
         $gameId = input('post.');
-
-
         $where['gameid'] = ['like', '%' . $gameId['gid'] . '%'];
         $where['status'] = ['=', '2'];
         //查询用户认证表中的游戏ids 获取到用户id
