@@ -1,11 +1,18 @@
 ---------------------------------------------------------------
+<<<<<<< HEAD
 [ 2019-07-11T08:55:24+08:00 ] 127.0.0.1 GET /admin/approve/index
 [ info ] www.csshayudj.com/admin/approve/index [运行时间：3.146765s][吞吐率：0.32req/s] [内存消耗：2,142.62kb] [文件加载：52]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+[ 2019-07-11T11:02:08+08:00 ] 127.0.0.1 POST /api/Personalcenter
+[ info ] www.peini.com/api/Personalcenter [运行时间：0.455577s][吞吐率：2.20req/s] [内存消耗：3,366.77kb] [文件加载：52]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'admin',
     1 => 'approve',
     2 => 'index',
@@ -61,11 +68,46 @@
 [ 2019-07-11T11:46:11+08:00 ] 127.0.0.1 POST /api/pay/index
 [ info ] www.csshayudj.com/api/pay/index [运行时间：1.088667s][吞吐率：0.92req/s] [内存消耗：1,878.48kb] [文件加载：46]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+    0 => 'api',
+    1 => 'Personalcenter',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'c708997c-e327-4245-9768-9db3f6919994',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------949321171558383091974291',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ RUN ] app\api\controller\Personalcenter->index[ E:\Project\peini-formal\application\api\controller\Personalcenter.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037788s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.027412s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`level`,`currency` FROM `pn_user` WHERE  (  uid=3 ) LIMIT 1 [ RunTime:0.025853s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_send_log` [ RunTime:0.021376s ]
+[ sql ] [ SQL ] SELECT count(amount) FROM `pn_send_log` WHERE  (  acceptuid=3 ) LIMIT 1 [ RunTime:0.032137s ]
+[ error ] [8]Array to string conversion[E:\Project\peini-formal\application\api\controller\Personalcenter.php:14]
+---------------------------------------------------------------
+[ 2019-07-11T11:02:24+08:00 ] 127.0.0.1 POST /api/Personalcenter
+[ info ] www.peini.com/api/Personalcenter [运行时间：0.183049s][吞吐率：5.46req/s] [内存消耗：3,314.38kb] [文件加载：48]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'api',
+<<<<<<< HEAD
     1 => 'pay',
     2 => 'index',
   ),
@@ -189,16 +231,54 @@
 [ 2019-07-11T15:08:21+08:00 ] 127.0.0.1 GET /admin
 [ info ] www.csshayudj.com/admin [运行时间：0.598274s][吞吐率：1.67req/s] [内存消耗：2,002.23kb] [文件加载：50]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'admin',
-    1 => NULL,
+=======
+    1 => 'Personalcenter',
     2 => NULL,
   ),
 )
 [ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => '49c1dcdf-68e3-4ebd-a3aa-5ce098e42ba7',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------549911238598272066743811',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ RUN ] app\api\controller\Personalcenter->index[ E:\Project\peini-formal\application\api\controller\Personalcenter.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036951s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.025796s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`level`,`currency` FROM `pn_user` WHERE  (  uid=3 ) LIMIT 1 [ RunTime:0.025408s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_send_log` [ RunTime:0.022874s ]
+[ sql ] [ SQL ] SELECT count(amount) FROM `pn_send_log` WHERE  (  acceptuid=3 ) LIMIT 1 [ RunTime:0.021649s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:02:41+08:00 ] 127.0.0.1 POST /api/Personalcenter
+[ info ] www.peini.com/api/Personalcenter [运行时间：0.235674s][吞吐率：4.24req/s] [内存消耗：3,314.52kb] [文件加载：48]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+<<<<<<< HEAD
+    0 => 'admin',
+    1 => NULL,
+=======
+    0 => 'api',
+    1 => 'Personalcenter',
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+<<<<<<< HEAD
   'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
@@ -238,10 +318,38 @@
 [ 2019-07-11T15:08:21+08:00 ] 127.0.0.1 GET /admin/index/welcome
 [ info ] www.csshayudj.com/admin/index/welcome [运行时间：0.086867s][吞吐率：11.51req/s] [内存消耗：1,322.07kb] [文件加载：41]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => '8e6fa0a0-76bf-4350-9555-49c5ef53034e',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------661632356947968637738326',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ RUN ] app\api\controller\Personalcenter->index[ E:\Project\peini-formal\application\api\controller\Personalcenter.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085244s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.024837s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`level`,`currency` FROM `pn_user` WHERE  (  uid=3 ) LIMIT 1 [ RunTime:0.026807s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_send_log` [ RunTime:0.022406s ]
+[ sql ] [ SQL ] SELECT count(amount) as amount FROM `pn_send_log` WHERE  (  acceptuid=3 ) LIMIT 1 [ RunTime:0.021195s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:02:45+08:00 ] 127.0.0.1 POST /api/Personalcenter
+[ info ] www.peini.com/api/Personalcenter [运行时间：0.192364s][吞吐率：5.20req/s] [内存消耗：3,314.52kb] [文件加载：48]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'admin',
     1 => 'index',
     2 => 'welcome',
@@ -327,10 +435,44 @@
 [ 2019-07-11T15:08:24+08:00 ] 127.0.0.1 GET /admin/approve/index
 [ info ] www.csshayudj.com/admin/approve/index [运行时间：1.510795s][吞吐率：0.66req/s] [内存消耗：2,282.43kb] [文件加载：54]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+    0 => 'api',
+    1 => 'Personalcenter',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'c9bc9701-e03e-4b63-af21-51dfed01795b',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------356369202445743660429600',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '4',
+)
+[ info ] [ RUN ] app\api\controller\Personalcenter->index[ E:\Project\peini-formal\application\api\controller\Personalcenter.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.039285s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.026214s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`level`,`currency` FROM `pn_user` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.025903s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_send_log` [ RunTime:0.025095s ]
+[ sql ] [ SQL ] SELECT count(amount) as amount FROM `pn_send_log` WHERE  (  acceptuid=4 ) LIMIT 1 [ RunTime:0.025694s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:05:35+08:00 ] 127.0.0.1 POST /api/Personalcenter
+[ info ] www.peini.com/api/Personalcenter [运行时间：0.183210s][吞吐率：5.46req/s] [内存消耗：3,314.43kb] [文件加载：48]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'admin',
     1 => 'approve',
     2 => 'index',
@@ -413,16 +555,55 @@
 [ 2019-07-11T15:09:12+08:00 ] 127.0.0.1 GET /admin
 [ info ] www.csshayudj.com/admin [运行时间：0.623701s][吞吐率：1.60req/s] [内存消耗：2,002.23kb] [文件加载：50]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'admin',
-    1 => NULL,
+=======
+    0 => 'api',
+    1 => 'Personalcenter',
     2 => NULL,
   ),
 )
 [ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => '77876283-311a-476b-a548-0056b1787dd5',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------891008992387851330491271',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '4',
+)
+[ info ] [ RUN ] app\api\controller\Personalcenter->index[ E:\Project\peini-formal\application\api\controller\Personalcenter.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036577s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.023876s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`level`,`currency` FROM `pn_user` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.022606s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_send_log` [ RunTime:0.021300s ]
+[ sql ] [ SQL ] SELECT sum(amount) as amount FROM `pn_send_log` WHERE  (  acceptuid=4 ) LIMIT 1 [ RunTime:0.020992s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:05:59+08:00 ] 127.0.0.1 POST /api/Personalcenter
+[ info ] www.peini.com/api/Personalcenter [运行时间：0.202560s][吞吐率：4.94req/s] [内存消耗：3,314.59kb] [文件加载：48]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+<<<<<<< HEAD
+    0 => 'admin',
+    1 => NULL,
+=======
+    0 => 'api',
+    1 => 'Personalcenter',
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+<<<<<<< HEAD
   'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
@@ -502,10 +683,38 @@
 [ 2019-07-11T15:09:13+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
 [ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.029797s][吞吐率：33.56req/s] [内存消耗：1,134.65kb] [文件加载：35]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'af1c1ff9-de40-4559-b37c-8cc1c992bd32',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------996583637783246596021858',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '4',
+)
+[ info ] [ RUN ] app\api\controller\Personalcenter->index[ E:\Project\peini-formal\application\api\controller\Personalcenter.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040658s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.024222s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`level`,`currency` FROM `pn_user` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.036812s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_send_log` [ RunTime:0.023843s ]
+[ sql ] [ SQL ] SELECT sum(amount) as amount FROM `pn_send_log` WHERE  (  acceptuid=4 ) LIMIT 1 [ RunTime:0.029426s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:06:13+08:00 ] 127.0.0.1 POST /api/Personalcenter
+[ info ] www.peini.com/api/Personalcenter [运行时间：0.173230s][吞吐率：5.77req/s] [内存消耗：3,314.34kb] [文件加载：48]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'admin',
     2 => 'static',
@@ -529,10 +738,44 @@
 [ 2019-07-11T15:09:13+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
 [ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.025426s][吞吐率：39.33req/s] [内存消耗：1,134.65kb] [文件加载：35]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+    0 => 'api',
+    1 => 'Personalcenter',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => '149b41af-9657-4a46-9719-7dcaf6075df7',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------244731805143820916512781',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ RUN ] app\api\controller\Personalcenter->index[ E:\Project\peini-formal\application\api\controller\Personalcenter.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.038054s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.023477s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`level`,`currency` FROM `pn_user` WHERE  (  uid=3 ) LIMIT 1 [ RunTime:0.023790s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_send_log` [ RunTime:0.022153s ]
+[ sql ] [ SQL ] SELECT sum(amount) as amount FROM `pn_send_log` WHERE  (  acceptuid=3 ) LIMIT 1 [ RunTime:0.022443s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:06:29+08:00 ] 127.0.0.1 POST /api/Personalcenter
+[ info ] www.peini.com/api/Personalcenter [运行时间：0.240517s][吞吐率：4.16req/s] [内存消耗：3,314.34kb] [文件加载：48]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'admin',
     2 => 'static',
@@ -556,10 +799,44 @@
 [ 2019-07-11T15:09:13+08:00 ] 127.0.0.1 GET /admin/user/index
 [ info ] www.csshayudj.com/admin/user/index [运行时间：0.316650s][吞吐率：3.16req/s] [内存消耗：2,182.98kb] [文件加载：57]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+    0 => 'api',
+    1 => 'Personalcenter',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => '8b219e8d-0074-4cd0-86c4-a527ef6f1ee3',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------425303761606386193960301',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ RUN ] app\api\controller\Personalcenter->index[ E:\Project\peini-formal\application\api\controller\Personalcenter.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.066463s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.024925s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`level`,`currency` FROM `pn_user` WHERE  (  uid=3 ) LIMIT 1 [ RunTime:0.024318s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_send_log` [ RunTime:0.055072s ]
+[ sql ] [ SQL ] SELECT sum(amount) as amount FROM `pn_send_log` WHERE  (  acceptuid=3 ) LIMIT 1 [ RunTime:0.021864s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:06:57+08:00 ] 127.0.0.1 POST /api/Personalcenter
+[ info ] www.peini.com/api/Personalcenter [运行时间：0.192888s][吞吐率：5.18req/s] [内存消耗：3,314.37kb] [文件加载：48]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'admin',
     1 => 'user',
     2 => 'index',
@@ -10985,10 +11262,44 @@
 [ 2019-07-11T15:43:04+08:00 ] 127.0.0.1 GET /admin/index/welcome
 [ info ] www.csshayudj.com/admin/index/welcome [运行时间：0.038156s][吞吐率：26.21req/s] [内存消耗：1,322.07kb] [文件加载：41]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+    0 => 'api',
+    1 => 'Personalcenter',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'e28cc924-6fdd-4638-8442-ebb38a1a1cf1',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------662796424348732485989906',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '4',
+)
+[ info ] [ RUN ] app\api\controller\Personalcenter->index[ E:\Project\peini-formal\application\api\controller\Personalcenter.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.038427s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.027460s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`level`,`currency` FROM `pn_user` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.024763s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_send_log` [ RunTime:0.026132s ]
+[ sql ] [ SQL ] SELECT sum(amount) as amount FROM `pn_send_log` WHERE  (  acceptuid=4 ) LIMIT 1 [ RunTime:0.024183s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:07:15+08:00 ] 127.0.0.1 POST /api/Personalcenter
+[ info ] www.peini.com/api/Personalcenter [运行时间：0.246110s][吞吐率：4.06req/s] [内存消耗：3,314.59kb] [文件加载：48]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'admin',
     1 => 'index',
     2 => 'welcome',
@@ -11025,10 +11336,44 @@
 [ 2019-07-11T15:43:04+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
 [ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.045808s][吞吐率：21.83req/s] [内存消耗：1,134.65kb] [文件加载：35]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+    0 => 'api',
+    1 => 'Personalcenter',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'd3a12b07-537a-4940-986a-d08fc1b64da2',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------331127207354655252784935',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '4',
+)
+[ info ] [ RUN ] app\api\controller\Personalcenter->index[ E:\Project\peini-formal\application\api\controller\Personalcenter.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.063277s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.025111s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`level`,`currency` FROM `pn_user` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.023870s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_send_log` [ RunTime:0.049281s ]
+[ sql ] [ SQL ] SELECT sum(amount) as amount FROM `pn_send_log` WHERE  (  acceptuid=4 ) LIMIT 1 [ RunTime:0.036685s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:07:19+08:00 ] 127.0.0.1 POST /api/Personalcenter
+[ info ] www.peini.com/api/Personalcenter [运行时间：0.193397s][吞吐率：5.17req/s] [内存消耗：3,314.55kb] [文件加载：48]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'admin',
     2 => 'static',
@@ -11052,10 +11397,44 @@
 [ 2019-07-11T15:43:04+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
 [ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.026663s][吞吐率：37.51req/s] [内存消耗：1,134.65kb] [文件加载：35]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+    0 => 'api',
+    1 => 'Personalcenter',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'bc7c1b11-6f4e-49b3-9dbf-f019e2e11554',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------596007227305176352249951',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ RUN ] app\api\controller\Personalcenter->index[ E:\Project\peini-formal\application\api\controller\Personalcenter.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.044162s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.024144s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`level`,`currency` FROM `pn_user` WHERE  (  uid=3 ) LIMIT 1 [ RunTime:0.027946s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_send_log` [ RunTime:0.023053s ]
+[ sql ] [ SQL ] SELECT sum(amount) as amount FROM `pn_send_log` WHERE  (  acceptuid=3 ) LIMIT 1 [ RunTime:0.021931s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:18:41+08:00 ] 127.0.0.1 POST /api/Personalcenter
+[ info ] www.peini.com/api/Personalcenter [运行时间：0.290963s][吞吐率：3.44req/s] [内存消耗：3,322.84kb] [文件加载：48]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'admin',
     2 => 'static',
@@ -11079,10 +11458,46 @@
 [ 2019-07-11T15:43:04+08:00 ] 127.0.0.1 GET /admin/user/index
 [ info ] www.csshayudj.com/admin/user/index [运行时间：0.366262s][吞吐率：2.73req/s] [内存消耗：2,182.98kb] [文件加载：57]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+    0 => 'api',
+    1 => 'Personalcenter',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'cdce25da-5b66-4ac2-b82a-1fa629cf3149',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------958869446439411730980371',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+)
+[ info ] [ RUN ] app\api\controller\Personalcenter->index[ E:\Project\peini-formal\application\api\controller\Personalcenter.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.041101s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.027187s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`level`,`currency` FROM `pn_user` WHERE  (  uid=3 ) LIMIT 1 [ RunTime:0.036139s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_send_log` [ RunTime:0.054332s ]
+[ sql ] [ SQL ] SELECT sum(amount) as amount FROM `pn_send_log` WHERE  (  acceptuid=3 ) LIMIT 1 [ RunTime:0.025450s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_order` [ RunTime:0.024924s ]
+[ sql ] [ SQL ] SELECT sum(amount) as amount FROM `pn_game_order` WHERE  (  pid=3 and status=3 or status=4 ) LIMIT 1 [ RunTime:0.024671s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:18:46+08:00 ] 127.0.0.1 POST /api/Personalcenter
+[ info ] www.peini.com/api/Personalcenter [运行时间：0.241469s][吞吐率：4.14req/s] [内存消耗：3,322.87kb] [文件加载：48]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'admin',
     1 => 'user',
     2 => 'index',
@@ -11128,10 +11543,46 @@
 [ 2019-07-11T15:43:06+08:00 ] 127.0.0.1 GET /admin/approve/index
 [ info ] www.csshayudj.com/admin/approve/index [运行时间：1.595008s][吞吐率：0.63req/s] [内存消耗：2,278.26kb] [文件加载：54]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+    0 => 'api',
+    1 => 'Personalcenter',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => '6224b3c6-26cf-4459-8059-fade56204be2',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------560379401843329742259339',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '4',
+)
+[ info ] [ RUN ] app\api\controller\Personalcenter->index[ E:\Project\peini-formal\application\api\controller\Personalcenter.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040802s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.026335s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`level`,`currency` FROM `pn_user` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.025866s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_send_log` [ RunTime:0.024767s ]
+[ sql ] [ SQL ] SELECT sum(amount) as amount FROM `pn_send_log` WHERE  (  acceptuid=4 ) LIMIT 1 [ RunTime:0.026776s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_order` [ RunTime:0.025236s ]
+[ sql ] [ SQL ] SELECT sum(amount) as amount FROM `pn_game_order` WHERE  (  pid=4 and status=3 or status=4 ) LIMIT 1 [ RunTime:0.024242s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:19:56+08:00 ] 127.0.0.1 POST /api/Personalcenter
+[ info ] www.peini.com/api/Personalcenter [运行时间：0.319411s][吞吐率：3.13req/s] [内存消耗：3,163.05kb] [文件加载：46]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'admin',
     1 => 'approve',
     2 => 'index',
@@ -11187,10 +11638,46 @@
 [ 2019-07-11T15:43:06+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
 [ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.025474s][吞吐率：39.26req/s] [内存消耗：1,134.65kb] [文件加载：35]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+    0 => 'api',
+    1 => 'Personalcenter',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => '9da6b6aa-ceca-4b34-a782-1507c9f23e3a',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------723868384694587163934215',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '4',
+)
+[ info ] [ RUN ] app\api\controller\Personalcenter->index[ E:\Project\peini-formal\application\api\controller\Personalcenter.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.090819s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.038184s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`level`,`currency` FROM `pn_user` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.026426s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_send_log` [ RunTime:0.030198s ]
+[ sql ] [ SQL ] SELECT sum(amount) as amount FROM `pn_send_log` WHERE  (  acceptuid=4 ) LIMIT 1 [ RunTime:0.025314s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_order` [ RunTime:0.025396s ]
+[ sql ] [ SQL ] SELECT sum(amount) as amount FROM `pn_game_order` WHERE  (  pid=4 and status=3 or status=4 ) LIMIT 1 [ RunTime:0.026884s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:30:38+08:00 ] 127.0.0.1 GET /
+[ info ] www.peini.com/ [运行时间：0.034958s][吞吐率：28.61req/s] [内存消耗：2,381.41kb] [文件加载：42]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'admin',
     2 => 'static',
@@ -11214,6 +11701,35 @@
 [ 2019-07-11T15:43:32+08:00 ] 127.0.0.1 GET /admin
 [ info ] www.csshayudj.com/admin [运行时间：0.497901s][吞吐率：2.01req/s] [内存消耗：2,002.23kb] [文件加载：50]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'purpose' => 'prefetch',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'socketlog' => 'SocketLog(tabid=28&client_id=1)',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\Project\peini-formal\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\Project\peini-formal\public/../application/index\view\index\web.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-11T11:30:41+08:00 ] 127.0.0.1 GET /admin
+[ info ] www.peini.com/admin [运行时间：0.030964s][吞吐率：32.30req/s] [内存消耗：2,325.86kb] [文件加载：43]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -11224,6 +11740,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
   'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
@@ -11235,6 +11752,18 @@
   'host' => 'www.csshayudj.com',
   'content-length' => '',
   'content-type' => '',
+=======
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'purpose' => 'prefetch',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'socketlog' => 'SocketLog(tabid=29&client_id=1)',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848',
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 )
 [ info ] [ PARAM ] array (
 )
@@ -11245,6 +11774,7 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
 [ info ] [ RUN ] app\admin\controller\Index->index[ D:\pei\application\admin\controller\Index.php ]
 [ info ] [ DB ] INIT mysql
 [ info ] [ VIEW ] D:\pei\public/../application/admin\view\index\index.html [ array (
@@ -11263,11 +11793,19 @@
 [ 2019-07-11T15:43:32+08:00 ] 127.0.0.1 GET /admin/index/welcome
 [ info ] www.csshayudj.com/admin/index/welcome [运行时间：0.034493s][吞吐率：28.99req/s] [内存消耗：1,322.07kb] [文件加载：41]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-11T11:30:41+08:00 ] 127.0.0.1 GET /admin/auth/login
+[ info ] www.peini.com/admin/auth/login [运行时间：0.027788s][吞吐率：35.99req/s] [内存消耗：2,476.73kb] [文件加载：43]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
     1 => 'index',
     2 => 'welcome',
   ),
@@ -11284,6 +11822,23 @@
   'host' => 'www.csshayudj.com',
   'content-length' => '',
   'content-type' => '',
+=======
+    1 => 'auth',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'purpose' => 'prefetch',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'socketlog' => 'SocketLog(tabid=29&client_id=1)',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; PHPSESSID=v6e7ljg9a90k0m45qfh690gnb3',
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 )
 [ info ] [ PARAM ] array (
 )
@@ -11294,6 +11849,7 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
 [ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\pei\application\admin\controller\Index.php ]
 [ info ] [ VIEW ] D:\pei\public/../application/admin\view\index\welcome.html [ array (
   0 => 'menu_role',
@@ -11303,10 +11859,21 @@
 [ 2019-07-11T15:43:32+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
 [ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.033753s][吞吐率：29.63req/s] [内存消耗：1,134.65kb] [文件加载：35]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+[ info ] [ RUN ] app\admin\controller\Auth->login[ E:\Project\peini-formal\application\admin\controller\Auth.php ]
+[ info ] [ VIEW ] E:\Project\peini-formal\public/../application/admin\view\auth\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-11T11:30:41+08:00 ] 127.0.0.1 GET /admin/auth/login
+[ info ] www.peini.com/admin/auth/login [运行时间：0.038861s][吞吐率：25.73req/s] [内存消耗：2,298.38kb] [文件加载：41]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'admin',
     2 => 'static',
@@ -11357,11 +11924,47 @@
 [ 2019-07-11T15:43:32+08:00 ] 127.0.0.1 GET /admin/user/index
 [ info ] www.csshayudj.com/admin/user/index [运行时间：0.353224s][吞吐率：2.83req/s] [内存消耗：2,182.98kb] [文件加载：57]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'socketlog' => 'SocketLog(tabid=27&client_id=1)',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; PHPSESSID=v6e7ljg9a90k0m45qfh690gnb3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->login[ E:\Project\peini-formal\application\admin\controller\Auth.php ]
+[ info ] [ VIEW ] E:\Project\peini-formal\public/../application/admin\view\auth\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-11T11:30:41+08:00 ] 127.0.0.1 GET /admin/auth/favicon.ico
+[ info ] www.peini.com/admin/auth/favicon.ico [运行时间：0.030786s][吞吐率：32.48req/s] [内存消耗：2,311.25kb] [文件加载：42]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
     1 => 'user',
     2 => 'index',
   ),
@@ -11378,6 +11981,22 @@
   'host' => 'www.csshayudj.com',
   'content-length' => '',
   'content-type' => '',
+=======
+    1 => 'auth',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'socketlog' => 'SocketLog(tabid=27&client_id=1)',
+  'referer' => 'http://www.peini.com/admin/auth/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; PHPSESSID=v6e7ljg9a90k0m45qfh690gnb3',
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 )
 [ info ] [ PARAM ] array (
 )
@@ -11388,6 +12007,7 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
 [ info ] [ RUN ] app\admin\controller\User->index[ D:\pei\application\admin\controller\User.php ]
 [ info ] [ DB ] INIT mysql
 [ info ] [ VIEW ] D:\pei\public/../application/admin\view\user\index.html [ array (
@@ -11406,11 +12026,19 @@
 [ 2019-07-11T15:43:35+08:00 ] 127.0.0.1 GET /admin/approve/index
 [ info ] www.csshayudj.com/admin/approve/index [运行时间：2.119269s][吞吐率：0.47req/s] [内存消耗：2,278.26kb] [文件加载：54]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-11T11:30:41+08:00 ] 127.0.0.1 GET /admin/auth/login
+[ info ] www.peini.com/admin/auth/login [运行时间：0.027579s][吞吐率：36.26req/s] [内存消耗：2,298.29kb] [文件加载：41]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
     1 => 'approve',
     2 => 'index',
   ),
@@ -11465,10 +12093,45 @@
 [ 2019-07-11T15:43:35+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
 [ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.022788s][吞吐率：43.88req/s] [内存消耗：1,134.65kb] [文件加载：35]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+    1 => 'auth',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'socketlog' => 'SocketLog(tabid=27&client_id=1)',
+  'referer' => 'http://www.peini.com/admin/auth/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; PHPSESSID=v6e7ljg9a90k0m45qfh690gnb3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->login[ E:\Project\peini-formal\application\admin\controller\Auth.php ]
+[ info ] [ VIEW ] E:\Project\peini-formal\public/../application/admin\view\auth\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-11T11:30:46+08:00 ] 127.0.0.1 POST /admin/auth/loginin
+[ info ] www.peini.com/admin/auth/loginin [运行时间：0.299706s][吞吐率：3.34req/s] [内存消耗：3,255.92kb] [文件加载：46]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'admin',
     2 => 'static',
@@ -11492,11 +12155,57 @@
 [ 2019-07-11T15:44:16+08:00 ] 127.0.0.1 GET /admin
 [ info ] www.csshayudj.com/admin [运行时间：0.564247s][吞吐率：1.77req/s] [内存消耗：2,002.41kb] [文件加载：50]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'loginin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'content-length' => '30',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://www.peini.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'socketlog' => 'SocketLog(tabid=27&client_id=1)',
+  'referer' => 'http://www.peini.com/admin/auth/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; PHPSESSID=v6e7ljg9a90k0m45qfh690gnb3',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->loginin[ E:\Project\peini-formal\application\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088122s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_admin` [ RunTime:0.025082s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_admin` WHERE  `user_account` = 'admin'  AND `user_password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1 [ RunTime:0.092365s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_admin_log` [ RunTime:0.030799s ]
+[ sql ] [ SQL ] INSERT INTO `pn_admin_log` (`admin_user_id` , `admin_user_name` , `set_time` , `set_ip` , `set_name`) VALUES (1 , '后台管理员' , '1562815846' , '127.0.0.1' , '登录后台') [ RunTime:0.029429s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:30:48+08:00 ] 127.0.0.1 GET /admin/index/index
+[ info ] www.peini.com/admin/index/index [运行时间：0.322212s][吞吐率：3.10req/s] [内存消耗：3,595.36kb] [文件加载：52]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
     1 => NULL,
     2 => NULL,
   ),
@@ -11514,6 +12223,23 @@
   'host' => 'www.csshayudj.com',
   'content-length' => '',
   'content-type' => '',
+=======
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'socketlog' => 'SocketLog(tabid=27&client_id=1)',
+  'referer' => 'http://www.peini.com/admin/auth/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; PHPSESSID=v6e7ljg9a90k0m45qfh690gnb3',
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 )
 [ info ] [ PARAM ] array (
 )
@@ -11524,14 +12250,21 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
 [ info ] [ RUN ] app\admin\controller\Index->index[ D:\pei\application\admin\controller\Index.php ]
 [ info ] [ DB ] INIT mysql
 [ info ] [ VIEW ] D:\pei\public/../application/admin\view\index\index.html [ array (
+=======
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\Project\peini-formal\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\Project\peini-formal\public/../application/admin\view\index\index.html [ array (
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
   0 => 'menu_role',
   1 => 'menu_list_one',
   2 => 'menu_list_two',
 ) ]
 [ info ] [ LOG ] INIT File
+<<<<<<< HEAD
 [ sql ] [ DB ] CONNECT:[ UseTime:0.176916s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `pn_role` [ RunTime:0.073752s ]
 [ sql ] [ SQL ] SELECT `role_permission` FROM `pn_role` WHERE  (  id = 1 ) LIMIT 1 [ RunTime:0.024096s ]
@@ -11542,6 +12275,18 @@
 [ 2019-07-11T15:44:16+08:00 ] 127.0.0.1 GET /admin/index/welcome
 [ info ] www.csshayudj.com/admin/index/welcome [运行时间：0.029449s][吞吐率：33.96req/s] [内存消耗：1,323.33kb] [文件加载：41]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+[ sql ] [ DB ] CONNECT:[ UseTime:0.047131s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_role` [ RunTime:0.023438s ]
+[ sql ] [ SQL ] SELECT `role_permission` FROM `pn_role` WHERE  (  id = 1 ) LIMIT 1 [ RunTime:0.026979s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_menu` [ RunTime:0.022185s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_menu` WHERE  (  level = 1 and statu = 1 ) [ RunTime:0.021925s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_menu` WHERE  (  level = 2 and statu = 1 ) [ RunTime:0.022277s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:30:48+08:00 ] 127.0.0.1 GET /admin/index/welcome
+[ info ] www.peini.com/admin/index/welcome [运行时间：0.049423s][吞吐率：20.23req/s] [内存消耗：2,416.39kb] [文件加载：43]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -11552,6 +12297,7 @@
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
   'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
@@ -11565,6 +12311,18 @@
   'host' => 'www.csshayudj.com',
   'content-length' => '',
   'content-type' => '',
+=======
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'socketlog' => 'SocketLog(tabid=27&client_id=1)',
+  'referer' => 'http://www.peini.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; PHPSESSID=v6e7ljg9a90k0m45qfh690gnb3',
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 )
 [ info ] [ PARAM ] array (
 )
@@ -11575,19 +12333,31 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
 [ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\pei\application\admin\controller\Index.php ]
 [ info ] [ VIEW ] D:\pei\public/../application/admin\view\index\welcome.html [ array (
+=======
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ E:\Project\peini-formal\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] E:\Project\peini-formal\public/../application/admin\view\index\welcome.html [ array (
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
   0 => 'menu_role',
 ) ]
 [ info ] [ LOG ] INIT File
 ---------------------------------------------------------------
+<<<<<<< HEAD
 [ 2019-07-11T15:44:16+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
 [ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.026785s][吞吐率：37.33req/s] [内存消耗：1,134.65kb] [文件加载：35]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+[ 2019-07-11T11:30:48+08:00 ] 127.0.0.1 GET /admin/index/favicon.ico
+[ info ] www.peini.com/admin/index/favicon.ico [运行时间：0.029411s][吞吐率：34.00req/s] [内存消耗：2,282.34kb] [文件加载：43]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'admin',
     2 => 'static',
@@ -11638,16 +12408,53 @@
 [ 2019-07-11T15:44:17+08:00 ] 127.0.0.1 GET /admin/user/index
 [ info ] www.csshayudj.com/admin/user/index [运行时间：0.485934s][吞吐率：2.06req/s] [内存消耗：2,182.98kb] [文件加载：57]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+    0 => 'admin',
+    1 => 'index',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'socketlog' => 'SocketLog(tabid=27&client_id=1)',
+  'referer' => 'http://www.peini.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; PHPSESSID=v6e7ljg9a90k0m45qfh690gnb3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-11T11:30:52+08:00 ] 127.0.0.1 GET /admin/order/index
+[ info ] www.peini.com/admin/order/index [运行时间：0.573812s][吞吐率：1.74req/s] [内存消耗：3,769.04kb] [文件加载：55]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
     1 => 'user',
+=======
+    1 => 'order',
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
     2 => 'index',
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
   'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
@@ -11659,6 +12466,18 @@
   'host' => 'www.csshayudj.com',
   'content-length' => '',
   'content-type' => '',
+=======
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'socketlog' => 'SocketLog(tabid=27&client_id=1)',
+  'referer' => 'http://www.peini.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; PHPSESSID=v6e7ljg9a90k0m45qfh690gnb3',
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 )
 [ info ] [ PARAM ] array (
 )
@@ -11669,15 +12488,22 @@
   'type' => '',
   'auto_start' => true,
 )
+<<<<<<< HEAD
 [ info ] [ RUN ] app\admin\controller\User->index[ D:\pei\application\admin\controller\User.php ]
 [ info ] [ DB ] INIT mysql
 [ info ] [ VIEW ] D:\pei\public/../application/admin\view\user\index.html [ array (
+=======
+[ info ] [ RUN ] app\admin\controller\Order->index[ E:\Project\peini-formal\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\Project\peini-formal\public/../application/admin\view\order\index.html [ array (
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
   0 => 'menu_role',
   1 => 'data',
   2 => 'total',
   3 => 'list',
 ) ]
 [ info ] [ LOG ] INIT File
+<<<<<<< HEAD
 [ sql ] [ DB ] CONNECT:[ UseTime:0.090388s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.109597s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pn_user` WHERE  (   status!=-1 ) LIMIT 1 [ RunTime:0.091125s ]
@@ -11687,16 +12513,45 @@
 [ 2019-07-11T15:44:19+08:00 ] 127.0.0.1 GET /admin/approve/index
 [ info ] www.csshayudj.com/admin/approve/index [运行时间：1.902698s][吞吐率：0.53req/s] [内存消耗：2,278.26kb] [文件加载：54]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+[ sql ] [ DB ] CONNECT:[ UseTime:0.041610s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_order` [ RunTime:0.027811s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pn_game_order` WHERE  `status` <> -1 LIMIT 1 [ RunTime:0.027299s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_game_order` WHERE  `status` <> -1 LIMIT 0,30 [ RunTime:0.025240s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.025917s ]
+[ sql ] [ SQL ] SELECT `username` FROM `pn_user` WHERE  (  uid=3 ) LIMIT 1 [ RunTime:0.025876s ]
+[ sql ] [ SQL ] SELECT `username` FROM `pn_user` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.025466s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.025268s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_game` WHERE  (  gid=1 ) LIMIT 1 [ RunTime:0.026679s ]
+[ sql ] [ SQL ] SELECT `username` FROM `pn_user` WHERE  (  uid=3 ) LIMIT 1 [ RunTime:0.028032s ]
+[ sql ] [ SQL ] SELECT `username` FROM `pn_user` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.038597s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_game` WHERE  (  gid=1 ) LIMIT 1 [ RunTime:0.024974s ]
+[ sql ] [ SQL ] SELECT `username` FROM `pn_user` WHERE  (  uid=3 ) LIMIT 1 [ RunTime:0.024497s ]
+[ sql ] [ SQL ] SELECT `username` FROM `pn_user` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.024745s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_game` WHERE  (  gid=1 ) LIMIT 1 [ RunTime:0.024527s ]
+[ sql ] [ SQL ] SELECT `username` FROM `pn_user` WHERE  (  uid=3 ) LIMIT 1 [ RunTime:0.024262s ]
+[ sql ] [ SQL ] SELECT `username` FROM `pn_user` WHERE  (  uid=2 ) LIMIT 1 [ RunTime:0.026966s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_game` WHERE  (  gid=1 ) LIMIT 1 [ RunTime:0.037620s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:30:55+08:00 ] 127.0.0.1 GET /admin/sendgift/index
+[ info ] www.peini.com/admin/sendgift/index [运行时间：0.433586s][吞吐率：2.31req/s] [内存消耗：3,739.34kb] [文件加载：55]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
     0 => 'admin',
+<<<<<<< HEAD
     1 => 'approve',
+=======
+    1 => 'sendgift',
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
     2 => 'index',
   ),
 )
 [ info ] [ HEADER ] array (
+<<<<<<< HEAD
   'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
@@ -11746,10 +12601,58 @@
 [ 2019-07-11T15:44:19+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
 [ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.034701s][吞吐率：28.82req/s] [内存消耗：1,134.65kb] [文件加载：35]
 [ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+=======
+  'host' => 'www.peini.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'socketlog' => 'SocketLog(tabid=27&client_id=1)',
+  'referer' => 'http://www.peini.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=1996878848; PHPSESSID=v6e7ljg9a90k0m45qfh690gnb3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Sendgift->index[ E:\Project\peini-formal\application\admin\controller\Sendgift.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\Project\peini-formal\public/../application/admin\view\sendgift\index.html [ array (
+  0 => 'menu_role',
+  1 => 'data',
+  2 => 'total',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.046144s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_send_log` [ RunTime:0.029515s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pn_send_log` WHERE  `status` <> -1 LIMIT 1 [ RunTime:0.048923s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_send_log` WHERE  `status` <> -1 LIMIT 0,30 [ RunTime:0.025311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.025827s ]
+[ sql ] [ SQL ] SELECT `username` FROM `pn_user` WHERE  (  uid=3 ) LIMIT 1 [ RunTime:0.025154s ]
+[ sql ] [ SQL ] SELECT `username` FROM `pn_user` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.028791s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_gift` [ RunTime:0.025488s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_gift` WHERE  (  gid=1 ) LIMIT 1 [ RunTime:0.025328s ]
+[ sql ] [ SQL ] SELECT `username` FROM `pn_user` WHERE  (  uid=3 ) LIMIT 1 [ RunTime:0.026559s ]
+[ sql ] [ SQL ] SELECT `username` FROM `pn_user` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.053114s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_gift` WHERE  (  gid=1 ) LIMIT 1 [ RunTime:0.025043s ]
+---------------------------------------------------------------
+[ 2019-07-11T11:32:25+08:00 ] 127.0.0.1 POST /api/Personalcenter
+[ info ] www.peini.com/api/Personalcenter [运行时间：0.785002s][吞吐率：1.27req/s] [内存消耗：3,163.80kb] [文件加载：46]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
+<<<<<<< HEAD
     0 => 'static',
     1 => 'admin',
     2 => 'static',
@@ -11769,3 +12672,34 @@
   'css' => 'weadmin.css.map',
 )
 [ info ] [ LOG ] INIT File
+=======
+    0 => 'api',
+    1 => 'Personalcenter',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => '0e7c3357-4b12-48bf-a139-d9bbaed73353',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------938394638785137515728474',
+  'content-length' => '159',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '4',
+)
+[ info ] [ RUN ] app\api\controller\Personalcenter->index[ E:\Project\peini-formal\application\api\controller\Personalcenter.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.193634s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.086547s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`birthday`,`level`,`currency` FROM `pn_user` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.089435s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_send_log` [ RunTime:0.091871s ]
+[ sql ] [ SQL ] SELECT sum(amount) as amount FROM `pn_send_log` WHERE  (  acceptuid=4 ) LIMIT 1 [ RunTime:0.084175s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_order` [ RunTime:0.084636s ]
+[ sql ] [ SQL ] SELECT sum(amount) as amount FROM `pn_game_order` WHERE  (  pid=4 and status=3 or status=4 ) LIMIT 1 [ RunTime:0.084075s ]
+>>>>>>> 8871c4118e6a0fc5a0be99518ccb75cac406ffd6

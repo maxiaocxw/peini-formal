@@ -81,14 +81,17 @@
             layer = layui.layer;
         upload = layui.upload,
 
+            //图片上传
             upload.render({
                 elem: '#test1',
-                url: "/admin/gift/UploadImage",
+                url: "/admin/cate/qinui_upload",
                 done: function(res) {
                     console.log(res);
                     if(res.code == 0){
-                        var p_src = "http://www.shayudj.com"+res.src;
-                        $("#demo1").attr('src', p_src);
+                        $("#demo1").attr('src', res.src);
+                        layer.msg(res.msg, { time: 1000, icon: res.icon });
+                    }else{
+                        layer.msg(res.msg, { time: 1000, icon: res.icon });
                     }
                 }
             });
@@ -97,7 +100,6 @@
         form.on('submit(add)', function(data) {
             data.field.img = $("#demo1").attr('src');
             delete data.field.file;
-            console.log(data.field);
             if(data.field.img == undefined){
                 alert('请选择礼物图片');
             }else{

@@ -31,7 +31,6 @@
                 <button type="button" class="layui-btn" id="test1">上传图片</button>
                 <div class="layui-upload-list">
                     <img class="layui-upload-img" id="demo1" src="{$data.img}" style="height: 200px;">
-                    <p id="demoText"></p>
                 </div>
             </div>
         </div>
@@ -51,10 +50,10 @@
                 <select name="tid" lay-verify="required" autocomplete="off" class="layui-select">
                     <option value="">请选择分类</option>
                     {foreach $gametype_data as $key => $v}
-                        {if($v.tid eq $data.tid)}
-                        <option value="{$v.tid}" selected>{$v.name}</option>
+                        {if $v.tid eq $data.tid}
+                            <option value="{$v.tid}" selected>{$v.name}</option>
                         {else/}
-                        <option value="{$v.tid}">{$v.name}</option>
+                            <option value="{$v.tid}">{$v.name}</option>
                         {/if}
                     {/foreach}
                 </select>
@@ -62,7 +61,7 @@
         </div>
         <div class="layui-form-item">
             <button class="layui-btn" lay-submit="" lay-filter="upda">修改</button>
-            &nbsp;&nbsp;&nbsp;&nbsp;<a href="/admin/cate/interest"><button type="button" class="layui-btn">返回</button></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="/admin/cate/game"><button type="button" class="layui-btn">返回</button></a>
         </div>
     </form>
 </div>
@@ -72,24 +71,43 @@
     layui.extend({
         admin: '__PUBLIC_ADMIN__/static/js/admin'
     });
-    layui.use(['form', 'layer'], function() {
+    layui.use(['form', 'layer', 'upload'], function() {
         var form = layui.form,
             admin = layui.admin,
             layer = layui.layer;
+        upload = layui.upload,
+
+            //图片上传
+            upload.render({
+                elem: '#test1',
+                url: "/admin/cate/qinui_upload",
+                done: function(res) {
+                    if(res.code == 0){
+                        $("#demo1").attr('src', res.src);
+                        layer.msg(res.msg, { time: 1000, icon: res.icon });
+                    }else{
+                        layer.msg(res.msg, { time: 1000, icon: res.icon });
+                    }
+                }
+            });
 
         //监听提交
         form.on('submit(upda)', function(data) {
-            $.post("{:url('admin/cate/updateGametypesDo')}", data.field, function(response) {
+            data.field.img = $("#demo1").attr('src');
+            delete data.field.file;
+            $.post("{:url('admin/cate/updateGamesDo')}", data.field, function(response) {
                 if (response.code == 0) {
                     layer.alert("修改成功", {
                         icon: response.icon
                     }, function() {
                         if(response.code == 0){
-                            location.href = "{:url('admin/cate/gametype')}";
+                            location.href = "{:url('admin/cate/game')}";
                         }else{
                             return false;
                         }
                     });
+                }else{
+                    layer.msg(response.msg, { time: 1000, icon: response.icon });
                 }
             }, 'json');
             //发异步，把数据提交给php

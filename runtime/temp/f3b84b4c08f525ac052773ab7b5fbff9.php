@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:58:"D:\pei\public/../application/admin\view\index\welcome.html";i:1554967655;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"E:\Project\peini-formal\public/../application/admin\view\index\welcome.html";i:1562150096;}*/ ?>
 <!DOCTYPE html>
 <html>
 

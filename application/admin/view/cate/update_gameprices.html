@@ -21,6 +21,7 @@
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="" name="" value="{$data.gname}" required="" lay-verify="required" autocomplete="off" class="layui-input" readonly>
+                <input type="text" id="gid" name="gid" value="{$data.gid}" hidden>
             </div>
         </div>
         <div class="layui-form-item">
@@ -61,6 +62,8 @@
                             return false;
                         }
                     });
+                }else{
+                    layer.msg(response.msg, { time: 1000, icon: response.icon });
                 }
             }, 'json');
             //发异步，把数据提交给php
