@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"D:\pei\public/../application/admin\view\gift\index.html";i:1562745812;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"D:\pei\public/../application/admin\view\gift\index.html";i:1562745825;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -68,7 +68,8 @@
 				<?=date('Y-m-d H:i:s',$value['addtime'])?>
 			</td>
 			<td class="td-manage">
-				<span><button class="layui-btn layui-btn-danger layui-btn-sm" onclick="updateWork(<?php echo $value['gid']; ?>)">修改</button></span>
+				<span><button class="layui-btn layui-btn-danger layui-btn-sm" onclick="updateWork()">修改</button></span>
+				<a title="修改" href="/admin/gift/update"><button class="layui-btn layui-btn-danger layui-btn-sm">修改</button></a>
 			</td>
 
 		</tr>

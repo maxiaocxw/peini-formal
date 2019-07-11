@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:58:"D:\pei\public/../application/admin\view\approve\index.html";i:1562744308;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:58:"D:\pei\public/../application/admin\view\approve\index.html";i:1562831052;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -23,7 +23,16 @@
     <a class="layui-btn layui-btn-sm" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
         <i class="layui-icon" style="line-height:30px">ဂ</i></a>
 </div>
+
+<div id="outerdiv" style="position:fixed;top:0;left:0;background:rgba(0,0,0,0.7);z-index:2;width:100%;height:100%;display:none;">
+    <div id="innerdiv" style="position:absolute;">
+        <img id="bigimg" style="border:5px solid #fff;" src="" />
+    </div>
+</div>
+
 <div class="weadmin-body">
+
+
     <div class="weadmin-block">
         <span class="fr" style="line-height:40px">共有数据：<?php echo $total; ?> 条</span>
     </div>
@@ -57,9 +66,9 @@
             <td><?php echo $value['list']['username']; ?></td>
             <td><?php echo $value['list']['alipay']; ?></td>
             <td><?php echo $value['list']['idcode']; ?></td>
-            <td><img src="http://cdn.lanyushiting.com/<?php echo $value['list']['idcodefront']; ?>" style="height: 100px;max-width: 360px;"></td>
-            <td><img src="http://cdn.lanyushiting.com/<?php echo $value['list']['idcodereverse']; ?>" style="height: 100px;max-width: 360px;"></td>
-            <td><img src="http://cdn.lanyushiting.com/<?php echo $value['list']['handidcode']; ?>" style="height: 100px;max-width: 360px;"></td>
+            <td><img src="http://cdn.lanyushiting.com/<?php echo $value['list']['idcodefront']; ?>" style="height: 100px;max-width: 360px;" class="pimg"></td>
+            <td><img src="http://cdn.lanyushiting.com/<?php echo $value['list']['idcodereverse']; ?>" style="height: 100px;max-width: 360px;" class="pimg" /></td>
+            <td><img src="http://cdn.lanyushiting.com/<?php echo $value['list']['handidcode']; ?>" style="height: 100px;max-width: 360px;" class="pimg" /></td>
             <td>
             <?php if($value['list']['status'] == 1): ?>
                 <span class="layui-btn layui-btn-danger layui-btn-xs">待审核</span></td>
@@ -98,6 +107,7 @@
         <?php endforeach; ?>
         </tbody>
     </table>
+
     <div class="page">
         <div>
             <?php echo $list->render(); ?>
@@ -139,7 +149,53 @@
     }
 
 
+    $("#outerdiv").hide();
+    $(function(){
+        $("img").mouseover(function(){
+            $(this).css("cursor","pointer");
+        });
 
+        $("img").click(function(){
+            var _this = $(this);//将当前的pimg元素作为_this传入函数
+            imgShow("#outerdiv", "#bigimg", _this);
+        });
+    });
+
+    function imgShow(outerdiv, bigimg, _this) {
+        var src = _this.attr("src");//获取当前点击的pimg元素中的src属性
+        $('#outerdiv').attr('display', 'block');
+        $(bigimg).attr("src", src);//设置#bigimg元素的src属性
+        $(outerdiv).fadeIn("fast");
+
+        $(outerdiv).click(function (){
+            $(this).fadeOut("fast");
+        });
+    }
+
+
+    // $(function (){
+    //     $('.pimg').click(function (){
+    //         var _this = $(this);
+    //         imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);
+    //
+    //     });
+    // });
+    //
+    //
+    //
+    // function imgShow(outerdiv, innerdiv, bigimg, _this){
+    //     var src = _this.attr("src");//获取当前点击的pimg元素中的src属性
+    //     $(bigimg).attr("src", src);//设置#bigimg元素的src属性
+    //
+    //     /*获取当前点击图片的真实大小，并显示弹出层及大图*/
+    //     $(bigimg).attr("src", src).load(function(){
+    //
+    //     });
+    //     alert(111);
+    //     $(outerdiv).click(function (){
+    //         $(this).fadeOut("fast");
+    //     });
+    // }
 
 </script>
 </body>

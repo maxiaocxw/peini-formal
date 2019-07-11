@@ -254,4 +254,21 @@ return [
         //七牛bucket
         'bucket' => 'peini'
     ],
+    //支付宝相关配置
+    'aliyu' => [
+        //商户id
+        'appId' => '2019070965745989',
+        //商户公钥
+        'partner_public_key' => 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt1RzhjzeGGlf7KosMcwkSLNAvGG+7RcAKF3LZgpBGt4ymMIep6BMAd39DclNatplhapWIj+vlXV5V+IbLRc0Gl8oy2MExtu3QQfDeGuYsM8yDv18rSh0FcMNJzqExyUpgkL9g/PfxpDJ796YJIwctlDF1RvvDfZI7GmvIOQu/LUkTwnkieY7myOXTadudg9W7H28EY4/lGzXZSkvcnInl7iG24pt0E4SPaSdGUIfdHIjjXmkCWIZXDaK1f30tKzKjp19ZhZS2v2fzmk/EqtA7Um/s2DzuEOe5mVwO0jqJS22zZQXhjFFBFYhmkDeG2mcykHKWWS8lqQEWbmblng7XwIDAQAB',
+        //支付宝公钥
+        'alipay_public_key' => 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvlbqq5n2lQyQpgH9whHZ3DgPJD7TUuOXJvON/AZ6JkBArc7sAEoWextA9ED6LS7RzSoa/KCO6EbCRj77javh+3tRnDfqwnJ3ZQtaI863+7l2sIowI0h08sMEsgXOG43GVOFtfL944/WC220x8y5/yOO5hsa3G3XxQmHURuPhnLC6RBHAnsxRS6ZJIZ/BBfU0YW2JswOU1KjnU58tWiZywckUreFljXO4e+ErhyNKT6t1lfAn0ulJMofpGLTIwqAXPHwK243A5bz2k4QTgDVNolo7+yxwJgbUJ0++0DTrqJFBmEaqkdNmqkVgxU/06VL5lpbqhDyFCJ/0d3qzgLYLiwIDAQAB',
+        //商户私钥
+        'partner_private_key'   => 'KNO4dr6b8lgtklBlLi5FVw==',
+        //传输方式
+        'format' => 'json',
+        //编码
+        'charset' => 'utf-8',
+        //地址
+        'gatewayUrl ' => 'https://openapi.alipay.com/gateway.do',
+    ],
 ];
