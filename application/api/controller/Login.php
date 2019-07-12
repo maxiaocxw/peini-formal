@@ -7,25 +7,53 @@ class Login extends Auth{
 		$this->checkParam();
 		$this->code = input('post.code')?input('post.code'):0;
 		$this->phone = input('post.phone')?input('post.phone'):0;
-		$this->checkParam('code,phone');
+		$this->type = input('post.type')?input('post.type'):1; //1 手机号登录 2微信登录
+		$this->openid = input('post.openid')?input('post.openid'):0;
+		if($this->type==1){
+			$this->checkParam('code,phone');
+		}else{
+			$this->checkParam('openid');
+		}
 		$this->url='http://cdn.lanyushiting.com/';
 	}
 
 	public function index(){
-		$this->checkCode($this->phone,$this->code);
-		$list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,token,currency')->where('mobile='.$this->phone)->find();
-		if(!$list){
-			$newuid=$this->addUser();
-			$this->II('200','请求成功',array('type'=>1,'info'=>$this->getUserInfo($newuid)));
+		//手机号登录
+		if($this->type==1){
+			$this->checkCode($this->phone,$this->code);
+			$list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,currency')->where('mobile='.$this->phone)->find();
+			if(!$list){	
+				$newuid=$this->addUser();
+				$this->II('200','请求成功',array('type'=>1,'info'=>$this->getUserInfo($newuid)));
+			}
+			if($list['status']==2){
+				$this->II('201','用户被封禁请联系管理员');
+			}
+			$list['token']=md5(time().rand(1000,9999));
+			Db::name('user')->where('mobile='.$this->phone)->update(array('token'=>$list['token']));
+			$list['birthday']=date('Y-m-d',$list['birthday']);
+			$list['addtime']=date('Y-m-d',$list['addtime']);
+			$list['qiniuToken'] = (new Qiniu())->getToken();
+			$list['headimg']=$this->url.$list['headimg'];
+			$this->II('200','请求成功',array('type'=>2,'info'=>$list));
+		//微信登录
+		}else{
+			$list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,token,currency')->where('openid='.$this->openid)->find();
+			if(!$list){
+				$this->II('300','去绑定手机号');
+			}
+			if($list['status']==2){
+				$this->II('201','用户被封禁请联系管理员');
+			}
+			$list['token']=md5(time().rand(1000,9999));
+			Db::name('user')->where('mobile='.$this->phone)->update(array('token'=>$list['token']));
+			$list['birthday']=date('Y-m-d',$list['birthday']);
+			$list['addtime']=date('Y-m-d',$list['addtime']);
+			$list['qiniuToken'] = (new Qiniu())->getToken();
+			$list['headimg']=$this->url.$list['headimg'];
+			$this->II('200','请求成功',array('type'=>2,'info'=>$list));
 		}
-		if($list['status']==2){
-			$this->II('201','用户被封禁请联系管理员');
-		}
-		$list['birthday']=date('Y-m-d',$list['birthday']);
-		$list['addtime']=date('Y-m-d',$list['addtime']);
-		$list['qiniuToken'] = (new Qiniu())->getToken();
-		$list['headimg']=$this->url.$list['headimg'];
-		$this->II('200','请求成功',array('type'=>2,'info'=>$list));
+		
 	}
 
 	public function addUser(){
@@ -45,5 +73,6 @@ class Login extends Auth{
 			$this->II('500','内部错误');
 		}
 	}
+
 
 }
