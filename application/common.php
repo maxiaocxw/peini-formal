@@ -401,3 +401,18 @@ function birthday($birthday)
 
     return $age;
 }
+
+function addLog($uid,$tranNo,$type,$content,$msg){
+    $data = [
+        'type' =>$type,
+        'content' => json_encode($content,JSON_UNESCAPED_UNICODE),
+        'info' => $msg,
+        'uid'  => $uid,
+        'tranno' => $tranNo,
+        'addtime'  => time()
+    ];
+
+    Db::name('log')->insert($data);
+
+
+}
