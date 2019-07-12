@@ -1,12 +1,11 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"D:\pei\public/../application/admin\view\approve\add.html";i:1562933487;}*/ ?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="renderer" content="webkit">
-    <link rel="stylesheet" href="/static/admin/static/css/font.css">
-    <link rel="stylesheet" href="/static/admin/static/css/weadmin.css">
+    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/font.css">
+    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/weadmin.css">
     <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
     <!--[if lt IE 9]>
     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -14,8 +13,32 @@
     <![endif]-->
 </head>
 
+<style>
+    #header{
+        position: relative;
+        width: 778px;
+        height: 250px;
+        background-color: #999;
+        margin: 0 auto;
+
+    }
+</style>
+
 <body>
-<div class="weadmin-body">
+<div class="weadmin-body" id="header">
+    <div id="Layer1" style="position:fixed; left:0px; top:0px; width:100%; height:100%">
+        <img src="http://cdn.lanyushiting.com/web.png" width="100%" height="100%"/>
+    </div>
+
+
+    <div class="layui-form-item">
+
+        <div class="layui-input-block">
+            <h1>陪玩资料认证</h1>
+        </div>
+    </div>
+
+
     <form action="" method="post" class="layui-form layui-form-pane">
 
         <div class="layui-form-item">
@@ -78,9 +101,9 @@
                 <span class="we-red">*</span>标签
             </label>
             <div class="layui-input-inline">
-                <?php foreach($label as $val): ?>
-                <input type="checkbox" name="label[]" value="<?php echo $val['lid']; ?>" title="<?php echo $val['name']; ?>">
-                <?php endforeach; ?>
+                {foreach $label as $val}
+                <input type="checkbox" name="label[]" value="{$val['lid']}" title="{$val['name']}">
+                {/foreach}
             </div>
         </div>
 
@@ -151,12 +174,16 @@
 
 
         <div class="layui-form-item">
-            <button class="layui-btn" lay-submit="" lay-filter="add">增加</button>
+
+            <div class="layui-input-block">
+                <button type="button" class="layui-btn" lay-submit="" lay-filter="add">增加</button>
+            </div>
         </div>
+
     </form>
 </div>
-<script src="/static/admin/static/js/jquery.js" charset="utf-8"></script>
-<script src="/static/admin/lib/layui/layui.js" charset="utf-8"></script>
+<script src="__PUBLIC_ADMIN__/static/js/jquery.js" charset="utf-8"></script>
+<script src="__PUBLIC_ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
 <script type="text/javascript">
     layui.use(['form', 'layer','upload'], function() {
         var form = layui.form,
@@ -261,11 +288,11 @@
                 alert('请选择上传视频');
             }
 
-            $.post("<?php echo url('admin/approve/addDo'); ?>", data.field, function(response) {
+            $.post("{:url('index/approve/addDo')}", data.field, function(response) {
                 if (response.code == 0) {
-                        layer.alert("添加成功", { icon: 6 }, function() {
-                            location.href = "";
-                        });
+                    layer.alert("添加成功", { icon: 6 }, function() {
+                        window.location.href = "http://www.shayudj.com/";
+                    });
                 }else{
                     layer.msg(response.msg, { time: 1000, icon: response.icon });
                 }

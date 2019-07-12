@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"D:\pei\public/../application/admin\view\approve\add.html";i:1562933487;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"D:\pei\public/../application/index\view\approve\add.html";i:1562936551;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -14,8 +14,32 @@
     <![endif]-->
 </head>
 
+<style>
+    #header{
+        position: relative;
+        width: 778px;
+        height: 250px;
+        background-color: #999;
+        margin: 0 auto;
+
+    }
+</style>
+
 <body>
-<div class="weadmin-body">
+<div class="weadmin-body" id="header">
+    <div id="Layer1" style="position:fixed; left:0px; top:0px; width:100%; height:100%">
+        <img src="http://cdn.lanyushiting.com/web.png" width="100%" height="100%"/>
+    </div>
+
+
+    <div class="layui-form-item">
+
+        <div class="layui-input-block">
+            <h1>陪玩资料认证</h1>
+        </div>
+    </div>
+
+
     <form action="" method="post" class="layui-form layui-form-pane">
 
         <div class="layui-form-item">
@@ -151,8 +175,12 @@
 
 
         <div class="layui-form-item">
-            <button class="layui-btn" lay-submit="" lay-filter="add">增加</button>
+
+            <div class="layui-input-block">
+                <button type="button" class="layui-btn" lay-submit="" lay-filter="add">增加</button>
+            </div>
         </div>
+
     </form>
 </div>
 <script src="/static/admin/static/js/jquery.js" charset="utf-8"></script>
@@ -261,11 +289,11 @@
                 alert('请选择上传视频');
             }
 
-            $.post("<?php echo url('admin/approve/addDo'); ?>", data.field, function(response) {
+            $.post("<?php echo url('index/approve/addDo'); ?>", data.field, function(response) {
                 if (response.code == 0) {
-                        layer.alert("添加成功", { icon: 6 }, function() {
-                            location.href = "";
-                        });
+                    layer.alert("添加成功", { icon: 6 }, function() {
+                        window.location.href = "http://www.shayudj.com/";
+                    });
                 }else{
                     layer.msg(response.msg, { time: 1000, icon: response.icon });
                 }
