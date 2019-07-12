@@ -566,4 +566,83 @@ class Cate extends Auth{
             echo (['code' => 1,'msg' => '参数错误','icon' =>2]);
         }
     }
+
+
+    //用户视频展示
+    public function video(){
+        //查询所有数据
+        $video = Db::name('video v')->field('v.*,u.username as uname')->join( 'user u', 'v.uid = u.uid' )->order('status','asc')->order('isrecommend','desc')->order('order','desc')->paginate(30,false);
+        //将结果转换成数组
+        $video_data = $video->toArray();
+        $this->assign('data',$video_data['data']);
+        $this->assign('total',$video_data['total']);
+        $this->assign('list',$video);
+        return $this->fetch();
+    }
+    //视频删除
+    public function delAllVideo(){
+        if(input('?post.table')){
+            $id = input('post.id/a');
+            if(empty($id)){
+                echo json_encode(['code' => 1,'msg' => '请选择数据','icon' =>2]);
+                exit;
+            }else{
+                $where['vid'] = array('IN',implode(',', $id));
+                $video_data['status'] = -1;
+                $result =Db::name(trim(input('post.table')))->where($where)->update($video_data);
+                if($result){
+                    echo json_encode(['code' => 0,'msg' => '删除成功','icon' => 1]);
+                }else{
+                    echo json_encode(['code' => 1,'msg' => '删除失败','icon' => 2]);
+                }
+            }
+        }else{
+            echo json_encode(['code' => 1,'msg' =>'禁止非法操作','icon' => 3]);
+        }
+    }
+    //视频修改状态
+    public function updateVideo(){
+        if(request()->isPost()){
+            $data = input('post.');
+            $where['vid'] = array('EQ',$data['vid']);
+            $result = Db::name('video')->where($where)->update($data);
+            if($result){
+                echo json_encode(['code' => 0,'msg' => '修改成功','icon' => 1]);
+            }else{
+                echo json_encode(['code' => 1,'msg' => '修改失败','icon' => 2]);
+            }
+        }
+    }
+    //视频修改推荐
+    public function upRecommend(){
+        if(request()->isPost()){
+            $data = input('post.');
+            $where['vid'] = array('EQ',$data['vid']);
+            $result = Db::name('video')->where($where)->update($data);
+            if($result){
+                echo json_encode(['code' => 0,'msg' => '修改成功','icon' => 1]);
+            }else{
+                echo json_encode(['code' => 1,'msg' => '修改失败','icon' => 2]);
+            }
+        }
+    }
+    //视频修改排序
+    public function upOrder(){
+        if(request()->isPost()){
+            $data = input('post.');
+            //判断当前排序数字是否存在
+            $order_first = Db::name('video')->where( [ 'order'=>$data['order'], 'status'=>2 ] )->find();
+            if( $order_first ){
+                echo json_encode(['code' => 1,'msg' => '排序已存在','icon' => 2]);
+            }else{
+                $where['vid'] = array('EQ',$data['vid']);
+                $result = Db::name('video')->where($where)->update($data);
+                if($result){
+                    echo json_encode(['code' => 0,'msg' => '修改成功','icon' => 1]);
+                }else{
+                    echo json_encode(['code' => 1,'msg' => '修改失败','icon' => 2]);
+                }
+            }
+        }
+    }
 }
