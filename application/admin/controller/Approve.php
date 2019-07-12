@@ -63,7 +63,9 @@ class Approve extends Controller {
             foreach($labelIds as $val){
                 $data = [
                     'uid' => $approve['uid'],
-                    'lid' => $val
+                    'lid' => $val,
+                    'realname' => $approve['realname'],
+                    'alipay'   => $approve['alipay']
                 ];
                 Db::name('label_user')->insert($data);
             }

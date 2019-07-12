@@ -64,7 +64,7 @@ class Home extends Auth {
         $page = isset($arr['page']) ? $arr['page'] : 1;
         //推荐数据
         $data = Db::name('video')->where([
-            'status' => 1, #查询视频是否正常
+            'status' => 2, #查询视频是否正常
             'isrecommend' => 2, #查询是否是推荐
         ])->order('order ASC')->page($page,$limit)->field('uid,videourl,img')->select();
 
@@ -114,7 +114,7 @@ class Home extends Auth {
         $page = isset($arr['page']) ? $arr['page'] : 1;
         //推荐数据
         $data = Db::name('video')->where([
-            'status' => 1, #查询视频是否正常
+            'status' => 2, #查询视频是否正常
             'isrecommend' => 1, #查询是否是推荐
         ])->page($page,$limit)->field('uid,videourl,img')->select();
         //初始化数组
