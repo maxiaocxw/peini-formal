@@ -119,6 +119,7 @@ class Pay extends Auth{
 
         $param['sign'] = $sign;
         $str = $c->getSignContentUrlencode($param);
+        var_dump($str);exit;
         return $str;
     }
 

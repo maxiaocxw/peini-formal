@@ -7,8 +7,10 @@
  */
 namespace app\api\controller;
 
+use AopClient;
 use think\Controller;
 use think\Log;
+
 
 vendor('aliyun-sdk.AopSdk');
 
@@ -21,7 +23,8 @@ class Paycllaback extends Controller{
 
     //支付宝回调
     public function aliPay(){
-        $c = new \AopClient;
+
+        $c = new AopClient;
 
         $result = $c->rsaCheckV1($_POST,$c->alipayrsaPublicKey,$_POST['sign_type']);
 
