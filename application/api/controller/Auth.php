@@ -155,7 +155,7 @@ class Auth extends Controller{
 
     //获取用户信息
     public function getUserInfo($uid){
-        $list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,token,currency')->where('uid='.$uid)->find();
+        $list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,currency')->where('uid='.$uid)->find();
         $list['birthday']=date('Y-m-d',$list['birthday']);
         $list['addtime']=date('Y-m-d',$list['addtime']);
         return $list;
