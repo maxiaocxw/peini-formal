@@ -19,7 +19,7 @@ class Cate extends Auth{
             //获取文件路径和文件后缀名
             $ext = pathinfo( $file['name'], PATHINFO_EXTENSION );
             //调用方法将图片上传到七牛
-            $qiniu_res = $qiniu->upload( 'image', $ext, $file['tmp_name'] );
+            $qiniu_res = $qiniu->upload( 'image', '.'.$ext, $file['tmp_name'] );
             //判断结果并返回完整路径
             if( $qiniu_res ){
                 //将结果转化成数组获取key

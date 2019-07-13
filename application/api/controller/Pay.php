@@ -7,9 +7,10 @@
  */
 namespace app\api\controller;
 
+use app\api\controller\WxPay;
+use think\Config;
 use think\Db;
 
-vendor('aliyun-sdk.AopSdk');
 
 class Pay extends Auth{
 
@@ -31,7 +32,7 @@ class Pay extends Auth{
         switch ($info['type']){
             //微信
             case 1:
-                $result = $this->wxPay();
+                $result = $this->wxPay($info);
                 $this->II('200','请求成功',$result);
                 break;
             case 2:
@@ -44,13 +45,16 @@ class Pay extends Auth{
                 break;
             default :
                 $this->II('201','请求失败',[]);
-
         }
 
     }
 
     //添加订单
     public function add(){
+        //参数验证
+//        $this->checkParam();
+        //token验证
+//        $this->checkToken();
         //添加数据到订单列表中
         $post = input('post.');
         //根据传递过来的金额id做一下2次校验
@@ -79,7 +83,8 @@ class Pay extends Auth{
             'paystatus' => 0,
             'status'    => 0,
             'type'      => $pay_type,
-            'addtime'   => time()
+            'addtime'   => time(),
+            'currencynum' => $money
         ];
         $result = Db::name('recharge_order')->insert($data);
         if($result){
@@ -88,42 +93,27 @@ class Pay extends Auth{
         $this->II('201','订单添失败',[]);
     }
 
+    /**
+     * 调取支付宝支付
+     * @param $info
+     * @return string
+     */
     public function aliPay($info){
-        //实例化类
-        $c = new \AopClient;
-        $request = new \AlipayTradeAppPayRequest();
-        /**业务参数 start**/
-        $content['subject'] = "用户充值".$info['money'];//商品的标题/交易标题/订单标题/订单关键字等。
-        $content['out_trade_no'] = $info['tranno'];//商户网站唯一订单号
-        $content['timeout_express'] = "30m";//该笔订单允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天，1c-当天（1c-当天的情况下，无论交易何时创建，都在0点关闭）。 该参数数值不接受小数点， 如 1.5h，可转换为 90m。注：若为空，则默认为15d。
-        $content['total_amount'] =number_format($info['money'],2,".","");//    订单总金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000]，
-        $content['product_code'] = "QUICK_MSECURITY_PAY";//    销售产品码，商家和支付宝签约的产品码，为固定值QUICK_MSECURITY_PAY
-        $con = json_encode($content);//$content是biz_content的值,将之转化成字符串
-        /**业务参数 end**/
-
-        /**公共参数 **/
-        $param = array();
-        $param['app_id'] = $c->appId;//支付宝分配给开发者的应用ID
-        $param['method'] = 'alipay.trade.app.pay';//接口名称
-        $param['charset'] = 'utf-8';//请求使用的编码格式
-        $param['sign_type'] = 'RSA2';//商户生成签名字符串所使用的签名算法类型
-        $param['timestamp'] = date("Y-m-d H:i:s");//发送请求的时间，格式"yyyy-MM-dd HH:mm:ss"
-        $param['version'] = '1.0';//调用的接口版本，固定为：1.0
-        $param['notify_url'] = 'http://www.shyudj.com/api/pay/alinotify';//支付宝服务器主动通知地址
-        $param['biz_content'] = $con;//业务请求参数的集合,长度不限,json格式
-        /**公共参数**/
-
-        //生成签名
-        $paramStr = $c->getSignContent($param);
-        $sign = $c->alonersaSign($paramStr,$c->rsaPrivateKey,'RSA2');
-
-        $param['sign'] = $sign;
-        $str = $c->getSignContentUrlencode($param);
-        return $str;
+        $alipay = new Alipay();
+        $result = $alipay ->alipay('用户充值',  $info['money'], $info['tranno'], Config::get('alipay')['notify_url']);
+        return $result;
     }
 
-    public function wxPay(){
-
+    public function wxPay($info){
+        //实例化微信类
+        $wx = new WxPay();
+        $result = $wx ->getPrePayOrder('用户充值',  $info['tranno'],$info['money']*100, 'http://www.shayudj.com/api/paycllaback/wxPay');
+        if ($result['prepay_id']){//判断返回参数中是否有prepay_id
+            $order1 = $wx->getOrder($result['prepay_id']);//执行二次签名返回参数
+            return $order1;
+        } else {
+            return $result['err_code_des'];
+        }
     }
 
     public function applePay(){

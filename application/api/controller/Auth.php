@@ -155,7 +155,8 @@ class Auth extends Controller{
 
     //获取用户信息
     public function getUserInfo($uid){
-        $list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,token,currency')->where('uid='.$uid)->find();
+        $list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,currency,token,rongtoken')->where('uid='.$uid)->find();
+        $list['qiniuToken'] = (new Qiniu())->getToken();
         $list['birthday']=date('Y-m-d',$list['birthday']);
         $list['addtime']=date('Y-m-d',$list['addtime']);
         return $list;
@@ -247,5 +248,40 @@ class Auth extends Controller{
         }
 
         return $constellation;
+    }
+
+
+    /**
+     * 发送数据
+     * @param String $url     请求的地址
+     * @param Array  $header  自定义的header数据
+     * @param Array  $content POST的数据
+     * @return String
+     */
+    public  function tocurl($url,$content){
+        $nowtime=time()*1000;
+        $rand_=rand(100000,999999);
+        $appsecret='rBBGXNtgRI4V4';
+        $header=[
+            'Content-Type:application/x-www-form-urlencoded',
+            'App-Key:p5tvi9dspeoj4',//appkey
+            'Nonce:'. $rand_,//随机数
+            'Timestamp:'.$nowtime,//当前时间戳
+            'Signature:'.sha1($appsecret.$rand_.$nowtime)
+        ];
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // 跳过证书检查
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);  // 从证书中检查SSL加密算法是否存在
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
+        $response = curl_exec($ch);
+        if($error=curl_error($ch)){
+            die($error);
+        }
+        curl_close($ch);
+        return $response;
     }
 }

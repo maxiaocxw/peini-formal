@@ -255,23 +255,28 @@ return [
         'bucket' => 'peini'
     ],
     //支付宝相关配置
-    'aliyu' => [
-        //商户id
-        'appId' => '2019070965745989',
-        //商户公钥
-        'partner_public_key' => 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt1RzhjzeGGlf7KosMcwkSLNAvGG+7RcAKF3LZgpBGt4ymMIep6BMAd39DclNatplhapWIj+vlXV5V+IbLRc0Gl8oy2MExtu3QQfDeGuYsM8yDv18rSh0FcMNJzqExyUpgkL9g/PfxpDJ796YJIwctlDF1RvvDfZI7GmvIOQu/LUkTwnkieY7myOXTadudg9W7H28EY4/lGzXZSkvcnInl7iG24pt0E4SPaSdGUIfdHIjjXmkCWIZXDaK1f30tKzKjp19ZhZS2v2fzmk/EqtA7Um/s2DzuEOe5mVwO0jqJS22zZQXhjFFBFYhmkDeG2mcykHKWWS8lqQEWbmblng7XwIDAQAB',
+    'alipay'=>[
+        //APPId
+        'appId'             => '2019070965745989',
+        //请求地址
+        'gatewayUrl'        => 'https://openapi.alipay.com/gateway.do',
+        //私钥
+        'rsaPrivateKey'     => 'MIIEpAIBAAKCAQEAt1RzhjzeGGlf7KosMcwkSLNAvGG+7RcAKF3LZgpBGt4ymMIep6BMAd39DclNatplhapWIj+vlXV5V+IbLRc0Gl8oy2MExtu3QQfDeGuYsM8yDv18rSh0FcMNJzqExyUpgkL9g/PfxpDJ796YJIwctlDF1RvvDfZI7GmvIOQu/LUkTwnkieY7myOXTadudg9W7H28EY4/lGzXZSkvcnInl7iG24pt0E4SPaSdGUIfdHIjjXmkCWIZXDaK1f30tKzKjp19ZhZS2v2fzmk/EqtA7Um/s2DzuEOe5mVwO0jqJS22zZQXhjFFBFYhmkDeG2mcykHKWWS8lqQEWbmblng7XwIDAQABAoIBAEZ0820cyXJyVQZcpF2DClLSaUe8/SabV1ksKvaNbFYKHUHuIN/lUDDLguygd9tgEfJb83x4I1/6ZOcso6shpsmX1tLLvFM8r+ITPMF0AJu7FY8DRr45tNuEOfLgn5T1qE1Ct7HVsSPcE2/XiXtKSeKbilyLvsUL6RzKxR6L8670vCAkfTv1UykpFQWrbsHfICwtWd2c1WyZRCRGkTL8ECCaWcEbZPecIRxoYJTHi2ZrwPiQ+ROxdeLx5eOTdDwkhwEPu4Sl5QYddN2z1KM4cSFyzUxAQmZJRnlnC7BIMadVT21uRTrHftTV5b2JfKRUARgfD/fgQlMsezpAbx5K4KECgYEA5yZOVOmi/uynqEIFNg+W0JarM3HODLAYDz3qA7aeDD3QXy6P4zOzEJ+0E07l3Q3uKvQoj7ZqoRjCHRzKPB2hrGh3G99b+TbT0oRcXJ5//DHzB0uy/9NAWWWK+zttII5k6F4Z0WRnbmQL7erOGHhU6F4Fqdz1bfnnjf+TQdXBgG8CgYEAywoNMboIZYaRVlWSa9EU99qElfMJlRJOVJLBCpAkIG0pqH0/RP0M6rOvf8RnLHTvxsBjOcgfEA7t+Jlio88MoXYp1LC92ZM5qGxD7eCokP5CUEt9OFK0p9U4Hft6pA7pq0AbPodhUOfRBWoeGBlnPfsRTh95CC6Chgmx+sC+jBECgYAFmdQEErU0YB+f4BmoObB51WzIjlVj0VCD7gghluc1fLnz1HkAFFyeZoBCh4LiXFgNCmWBNfZXePYbJntwAXfNaaqZLkxYOY/gZfym8eBACCXPY3Iu6LuCbwdzFvmJ9GlViBIwFLK85gez+CCOTzwfdUfF2ejIhWmq8ypqSfeqWQKBgQCyUD2OMmc1Yp05SSWycokLs2lFl5AOz2jjdY77i+NuZvBy/KwYFnTFmtDCUOabcIcz8bozAMHnBHWSIoMygaACHRhXpnDVKCs28v4lZ2wjCmmKwwFR+bCWxPbnvffTJRWqRD6pB5Q7zZsQOkX7vDOjh1+HULSmrtIKjXE1Wxj9QQKBgQCtuQ9ErBPBOQJ3qimHe/2v4RY4+qy0gH0ZhtmWj1NEYwsvK9oeuYd2YcE1CYkPSqpW8cGhyVT2RUIjTnMOdLUefwCCIBmwsSz15DyWtIzh4IrlEe6WZ+vQ0HfJHuHL/Km5fSVIGKSiMq6UWhZ+GLPzEtZZ0yy5ctjnUiLIgo47fQ==',
+
+        //应用公钥
+        'rsaPublicKey'      => 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt1RzhjzeGGlf7KosMcwkSLNAvGG+7RcAKF3LZgpBGt4ymMIep6BMAd39DclNatplhapWIj+vlXV5V+IbLRc0Gl8oy2MExtu3QQfDeGuYsM8yDv18rSh0FcMNJzqExyUpgkL9g/PfxpDJ796YJIwctlDF1RvvDfZI7GmvIOQu/LUkTwnkieY7myOXTadudg9W7H28EY4/lGzXZSkvcnInl7iG24pt0E4SPaSdGUIfdHIjjXmkCWIZXDaK1f30tKzKjp19ZhZS2v2fzmk/EqtA7Um/s2DzuEOe5mVwO0jqJS22zZQXhjFFBFYhmkDeG2mcykHKWWS8lqQEWbmblng7XwIDAQAB',
+
         //支付宝公钥
-        'alipay_public_key' => 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvlbqq5n2lQyQpgH9whHZ3DgPJD7TUuOXJvON/AZ6JkBArc7sAEoWextA9ED6LS7RzSoa/KCO6EbCRj77javh+3tRnDfqwnJ3ZQtaI863+7l2sIowI0h08sMEsgXOG43GVOFtfL944/WC220x8y5/yOO5hsa3G3XxQmHURuPhnLC6RBHAnsxRS6ZJIZ/BBfU0YW2JswOU1KjnU58tWiZywckUreFljXO4e+ErhyNKT6t1lfAn0ulJMofpGLTIwqAXPHwK243A5bz2k4QTgDVNolo7+yxwJgbUJ0++0DTrqJFBmEaqkdNmqkVgxU/06VL5lpbqhDyFCJ/0d3qzgLYLiwIDAQAB',
-        //商户私钥
-        'partner_private_key'   => 'KNO4dr6b8lgtklBlLi5FVw==',
-        //传输方式
-        'format' => 'json',
+        'alipayrsaPublicKey'=> 'MIIEpAIBAAKCAQEAt1RzhjzeGGlf7KosMcwkSLNAvGG+7RcAKF3LZgpBGt4ymMIep6BMAd39DclNatplhapWIj+vlXV5V+IbLRc0Gl8oy2MExtu3QQfDeGuYsM8yDv18rSh0FcMNJzqExyUpgkL9g/PfxpDJ796YJIwctlDF1RvvDfZI7GmvIOQu/LUkTwnkieY7myOXTadudg9W7H28EY4/lGzXZSkvcnInl7iG24pt0E4SPaSdGUIfdHIjjXmkCWIZXDaK1f30tKzKjp19ZhZS2v2fzmk/EqtA7Um/s2DzuEOe5mVwO0jqJS22zZQXhjFFBFYhmkDeG2mcykHKWWS8lqQEWbmblng7XwIDAQABAoIBAEZ0820cyXJyVQZcpF2DClLSaUe8/SabV1ksKvaNbFYKHUHuIN/lUDDLguygd9tgEfJb83x4I1/6ZOcso6shpsmX1tLLvFM8r+ITPMF0AJu7FY8DRr45tNuEOfLgn5T1qE1Ct7HVsSPcE2/XiXtKSeKbilyLvsUL6RzKxR6L8670vCAkfTv1UykpFQWrbsHfICwtWd2c1WyZRCRGkTL8ECCaWcEbZPecIRxoYJTHi2ZrwPiQ+ROxdeLx5eOTdDwkhwEPu4Sl5QYddN2z1KM4cSFyzUxAQmZJRnlnC7BIMadVT21uRTrHftTV5b2JfKRUARgfD/fgQlMsezpAbx5K4KECgYEA5yZOVOmi/uynqEIFNg+W0JarM3HODLAYDz3qA7aeDD3QXy6P4zOzEJ+0E07l3Q3uKvQoj7ZqoRjCHRzKPB2hrGh3G99b+TbT0oRcXJ5//DHzB0uy/9NAWWWK+zttII5k6F4Z0WRnbmQL7erOGHhU6F4Fqdz1bfnnjf+TQdXBgG8CgYEAywoNMboIZYaRVlWSa9EU99qElfMJlRJOVJLBCpAkIG0pqH0/RP0M6rOvf8RnLHTvxsBjOcgfEA7t+Jlio88MoXYp1LC92ZM5qGxD7eCokP5CUEt9OFK0p9U4Hft6pA7pq0AbPodhUOfRBWoeGBlnPfsRTh95CC6Chgmx+sC+jBECgYAFmdQEErU0YB+f4BmoObB51WzIjlVj0VCD7gghluc1fLnz1HkAFFyeZoBCh4LiXFgNCmWBNfZXePYbJntwAXfNaaqZLkxYOY/gZfym8eBACCXPY3Iu6LuCbwdzFvmJ9GlViBIwFLK85gez+CCOTzwfdUfF2ejIhWmq8ypqSfeqWQKBgQCyUD2OMmc1Yp05SSWycokLs2lFl5AOz2jjdY77i+NuZvBy/KwYFnTFmtDCUOabcIcz8bozAMHnBHWSIoMygaACHRhXpnDVKCs28v4lZ2wjCmmKwwFR+bCWxPbnvffTJRWqRD6pB5Q7zZsQOkX7vDOjh1+HULSmrtIKjXE1Wxj9QQKBgQCtuQ9ErBPBOQJ3qimHe/2v4RY4+qy0gH0ZhtmWj1NEYwsvK9oeuYd2YcE1CYkPSqpW8cGhyVT2RUIjTnMOdLUefwCCIBmwsSz15DyWtIzh4IrlEe6WZ+vQ0HfJHuHL/Km5fSVIGKSiMq6UWhZ+GLPzEtZZ0yy5ctjnUiLIgo47fQ==',
+        //传输数据格式
+        'format'            => 'json',
         //编码
-        'charset' => 'utf-8',
-        //地址
-        'gatewayUrl ' => 'https://openapi.alipay.com/gateway.do',
-        //订单最晚支付时长
-        'timeout_express' => '30m',
-        //
+        'charset'           => 'UTF-8',
+        //加密方式
+        'signType'          => 'RSA2',
+        //请求方式
+        'transport'         => 'http',
+        //异步回调地址
+        'notify_url'        => 'http://www.shayudj.com/api/paycllaback/aliPay'
     ],
 ];

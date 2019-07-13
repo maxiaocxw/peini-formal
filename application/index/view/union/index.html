@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+	<title>陪你公会信息上传</title>
+	<style type="text/css">
+		body{
+			height: 100%;
+			margin:0px;
+		}
+	.demo2-bg{
+	    background: url(http://cdn.lanyushiting.com/web.png) no-repeat;
+	    background-size: cover;
+	    width: 100%;
+	    height: 100%;
+	    position: relative;
+	}
+	.demo2{
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    top: 0;
+	    bottom: 0;
+	    width: 100%;
+	    height: 100%;
+	    line-height: 50px;
+	    text-align: center;
+	    background:rgba(255,255,255,0.5);
+	}
+    h1{
+        margin-bottom: 0px;
+    }
+	form span{
+		font-size: 18px;font-weight: bold;
+
+	}
+    form {
+        width:30%;
+        margin-left: 35%;
+    }
+	form input{
+		width:200px;
+		height: 25px;
+        float:right;
+	}
+	button {
+		width:250px;
+		height: 25px;
+		border:0px;
+		border-radius: 10px;
+		background-color: #FFB6C1;
+		font-size: 16px;
+		font-weight: bold;
+		color:#fff;
+	}
+	</style>
+</head>
+
+<body>
+<div class="demo2-bg">
+    <div class="demo2">
+    	<h1>公会信息上传</h1>
+    	<span class="duigong" style="cursor:pointer;font-weight:bold;background-color:#9F79EE;">对公公会信息</span>&nbsp;&nbsp;&nbsp;<span style="font-weight:bold;">|</span>&nbsp;&nbsp;&nbsp;<span class="duisi" style="cursor:pointer;font-weight:bold;">对私公会信息</span>
+    	<form class="duigongform" action="/index/union/uploaddo" enctype="multipart/form-data" method="post">
+    		<span>公会名称: </span><input autocomplete="off" type="text" name="name" /><br />
+    		<span>身份证正面: </span><input autocomplete="off" type="file" name="file" id="file1" onchange="uploaddo1();" /><br />
+    		<input class="file1" type="hidden" value="" name="idcodefront" />
+    		<span>身份证反面: </span><input autocomplete="off" type="file" name="file2" id="file2" onchange="uploaddo2();" /><br />
+    		<input class="file2" type="hidden" value="" name="idcodereverse">
+    		<span>手持身份证: </span><input autocomplete="off" type="file" name="file3" id="file3" onchange="uploaddo3();" /><br />
+    		<input class="file3" type="hidden"  value="" name="handidcode">
+    		<span>QQ: </span><input autocomplete="off" type="text" name="qq"><br />
+    		<span>微信: </span><input autocomplete="off" type="text" name="wechat"><br />
+    		<span>电话:</span><input autocomplete="off" type="text" name="mobile"><br />
+    		<input class="file4" type="hidden" value="" name="paymentname">
+    		<span>开户许可证: </span><input autocomplete="off" type="file" name="file4" id="file4" onchange="uploaddo4();" /><br />
+            <input class="file5" type="hidden" value="" name="businesslicense">
+            <span>营业执照: </span><input autocomplete="off" type="file" name="file4" id="file5" onchange="uploaddo5();" /><br />
+    		<span>对公银行账号: </span><input autocomplete="off" type="text" name="bankcard"><br />
+    		<span>开户行信息: </span><input autocomplete="off" type="text" name="subbranch"><br />
+    		<input type="hidden" name="type" value="1" />
+    		<button>提交</button>
+    	</form>
+    	<form class="duisiform" style="display: none;" action="/index/union/uploaddo" enctype="multipart/form-data" method="post">
+    		<span>公会名称: </span><input autocomplete="off" type="text" name="name" /><br />
+    		<span>身份证正面: </span><input autocomplete="off" type="file" name="file" id="file11" onchange="uploaddo11();" /><br />
+    		<input class="file11" type="hidden" value="" name="idcodefront" />
+    		<span>身份证反面: </span><input autocomplete="off" type="file" name="file2" id="file22" onchange="uploaddo22();" /><br />
+    		<input class="file22" type="hidden" value="" name="idcodereverse">
+    		<span>手持身份证: </span><input autocomplete="off" type="file" name="file3" id="file33" onchange="uploaddo33();" /><br />
+    		<input class="file33" type="hidden"  value="" name="handidcode">
+    		<span>QQ: </span><input autocomplete="off" type="text" name="qq"><br />
+    		<span>微信: </span><input autocomplete="off" type="text" name="wechat"><br />
+    		<span>电话: </span><input autocomplete="off" type="text" name="mobile"><br />
+    		<span>支付宝: </span><input autocomplete="off" type="text" name="alpay"><br />
+    		<input type="hidden" name="type" value="2" />
+    		<button>提交</button>
+    	</form>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="__PUBLIC_ADMIN__/static/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$('.duigong').click(function(){
+		$('.duigong').css('background-color','#9F79EE');
+		$('.duisi').css('background-color','');
+		$('.duigongform').show();
+		$('.duisiform').hide();
+	})
+	$('.duisi').click(function(){
+		$('.duigong').css('background-color','');
+		$('.duisi').css('background-color','#9F79EE');
+		$('.duigongform').hide();
+		$('.duisiform').show();
+	})
+	function uploaddo1(){
+    var formData = new FormData();
+    formData.append("file", document.getElementById("file1").files[0]);   
+    $.ajax({
+        url: "/index/union/qinui_upload",
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (data) {
+        	$('.file1').val(data);
+            console.log(data);
+        },
+        error: function () {
+            console.log('aaa');
+        }
+    });
+}
+    function uploaddo2(){
+    var formData = new FormData();
+    formData.append("file", document.getElementById("file2").files[0]);   
+    $.ajax({
+        url: "/index/union/qinui_upload",
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (data) {
+        	$('.file2').val(data);
+            console.log(data);
+        },
+        error: function () {
+            console.log('aaa');
+        }
+    });
+}
+    function uploaddo3(){
+    var formData = new FormData();
+    formData.append("file", document.getElementById("file3").files[0]);   
+    $.ajax({
+        url: "/index/union/qinui_upload",
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (data) {
+        	$('.file3').val(data);
+            console.log(data);
+        },
+        error: function () {
+            console.log('aaa');
+        }
+    });
+}
+function uploaddo4(){
+    var formData = new FormData();
+    formData.append("file", document.getElementById("file4").files[0]);   
+    $.ajax({
+        url: "/index/union/qinui_upload",
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (data) {
+        	$('.file4').val(data);
+            console.log(data);
+        },
+        error: function () {
+            console.log('aaa');
+        }
+    });
+}
+function uploaddo5(){
+    var formData = new FormData();
+    formData.append("file", document.getElementById("file5").files[0]);   
+    $.ajax({
+        url: "/index/union/qinui_upload",
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (data) {
+            $('.file5').val(data);
+            console.log(data);
+        },
+        error: function () {
+            console.log('aaa');
+        }
+    });
+}
+function uploaddo11(){
+    var formData = new FormData();
+    formData.append("file", document.getElementById("file11").files[0]);   
+    $.ajax({
+        url: "/index/union/qinui_upload",
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (data) {
+        	$('.file11').val(data);
+            console.log(data);
+        },
+        error: function () {
+            console.log('aaa');
+        }
+    });
+}
+function uploaddo22(){
+    var formData = new FormData();
+    formData.append("file", document.getElementById("file22").files[0]);   
+    $.ajax({
+        url: "/index/union/qinui_upload",
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (data) {
+        	$('.file22').val(data);
+            console.log(data);
+        },
+        error: function () {
+            console.log('aaa');
+        }
+    });
+}
+function uploaddo33(){
+    var formData = new FormData();
+    formData.append("file", document.getElementById("file33").files[0]);   
+    $.ajax({
+        url: "/index/union/qinui_upload",
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (data) {
+        	$('.file33').val(data);
+            console.log(data);
+        },
+        error: function () {
+            console.log('aaa');
+        }
+    });
+}
+</script>

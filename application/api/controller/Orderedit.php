@@ -78,6 +78,9 @@ class OrderEdit extends Auth{
 	}
 
 	public function isOver(){
+		if(Db::name('user')->where('uid='.$this->uid)->value('isunlimited')==2){
+			return true;
+		}
 		if(Db::name('game_order')->where('pid='.$this->uid.' and status=2')->value('id')){
 			$this->II('201','还有订单未完成，不能接单');
 		}else{
