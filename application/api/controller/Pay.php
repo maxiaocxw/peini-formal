@@ -50,6 +50,10 @@ class Pay extends Auth{
 
     //添加订单
     public function add(){
+        //参数验证
+        $this->checkParam();
+        //token验证
+        $this->checkToken();
         //添加数据到订单列表中
         $post = input('post.');
         //根据传递过来的金额id做一下2次校验
