@@ -180,18 +180,19 @@ class Approve extends \think\Controller{
                     ];
                     $videoResult = Db::name('video')->insert($videoData);
                     if($videoResult){
-                        echo json_encode(['code' => 0,'msg' => '添加成功','icon' => 2]);exit;
+                        echo json_encode(['code' => 0,'msg' => '添加成功','icon' => 1]);exit;
                     }else{
-                        echo json_encode(['code' => 1,'msg' => '添加失败','icon' => 2]);exit;
+                        echo json_encode(['code' => 1,'msg' => '添加失败','icon' => 6]);exit;
                     }
                 }else{
-                    echo json_encode(['code' => 1,'msg' => '添加失败','icon' => 2]);exit;
+                    echo json_encode(['code' => 1,'msg' => '添加失败','icon' => 5]);exit;
                 }
             }else{
-                echo json_encode(['code' => 1,'msg' => '添加失败','icon' => 2]);exit;
+                echo json_encode(['code' => 1,'msg' => '添加失败','icon' => 4]);exit;
             }
         }catch (\Exception $e){
-            echo json_encode(['code' => 1,'msg' => '添加失败','icon' => 2]);exit;
+            var_dump($e);exit;
+            echo json_encode(['code' => 1,'msg' => '添加失败','icon' => 3]);exit;
         }
     }
 

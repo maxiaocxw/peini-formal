@@ -32,7 +32,7 @@ class Cate extends Auth{
             echo json_encode(['code' => 1,'msg' => '上传错误','icon' => 2]);
         }
     }
-    
+
     //职业展示
     public function work(){
         //查询职业表的所有数据
