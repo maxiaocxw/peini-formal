@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:93:"D:\phpserver\wwwroot\default\peini-formal\public/../application/admin\view\approve\index.html";i:1563006743;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -7,8 +8,8 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/font.css">
-    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/weadmin.css">
+    <link rel="stylesheet" href="/static/admin/static/css/font.css">
+    <link rel="stylesheet" href="/static/admin/static/css/weadmin.css">
 </head>
 
 <body>
@@ -26,7 +27,7 @@
 
 
     <div class="weadmin-block">
-        <span class="fr" style="line-height:40px">共有数据：{$total} 条</span>
+        <span class="fr" style="line-height:40px">共有数据：<?php echo $total; ?> 条</span>
     </div>
     <table class="layui-table">
         <thead>
@@ -48,79 +49,79 @@
             <th>操作</th>
         </thead>
         <tbody>
-        {foreach $listInfo as $key => $value}
+        <?php foreach($listInfo as $key => $value): ?>
 
         <tr>
             <td>
                 <div class="layui-unselect layui-form-checkbox" id="admin_id" lay-skin="primary" ><i class="layui-icon">&#xe605;</i></div>
             </td>
-            <td>{$value['list']['id']}</td>
-            <td>{$value['list']['username']}</td>
-            <td>{$value['list']['alipay']}</td>
-            <td>{$value['list']['idcode']}</td>
+            <td><?php echo $value['list']['id']; ?></td>
+            <td><?php echo $value['list']['username']; ?></td>
+            <td><?php echo $value['list']['alipay']; ?></td>
+            <td><?php echo $value['list']['idcode']; ?></td>
             <td>
                 <div class="layui-upload-list">
-                    <div class='imgBox'><img src="http://cdn.lanyushiting.com/{$value['list']['idcodefront']}" class='wh100 ml2 mr2 screen'></div>
+                    <div class='imgBox'><img src="http://cdn.lanyushiting.com/<?php echo $value['list']['idcodefront']; ?>" class='wh100 ml2 mr2 screen'></div>
                 </div>
             </td>
             <td>
                 <div class="layui-upload-list">
-                    <div class='imgBox'><img src="http://cdn.lanyushiting.com/{$value['list']['idcodereverse']}" class='wh100 ml2 mr2 screen'></div>
+                    <div class='imgBox'><img src="http://cdn.lanyushiting.com/<?php echo $value['list']['idcodereverse']; ?>" class='wh100 ml2 mr2 screen'></div>
                 </div>
             </td>
             <td>
                 <div class="layui-upload-list">
-                    <div class='imgBox'><img src="http://cdn.lanyushiting.com/{$value['list']['handidcode']}" class='wh100 ml2 mr2 screen'></div>
+                    <div class='imgBox'><img src="http://cdn.lanyushiting.com/<?php echo $value['list']['handidcode']; ?>" class='wh100 ml2 mr2 screen'></div>
                 </div>
             </td>
             <td>
-            {if $value['list']['status'] == 1}
+            <?php if($value['list']['status'] == 1): ?>
                 <span class="layui-btn layui-btn-danger layui-btn-xs">待审核</span></td>
-            {elseif $value['list']['status'] == 2}
+            <?php elseif($value['list']['status'] == 2): ?>
             <span class="layui-btn layui-btn-danger layui-btn-xs">审核成功</span></td>
-            {elseif $value['list']['status'] == 3}
+            <?php elseif($value['list']['status'] == 3): ?>
             <span class="layui-btn layui-btn-danger layui-btn-xs">审核未通过</span></td>
-            {/if}
+            <?php endif; ?>
             </td>
 
             <td>
                 <?=date('Y-m-d H:i:s',$value['list']['addtime'])?>
             </td>
             <td>
-                {foreach $value['game'] as $game}
-                <span>{$game['gameName']}</span>,<span>{$game['price']}</span><br>
-                {/foreach}
+                <?php foreach($value['game'] as $game): ?>
+                <span><?php echo $game['gameName']; ?></span>,<span><?php echo $game['price']; ?></span><br>
+                <?php endforeach; ?>
             </td>
             <td>
-                {foreach $value['label'] as $label}
-                <span>{$label['name']}</span><br>
-                {/foreach}
+                <?php foreach($value['label'] as $label): ?>
+                <span><?php echo $label['name']; ?></span><br>
+                <?php endforeach; ?>
             </td>
             <td class="td-manage">
-                {if $value['list']['status'] == 1}
-                    <a title="通过审核" href="/admin/approve/review?id={$value['list']['id']}"><button class="layui-btn layui-btn-danger layui-btn-sm">通过审核</button></a>
-                    <a title="审核未通过" href="/admin/approve/noReview?id={$value['list']['id']}"><button class="layui-btn layui-btn-danger layui-btn-sm">审核未通过</button></a>
-                {elseif $value['list']['status'] == 2}
+                <?php if($value['list']['status'] == 1): ?>
+                    <a title="通过审核" href="/admin/approve/review?id=<?php echo $value['list']['id']; ?>"><button class="layui-btn layui-btn-danger layui-btn-sm">通过审核</button></a>
+                    <a title="审核未通过" href="/admin/approve/noReview?id=<?php echo $value['list']['id']; ?>"><button class="layui-btn layui-btn-danger layui-btn-sm">审核未通过</button></a>
+                <?php elseif($value['list']['status'] == 2): ?>
                     <span class="layui-btn layui-btn-danger layui-btn-xs">审核通过</span></td>
-                {elseif $value['list']['status'] == 3}
+                <?php elseif($value['list']['status'] == 3): ?>
                     <span class="layui-btn layui-btn-danger layui-btn-xs">审核未通过</span></td>
-                {/if}
+                <?php endif; ?>
             </td>
 
         </tr>
-        {/foreach}
+        <?php endforeach; ?>
         </tbody>
     </table>
 
     <div class="page">
         <div>
-            {$list->render()}
+            <?php echo $list->render(); ?>
         </div>
     </div>
 </div>
-<script src="__PUBLIC_ADMIN__/static/js/jquery.js" charset="utf-8"></script>
-<script src="__PUBLIC_ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
-<script src="__PUBLIC_ADMIN__/static/js/weadmin.js" charset="utf-8"></script>
+<script src="/static/admin/static/js/jquery.js" charset="utf-8"></script>
+<script src="/static/admin/lib/layui/layui.js" charset="utf-8"></script>
+<script src="/static/admin/static/js/weadmin.js" charset="utf-8"></script>
 <script type="text/javascript">
     layui.use(['layer', 'laydate','form'], function() {
         var laydate = layui.laydate;
@@ -136,7 +137,7 @@
     function delAll(){
         var data = tableCheck.getData();
         layer.confirm('确认要删除吗？',function(index){
-            $.post("{:url('admin/gift/delAll')}",{id:data,table:'gift'},function(response){
+            $.post("<?php echo url('admin/gift/delAll'); ?>",{id:data,table:'gift'},function(response){
                 layer.msg(response.msg,{time:1000,icon:response.icon},function(){
                     location.reload();
                 })
@@ -155,7 +156,7 @@
     });
 
     function updateWork(id, status) {
-        $.post("{:url('admin/gift/update')}", { gid: id, status: status }, function(data) {
+        $.post("<?php echo url('admin/gift/update'); ?>", { gid: id, status: status }, function(data) {
             layer.msg(data.msg, { time: 1000, data:icon }, function() {
                 location.reload();
             })
