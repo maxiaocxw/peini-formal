@@ -542,3 +542,242 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `pn_recharge_order` [ RunTime:0.021781s ]
 [ sql ] [ SQL ] INSERT INTO `pn_recharge_order` (`aid` , `tranno` , `uid` , `money` , `paystatus` , `status` , `type` , `addtime` , `currencynum`) VALUES (2 , '2019071310110249' , 1 , 50 , 0 , 0 , 1 , 1562991374 , 50) [ RunTime:0.022801s ]
 [ sql ] [ SQL ] SELECT * FROM `pn_recharge_order` WHERE  (  tranno=2019071310110249 ) LIMIT 1 [ RunTime:0.020317s ]
+---------------------------------------------------------------
+[ 2019-07-13T15:33:55+08:00 ] 127.0.0.1 GET /admin/
+[ info ] www.csshayudj.com/admin/ [运行时间：1.300081s][吞吐率：0.77req/s] [内存消耗：2,205.77kb] [文件加载：52]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\pei\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/admin\view\index\index.html [ array (
+  0 => 'menu_role',
+  1 => 'menu_list_one',
+  2 => 'menu_list_two',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028538s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_role` [ RunTime:0.018765s ]
+[ sql ] [ SQL ] SELECT `role_permission` FROM `pn_role` WHERE  (  id = 1 ) LIMIT 1 [ RunTime:0.018177s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_menu` [ RunTime:0.018596s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_menu` WHERE  (  level = 1 and statu = 1 ) [ RunTime:0.017674s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_menu` WHERE  (  level = 2 and statu = 1 ) [ RunTime:0.018532s ]
+---------------------------------------------------------------
+[ 2019-07-13T15:33:55+08:00 ] 127.0.0.1 GET /admin/index/welcome
+[ info ] www.csshayudj.com/admin/index/welcome [运行时间：0.086651s][吞吐率：11.54req/s] [内存消耗：1,445.09kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'welcome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/admin/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->welcome[ D:\pei\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/admin\view\index\welcome.html [ array (
+  0 => 'menu_role',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-13T15:33:55+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.189876s][吞吐率：5.27req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-13T15:33:56+08:00 ] 127.0.0.1 GET /admin/favicon.ico
+[ info ] www.csshayudj.com/admin/favicon.ico [运行时间：0.145591s][吞吐率：6.87req/s] [内存消耗：1,145.61kb] [文件加载：36]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'favicon.ico',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/admin/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-13T15:34:01+08:00 ] 127.0.0.1 GET /admin/approve/index
+[ info ] www.csshayudj.com/admin/approve/index [运行时间：0.946729s][吞吐率：1.06req/s] [内存消耗：2,224.91kb] [文件加载：52]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'approve',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/admin/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Approve->index[ D:\pei\application\admin\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/admin\view\approve\index.html [ array (
+  0 => 'data',
+  1 => 'total',
+  2 => 'listInfo',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030327s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.020320s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pn_approve` LIMIT 1 [ RunTime:0.019472s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_approve` ORDER BY `id` DESC LIMIT 0,30 [ RunTime:0.021023s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_playinfo` [ RunTime:0.020454s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_playinfo` WHERE  (  uid=16 ) [ RunTime:0.019214s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.019929s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  `lid` IN (1,2,3) [ RunTime:0.019628s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_playinfo` WHERE  (  uid=15 ) [ RunTime:0.019675s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  `lid` IN (1,2,3) [ RunTime:0.018463s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_playinfo` WHERE  (  uid=14 ) [ RunTime:0.019213s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  `lid` IN (1,2,3) [ RunTime:0.018677s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_playinfo` WHERE  (  uid=13 ) [ RunTime:0.018601s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  `lid` IN (1,2,3) [ RunTime:0.018955s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_playinfo` WHERE  (  uid=12 ) [ RunTime:0.019182s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  `lid` IN (1,2,3) [ RunTime:0.018683s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_playinfo` WHERE  (  uid=11 ) [ RunTime:0.018527s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  `lid` IN (1,2,3) [ RunTime:0.019395s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_playinfo` WHERE  (  uid=10 ) [ RunTime:0.019232s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  `lid` IN (1,2,3) [ RunTime:0.019158s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_playinfo` WHERE  (  uid=9 ) [ RunTime:0.018371s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  `lid` IN (1,2,3) [ RunTime:0.019317s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_playinfo` WHERE  (  uid=8 ) [ RunTime:0.019156s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  `lid` IN (1,2,3) [ RunTime:0.019143s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_playinfo` WHERE  (  uid=2 ) [ RunTime:0.019084s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  `lid` IN (1,2,3) [ RunTime:0.019160s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_playinfo` WHERE  (  uid=1 ) [ RunTime:0.019211s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.019508s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_game` WHERE  (  gid=1 ) LIMIT 1 [ RunTime:0.019201s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_game` WHERE  (  gid=2 ) LIMIT 1 [ RunTime:0.019223s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_game` WHERE  (  gid=3 ) LIMIT 1 [ RunTime:0.019278s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  `lid` IN (1,2,3) [ RunTime:0.019262s ]
+---------------------------------------------------------------
+[ 2019-07-13T15:34:01+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.029411s][吞吐率：34.00req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File

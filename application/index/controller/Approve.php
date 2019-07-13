@@ -157,9 +157,9 @@ class Approve extends \think\Controller{
                 $peiData = [
                     'uid' => $userId,
                     'idcode' => $post['idcode'],
-                    'idcodefront' => $post['img1'],
-                    'idcodereverse' => $post['img2'],
-                    'handidcode'    => $post['img3'],
+                    'idcodefront' =>str_replace('http://cdn.lanyushiting.com/','',$post['img1']),
+                    'idcodereverse' => str_replace('http://cdn.lanyushiting.com/','',$post['img2']),
+                    'handidcode'    => str_replace('http://cdn.lanyushiting.com/','',$post['img3']),
                     'status'        => 1,
                     'addtime'       => time(),
                     'labelid'       => implode(',',$post['label']),
@@ -173,8 +173,8 @@ class Approve extends \think\Controller{
                     //添加视频信息
                     $videoData = [
                         'uid'   => $userId,
-                        'videourl' => $post['img4'],
-                        'img'      => $post['img5'],
+                        'videourl' =>str_replace('http://cdn.lanyushiting.com/','',$post['img4']),
+                        'img'      =>str_replace('http://cdn.lanyushiting.com/','',$post['img5']),
                         'status'   => 1,
                         'addtime'  => time(),
                     ];
