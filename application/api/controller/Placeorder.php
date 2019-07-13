@@ -21,7 +21,9 @@ class Placeorder extends Auth{
 		//对比价格是否相同
 		$this->checkPrice();
 		//判断陪玩是否还有其他订单没完成
-		$this->isOver();
+		//$this->isOver();
+		//判断当前已经下了多少单 限制3单
+		$this->isNum(3);
 		$this->amount=$this->num*$this->price;
 		$usable=Db::name('user')->where('uid='.$this->uid)->value('currency');
 		if($usable>=$this->amount){
@@ -44,7 +46,7 @@ class Placeorder extends Auth{
 					'status'	=>		1
 				));
 				//插入定时 超过多长时间没接单自动取消
-
+				
 				Db::commit();
 				$this->II('200','成功');
 			} catch (\Exception $e) {
@@ -71,5 +73,14 @@ class Placeorder extends Auth{
 			$this->II('201','该陪玩还有订单没完成，不能下单');
 		}
 		return true;
+	}
+
+	public function isNum($num){
+		$isnum=Db::name('game_order')->field('id')->where('uid='.$this->uid.' and status=2 or status=1 or status=2')->count();
+		if($isnum>=$num){
+			$this->II('201','最多能下'.$num.'单');
+		}else{
+			return true;
+		}
 	}
 }
