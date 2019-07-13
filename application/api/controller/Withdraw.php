@@ -14,10 +14,9 @@ class Withdraw extends Auth{
     public function add(){
 
         //参数验证
-//        $this->checkParam();
+        $this->checkParam();
         //token验证
-//        $this->checkToken();
-
+        $this->checkToken();
         //接收post传递过来的参数
         $post = input('post.');
         //拼装参数
