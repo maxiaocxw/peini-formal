@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"D:\pei\public/../application/index\view\approve\add.html";i:1562936551;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"D:\pei\public/../application/index\view\approve\add.html";i:1562939194;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -154,7 +154,9 @@
             <div class="layui-input-block">
                 <button type="button" class="layui-btn" id="test4">上传视频</button>
                 <div class="layui-upload-list">
-                    <img class="layui-upload-img" id="demo4" style="height: 200px;">
+
+                    <video class="layui-upload-video" id="demo4" style="height: 200px;" src="" /></video>
+                    <!--<img class="layui-upload-img" id="demo4" style="height: 200px;">-->
                     <p id="demoText"></p>
                 </div>
             </div>
@@ -195,7 +197,7 @@
             //图片上传
             upload.render({
                 elem: '#test1',
-                url: "/admin/cate/qinui_upload",
+                url: "/index/approve/qinui_upload",
                 done: function(res) {
                     console.log(res);
                     if(res.code == 0){
@@ -209,7 +211,7 @@
 
         upload.render({
             elem: '#test2',
-            url: "/admin/cate/qinui_upload",
+            url: "/index/approve/qinui_upload",
             done: function(res) {
                 if(res.code == 0){
                     $("#demo2").attr('src', res.src);
@@ -222,7 +224,7 @@
 
         upload.render({
             elem: '#test3',
-            url: "/admin/cate/qinui_upload",
+            url: "/index/approve/qinui_upload",
             done: function(res) {
                 if(res.code == 0){
                     $("#demo3").attr('src', res.src);
@@ -235,7 +237,9 @@
 
         upload.render({
             elem: '#test4',
-            url: "/admin/cate/qinui_upload_video",
+            url: "/index/approve/qinui_upload_video",
+            field:"layuiVideo",
+            accept: 'video',
             done: function(res) {
                 if(res.code == 0){
                     $("#demo4").attr('src', res.src);
@@ -248,7 +252,7 @@
 
         upload.render({
             elem: '#test5',
-            url: "/admin/cate/qinui_upload_video",
+            url: "/index/approve/qinui_upload",
             done: function(res) {
                 if(res.code == 0){
                     $("#demo5").attr('src', res.src);
@@ -281,13 +285,6 @@
                 alert('请选择手持身份证照片');
             }
 
-            if(data.field.img4 == undefined){
-                alert('请选择视频封面图');
-            }
-
-            if(data.field.img5 == undefined){
-                alert('请选择上传视频');
-            }
 
             $.post("<?php echo url('index/approve/addDo'); ?>", data.field, function(response) {
                 if (response.code == 0) {

@@ -25151,3 +25151,2903 @@
 [ sql ] [ SQL ] INSERT INTO `pn_approve` (`uid` , `idcode` , `idcodefront` , `idcodereverse` , `handidcode` , `status` , `addtime` , `labelid` , `username` , `alipay` , `qq` , `wx`) VALUES (14 , '123456789123456789' , 'http://cdn.lanyushiting.com/image/1562936600/8855png' , 'http://cdn.lanyushiting.com/image/1562936602/9741png' , 'http://cdn.lanyushiting.com/image/1562936606/4219png' , 1 , 1562936615 , '1,2,3' , '陈舒' , '15032408337' , '2543599672' , '15032408337') [ RunTime:0.020870s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.019297s ]
 [ sql ] [ SQL ] INSERT INTO `pn_video` (`uid` , `videourl` , `img` , `status` , `addtime`) VALUES (14 , 'http://cdn.lanyushiting.com/video/1562936609/7864png' , 'http://cdn.lanyushiting.com/video/1562936613/3981png' , 1 , 1562936615) [ RunTime:0.021234s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:12:20+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.270984s][吞吐率：3.69req/s] [内存消耗：2,225.02kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030698s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.020532s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.020443s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.020261s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.020023s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.020059s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.019813s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.020801s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.019600s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:12:21+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.037452s][吞吐率：26.70req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:12:25+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：0.739151s][吞吐率：1.35req/s] [内存消耗：1,575.67kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryEgRAxxQtLTYIfGjB',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:22:19+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.274692s][吞吐率：3.64req/s] [内存消耗：2,225.34kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'purpose' => 'prefetch',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032109s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.021287s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.021423s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.021507s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.020353s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.020350s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.021348s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.021409s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.021328s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:22:34+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.260764s][吞吐率：3.83req/s] [内存消耗：2,225.36kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029798s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.020216s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.020168s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.021053s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.019444s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.020632s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.020048s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.021251s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.019756s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:22:39+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.042674s][吞吐率：23.43req/s] [内存消耗：1,426.91kb] [文件加载：47]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryyHBlmNT6AUWHWvIo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '325881',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'dir' => 'media',
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: file[D:\pei\application\index\controller\Approve.php:218]
+---------------------------------------------------------------
+[ 2019-07-12T21:22:45+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.034694s][吞吐率：28.82req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:22:49+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.053248s][吞吐率：18.78req/s] [内存消耗：1,426.91kb] [文件加载：47]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryy2OqnocHcTtQM7UX',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '325881',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'dir' => 'media',
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: file[D:\pei\application\index\controller\Approve.php:218]
+---------------------------------------------------------------
+[ 2019-07-12T21:24:46+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.243018s][吞吐率：4.11req/s] [内存消耗：2,028.53kb] [文件加载：49]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029804s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.020613s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.020634s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.020585s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.020274s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.019543s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.019666s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.021162s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.019557s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:24:46+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.035541s][吞吐率：28.14req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:24:50+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.036443s][吞吐率：27.44req/s] [内存消耗：1,427.21kb] [文件加载：47]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryXyFiSmxIS73k8A6C',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '325881',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'dir' => 'media',
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: file[D:\pei\application\index\controller\Approve.php:219]
+---------------------------------------------------------------
+[ 2019-07-12T21:25:17+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：3.216058s][吞吐率：0.31req/s] [内存消耗：2,028.66kb] [文件加载：49]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:3.027724s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.018786s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.018596s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.018357s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.017854s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.018313s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.018151s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.018119s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.017960s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:25:17+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.035902s][吞吐率：27.85req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:25:21+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.032498s][吞吐率：30.77req/s] [内存消耗：1,333.38kb] [文件加载：41]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryCASDxVqWHRIpFhVU',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '325881',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'dir' => 'media',
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:25:52+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.229087s][吞吐率：4.37req/s] [内存消耗：2,028.69kb] [文件加载：49]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029094s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.020018s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.019590s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.019643s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.018478s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.019699s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.019355s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.019197s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.019117s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:25:52+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.031613s][吞吐率：31.63req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:26:47+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.243356s][吞吐率：4.11req/s] [内存消耗：2,028.36kb] [文件加载：49]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029351s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.019242s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.019645s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.019907s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.019489s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.019064s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.019046s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.019575s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.018779s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:26:47+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.033297s][吞吐率：30.03req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:26:52+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.032305s][吞吐率：30.95req/s] [内存消耗：1,333.41kb] [文件加载：41]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryg3v59tD6ewwHOKiv',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '325881',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'dir' => 'media',
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:26:55+08:00 ] 127.0.0.1 GET /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.038396s][吞吐率：26.04req/s] [内存消耗：1,425.28kb] [文件加载：47]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: layuiVideo[D:\pei\application\index\controller\Approve.php:218]
+---------------------------------------------------------------
+[ 2019-07-12T21:27:14+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.229223s][吞吐率：4.36req/s] [内存消耗：2,028.27kb] [文件加载：49]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030143s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.019553s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.019963s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.018768s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.018684s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.019074s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.018863s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.019984s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.018252s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:27:14+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.044915s][吞吐率：22.26req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:27:22+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.222120s][吞吐率：4.50req/s] [内存消耗：2,028.27kb] [文件加载：49]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028015s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.018528s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.017975s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.019224s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.018137s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.018740s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.018650s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.018053s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.017789s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:27:22+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.028400s][吞吐率：35.21req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:27:29+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.619497s][吞吐率：1.61req/s] [内存消耗：1,576.26kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary92YMYoZam9iFLA98',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '325881',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'dir' => 'media',
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:28:05+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.213573s][吞吐率：4.68req/s] [内存消耗：2,028.69kb] [文件加载：49]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027454s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.017957s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.017536s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.018389s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.016850s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.017552s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.017186s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.018473s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.017943s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:28:06+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.035280s][吞吐率：28.34req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:28:10+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.034022s][吞吐率：29.39req/s] [内存消耗：1,333.43kb] [文件加载：41]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryX4il73x6ksKy0MTK',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '325881',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'dir' => 'media',
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:28:45+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.223523s][吞吐率：4.47req/s] [内存消耗：2,028.27kb] [文件加载：49]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029594s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.019771s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.018806s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.019306s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.018947s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.019412s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.018272s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.019611s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.018398s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:28:45+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.035249s][吞吐率：28.37req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:28:49+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.532247s][吞吐率：1.88req/s] [内存消耗：1,576.26kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryb0BBeLO8Pw0CE0ix',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '325881',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'dir' => 'media',
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:30:35+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.274559s][吞吐率：3.64req/s] [内存消耗：2,225.39kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030699s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.020909s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.021153s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.020861s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.020037s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.019756s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.020245s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.021519s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.019995s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:30:35+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.026927s][吞吐率：37.14req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:30:39+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.538381s][吞吐率：1.86req/s] [内存消耗：1,575.80kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryKcRKuEES1cCLPfUA',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '325786',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:37:16+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.245887s][吞吐率：4.07req/s] [内存消耗：2,028.34kb] [文件加载：49]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'purpose' => 'prefetch',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029711s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.020119s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.019917s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.018718s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.019593s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.019726s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.019384s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.019263s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.018469s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:37:22+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：0.804325s][吞吐率：1.24req/s] [内存消耗：1,575.84kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryrMb59Q0leR5hPPKe',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:37:27+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.517503s][吞吐率：1.93req/s] [内存消耗：1,575.93kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarynjPAv0kGNoTbpAnS',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '325786',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:37:32+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：0.860542s][吞吐率：1.16req/s] [内存消耗：1,575.84kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryBrrPzRHabzSh9sKj',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:37:35+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：0.770640s][吞吐率：1.30req/s] [内存消耗：1,575.84kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryHLWHGwzNtqATVEuL',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:37:38+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：0.665099s][吞吐率：1.50req/s] [内存消耗：1,575.84kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarymCEO1b8gd2d23Xvx',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:37:51+08:00 ] 127.0.0.1 POST /index/approve/adddo
+[ info ] www.csshayudj.com/index/approve/adddo [运行时间：0.026840s][吞吐率：37.26req/s] [内存消耗：1,293.09kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'adddo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '415',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '12323123',
+  'username' => '12312312',
+  'idcode' => '123123',
+  'alipay' => '123123',
+  'qq' => '123123',
+  'wx' => '1213',
+  'label' => 
+  array (
+    0 => '1',
+    1 => '2',
+    2 => '3',
+  ),
+  'layuiVideo' => '',
+  'img1' => 'http://cdn.lanyushiting.com/image/1562938657/4491png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1562938654/8711png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1562938651/4424png',
+  'img5' => 'http://cdn.lanyushiting.com/image/1562938641/7735png',
+)
+[ info ] [ RUN ] app\index\controller\Approve->addDo[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:38:46+08:00 ] 127.0.0.1 POST /index/approve/adddo
+[ info ] www.csshayudj.com/index/approve/adddo [运行时间：0.022663s][吞吐率：44.12req/s] [内存消耗：1,293.09kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'adddo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '415',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '12323123',
+  'username' => '12312312',
+  'idcode' => '123123',
+  'alipay' => '123123',
+  'qq' => '123123',
+  'wx' => '1213',
+  'label' => 
+  array (
+    0 => '1',
+    1 => '2',
+    2 => '3',
+  ),
+  'layuiVideo' => '',
+  'img1' => 'http://cdn.lanyushiting.com/image/1562938657/4491png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1562938654/8711png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1562938651/4424png',
+  'img5' => 'http://cdn.lanyushiting.com/image/1562938641/7735png',
+)
+[ info ] [ RUN ] app\index\controller\Approve->addDo[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:38:47+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.243276s][吞吐率：4.11req/s] [内存消耗：2,225.49kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030137s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.019757s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.019342s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.019366s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.018808s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.018859s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.019519s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.019538s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.019097s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:38:52+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：0.725744s][吞吐率：1.38req/s] [内存消耗：1,575.84kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary4Lh2hPtcWXoTHXAz',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:39:00+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.471767s][吞吐率：2.12req/s] [内存消耗：1,575.93kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryGOR8s0xlDzXKUBMs',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '325786',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:39:05+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：0.701093s][吞吐率：1.43req/s] [内存消耗：1,575.84kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryoOLEtOczGFWuUzhC',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:39:08+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：0.728854s][吞吐率：1.37req/s] [内存消耗：1,575.84kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarymAr6zAOy05ZM2qWf',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:39:11+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：0.596121s][吞吐率：1.68req/s] [内存消耗：1,575.84kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryYdxxgpwXyad3hGm9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:39:19+08:00 ] 127.0.0.1 POST /index/approve/adddo
+[ info ] www.csshayudj.com/index/approve/adddo [运行时间：0.024463s][吞吐率：40.88req/s] [内存消耗：1,293.09kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'adddo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '391',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '1111',
+  'username' => '22',
+  'idcode' => '33',
+  'alipay' => '44',
+  'qq' => '55',
+  'wx' => '55',
+  'label' => 
+  array (
+    0 => '1',
+    1 => '2',
+    2 => '3',
+  ),
+  'layuiVideo' => '',
+  'img1' => 'http://cdn.lanyushiting.com/image/1562938750/4158png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1562938747/8391png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1562938744/9178png',
+  'img5' => 'http://cdn.lanyushiting.com/image/1562938731/8921png',
+)
+[ info ] [ RUN ] app\index\controller\Approve->addDo[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:39:21+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.029102s][吞吐率：34.36req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:39:23+08:00 ] 127.0.0.1 POST /index/approve/adddo
+[ info ] www.csshayudj.com/index/approve/adddo [运行时间：0.042300s][吞吐率：23.64req/s] [内存消耗：1,293.09kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'adddo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '391',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '1111',
+  'username' => '22',
+  'idcode' => '33',
+  'alipay' => '44',
+  'qq' => '55',
+  'wx' => '55',
+  'label' => 
+  array (
+    0 => '1',
+    1 => '2',
+    2 => '3',
+  ),
+  'layuiVideo' => '',
+  'img1' => 'http://cdn.lanyushiting.com/image/1562938750/4158png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1562938747/8391png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1562938744/9178png',
+  'img5' => 'http://cdn.lanyushiting.com/image/1562938731/8921png',
+)
+[ info ] [ RUN ] app\index\controller\Approve->addDo[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:40:32+08:00 ] 127.0.0.1 POST /index/approve/adddo
+[ info ] www.csshayudj.com/index/approve/adddo [运行时间：0.027037s][吞吐率：36.99req/s] [内存消耗：1,293.12kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'adddo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '391',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '1111',
+  'username' => '22',
+  'idcode' => '33',
+  'alipay' => '44',
+  'qq' => '55',
+  'wx' => '55',
+  'label' => 
+  array (
+    0 => '1',
+    1 => '2',
+    2 => '3',
+  ),
+  'layuiVideo' => '',
+  'img1' => 'http://cdn.lanyushiting.com/image/1562938750/4158png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1562938747/8391png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1562938744/9178png',
+  'img5' => 'http://cdn.lanyushiting.com/image/1562938731/8921png',
+)
+[ info ] [ RUN ] app\index\controller\Approve->addDo[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:40:45+08:00 ] 127.0.0.1 POST /index/approve/adddo
+[ info ] www.csshayudj.com/index/approve/adddo [运行时间：0.024821s][吞吐率：40.29req/s] [内存消耗：1,293.07kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'adddo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '391',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '1111',
+  'username' => '22',
+  'idcode' => '33',
+  'alipay' => '44',
+  'qq' => '55',
+  'wx' => '55',
+  'label' => 
+  array (
+    0 => '1',
+    1 => '2',
+    2 => '3',
+  ),
+  'layuiVideo' => '',
+  'img1' => 'http://cdn.lanyushiting.com/image/1562938750/4158png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1562938747/8391png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1562938744/9178png',
+  'img5' => 'http://cdn.lanyushiting.com/image/1562938731/8921png',
+)
+[ info ] [ RUN ] app\index\controller\Approve->addDo[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:41:14+08:00 ] 127.0.0.1 POST /index/approve/adddo
+[ info ] www.csshayudj.com/index/approve/adddo [运行时间：0.025559s][吞吐率：39.13req/s] [内存消耗：1,293.13kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'adddo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '456',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '15032408345',
+  'username' => '尘世',
+  'idcode' => '123456789123456789',
+  'alipay' => '15032408337',
+  'qq' => '2543599672',
+  'wx' => '15032408337',
+  'label' => 
+  array (
+    0 => '1',
+    1 => '2',
+    2 => '3',
+  ),
+  'layuiVideo' => '',
+  'img1' => 'http://cdn.lanyushiting.com/image/1562938750/4158png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1562938747/8391png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1562938744/9178png',
+  'img5' => 'http://cdn.lanyushiting.com/image/1562938731/8921png',
+)
+[ info ] [ RUN ] app\index\controller\Approve->addDo[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:42:56+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.318073s][吞吐率：3.14req/s] [内存消耗：2,225.45kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031091s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.020603s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.021201s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.021304s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.020787s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.021028s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.020360s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.021214s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.019873s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:42:56+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.031754s][吞吐率：31.49req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:43:01+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.233937s][吞吐率：4.27req/s] [内存消耗：2,028.32kb] [文件加载：49]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031335s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.020339s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.020661s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.019500s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.019854s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.020595s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.020435s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.020324s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.020262s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:43:02+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.036812s][吞吐率：27.17req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:43:10+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.604393s][吞吐率：1.65req/s] [内存消耗：1,575.88kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryVBtinKeBmkY6MlHV',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '325786',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:44:17+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.261957s][吞吐率：3.82req/s] [内存消耗：2,225.45kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029833s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.020137s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.019972s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.020124s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.019519s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.019080s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.020388s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.019599s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.019009s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:44:17+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.025005s][吞吐率：39.99req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:44:22+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.535948s][吞吐率：1.87req/s] [内存消耗：1,575.88kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryUOXOC9JpP7I7UOju',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '325786',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:44:38+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.246999s][吞吐率：4.05req/s] [内存消耗：2,225.45kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032679s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.019861s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.019743s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.020090s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.018792s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.018839s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.019243s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.019657s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.018801s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:44:38+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.038161s][吞吐率：26.20req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:44:42+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.678839s][吞吐率：1.47req/s] [内存消耗：1,575.88kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryXOvbfAjnMBjPNc5U',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '325786',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:45:19+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：1.246833s][吞吐率：0.80req/s] [内存消耗：1,575.79kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary2v217SB50CtmP3f7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '1465242',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:45:24+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：1.125146s][吞吐率：0.89req/s] [内存消耗：1,575.79kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryUgAs2kkJxdvO6uyB',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '1465242',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:45:28+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：1.587387s][吞吐率：0.63req/s] [内存消耗：1,575.79kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryqDFoeWGEALo98F5R',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '1465242',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:45:36+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.489932s][吞吐率：2.04req/s] [内存消耗：1,575.88kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryAkLdDKmld42E6fDA',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '325786',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:45:42+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：0.770650s][吞吐率：1.30req/s] [内存消耗：1,575.79kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryBop8GEAZyaQ7Ak9F',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:45:43+08:00 ] 127.0.0.1 POST /index/approve/adddo
+[ info ] www.csshayudj.com/index/approve/adddo [运行时间：0.033489s][吞吐率：29.86req/s] [内存消耗：1,293.13kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'adddo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '457',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '15032408312',
+  'username' => '尘世',
+  'idcode' => '1234567891233456789',
+  'alipay' => '15032408337',
+  'qq' => '2543599672',
+  'wx' => '15032408337',
+  'label' => 
+  array (
+    0 => '1',
+    1 => '2',
+    2 => '3',
+  ),
+  'layuiVideo' => '',
+  'img1' => 'http://cdn.lanyushiting.com/image/1562939118/4159png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1562939123/4017png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1562939126/6429png',
+  'img5' => 'http://cdn.lanyushiting.com/image/1562939141/9826png',
+)
+[ info ] [ RUN ] app\index\controller\Approve->addDo[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:45:52+08:00 ] 127.0.0.1 POST /index/approve/adddo
+[ info ] www.csshayudj.com/index/approve/adddo [运行时间：0.033464s][吞吐率：29.88req/s] [内存消耗：1,293.13kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'adddo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '456',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '15032408312',
+  'username' => '尘世',
+  'idcode' => '123456789123465789',
+  'alipay' => '15032408337',
+  'qq' => '2543599672',
+  'wx' => '15032408337',
+  'label' => 
+  array (
+    0 => '1',
+    1 => '2',
+    2 => '3',
+  ),
+  'layuiVideo' => '',
+  'img1' => 'http://cdn.lanyushiting.com/image/1562939118/4159png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1562939123/4017png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1562939126/6429png',
+  'img5' => 'http://cdn.lanyushiting.com/image/1562939141/9826png',
+)
+[ info ] [ RUN ] app\index\controller\Approve->addDo[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:46:37+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.267169s][吞吐率：3.74req/s] [内存消耗：2,225.45kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031201s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.020442s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.019260s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.020206s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.018881s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.019806s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.019730s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.019441s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.019906s ]
+---------------------------------------------------------------
+[ 2019-07-12T21:46:37+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.028839s][吞吐率：34.68req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:46:44+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload_video
+[ info ] www.csshayudj.com/index/approve/qinui_upload_video [运行时间：0.602202s][吞吐率：1.66req/s] [内存消耗：1,575.88kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload_video',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary5yn3oPVUor6Z3KqA',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '325786',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload_video[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:47:14+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：0.700277s][吞吐率：1.43req/s] [内存消耗：1,575.79kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryEsuGahojX0Goc5kL',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:47:18+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：0.738461s][吞吐率：1.35req/s] [内存消耗：1,575.79kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarykyN3j4GcBk2BHk07',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:47:22+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：0.803739s][吞吐率：1.24req/s] [内存消耗：1,575.79kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryF2AYhBkttJjdtOen',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:47:26+08:00 ] 127.0.0.1 POST /index/approve/qinui_upload
+[ info ] www.csshayudj.com/index/approve/qinui_upload [运行时间：0.670681s][吞吐率：1.49req/s] [内存消耗：1,575.79kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryaEIuWjVG6k5s5dDu',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->qinui_upload[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:47:28+08:00 ] 127.0.0.1 POST /index/approve/adddo
+[ info ] www.csshayudj.com/index/approve/adddo [运行时间：0.028082s][吞吐率：35.61req/s] [内存消耗：1,293.44kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'adddo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '528',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '15032408339',
+  'username' => '晨晨',
+  'idcode' => '1234567891234567889',
+  'alipay' => '15032408337',
+  'qq' => '2543599672',
+  'wx' => '15032408337',
+  'label' => 
+  array (
+    0 => '1',
+    1 => '2',
+    2 => '3',
+  ),
+  'layuiVideo' => '',
+  'img1' => 'http://cdn.lanyushiting.com/image/1562939234/7485png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1562939237/6813png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1562939241/6963png',
+  'img4' => 'http://cdn.lanyushiting.com/video/1562939203/6855.mp4',
+  'img5' => 'http://cdn.lanyushiting.com/image/1562939245/2110png',
+)
+[ info ] [ RUN ] app\index\controller\Approve->addDo[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-12T21:47:37+08:00 ] 127.0.0.1 POST /index/approve/adddo
+[ info ] www.csshayudj.com/index/approve/adddo [运行时间：0.297726s][吞吐率：3.36req/s] [内存消耗：1,893.13kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'adddo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/approve/add',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '527',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '15032408339',
+  'username' => '晨晨',
+  'idcode' => '123456789123456789',
+  'alipay' => '15032408337',
+  'qq' => '2543599672',
+  'wx' => '15032408337',
+  'label' => 
+  array (
+    0 => '1',
+    1 => '2',
+    2 => '3',
+  ),
+  'layuiVideo' => '',
+  'img1' => 'http://cdn.lanyushiting.com/image/1562939234/7485png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1562939237/6813png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1562939241/6963png',
+  'img4' => 'http://cdn.lanyushiting.com/video/1562939203/6855.mp4',
+  'img5' => 'http://cdn.lanyushiting.com/image/1562939245/2110png',
+)
+[ info ] [ RUN ] app\index\controller\Approve->addDo[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030510s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.019729s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_user` WHERE  (  mobile=15032408339 ) LIMIT 1 [ RunTime:0.019742s ]
+[ sql ] [ SQL ] INSERT INTO `pn_user` (`username` , `realname` , `type` , `mobile` , `interestid`) VALUES ('15032408339' , '晨晨' , 1 , '15032408339' , '1,2,3') [ RunTime:0.021632s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label_user` [ RunTime:0.021226s ]
+[ sql ] [ SQL ] INSERT INTO `pn_label_user` (`uid` , `lid`) VALUES (16 , 1) [ RunTime:0.022272s ]
+[ sql ] [ SQL ] INSERT INTO `pn_label_user` (`uid` , `lid`) VALUES (16 , 2) [ RunTime:0.010515s ]
+[ sql ] [ SQL ] INSERT INTO `pn_label_user` (`uid` , `lid`) VALUES (16 , 3) [ RunTime:0.012410s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.020733s ]
+[ sql ] [ SQL ] INSERT INTO `pn_approve` (`uid` , `idcode` , `idcodefront` , `idcodereverse` , `handidcode` , `status` , `addtime` , `labelid` , `username` , `alipay` , `qq` , `wx`) VALUES (16 , '123456789123456789' , 'http://cdn.lanyushiting.com/image/1562939234/7485png' , 'http://cdn.lanyushiting.com/image/1562939237/6813png' , 'http://cdn.lanyushiting.com/image/1562939241/6963png' , 1 , 1562939257 , '1,2,3' , '晨晨' , '15032408337' , '2543599672' , '15032408337') [ RunTime:0.021523s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_video` [ RunTime:0.019140s ]
+[ sql ] [ SQL ] INSERT INTO `pn_video` (`uid` , `videourl` , `img` , `status` , `addtime`) VALUES (16 , 'http://cdn.lanyushiting.com/video/1562939203/6855.mp4' , 'http://cdn.lanyushiting.com/image/1562939245/2110png' , 1 , 1562939257) [ RunTime:0.022472s ]

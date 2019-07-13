@@ -1,5 +1,6 @@
 <?php
 namespace app\index\controller;
+use app\api\controller\Qiniu;
 use think\Db;
 
 /**
@@ -10,6 +11,12 @@ use think\Db;
  */
 
 class Approve extends \think\Controller{
+
+    public $url;
+
+    public function _initialize(){
+        $this->url='http://cdn.lanyushiting.com/';
+    }
 
     public function add(){
         //查询游戏
@@ -138,6 +145,14 @@ class Approve extends \think\Controller{
             if($user){
                 //获取uid
                 $userId = Db::name('user')->getLastInsID();
+                //添加标签
+                foreach($post['label'] as $val){
+                    $data = [
+                        'uid' => $userId,
+                        'lid' => $val,
+                    ];
+                    Db::name('label_user')->insert($data);
+                }
                 //添加陪玩信息
                 $peiData = [
                     'uid' => $userId,
@@ -180,5 +195,48 @@ class Approve extends \think\Controller{
         }
     }
 
+    public function qinui_upload(){
+        $qiniu = new Qiniu();
+        $file = $_FILES['file'];
+        if( is_uploaded_file( $file['tmp_name'] ) ){
+            //获取文件路径和文件后缀名
+            $ext = pathinfo( $file['name'], PATHINFO_EXTENSION );
+            //调用方法将图片上传到七牛
+            $qiniu_res = $qiniu->upload( 'image', $ext, $file['tmp_name'] );
+            //判断结果并返回完整路径
+            if( $qiniu_res ){
+                //将结果转化成数组获取key
+                $qiniu_arr = json_decode( $qiniu_res , true );
+                echo json_encode(['code' => 0,'msg' => '上传成功','icon' => 1,'src'=>$this->url.$qiniu_arr['key']]);
+            }else{
+                echo json_encode(['code' => 1,'msg' => '上传失败','icon' => 2]);
+            }
+        }else{
+            echo json_encode(['code' => 1,'msg' => '上传错误','icon' => 2]);
+        }
+    }
 
+    /**
+     *
+     */
+    public function qinui_upload_video(){
+        $qiniu = new Qiniu();
+        $file = $_FILES['layuiVideo'];
+        if( is_uploaded_file( $file['tmp_name'] ) ){
+            //获取文件路径和文件后缀名
+            $ext = pathinfo( $file['name'], PATHINFO_EXTENSION );
+            //调用方法将图片上传到七牛
+            $qiniu_res = $qiniu->upload( 'video', '.'.$ext, $file['tmp_name'] );
+            //判断结果并返回完整路径
+            if( $qiniu_res ){
+                //将结果转化成数组获取key
+                $qiniu_arr = json_decode( $qiniu_res , true );
+                echo json_encode(['code' => 0,'msg' => '上传成功','icon' => 1,'src'=>$this->url.$qiniu_arr['key']]);
+            }else{
+                echo json_encode(['code' => 1,'msg' => '上传失败','icon' => 2]);
+            }
+        }else{
+            echo json_encode(['code' => 1,'msg' => '上传错误','icon' => 2]);
+        }
+    }
 }
