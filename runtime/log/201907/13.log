@@ -201,3 +201,344 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.030414s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `pn_withdrawal` [ RunTime:0.020816s ]
 [ sql ] [ SQL ] INSERT INTO `pn_withdrawal` (`uid` , `tranno` , `money` , `addtime` , `status`) VALUES (1 , '2019071310150485' , 123 , 1562981998 , 1) [ RunTime:0.022578s ]
+---------------------------------------------------------------
+[ 2019-07-13T12:07:40+08:00 ] 127.0.0.1 POST /api/pay/add
+[ info ] www.csshayudj.com/api/pay/add [运行时间：0.073762s][吞吐率：13.56req/s] [内存消耗：1,296.14kb] [文件加载：38]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '476',
+  'content-type' => 'multipart/form-data; boundary=--------------------------720848734349181624776318',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'e7fff169-234d-43e1-9f7e-91800d265cfa',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '2',
+  'money' => '50',
+  'pay_type' => '1',
+  'uid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pay->add[ D:\pei\application\api\controller\Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-13T12:08:10+08:00 ] 127.0.0.1 POST /api/pay/add
+[ info ] www.csshayudj.com/api/pay/add [运行时间：0.027336s][吞吐率：36.58req/s] [内存消耗：1,296.14kb] [文件加载：38]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '476',
+  'content-type' => 'multipart/form-data; boundary=--------------------------651415659873776995088929',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '7253f2c7-0888-4281-892b-6046ec5023d7',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '2',
+  'money' => '50',
+  'pay_type' => '1',
+  'uid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pay->add[ D:\pei\application\api\controller\Pay.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-13T12:08:21+08:00 ] 127.0.0.1 POST /api/pay/add
+[ info ] www.csshayudj.com/api/pay/add [运行时间：0.377265s][吞吐率：2.65req/s] [内存消耗：2,077.88kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '476',
+  'content-type' => 'multipart/form-data; boundary=--------------------------400402155479081797821388',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '98252036-cad8-4a92-a1da-d85bd5dd23c1',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '2',
+  'money' => '50',
+  'pay_type' => '1',
+  'uid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pay->add[ D:\pei\application\api\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031738s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_allow_recharge` [ RunTime:0.023063s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_allow_recharge` WHERE  `aid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.020316s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_recharge_order` [ RunTime:0.020110s ]
+[ sql ] [ SQL ] INSERT INTO `pn_recharge_order` (`aid` , `tranno` , `uid` , `money` , `paystatus` , `status` , `type` , `addtime` , `currencynum`) VALUES (2 , '2019071353565699' , 1 , 50 , 0 , 0 , 1 , 1562990901 , 50) [ RunTime:0.022179s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_recharge_order` WHERE  (  tranno=2019071353565699 ) LIMIT 1 [ RunTime:0.020239s ]
+[ error ] [0]致命错误: Class 'app\mobile\controller\WxPay' not found[D:\pei\application\api\controller\Pay.php:109]
+---------------------------------------------------------------
+[ 2019-07-13T12:08:39+08:00 ] 127.0.0.1 POST /api/pay/add
+[ info ] www.csshayudj.com/api/pay/add [运行时间：0.196201s][吞吐率：5.10req/s] [内存消耗：2,077.88kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '476',
+  'content-type' => 'multipart/form-data; boundary=--------------------------212414964634012535450292',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '406f6669-f182-442b-81f2-88ef7f9ad7cc',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '2',
+  'money' => '50',
+  'pay_type' => '1',
+  'uid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pay->add[ D:\pei\application\api\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028133s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_allow_recharge` [ RunTime:0.019053s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_allow_recharge` WHERE  `aid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.019265s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_recharge_order` [ RunTime:0.019373s ]
+[ sql ] [ SQL ] INSERT INTO `pn_recharge_order` (`aid` , `tranno` , `uid` , `money` , `paystatus` , `status` , `type` , `addtime` , `currencynum`) VALUES (2 , '2019071355975456' , 1 , 50 , 0 , 0 , 1 , 1562990919 , 50) [ RunTime:0.048914s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_recharge_order` WHERE  (  tranno=2019071355975456 ) LIMIT 1 [ RunTime:0.019461s ]
+[ error ] [0]致命错误: Class 'app\mobile\controller\WxPay' not found[D:\pei\application\api\controller\Pay.php:109]
+---------------------------------------------------------------
+[ 2019-07-13T12:08:49+08:00 ] 127.0.0.1 POST /api/pay/add
+[ info ] www.csshayudj.com/api/pay/add [运行时间：0.166771s][吞吐率：6.00req/s] [内存消耗：2,077.88kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '476',
+  'content-type' => 'multipart/form-data; boundary=--------------------------499545958875439230131541',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'cc62deba-d7f4-4828-b3c9-9e5932edb842',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '2',
+  'money' => '50',
+  'pay_type' => '1',
+  'uid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pay->add[ D:\pei\application\api\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028311s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_allow_recharge` [ RunTime:0.019095s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_allow_recharge` WHERE  `aid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.019190s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_recharge_order` [ RunTime:0.019420s ]
+[ sql ] [ SQL ] INSERT INTO `pn_recharge_order` (`aid` , `tranno` , `uid` , `money` , `paystatus` , `status` , `type` , `addtime` , `currencynum`) VALUES (2 , '2019071349554910' , 1 , 50 , 0 , 0 , 1 , 1562990929 , 50) [ RunTime:0.019969s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_recharge_order` WHERE  (  tranno=2019071349554910 ) LIMIT 1 [ RunTime:0.019233s ]
+[ error ] [0]致命错误: Class 'app\mobile\controller\WxPay' not found[D:\pei\application\api\controller\Pay.php:109]
+---------------------------------------------------------------
+[ 2019-07-13T12:09:11+08:00 ] 127.0.0.1 POST /api/pay/add
+[ info ] www.csshayudj.com/api/pay/add [运行时间：0.843371s][吞吐率：1.19req/s] [内存消耗：2,104.20kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '476',
+  'content-type' => 'multipart/form-data; boundary=--------------------------802818855527933025696380',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'badc22a6-94d0-4455-92ca-8fb8b03b519d',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '2',
+  'money' => '50',
+  'pay_type' => '1',
+  'uid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pay->add[ D:\pei\application\api\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027992s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_allow_recharge` [ RunTime:0.018460s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_allow_recharge` WHERE  `aid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.018828s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_recharge_order` [ RunTime:0.018626s ]
+[ sql ] [ SQL ] INSERT INTO `pn_recharge_order` (`aid` , `tranno` , `uid` , `money` , `paystatus` , `status` , `type` , `addtime` , `currencynum`) VALUES (2 , '2019071354102489' , 1 , 50 , 0 , 0 , 1 , 1562990950 , 50) [ RunTime:0.020880s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_recharge_order` WHERE  (  tranno=2019071354102489 ) LIMIT 1 [ RunTime:0.018310s ]
+[ error ] [8]Trying to get property of non-object[D:\pei\application\api\controller\WxPay.php:194]
+---------------------------------------------------------------
+[ 2019-07-13T12:10:42+08:00 ] 127.0.0.1 POST /api/pay/add
+[ info ] www.csshayudj.com/api/pay/add [运行时间：0.363625s][吞吐率：2.75req/s] [内存消耗：1,953.02kb] [文件加载：47]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '476',
+  'content-type' => 'multipart/form-data; boundary=--------------------------393850969958090667251699',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'd1b5abbc-d774-4a6d-b615-1bd42a9d9f5c',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '2',
+  'money' => '50',
+  'pay_type' => '1',
+  'uid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pay->add[ D:\pei\application\api\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028573s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_allow_recharge` [ RunTime:0.019760s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_allow_recharge` WHERE  `aid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.019241s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_recharge_order` [ RunTime:0.020102s ]
+[ sql ] [ SQL ] INSERT INTO `pn_recharge_order` (`aid` , `tranno` , `uid` , `money` , `paystatus` , `status` , `type` , `addtime` , `currencynum`) VALUES (2 , '2019071350975348' , 1 , 50 , 0 , 0 , 1 , 1562991042 , 50) [ RunTime:0.021245s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_recharge_order` WHERE  (  tranno=2019071350975348 ) LIMIT 1 [ RunTime:0.019243s ]
+---------------------------------------------------------------
+[ 2019-07-13T12:15:41+08:00 ] 127.0.0.1 POST /api/pay/add
+[ info ] www.csshayudj.com/api/pay/add [运行时间：0.483242s][吞吐率：2.07req/s] [内存消耗：1,949.84kb] [文件加载：47]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '476',
+  'content-type' => 'multipart/form-data; boundary=--------------------------405034589997921930867147',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '892d0173-7477-4506-859a-23de61f51b0f',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '2',
+  'money' => '50',
+  'pay_type' => '1',
+  'uid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pay->add[ D:\pei\application\api\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029025s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_allow_recharge` [ RunTime:0.019699s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_allow_recharge` WHERE  `aid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.019911s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_recharge_order` [ RunTime:0.019657s ]
+[ sql ] [ SQL ] INSERT INTO `pn_recharge_order` (`aid` , `tranno` , `uid` , `money` , `paystatus` , `status` , `type` , `addtime` , `currencynum`) VALUES (2 , '2019071310048525' , 1 , 50 , 0 , 0 , 1 , 1562991341 , 50) [ RunTime:0.022213s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_recharge_order` WHERE  (  tranno=2019071310048525 ) LIMIT 1 [ RunTime:0.018807s ]
+---------------------------------------------------------------
+[ 2019-07-13T12:16:15+08:00 ] 127.0.0.1 POST /api/pay/add
+[ info ] www.csshayudj.com/api/pay/add [运行时间：0.382395s][吞吐率：2.62req/s] [内存消耗：1,949.13kb] [文件加载：47]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'pay',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '476',
+  'content-type' => 'multipart/form-data; boundary=--------------------------317985592405720325722967',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'd6dd1d84-5451-4902-8507-8fe8e0ee591f',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'aid' => '2',
+  'money' => '50',
+  'pay_type' => '1',
+  'uid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Pay->add[ D:\pei\application\api\controller\Pay.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030185s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_allow_recharge` [ RunTime:0.019821s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_allow_recharge` WHERE  `aid` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.020570s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_recharge_order` [ RunTime:0.021781s ]
+[ sql ] [ SQL ] INSERT INTO `pn_recharge_order` (`aid` , `tranno` , `uid` , `money` , `paystatus` , `status` , `type` , `addtime` , `currencynum`) VALUES (2 , '2019071310110249' , 1 , 50 , 0 , 0 , 1 , 1562991374 , 50) [ RunTime:0.022801s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_recharge_order` WHERE  (  tranno=2019071310110249 ) LIMIT 1 [ RunTime:0.020317s ]

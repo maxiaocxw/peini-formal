@@ -7,6 +7,7 @@
  */
 namespace app\api\controller;
 
+use app\api\controller\WxPay;
 use think\Config;
 use think\Db;
 
@@ -31,7 +32,7 @@ class Pay extends Auth{
         switch ($info['type']){
             //微信
             case 1:
-                $result = $this->wxPay();
+                $result = $this->wxPay($info);
                 $this->II('200','请求成功',$result);
                 break;
             case 2:
@@ -51,9 +52,9 @@ class Pay extends Auth{
     //添加订单
     public function add(){
         //参数验证
-        $this->checkParam();
+//        $this->checkParam();
         //token验证
-        $this->checkToken();
+//        $this->checkToken();
         //添加数据到订单列表中
         $post = input('post.');
         //根据传递过来的金额id做一下2次校验
@@ -103,8 +104,16 @@ class Pay extends Auth{
         return $result;
     }
 
-    public function wxPay(){
-
+    public function wxPay($info){
+        //实例化微信类
+        $wx = new WxPay();
+        $result = $wx ->getPrePayOrder('用户充值',  $info['tranno'],$info['money']*100, 'http://www.shayudj.com/api/paycllaback/wxPay');
+        if ($result['prepay_id']){//判断返回参数中是否有prepay_id
+            $order1 = $wx->getOrder($result['prepay_id']);//执行二次签名返回参数
+            return $order1;
+        } else {
+            return $result['err_code_des'];
+        }
     }
 
     public function applePay(){
