@@ -36,6 +36,4 @@ class Withdraw extends Auth{
             $this->II('201','请求失败',[]);
         }
     }
-
-
 }
