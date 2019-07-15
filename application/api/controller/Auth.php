@@ -284,4 +284,16 @@ class Auth extends Controller{
         curl_close($ch);
         return $response;
     }
+
+    public function addMessage($uid,$type,$title){
+        Db::name('message')->insert(array(
+            'uid'       =>      $uid,
+            'type'      =>      $type,
+            'title'     =>      $title,
+            'content'   =>      $title,
+            'addtime'   =>      time(),
+            'status'    =>      1
+        ));
+        return true;
+    }
 }
