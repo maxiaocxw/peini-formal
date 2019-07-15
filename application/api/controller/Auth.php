@@ -155,7 +155,7 @@ class Auth extends Controller{
 
     //获取用户信息
     public function getUserInfo($uid){
-        $list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,currency,token,rongtoken')->where('uid='.$uid)->find();
+        $list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,currency,token,rongtoken,number')->where('uid='.$uid)->find();
         $list['qiniuToken'] = (new Qiniu())->getToken();
         $list['birthday']=date('Y-m-d',$list['birthday']);
         $list['addtime']=date('Y-m-d',$list['addtime']);
@@ -283,5 +283,17 @@ class Auth extends Controller{
         }
         curl_close($ch);
         return $response;
+    }
+
+    public function addMessage($uid,$type,$title){
+        Db::name('message')->insert(array(
+            'uid'       =>      $uid,
+            'type'      =>      $type,
+            'title'     =>      $title,
+            'content'   =>      $title,
+            'addtime'   =>      time(),
+            'status'    =>      1
+        ));
+        return true;
     }
 }
