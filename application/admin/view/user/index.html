@@ -26,7 +26,7 @@
         <div class="layui-row">
             <form class="layui-form layui-col-md12 we-search" action="{:url('admin/user/index')}" method="get">
                 <div class="layui-inline">
-                    <input type="text" name="username" placeholder="请输入公司名" autocomplete="off" class="layui-input" {if(isset($username))}value="{$username}" {/if}> </div> <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+                    <input type="text" name="username" placeholder="请输入用户名" autocomplete="off" class="layui-input" {if(isset($username))}value="{$username}" {/if}> </div> <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
             </form>
         </div>
         <div class="weadmin-block">
@@ -40,13 +40,16 @@
                         <div class="layui-unselect header layui-form-checkbox" id="c_all" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
                     </th>
                     <th>ID</th>
-                    <th>用户名称</th>
-                    <th>用户电话</th>
-                    <th>邮箱</th>
-                    <th>地址</th>
-                    <th>允许创建项目数</th>
-                    <th>用户类型</th>
+                    <th>编号</th>
+                    <th>用户名</th>
+                    <th>性别</th>
+                    <th>手机号</th>
+                    <th>头像</th>
+                    <th>城市</th>
+                    <th>等级</th>
+                    <th>余额</th>
                     <th>注册时间</th>
+                    <th>用户类型</th>
                     <th>状态</th>
                     <th>操作</th>
             </thead>
@@ -57,23 +60,29 @@
                         <div class="layui-unselect layui-form-checkbox" id="admin_id" lay-skin="primary" data-id="{$value['uid']}"><i class="layui-icon">&#xe605;</i></div>
                     </td>
                     <td>{$value.uid}</td>
+                    <td>{$value.number}</td>
                     <td>{$value.username}</td>
+                    <td>{if $value['sex']==1}男{elseif $value['sex']==2}女{else}未知{/if}</td>
                     <td>{$value.mobile}</td>
-                    <td>{$value.email}</td>
-                    <td>{$value.address}</td>
-                    <td>{$value.allow}</td>
-                    <!-- <td>{if $value['level']==0}免费{else}{$value.level}{/if}</td> -->
-                    <td>{if $value['type']==1}用户{else}企业{/if}</td>
-                    <td>
-                        <?=date('Y-m-d H:i:s',$value['addtime'])?>
-                    </td>
+                    <td><img src="http://cdn.lanyushiting.com/{$value['headimg']}" style="height: 50px;width: 50px;border-radius:50%;" class="pimg"></td>
+                    <td>{$value.city}</td>
+                    <td>{$value.level}</td>
+                    <td>{$value.currency}</td>
+                    <td><?=date('Y-m-d H:i:s',$value['addtime'])?></td>
                     <td class="td-status">
-                        {if($value['status'] == 0)}
-                        <span class="layui-btn layui-btn-normal layui-btn-xs">待审核</span></td>
-                        {elseif($value['status']==1)}
-                        <span class="layui-btn layui-btn-danger layui-btn-xs">已启用</span></td>
-                        {elseif($value['status']==2)}
-                        <span class="layui-btn layui-btn-danger layui-btn-xs">已禁用</span></td>
+                        {if($value['type'] == 1)}
+                        <span class="layui-btn layui-btn-primary layui-btn-xs">用户</span></td>
+                        {elseif($value['type'] == 2)}
+                            <span class="layui-btn layui-btn layui-btn-xs">达人</span></td>
+                        </td>
+                        {/if}
+                    <td class="td-status">
+                        {if($value['status'] == 1)}
+                        <span class="layui-btn layui-btn-primary layui-btn-xs">正常</span></td>
+                        {elseif($value['status'] == 2)}
+                            <span class="layui-btn layui-btn layui-btn-xs">禁用</span></td>
+                        {elseif($value['status'] == 3)}
+                            <span class="layui-btn layui-btn-normal layui-btn-xs">冻结</span></td>
                         {/if}
                     <td class="td-manage">
                         <a title="修改"  href="/admin/user/update/uid/{$value['uid']}"><button class="layui-btn layui-btn-danger layui-btn-sm">修改</button></a>
