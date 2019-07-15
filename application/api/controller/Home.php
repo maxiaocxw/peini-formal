@@ -79,6 +79,7 @@ class Home extends Auth {
                         ->join('label la','labelUser.lid = la.lid')
                         ->where(['labelUser.uid'=>$userInfo['uid'],'la.status'=>1])
                         ->field('name')
+                        ->limit(3)
                         ->select();
             if(!empty($userInfo)){
                 $userData[] = [

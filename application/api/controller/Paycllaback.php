@@ -250,13 +250,13 @@ class Paycllaback extends Controller{
                     if($data){
                         $content = "苹果充值成功，到账金额：".$orderInfo['currencynum']."账户余额：".$money;
                         $this->addMessage($orderInfo['uid'],2,'苹果充值成功',$content);
-                        addLog($orderInfo['uid'],$orderInfo['tranno'],1,$_REQUEST,'添加成功');
+                        addLog($orderInfo['uid'],$orderInfo['tranno'],1,$receipt_data,'添加成功');
                         $auth->II('200','验签成功',[]);
                         exit;
                     }else{
                         $content = "苹果充值失败，请拨打客服电话：01053323933";
                         $this->addMessage($orderInfo['uid'],2,'苹果充值失败',$content);
-                        addLog($orderInfo['uid'],$orderInfo['tranno'],1,$_REQUEST,'添加失败');
+                        addLog($orderInfo['uid'],$orderInfo['tranno'],1,$receipt_data,'添加失败');
                         $auth->II('201','验签成功',[]);
                         exit;
                     }

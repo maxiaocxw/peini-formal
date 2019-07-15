@@ -46,7 +46,7 @@ class Gift extends Controller{
 
         $game_data['name'] = $data['name'];
         $game_data['price'] = $data['price'];
-        $game_data['img'] = $data['img'];
+        $game_data['img'] = str_replace('http://cdn.lanyushiting.com/','',$data['img']);
         $game_data['order'] = $data['order'];
         $game_data['status'] = $data['status'];
         $game_data['addtime'] = time();
