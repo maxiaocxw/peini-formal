@@ -40,7 +40,6 @@ class Message extends Auth{
         $this->checkToken();
         //接收参数
         $post = input('post.');
-
         $saveData = [
             'status' => 2
         ];

@@ -193,3 +193,3200 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.028998s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `pn_message` [ RunTime:0.019219s ]
 [ sql ] [ SQL ] UPDATE `pn_message`  SET `status`=2  WHERE  `mid` = 1  AND `uid` = 5 [ RunTime:0.021221s ]
+---------------------------------------------------------------
+[ 2019-07-15T09:54:31+08:00 ] 127.0.0.1 POST /api/message/orderIndex
+[ info ] www.csshayudj.com/api/message/orderIndex [运行时间：0.043440s][吞吐率：23.02req/s] [内存消耗：1,296.63kb] [文件加载：38]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'message',
+    2 => 'orderIndex',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '262',
+  'content-type' => 'multipart/form-data; boundary=--------------------------779911388546406595788495',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '91687105-246a-4cae-9327-40207098f83d',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '5',
+  'mid' => '1',
+)
+[ info ] [ RUN ] app\api\controller\Message->orderIndex[ D:\pei\application\api\controller\Message.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T09:54:36+08:00 ] 127.0.0.1 POST /api/message/orderIndex
+[ info ] www.csshayudj.com/api/message/orderIndex [运行时间：0.031418s][吞吐率：31.83req/s] [内存消耗：1,296.43kb] [文件加载：38]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'message',
+    2 => 'orderIndex',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------736540308598460248574538',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '755c397a-f81f-4596-9583-20e3de632e64',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '5',
+)
+[ info ] [ RUN ] app\api\controller\Message->orderIndex[ D:\pei\application\api\controller\Message.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T09:54:47+08:00 ] 127.0.0.1 POST /api/message/orderIndex
+[ info ] www.csshayudj.com/api/message/orderIndex [运行时间：0.112465s][吞吐率：8.89req/s] [内存消耗：1,920.81kb] [文件加载：45]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'message',
+    2 => 'orderIndex',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '159',
+  'content-type' => 'multipart/form-data; boundary=--------------------------456103210995069992874109',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '30b96858-fe8b-4471-a357-60438531adc0',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '5',
+)
+[ info ] [ RUN ] app\api\controller\Message->orderIndex[ D:\pei\application\api\controller\Message.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028266s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_message` [ RunTime:0.018756s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_message` WHERE  `uid` = 5  AND `type` = 2 [ RunTime:0.020037s ]
+---------------------------------------------------------------
+[ 2019-07-15T09:58:39+08:00 ] 127.0.0.1 GET /api/message/systemIndex
+[ info ] www.csshayudj.com/api/message/systemIndex [运行时间：0.133930s][吞吐率：7.47req/s] [内存消耗：1,911.06kb] [文件加载：46]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'message',
+    2 => 'systemIndex',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'content-type' => 'multipart/form-data; boundary=--------------------------140905352247452896113149',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '5130981d-7588-48be-b0af-9f43e9360603',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Message->systemIndex[ D:\pei\application\api\controller\Message.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028488s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_message` [ RunTime:0.019121s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_message` WHERE  (  type=1 and status != -1 ) [ RunTime:0.019402s ]
+---------------------------------------------------------------
+[ 2019-07-15T09:59:04+08:00 ] 127.0.0.1 GET /api/message/systemIndex
+[ info ] www.csshayudj.com/api/message/systemIndex [运行时间：0.112998s][吞吐率：8.85req/s] [内存消耗：1,911.06kb] [文件加载：46]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'message',
+    2 => 'systemIndex',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'content-type' => 'multipart/form-data; boundary=--------------------------407878263884724660099039',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '2a8dc44c-1bc1-41bf-860c-371abd69232a',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Message->systemIndex[ D:\pei\application\api\controller\Message.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030750s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_message` [ RunTime:0.019845s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_message` WHERE  (  type=1 and status != -1 ) [ RunTime:0.020635s ]
+---------------------------------------------------------------
+[ 2019-07-15T09:59:28+08:00 ] 127.0.0.1 GET /api/message/systemIndex
+[ info ] www.csshayudj.com/api/message/systemIndex [运行时间：0.106671s][吞吐率：9.37req/s] [内存消耗：1,911.91kb] [文件加载：46]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'message',
+    2 => 'systemIndex',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'content-type' => 'multipart/form-data; boundary=--------------------------172859553328491817060943',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '273d496b-9bd2-4cef-ab70-43bca19941c9',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Message->systemIndex[ D:\pei\application\api\controller\Message.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029917s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_message` [ RunTime:0.020193s ]
+[ sql ] [ SQL ] SELECT * FROM `pn_message` WHERE  (  type=1 and status != -1 ) [ RunTime:0.020334s ]
+---------------------------------------------------------------
+[ 2019-07-15T10:02:29+08:00 ] 127.0.0.1 GET /api/message/update
+[ info ] www.csshayudj.com/api/message/update [运行时间：0.036865s][吞吐率：27.13req/s] [内存消耗：1,296.16kb] [文件加载：38]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'message',
+    2 => 'update',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '263',
+  'content-type' => 'multipart/form-data; boundary=--------------------------318060412968282376855897',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '24b9ea23-5d4b-4230-964e-50ea0407bc9f',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Message->update[ D:\pei\application\api\controller\Message.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T10:02:38+08:00 ] 127.0.0.1 GET /api/message/update
+[ info ] www.csshayudj.com/api/message/update [运行时间：0.234799s][吞吐率：4.26req/s] [内存消耗：1,389.89kb] [文件加载：44]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'message',
+    2 => 'update',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '263',
+  'content-type' => 'multipart/form-data; boundary=--------------------------405247748459959474249112',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '94865452-0a2d-4c3d-9d14-5a30c97f5076',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Message->update[ D:\pei\application\api\controller\Message.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mid[D:\pei\application\api\controller\Message.php:47]
+---------------------------------------------------------------
+[ 2019-07-15T10:04:13+08:00 ] 127.0.0.1 GET /api/message/update
+[ info ] www.csshayudj.com/api/message/update [运行时间：0.033425s][吞吐率：29.92req/s] [内存消耗：1,389.89kb] [文件加载：44]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'message',
+    2 => 'update',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '262',
+  'content-type' => 'multipart/form-data; boundary=--------------------------516091538508595038370054',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '3c2805ee-79a8-4b96-a91b-64720b4bda2b',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Message->update[ D:\pei\application\api\controller\Message.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: mid[D:\pei\application\api\controller\Message.php:47]
+---------------------------------------------------------------
+[ 2019-07-15T10:04:34+08:00 ] 127.0.0.1 POST /api/message/update
+[ info ] www.csshayudj.com/api/message/update [运行时间：0.116666s][吞吐率：8.57req/s] [内存消耗：1,931.51kb] [文件加载：48]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'message',
+    2 => 'update',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '262',
+  'content-type' => 'multipart/form-data; boundary=--------------------------073162335695223800681720',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'cd906a20-e7ac-4bf0-a504-f89f30843ede',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '5',
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Message->update[ D:\pei\application\api\controller\Message.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030995s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_message` [ RunTime:0.019443s ]
+[ sql ] [ SQL ] UPDATE `pn_message`  SET `status`=2  WHERE  `mid` = 2  AND `uid` = 5 [ RunTime:0.020760s ]
+---------------------------------------------------------------
+[ 2019-07-15T10:04:39+08:00 ] 127.0.0.1 POST /api/message/update
+[ info ] www.csshayudj.com/api/message/update [运行时间：0.121703s][吞吐率：8.22req/s] [内存消耗：1,931.51kb] [文件加载：48]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'message',
+    2 => 'update',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '262',
+  'content-type' => 'multipart/form-data; boundary=--------------------------169130131560101675801681',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'a7feee3d-5781-46ee-bc37-4195e68d634b',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '5',
+  'mid' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Message->update[ D:\pei\application\api\controller\Message.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030672s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_message` [ RunTime:0.021204s ]
+[ sql ] [ SQL ] UPDATE `pn_message`  SET `status`=2  WHERE  `mid` = 2  AND `uid` = 5 [ RunTime:0.022685s ]
+---------------------------------------------------------------
+[ 2019-07-15T10:04:57+08:00 ] 127.0.0.1 POST /api/message/update
+[ info ] www.csshayudj.com/api/message/update [运行时间：0.113853s][吞吐率：8.78req/s] [内存消耗：1,931.51kb] [文件加载：48]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'message',
+    2 => 'update',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '262',
+  'content-type' => 'multipart/form-data; boundary=--------------------------199833100053212416466472',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'dd8494e5-924b-4093-afea-e44a4d0512af',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '5',
+  'mid' => '3',
+)
+[ info ] [ RUN ] app\api\controller\Message->update[ D:\pei\application\api\controller\Message.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027866s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_message` [ RunTime:0.017968s ]
+[ sql ] [ SQL ] UPDATE `pn_message`  SET `status`=2  WHERE  `mid` = 3  AND `uid` = 5 [ RunTime:0.020739s ]
+---------------------------------------------------------------
+[ 2019-07-15T11:34:35+08:00 ] 127.0.0.1 POST /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.704249s][吞吐率：1.42req/s] [内存消耗：1,169.43kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '262',
+  'content-type' => 'multipart/form-data; boundary=--------------------------940619846112882348466831',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'e72bc111-e2ee-4c34-b4e0-6f183facbb70',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '5',
+  'mid' => '3',
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T13:18:19+08:00 ] 127.0.0.1 POST /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.041365s][吞吐率：24.18req/s] [内存消耗：1,169.43kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '262',
+  'content-type' => 'multipart/form-data; boundary=--------------------------014602853977388356239324',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'ae4024e2-a35c-412e-82ab-10f76a8abfb2',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '5',
+  'mid' => '3',
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T13:18:20+08:00 ] 127.0.0.1 POST /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.026671s][吞吐率：37.49req/s] [内存消耗：1,169.43kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '262',
+  'content-type' => 'multipart/form-data; boundary=--------------------------654080422398233667868477',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '53c0a85e-03c4-4cc4-91fa-b3375936a2a8',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '5',
+  'mid' => '3',
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T13:18:21+08:00 ] 127.0.0.1 POST /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.028032s][吞吐率：35.67req/s] [内存消耗：1,169.43kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '262',
+  'content-type' => 'multipart/form-data; boundary=--------------------------783606142119503849354810',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'd52a7365-285e-4a19-b906-7c88dd6b7246',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '5',
+  'mid' => '3',
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T13:20:12+08:00 ] 127.0.0.1 POST /api/qiniu/getToken
+[ info ] www.csshayudj.com/api/qiniu/getToken [运行时间：0.022486s][吞吐率：44.47req/s] [内存消耗：1,169.43kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'qiniu',
+    2 => 'getToken',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '262',
+  'content-type' => 'multipart/form-data; boundary=--------------------------108742683078852576897815',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '158dcb2e-3931-4c8f-a90e-84c481dbbea2',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '5',
+  'mid' => '3',
+)
+[ info ] [ RUN ] app\api\controller\Qiniu->getToken[ D:\pei\application\api\controller\Qiniu.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T13:58:35+08:00 ] 127.0.0.1 GET /index/approve/add
+[ info ] www.csshayudj.com/index/approve/add [运行时间：0.650795s][吞吐率：1.54req/s] [内存消耗：2,234.08kb] [文件加载：51]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'purpose' => 'prefetch',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Approve->add[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\approve\add.html [ array (
+  0 => 'game',
+  1 => 'label',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030258s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.020079s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`tid` FROM `pn_game` WHERE  (  status=1 ) [ RunTime:0.020167s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game_price` [ RunTime:0.020244s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 1  AND `status` = 1 [ RunTime:0.019588s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 2  AND `status` = 1 [ RunTime:0.019865s ]
+[ sql ] [ SQL ] SELECT `gid`,`price` FROM `pn_game_price` WHERE  `gid` = 3  AND `status` = 1 [ RunTime:0.019276s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_label` [ RunTime:0.019886s ]
+[ sql ] [ SQL ] SELECT `lid`,`name` FROM `pn_label` WHERE  (  status=1 ) [ RunTime:0.019166s ]
+---------------------------------------------------------------
+[ 2019-07-15T13:58:49+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.040821s][吞吐率：24.50req/s] [内存消耗：1,307.21kb] [文件加载：39]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T13:59:31+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.153180s][吞吐率：6.53req/s] [内存消耗：1,492.23kb] [文件加载：46]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: label[D:\pei\runtime\temp\c3594d69a4ea85cb922d1fa7a0eb6819.php:105]
+---------------------------------------------------------------
+[ 2019-07-15T13:59:42+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.059124s][吞吐率：16.91req/s] [内存消耗：1,499.95kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:05:13+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.064388s][吞吐率：15.53req/s] [内存消耗：1,495.95kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:05:19+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.078242s][吞吐率：12.78req/s] [内存消耗：1,495.95kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:05:29+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.063041s][吞吐率：15.86req/s] [内存消耗：1,495.95kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:07:35+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.063713s][吞吐率：15.70req/s] [内存消耗：1,499.95kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:07:38+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.034567s][吞吐率：28.93req/s] [内存消耗：1,367.52kb] [文件加载：41]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:13:15+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.061492s][吞吐率：16.26req/s] [内存消耗：1,500.30kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:13:59+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.061477s][吞吐率：16.27req/s] [内存消耗：1,500.30kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:14:05+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.054565s][吞吐率：18.33req/s] [内存消耗：1,500.30kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:17:03+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.072851s][吞吐率：13.73req/s] [内存消耗：1,504.54kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:17:30+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：1.249604s][吞吐率：0.80req/s] [内存消耗：1,582.91kb] [文件加载：57]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryqdN7kceIcgBCxExg',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '1465242',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\index\controller\Money::$url[D:\pei\application\index\controller\Money.php:37]
+---------------------------------------------------------------
+[ 2019-07-15T14:17:37+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.038823s][吞吐率：25.76req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:17:43+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：1.105165s][吞吐率：0.90req/s] [内存消耗：1,582.91kb] [文件加载：57]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryBpy7ohCtai6oH2nx',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '1465242',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\index\controller\Money::$url[D:\pei\application\index\controller\Money.php:37]
+---------------------------------------------------------------
+[ 2019-07-15T14:18:22+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.036837s][吞吐率：27.15req/s] [内存消耗：1,372.32kb] [文件加载：41]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:18:22+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.027567s][吞吐率：36.28req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:18:28+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：0.665189s][吞吐率：1.50req/s] [内存消耗：1,545.76kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary4bDECTXPj9WTBrg1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:18:33+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：0.644757s][吞吐率：1.55req/s] [内存消耗：1,545.76kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarysvWeJngwQiQGOiYP',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:18:48+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：0.730092s][吞吐率：1.37req/s] [内存消耗：1,545.76kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryVVv7ZaZ24IOQASvX',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:18:53+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：0.712678s][吞吐率：1.40req/s] [内存消耗：1,545.76kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryEk2Y1b4x6EAc4c2A',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:19:13+08:00 ] 127.0.0.1 POST /index/approve/adddo
+[ info ] www.csshayudj.com/index/approve/adddo [运行时间：0.030019s][吞吐率：33.31req/s] [内存消耗：1,291.36kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'adddo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '426',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => '佳佳网咖',
+  'area' => '北京',
+  'fzname' => '陈舒琪',
+  'idcode' => '132456789123465789',
+  'ide' => '15032408337',
+  'img1' => 'http://cdn.lanyushiting.com/image/1563171528/6027.png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1563171532/1030.png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1563171507/8384.png',
+  'img4' => 'http://cdn.lanyushiting.com/image/1563171512/9266.png',
+)
+[ info ] [ RUN ] app\index\controller\Approve->addDo[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:19:32+08:00 ] 127.0.0.1 POST /index/approve/adddo
+[ info ] www.csshayudj.com/index/approve/adddo [运行时间：0.035779s][吞吐率：27.95req/s] [内存消耗：1,291.36kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'approve',
+    2 => 'adddo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '426',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => '佳佳网咖',
+  'area' => '北京',
+  'fzname' => '陈舒琪',
+  'idcode' => '132456789123465789',
+  'ide' => '15032408337',
+  'img1' => 'http://cdn.lanyushiting.com/image/1563171528/6027.png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1563171532/1030.png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1563171507/8384.png',
+  'img4' => 'http://cdn.lanyushiting.com/image/1563171512/9266.png',
+)
+[ info ] [ RUN ] app\index\controller\Approve->addDo[ D:\pei\application\index\controller\Approve.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:19:36+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.070346s][吞吐率：14.22req/s] [内存消耗：1,504.74kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:19:37+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.024843s][吞吐率：40.25req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:19:49+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：1.932059s][吞吐率：0.52req/s] [内存消耗：1,545.76kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryh7iqxhrFVj2LaCKJ',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:19:50+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：0.819747s][吞吐率：1.22req/s] [内存消耗：1,545.76kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary5uc3ISPtVXP8eUrJ',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:20:06+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：0.867080s][吞吐率：1.15req/s] [内存消耗：1,545.76kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarywfnq9IEwAJKYBJXG',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:20:10+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：0.747288s][吞吐率：1.34req/s] [内存消耗：1,545.76kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryHnzkTqmuZyQvxSez',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:20:14+08:00 ] 127.0.0.1 POST /index/money/add
+[ info ] www.csshayudj.com/index/money/add [运行时间：0.023243s][吞吐率：43.02req/s] [内存消耗：1,261.16kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '417',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => '佳佳网咖',
+  'area' => '北京',
+  'fzname' => '陈春',
+  'idcode' => '123456789123456789',
+  'ide' => '15032408337',
+  'img1' => 'http://cdn.lanyushiting.com/image/1563171605/7824.png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1563171609/2789.png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1563171587/4939.png',
+  'img4' => 'http://cdn.lanyushiting.com/image/1563171589/3270.png',
+)
+[ info ] [ RUN ] app\index\controller\Money->add[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:20:36+08:00 ] 127.0.0.1 POST /index/money/add
+[ info ] www.csshayudj.com/index/money/add [运行时间：0.028595s][吞吐率：34.97req/s] [内存消耗：1,261.27kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '417',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => '佳佳网咖',
+  'area' => '北京',
+  'fzname' => '陈春',
+  'idcode' => '123456789123456789',
+  'ide' => '15032408337',
+  'img1' => 'http://cdn.lanyushiting.com/image/1563171605/7824.png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1563171609/2789.png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1563171587/4939.png',
+  'img4' => 'http://cdn.lanyushiting.com/image/1563171589/3270.png',
+)
+[ info ] [ RUN ] app\index\controller\Money->add[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:31:18+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.053092s][吞吐率：18.84req/s] [内存消耗：1,256.27kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:33:10+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.029964s][吞吐率：33.37req/s] [内存消耗：1,257.61kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:33:43+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.040211s][吞吐率：24.87req/s] [内存消耗：1,257.84kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:33:51+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.031758s][吞吐率：31.49req/s] [内存消耗：1,257.92kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:34:48+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.041842s][吞吐率：23.90req/s] [内存消耗：1,372.43kb] [文件加载：41]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:34:48+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.038344s][吞吐率：26.08req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:41:25+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：0.777588s][吞吐率：1.29req/s] [内存消耗：1,546.87kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryI1iAb4ZLrHS6LaEn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:41:27+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：0.819621s][吞吐率：1.22req/s] [内存消耗：1,546.87kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryRCkAfgeCuqZo0SXQ',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:41:47+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：0.897095s][吞吐率：1.11req/s] [内存消耗：1,546.87kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryorTAkMlrpycYBZDL',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:41:49+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：0.705859s][吞吐率：1.42req/s] [内存消耗：1,546.87kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryBrMTscPcGdCAkv6R',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:41:56+08:00 ] 127.0.0.1 POST /index/money/add
+[ info ] www.csshayudj.com/index/money/add [运行时间：0.037167s][吞吐率：26.91req/s] [内存消耗：1,262.33kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '426',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => '家家旺卡',
+  'area' => '北京',
+  'fzname' => '陈舒琪',
+  'idcode' => '123456789123456789',
+  'ide' => '15032408337',
+  'img1' => 'http://cdn.lanyushiting.com/image/1563172906/1505.png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1563172909/5263.png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1563172884/4396.png',
+  'img4' => 'http://cdn.lanyushiting.com/image/1563172886/4801.png',
+)
+[ info ] [ RUN ] app\index\controller\Money->add[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:51:23+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.040445s][吞吐率：24.73req/s] [内存消耗：1,378.98kb] [文件加载：41]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:51:23+08:00 ] 127.0.0.1 GET /static/admin/static/css/weadmin.css.map
+[ info ] www.csshayudj.com/static/admin/static/css/weadmin.css.map [运行时间：0.030864s][吞吐率：32.40req/s] [内存消耗：1,143.21kb] [文件加载：35]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'weadmin.css.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:51:39+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：0.760318s][吞吐率：1.32req/s] [内存消耗：1,552.43kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryqHAgB0DYRsvJRHy1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:51:43+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：0.686889s][吞吐率：1.46req/s] [内存消耗：1,552.43kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarydqr330PnWhwAvj9p',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:52:05+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：0.756391s][吞吐率：1.32req/s] [内存消耗：1,552.43kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryag1EoeQBuveNP1I9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:52:08+08:00 ] 127.0.0.1 POST /index/money/qinui_upload
+[ info ] www.csshayudj.com/index/money/qinui_upload [运行时间：0.650405s][吞吐率：1.54req/s] [内存消耗：1,552.43kb] [文件加载：53]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'qinui_upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryfZuuUjcUHDvs9YOl',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '714169',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->qinui_upload[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:52:15+08:00 ] 127.0.0.1 POST /index/money/add
+[ info ] www.csshayudj.com/index/money/add [运行时间：0.106718s][吞吐率：9.37req/s] [内存消耗：1,854.16kb] [文件加载：44]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.csshayudj.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '435',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => '佳佳木网咖',
+  'area' => '北京',
+  'fzname' => '佳佳木',
+  'idcode' => '123456789132456789',
+  'ide' => '12345679812',
+  'img1' => 'http://cdn.lanyushiting.com/image/1563173525/5855.png',
+  'img2' => 'http://cdn.lanyushiting.com/image/1563173528/5237.png',
+  'img3' => 'http://cdn.lanyushiting.com/image/1563173499/7775.png',
+  'img4' => 'http://cdn.lanyushiting.com/image/1563173502/5766.png',
+)
+[ info ] [ RUN ] app\index\controller\Money->add[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029621s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_money` [ RunTime:0.019599s ]
+[ sql ] [ SQL ] INSERT INTO `pn_money` (`cafe_name` , `business` , `network` , `area` , `principal_name` , `id_code` , `id_code_front` , `id_code_side` , `account`) VALUES ('佳佳木网咖' , 'image/1563173499/7775.png' , 'image/1563173502/5766.png' , '北京' , '佳佳木' , '123456789132456789' , 'image/1563173525/5855.png' , 'image/1563173528/5237.png' , '12345679812') [ RunTime:0.022305s ]
+---------------------------------------------------------------
+[ 2019-07-15T14:52:17+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.030336s][吞吐率：32.96req/s] [内存消耗：1,379.05kb] [文件加载：41]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:53:50+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.049305s][吞吐率：20.28req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:54:26+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.056851s][吞吐率：17.59req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T14:55:07+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.049912s][吞吐率：20.04req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:21:26+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.067537s][吞吐率：14.81req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:22:36+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.049818s][吞吐率：20.07req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:23:19+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.057928s][吞吐率：17.26req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:23:22+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.056717s][吞吐率：17.63req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:47:22+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.064559s][吞吐率：15.49req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:47:27+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.027743s][吞吐率：36.05req/s] [内存消耗：1,379.26kb] [文件加载：41]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:48:23+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.061964s][吞吐率：16.14req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:48:24+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.030812s][吞吐率：32.45req/s] [内存消耗：1,379.26kb] [文件加载：41]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:48:33+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.055301s][吞吐率：18.08req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:48:43+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.057413s][吞吐率：17.42req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:48:52+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.057325s][吞吐率：17.44req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:48:53+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.025575s][吞吐率：39.10req/s] [内存消耗：1,379.26kb] [文件加载：41]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:48:54+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.029445s][吞吐率：33.96req/s] [内存消耗：1,379.26kb] [文件加载：41]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:48:54+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.022558s][吞吐率：44.33req/s] [内存消耗：1,379.26kb] [文件加载：41]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:49:05+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.048077s][吞吐率：20.80req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:49:12+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.055180s][吞吐率：18.12req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:49:25+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.047578s][吞吐率：21.02req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:49:45+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.057673s][吞吐率：17.34req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:49:46+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.027954s][吞吐率：35.77req/s] [内存消耗：1,379.26kb] [文件加载：41]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:50:22+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.054860s][吞吐率：18.23req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:50:35+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.059348s][吞吐率：16.85req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:50:49+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.058657s][吞吐率：17.05req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:51:00+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.047929s][吞吐率：20.86req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:55:06+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.060049s][吞吐率：16.65req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:57:20+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.056768s][吞吐率：17.62req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:58:14+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.057711s][吞吐率：17.33req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T15:58:22+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.048758s][吞吐率：20.51req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-15T16:00:41+08:00 ] 127.0.0.1 GET /index/money/index
+[ info ] www.csshayudj.com/index/money/index [运行时间：0.062019s][吞吐率：16.12req/s] [内存消耗：1,511.69kb] [文件加载：43]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'money',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2896157696; pgv_si=s47170560; PHPSESSID=vqa54qp40fdnihqcq88vev3pf9',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.csshayudj.com/index/money/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.csshayudj.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Money->index[ D:\pei\application\index\controller\Money.php ]
+[ info ] [ VIEW ] D:\pei\public/../application/index\view\money\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File

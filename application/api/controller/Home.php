@@ -86,12 +86,11 @@ class Home extends Auth {
                     'name'  => $userInfo['username'],
                     'headimg' =>  'cdn.lanyushiting.com/'.$userInfo['headimg'],
                     'videourl' =>  'cdn.lanyushiting.com/'.$val['videourl'],
-                    'img'   => $val['img'],
+                    'img'   => 'cdn.lanyushiting.com/'.$val['img'],
                     'label' => $label
                 ];
             }
         }
-
         //返回数据
         $this->II('200','请求成功',$userData);
     }

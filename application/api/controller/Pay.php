@@ -40,8 +40,7 @@ class Pay extends Auth{
                 $this->II('200','请求成功',$result);
                 break;
             case 3:
-                $result = $this->applePay();
-                $this->II('200','请求成功',$result);
+                $this->II('200','请求成功',[]);
                 break;
             default :
                 $this->II('201','请求失败',[]);
@@ -114,10 +113,5 @@ class Pay extends Auth{
         } else {
             return $result['err_code_des'];
         }
-    }
-
-    public function applePay(){
-
-
     }
 }
