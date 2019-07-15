@@ -52,7 +52,7 @@ class WxPay extends Controller{
         $data["package"] = "Sign=WXPay";
         $data["partnerid"] = $this->config['mch_id'];
         $data["prepayid"] = $prepayId;
-        $data["timestamp"] = time();
+        $data["timestamp"] = (string)time();
         $s = $this->getSign($data, false);
         $data["sign"] = $s;
 

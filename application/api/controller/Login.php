@@ -51,7 +51,7 @@ class Login extends Auth{
 			$this->II('200','请求成功',array('type'=>2,'info'=>$list));
 		//微信登录
 		}else{
-			$list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,token,currency,rongtoken')->where('openid='.$this->openid)->find();
+			$list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,token,currency,rongtoken')->where("openid='".$this->openid."'")->find();
 			if(!$list){
 				$this->II('300','去绑定手机号');
 			}
