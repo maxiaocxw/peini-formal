@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:90:"D:\phpserver\wwwroot\default\peini-formal\public/../application/admin\view\cate\video.html";i:1563006527;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -7,8 +8,8 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/font.css">
-    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/weadmin.css">
+    <link rel="stylesheet" href="/static/admin/static/css/font.css">
+    <link rel="stylesheet" href="/static/admin/static/css/weadmin.css">
     <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
     <!--[if lt IE 9]>
 	      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -20,7 +21,7 @@
     <div class="weadmin-nav">
         <span class="layui-breadcrumb">
         <a href="">首页</a>
-        <a href="{:url('admin/cate/video')}">视频列表</a>
+        <a href="<?php echo url('admin/cate/video'); ?>">视频列表</a>
         <a>
           <cite>视频列表</cite></a>
       </span>
@@ -35,10 +36,10 @@
     <div class="weadmin-body">
         <div class="weadmin-block">
             <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
-            <!-- <a href="{:url('admin/cate/addVideo')}">
+            <a href="<?php echo url('admin/cate/addVideo'); ?>">
 					<button class="layui-btn"><i class="layui-icon"></i>添加</button>
-				</a> -->
-            <span class="fr" style="line-height:40px">共有数据：{$total} 条</span>
+				</a>
+            <span class="fr" style="line-height:40px">共有数据：<?php echo $total; ?> 条</span>
         </div>
         <table class="layui-table">
             <thead>
@@ -57,71 +58,70 @@
                     <th>操作</th>
             </thead>
             <tbody>
-                {foreach $data as $key => $value}
+                <?php foreach($data as $key => $value): ?>
                     <td>
-                        <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id="{$value.vid}"><i class="layui-icon">&#xe605;</i></div>
+                        <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id="<?php echo $value['vid']; ?>"><i class="layui-icon">&#xe605;</i></div>
                     </td>
-                    <td>{$value.vid}</td>
+                    <td><?php echo $value['vid']; ?></td>
                     <td>
-                        <video class="screen" width="300" height="250" controls="controls" src="http://cdn.lanyushiting.com/{$value.videourl}"></video>
+                        <video class="screen" width="300" height="250" controls="controls" src="http://cdn.lanyushiting.com/<?php echo $value['videourl']; ?>"></video>
                     </td>
                     <td>
                         <div class="layui-upload-list">
-                            <div class='imgBox'><img src="http://cdn.lanyushiting.com/{$value.img}" class='wh100 ml2 mr2 screen'></div>
+                            <div class='imgBox'><img src="http://cdn.lanyushiting.com/<?php echo $value['img']; ?>" class='wh100 ml2 mr2 screen'></div>
                         </div>
                     </td>
-                    <td>{$value.uname}</td>
-                    <td>{$value.order}</td>
+                    <td><?php echo $value['uname']; ?></td>
+                    <td><?php echo $value['order']; ?></td>
                     <td>
                         <?=date('Y-m-d H:i:s',$value['addtime'])?>
                     </td>
                     <td>
-                        {if($value['isrecommend'] == 1)}
+                        <?php if(($value['isrecommend'] == 1)): ?>
                         <span>不推荐</span>
-                        {else}
+                        <?php else: ?>
                         <span>推荐</span>
-                        {/if}
+                        <?php endif; ?>
                     </td>
                     <td class="td-status">
-                        {if condition="$value['status'] eq 1"}
+                        <?php if($value['status'] == 1): ?>
                             <span class="layui-btn layui-btn-normal layui-btn-sm">待审核</span>
-                        {elseif condition="$value['status'] eq 2"}
+                        <?php elseif($value['status'] == 2): ?>
                             <span class="layui-btn layui-btn-warm layui-btn-sm">已上线</span>
-                        {elseif condition="$value['status'] eq 3"}
+                        <?php elseif($value['status'] == 3): ?>
                             <span class="layui-btn layui-btn-danger layui-btn-sm">审核失败</span>
-                        {else/}
+                        <?php else: ?>
                             <span class="layui-btn layui-btn-danger layui-btn-sm">已下线</span>
-                        {/if}
+                        <?php endif; ?>
                     </td>
                     <td class="td-manage">
-                        {if($value['status'] == 1)}
-                            <a onclick="updateVideo({$value['vid']},2)" href="javascript:;" title="审核成功"><button class="layui-btn layui-btn-warm layui-btn-sm">审核成功</button></a>
-                            <a onclick="updateVideo({$value['vid']},3)" href="javascript:;" title="审核失败"><button class="layui-btn layui-btn-danger layui-btn-sm">审核失败</button></a>
-                        {elseif($value['status'] == 2)}
-                            {if($value['isrecommend'] == 1)}
-                                <a onclick="upRecommend({$value['vid']},2)" href="javascript:;" title="推荐"><button class="layui-btn layui-btn-normal layui-btn-sm">推荐</button></a>
-                            {else}
-                                <a onclick="upRecommend({$value['vid']},1)" href="javascript:;" title="不推"><button class="layui-btn layui-btn-danger layui-btn-sm">不推</button></a>
-                            {/if}
-                            <a onclick="orderVideo({$value['vid']})" href="javascript:;" title="排序"><button class="layui-btn layui-btn-sm">排序</button></a>
-                            <a onclick="updateVideo({$value['vid']},-1)" href="javascript:;" title="禁用"><button class="layui-btn layui-btn-danger layui-btn-sm">禁用</button></a>
-                        {elseif($value['status'] == 3)}
-                            <a onclick="updateVideo({$value['vid']},-1)" href="javascript:;" title="删除"><button class="layui-btn layui-btn-danger layui-btn-sm">删除</button></a>
-                        {/if}
+                        <?php if(($value['status'] == 1)): ?>
+                            <a onclick="updateVideo(<?php echo $value['vid']; ?>,2)" href="javascript:;" title="审核成功"><button class="layui-btn layui-btn-warm layui-btn-sm">审核成功</button></a>
+                            <a onclick="updateVideo(<?php echo $value['vid']; ?>,3)" href="javascript:;" title="审核失败"><button class="layui-btn layui-btn-danger layui-btn-sm">审核失败</button></a>
+                        <?php elseif(($value['status'] == 2)): if(($value['isrecommend'] == 1)): ?>
+                                <a onclick="upRecommend(<?php echo $value['vid']; ?>,2)" href="javascript:;" title="推荐"><button class="layui-btn layui-btn-normal layui-btn-sm">推荐</button></a>
+                            <?php else: ?>
+                                <a onclick="upRecommend(<?php echo $value['vid']; ?>,1)" href="javascript:;" title="不推"><button class="layui-btn layui-btn-danger layui-btn-sm">不推</button></a>
+                            <?php endif; ?>
+                            <a onclick="orderVideo(<?php echo $value['vid']; ?>)" href="javascript:;" title="排序"><button class="layui-btn layui-btn-sm">排序</button></a>
+                            <a onclick="updateVideo(<?php echo $value['vid']; ?>,-1)" href="javascript:;" title="禁用"><button class="layui-btn layui-btn-danger layui-btn-sm">禁用</button></a>
+                        <?php elseif(($value['status'] == 3)): ?>
+                            <a onclick="updateVideo(<?php echo $value['vid']; ?>,-1)" href="javascript:;" title="删除"><button class="layui-btn layui-btn-danger layui-btn-sm">删除</button></a>
+                        <?php endif; ?>
                     </td>
                 </tr>
-                {/foreach}
+                <?php endforeach; ?>
             </tbody>
         </table>
         <div class="page">
             <div>
-                {$list->render()}
+                <?php echo $list->render(); ?>
             </div>
         </div>
     </div>
-    <script src="__PUBLIC_ADMIN__/static/js/jquery.js" charset="utf-8"></script>
-    <script src="__PUBLIC_ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
-    <script type="text/javascript" src="__PUBLIC_ADMIN__/static/js/weadmin.js"></script>
+    <script src="/static/admin/static/js/jquery.js" charset="utf-8"></script>
+    <script src="/static/admin/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/static/admin/static/js/weadmin.js"></script>
     <script type="text/javascript">
     layui.use(['layer'], function() {
         var form = layui.form;
@@ -161,7 +161,7 @@
                     return false;
                 }
                 $.post(
-                    "{:url('admin/cate/upOrder')}",
+                    "<?php echo url('admin/cate/upOrder'); ?>",
                     {
                         order:order_num,
                         vid:vid
@@ -189,7 +189,7 @@
         var data = tableCheck.getData();
         layer.confirm('确认要删除吗？', function(index) {
             // //捉到所有被选中的，发异步进行删除
-            $.post("{:url('admin/cate/delAllVideo')}", { id: data, table: 'video' }, function(response) {
+            $.post("<?php echo url('admin/cate/delAllVideo'); ?>", { id: data, table: 'video' }, function(response) {
                 layer.msg(response.msg, { time: 1000, icon: response.icon }, function() {
                     location.reload();
                 })
@@ -198,7 +198,7 @@
     }
     //修改状态
     function updateVideo(id, status) {
-        $.post("{:url('admin/cate/updateVideo')}", { vid: id, status: status }, function(data) {
+        $.post("<?php echo url('admin/cate/updateVideo'); ?>", { vid: id, status: status }, function(data) {
             layer.msg(data.msg, { time: 1000, icon: data.icon }, function() {
                 location.reload();
             })
@@ -206,7 +206,7 @@
     }
     //修改推荐
     function upRecommend(id, status) {
-        $.post("{:url('admin/cate/upRecommend')}", { vid: id, isrecommend: status }, function(data) {
+        $.post("<?php echo url('admin/cate/upRecommend'); ?>", { vid: id, isrecommend: status }, function(data) {
             layer.msg(data.msg, { time: 1000, icon: data.icon }, function() {
                 location.reload();
             })

@@ -22,13 +22,6 @@
     <a class="layui-btn layui-btn-sm" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
         <i class="layui-icon" style="line-height:30px">ဂ</i></a>
 </div>
-
-<div id="outerdiv" style="position:fixed;top:0;left:0;background:rgba(0,0,0,0.7);z-index:2;width:100%;height:100%;display:none;">
-    <div id="innerdiv" style="position:absolute;">
-        <img id="bigimg" style="border:5px solid #fff;" src="" />
-    </div>
-</div>
-
 <div class="weadmin-body">
 
 
@@ -65,9 +58,27 @@
             <td>{$value['list']['username']}</td>
             <td>{$value['list']['alipay']}</td>
             <td>{$value['list']['idcode']}</td>
+<<<<<<< HEAD
+            <td>
+                <div class="layui-upload-list">
+                    <div class='imgBox'><img src="http://cdn.lanyushiting.com/{$value['list']['idcodefront']}" class='wh100 ml2 mr2 screen'></div>
+                </div>
+            </td>
+            <td>
+                <div class="layui-upload-list">
+                    <div class='imgBox'><img src="http://cdn.lanyushiting.com/{$value['list']['idcodereverse']}" class='wh100 ml2 mr2 screen'></div>
+                </div>
+            </td>
+            <td>
+                <div class="layui-upload-list">
+                    <div class='imgBox'><img src="http://cdn.lanyushiting.com/{$value['list']['handidcode']}" class='wh100 ml2 mr2 screen'></div>
+                </div>
+            </td>
+=======
             <td><img src="http://cdn.lanyushiting.com/{$value['list']['idcodefront']}" style="height: 50px;max-width: 180px;" class="pimg"></td>
             <td><img src="http://cdn.lanyushiting.com/{$value['list']['idcodereverse']}" style="height: 50px;max-width: 180px;" class="pimg" /></td>
             <td><img src="http://cdn.lanyushiting.com/{$value['list']['handidcode']}" style="height: 50px;max-width: 180px;" class="pimg" /></td>
+>>>>>>> 2535610ff6f34ed72d59d9f8e5cecd330f5efb3d
             <td>
             {if $value['list']['status'] == 1}
                 <span class="layui-btn layui-btn-danger layui-btn-xs">待审核</span></td>
@@ -139,6 +150,16 @@
         });
     }
 
+    //图片放大展示
+    $(".screen").bind('click', function() {
+        var photos = $(this).parent().parent();
+        layer.photos({
+            photos: photos,
+            anim: 5, //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+            closeBtn: 1,
+        });
+    });
+
     function updateWork(id, status) {
         $.post("{:url('admin/gift/update')}", { gid: id, status: status }, function(data) {
             layer.msg(data.msg, { time: 1000, data:icon }, function() {
@@ -146,56 +167,6 @@
             })
         }, 'json');
     }
-
-
-    $("#outerdiv").hide();
-    $(function(){
-        $("img").mouseover(function(){
-            $(this).css("cursor","pointer");
-        });
-
-        $("img").click(function(){
-            var _this = $(this);//将当前的pimg元素作为_this传入函数
-            imgShow("#outerdiv", "#bigimg", _this);
-        });
-    });
-
-    function imgShow(outerdiv, bigimg, _this) {
-        var src = _this.attr("src");//获取当前点击的pimg元素中的src属性
-        $('#outerdiv').attr('display', 'block');
-        $(bigimg).attr("src", src);//设置#bigimg元素的src属性
-        $(outerdiv).fadeIn("fast");
-
-        $(outerdiv).click(function (){
-            $(this).fadeOut("fast");
-        });
-    }
-
-
-    // $(function (){
-    //     $('.pimg').click(function (){
-    //         var _this = $(this);
-    //         imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);
-    //
-    //     });
-    // });
-    //
-    //
-    //
-    // function imgShow(outerdiv, innerdiv, bigimg, _this){
-    //     var src = _this.attr("src");//获取当前点击的pimg元素中的src属性
-    //     $(bigimg).attr("src", src);//设置#bigimg元素的src属性
-    //
-    //     /*获取当前点击图片的真实大小，并显示弹出层及大图*/
-    //     $(bigimg).attr("src", src).load(function(){
-    //
-    //     });
-    //     alert(111);
-    //     $(outerdiv).click(function (){
-    //         $(this).fadeOut("fast");
-    //     });
-    // }
-
 </script>
 </body>
 

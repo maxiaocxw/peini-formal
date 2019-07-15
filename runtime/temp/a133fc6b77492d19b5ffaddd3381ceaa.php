@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:90:"D:\phpserver\wwwroot\default\peini-formal\public/../application/admin\view\gift\index.html";i:1563006962;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -7,8 +8,8 @@
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/font.css">
-	<link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/weadmin.css">
+	<link rel="stylesheet" href="/static/admin/static/css/font.css">
+	<link rel="stylesheet" href="/static/admin/static/css/weadmin.css">
 </head>
 
 <body>
@@ -26,7 +27,7 @@
 	<div class="weadmin-block">
 		<button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>删除</button>
 		<a title="修改"  href="/admin/gift/add"><button class="layui-btn admin_add"><i class="layui-icon"></i>添加礼物</button></a>
-		<span class="fr" style="line-height:40px">共有数据：{$total} 条</span>
+		<span class="fr" style="line-height:40px">共有数据：<?php echo $total; ?> 条</span>
 	</div>
 	<table class="layui-table">
 		<thead>
@@ -44,28 +45,28 @@
 			<th>操作</th>
 		</thead>
 		<tbody>
-		{foreach $list as $key => $value}
+		<?php foreach($list as $key => $value): ?>
 		<tr>
 			<td>
-				<div class="layui-unselect layui-form-checkbox" id="admin_id" lay-skin="primary" data-id="{$value['gid']}"><i class="layui-icon">&#xe605;</i></div>
+				<div class="layui-unselect layui-form-checkbox" id="admin_id" lay-skin="primary" data-id="<?php echo $value['gid']; ?>"><i class="layui-icon">&#xe605;</i></div>
 			</td>
-			<td>{$value.gid}</td>
-			<td>{$value.name}</td>
-			<td>{$value.price}</td>
+			<td><?php echo $value['gid']; ?></td>
+			<td><?php echo $value['name']; ?></td>
+			<td><?php echo $value['price']; ?></td>
 			<td>
 				<div class="layui-upload-list">
-					<div class='imgBox'><img src="{$value.img}" class='wh100 ml2 mr2 screen'></div>
+					<div class='imgBox'><img src="<?php echo $value['img']; ?>" class='wh100 ml2 mr2 screen'></div>
 				</div>
 			</td>
-			<td>{$value.order}</td>
+			<td><?php echo $value['order']; ?></td>
 			<td>
-				{if $value['status'] == 1}
+				<?php if($value['status'] == 1): ?>
 					<span class="layui-btn layui-btn-danger layui-btn-xs">正常</span></td>
-				{elseif $value['status'] == 2}
+				<?php elseif($value['status'] == 2): ?>
 					<span class="layui-btn layui-btn-danger layui-btn-xs">禁用</span></td>
-				{elseif $value['status'] == -1}
+				<?php elseif($value['status'] == -1): ?>
 					<span class="layui-btn layui-btn-danger layui-btn-xs">已删除</span></td>
-				{/if}
+				<?php endif; ?>
 			</td>
 			<td>
 				<?=date('Y-m-d H:i:s',$value['addtime'])?>
@@ -76,18 +77,18 @@
 			</td>
 
 		</tr>
-		{/foreach}
+		<?php endforeach; ?>
 		</tbody>
 	</table>
 	<div class="page">
 		<div>
-			{$list->render()}
+			<?php echo $list->render(); ?>
 		</div>
 	</div>
 </div>
-<script src="__PUBLIC_ADMIN__/static/js/jquery.js" charset="utf-8"></script>
-<script src="__PUBLIC_ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
-<script src="__PUBLIC_ADMIN__/static/js/weadmin.js" charset="utf-8"></script>
+<script src="/static/admin/static/js/jquery.js" charset="utf-8"></script>
+<script src="/static/admin/lib/layui/layui.js" charset="utf-8"></script>
+<script src="/static/admin/static/js/weadmin.js" charset="utf-8"></script>
 <script type="text/javascript">
 	layui.use(['layer', 'laydate','form'], function() {
 		var laydate = layui.laydate;
@@ -103,7 +104,7 @@
 	function delAll(){
 		var data = tableCheck.getData();
 		layer.confirm('确认要删除吗？',function(index){
-			$.post("{:url('admin/gift/delAll')}",{id:data,table:'gift'},function(response){
+			$.post("<?php echo url('admin/gift/delAll'); ?>",{id:data,table:'gift'},function(response){
 				layer.msg(response.msg,{time:1000,icon:response.icon},function(){
 					location.reload();
 				})
@@ -112,7 +113,7 @@
 	}
 
 	function updateWork(id, status) {
-		$.post("{:url('admin/gift/update')}", { gid: id, status: status }, function(data) {
+		$.post("<?php echo url('admin/gift/update'); ?>", { gid: id, status: status }, function(data) {
 			layer.msg(data.msg, { time: 1000, data:icon }, function() {
 				location.reload();
 			})
