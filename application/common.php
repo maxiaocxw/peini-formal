@@ -388,7 +388,8 @@ function granTranNo(){
  */
 function birthday($birthday)
 {
-    $age = strtotime($birthday);
+    $date =date('Ymd',$birthday);
+    $age = strtotime($date);
     if ($age === false) {
         return false;
     }
@@ -398,7 +399,6 @@ function birthday($birthday)
     $age = $y2 - $y1;
     if ((int)($m2 . $d2) < (int)($m1 . $d1))
         $age -= 1;
-
     return $age;
 }
 
