@@ -40,7 +40,7 @@ class Pay extends Auth{
                 $this->II('200','请求成功',$result);
                 break;
             case 3:
-                $this->II('200','请求成功',[]);
+                $this->II('200','请求成功',$tran_no);
                 break;
             default :
                 $this->II('201','请求失败',[]);
