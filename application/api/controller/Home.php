@@ -150,9 +150,9 @@ class Home extends Auth {
     //关注
     public function addLike(){
         //参数验证
-//        $this->checkParam();
+        $this->checkParam();
         //token验证
-//        $this->checkToken();
+        $this->checkToken();
         //接收参数
         $post = input('post.');
         $data = [
@@ -168,9 +168,9 @@ class Home extends Auth {
     }
 
     public function unLike(){
-//        $this->checkParam();
+        $this->checkParam();
         //token验证
-//        $this->checkToken();
+        $this->checkToken();
         //接收参数
         $post = input('post.');
 
