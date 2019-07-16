@@ -60,33 +60,6 @@ class Gift extends Controller{
     }
 
 
-    //图片上传
-    public function UploadImage(){
-        $file = $_FILES['file'];
-        if( is_uploaded_file( $file['tmp_name'] ) ){
-            $path = './uploads/game';
-            if( !file_exists($path) ){
-                mkdir( $path,0777,true );
-                chmod( $path, 777 );
-            }
-            //新文件名  避免文件名相同覆盖
-            $uniname = md5( uniqid( microtime(true), true ) );
-            //获取上传文件的后缀名
-            $ext = pathinfo( $file['name'], PATHINFO_EXTENSION );
-            //拼接要上传的完整的路径名称
-            $destination = $path.'/'.$uniname.'.'.$ext;
-            if( move_uploaded_file( $file['tmp_name'], $destination ) ){
-                echo json_encode(['code' => 0,'msg' => '上传成功','icon' => 1,'src'=>$destination]);
-            }else{
-                echo json_encode(['code' => 1,'msg' => '上传失败','icon' => 2]);
-            }
-        }else{
-            echo json_encode(['code' => 1,'msg' => '上传失败','icon' => 2]);
-        }
-    }
-
-
-
     //删除
     public function delAll(){
 
@@ -111,12 +84,10 @@ class Gift extends Controller{
 
     }
 
-
     //修改
     public function update(){
         if(request()->isPost()){
             $data = input('post.');
-            var_dump($data);exit;
             $where['gid'] = $data['gid'];
             $result = Db::name('gift')->where($where)->update($data);
             if($result){

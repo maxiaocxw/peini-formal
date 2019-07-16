@@ -11,6 +11,8 @@ use think\Db;
 
 class Home extends Auth {
 
+    public $url = "http://cdn.lanyushiting.com/";
+
     //喜欢
     public function like(){
         $this->checkParam();
@@ -43,8 +45,8 @@ class Home extends Auth {
                 $userData[] = [
                     'uid'  => $userInfo['uid'],
                     'name'=>$userInfo['username'],
-                    'birthday'=>$userInfo['birthday'],
-                    'headimg' =>'cdn.lanyushiting.com/'.$userInfo['headimg'],
+                    'birthday'=>birthday($userInfo['birthday']),
+                    'headimg' =>$this->url.$userInfo['headimg'],
                     'label' => $label
                 ];
             }
@@ -85,9 +87,9 @@ class Home extends Auth {
                 $userData[] = [
                     'uid'  => $userInfo['uid'],
                     'name'  => $userInfo['username'],
-                    'headimg' =>  'cdn.lanyushiting.com/'.$userInfo['headimg'],
-                    'videourl' =>  'cdn.lanyushiting.com/'.$val['videourl'],
-                    'img'   => 'cdn.lanyushiting.com/'.$val['img'],
+                    'headimg' =>  $this->url.$userInfo['headimg'],
+                    'videourl' =>  $this->url.$val['videourl'],
+                    'img'   => $this->url.$val['img'],
                     'label' => $label
                 ];
             }
@@ -133,9 +135,9 @@ class Home extends Auth {
                 $userData[] = [
                     'uid'  => $userInfo['uid'],
                     'name' =>$userInfo['username'],
-                    'headimg' =>  'cdn.lanyushiting.com/'.$userInfo['headimg'],
-                    'videourl' =>  'cdn.lanyushiting.com/'.$val['videourl'],
-                    'img' => $val['img'],
+                    'headimg' => $this->url.$userInfo['headimg'],
+                    'videourl' =>  $this->url.$val['videourl'],
+                    'img' => $this->url.$val['img'],
                     'label' => $label
                 ];
             }
@@ -143,6 +145,50 @@ class Home extends Auth {
 
         //返回数据
         $this->II('200','请求成功',$userData);
+    }
+
+    //关注
+    public function addLike(){
+        //参数验证
+//        $this->checkParam();
+        //token验证
+//        $this->checkToken();
+        //接收参数
+        $post = input('post.');
+        $data = [
+            'uid' => $post['uid'],
+            'acceptuid' => $post['acceptuid'],
+        ];
+        $result = Db::name('like')->insert($data);
+        if($result){
+            $this->II('200','关注成功',$result);
+        }else{
+            $this->II('201','关注失败',$result);
+        }
+    }
+
+    public function unLike(){
+//        $this->checkParam();
+        //token验证
+//        $this->checkToken();
+        //接收参数
+        $post = input('post.');
+
+        $where = [
+            'uid' => $post['uid'],
+            'acceptuid' => $post['acceptuid']
+        ];
+
+        $saveData = [
+            'status' => -1
+        ];
+        $result = Db::name('like')->where($where)->update($saveData);
+
+        if($result){
+            $this->II('200','取消关注成功',$result);
+        }else{
+            $this->II('201','取消关注失败',$result);
+        }
     }
 
 }
