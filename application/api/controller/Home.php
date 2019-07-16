@@ -45,7 +45,7 @@ class Home extends Auth {
                 $userData[] = [
                     'uid'  => $userInfo['uid'],
                     'name'=>$userInfo['username'],
-                    'birthday'=>birthday($userInfo['birthday']),
+                    'age'=>birthday($userInfo['birthday']),
                     'headimg' =>$this->url.$userInfo['headimg'],
                     'label' => $label
                 ];

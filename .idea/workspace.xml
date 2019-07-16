@@ -19,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/api/controller/Home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="173" column="14" selection-start-line="173" selection-start-column="14" selection-end-line="173" selection-end-column="14" />
+            <state relative-caret-position="322">
+              <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
               <folding>
                 <element signature="e#1627#3157#0#PHP" />
                 <element signature="e#3380#4797#0#PHP" />
@@ -273,12 +273,12 @@
       <workItem from="1562378961634" duration="16977000" />
       <workItem from="1562632808362" duration="5288000" />
       <workItem from="1562638120486" duration="57759000" />
-      <workItem from="1562893007958" duration="97964000" />
+      <workItem from="1562893007958" duration="98217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="222359000" />
+    <option name="totallyTimeSpent" value="222612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2568" y="-286" width="2576" height="1416" extended-state="6" />
@@ -355,13 +355,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/aliyun-sdk/lotusphp_runtime/Lotus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/aliyun-sdk/AopSdk.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="644">
@@ -735,10 +728,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/controller/AppHome.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/api/controller/Home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="173" column="14" selection-start-line="173" selection-start-column="14" selection-end-line="173" selection-end-column="14" />
+        <state relative-caret-position="322">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
           <folding>
             <element signature="e#1627#3157#0#PHP" />
             <element signature="e#3380#4797#0#PHP" />
