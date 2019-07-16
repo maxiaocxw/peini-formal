@@ -56,6 +56,7 @@ class Pay extends Auth{
         $this->checkToken();
         //添加数据到订单列表中
         $post = input('post.');
+
         //根据传递过来的金额id做一下2次校验
         $moneyInfo = Db::name('allow_recharge')->where([
             'aid'   => $post['aid'],

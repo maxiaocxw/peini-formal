@@ -54,7 +54,6 @@ class ApplePay{
          * 21007 receipt是Sandbox receipt，但却发送至生产系统的验证服务
          * 21008 receipt是生产receipt，但却发送至Sandbox环境的验证服务
          */
-
         // 验证参数
         if (strlen($receipt_data)<20){
             $result = ['status'=>false, 'message'=>'非法参数'];
@@ -67,7 +66,7 @@ class ApplePay{
         // 如果是沙盒数据 则验证沙盒模式
         if($data['status'] == '21007'){
             // 请求验证
-            $html = $this->acurl($receipt_data, 1);
+            $html =  $this->acurl($receipt_data, 1);
             $data = json_decode($html,true);
             $data['sandbox'] = '1';
         }
@@ -87,14 +86,17 @@ class ApplePay{
 
     public function acurl($receipt_data, $sandbox=0) {
         //小票信息
-        $POSTFIELDS = array("receipt-data" => $receipt_data);
-        $POSTFIELDS = json_encode($POSTFIELDS);
+//        $POSTFIELDS = array("receipt-data" => $receipt_data);
+
+        //拼装json
+        $POSTFIELDS = '{"receipt-data":"'.$receipt_data.'"}';
 
         //正式购买地址 沙盒购买地址
         $url_buy     = "https://buy.itunes.apple.com/verifyReceipt";
         $url_sandbox = "https://sandbox.itunes.apple.com/verifyReceipt";
         $url = $sandbox ? $url_sandbox : $url_buy;
         return $this->curlHtml($url, $POSTFIELDS);
+
     }
 
 }
