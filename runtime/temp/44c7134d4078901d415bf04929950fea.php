@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:90:"F:\phpserver\wwwroot\default\peini-formal\public/../application/union\view\auth\login.html";i:1563295445;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/font.css">
-    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/weadmin.css">
-    <script src="__PUBLIC_ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/static/admin/static/css/font.css">
+    <link rel="stylesheet" href="/static/admin/static/css/weadmin.css">
+    <script src="/static/admin/lib/layui/layui.js" charset="utf-8"></script>
 </head>
 
 <style>
@@ -71,7 +72,7 @@
             }
             if( sendcode_state ){
                 if( phone.match(/(13\d|14[579]|15[^4\D]|17[^49\D]|18\d)\d{8}/)){
-                    $.post("{:url('union/auth/putCode')}", {'phone':phone}, function(response) {
+                    $.post("<?php echo url('union/auth/putCode'); ?>", {'phone':phone}, function(response) {
                         if (response.code == 0) {
                             layer.msg(response.msg, { time: 1000, icon: response.icon });
                         }else{
@@ -89,14 +90,14 @@
         //监听提交
         form.on('submit(login)', function(data) {
             // $.ajax({
-            //     url: "{:url('union/auth/checkCode')}",
+            //     url: "<?php echo url('union/auth/checkCode'); ?>",
             //     type: "post",
             //     data: data.field,
             //     dataType: "json",
             //     success: function(msg) {
             //         layer.msg(msg.msg, { time: 1000 }, function() {
             //             if (msg.code == 0) {
-            //                 location.href = "{:url('union/index/index')}";
+            //                 location.href = "<?php echo url('union/index/index'); ?>";
             //             } else {
             //                 layer.msg(response.msg, { time: 1000, icon: response.icon });
             //             }
@@ -104,10 +105,10 @@
             //     }
             // })
 
-            $.post("{:url('union/auth/checkCode')}", data.field, function(response) {
+            $.post("<?php echo url('union/auth/checkCode'); ?>", data.field, function(response) {
                 if (response.code == 0) {
                     layer.msg(response.msg, { time: 1000, icon: response.icon });
-                    location.href = "{:url('union/index/index')}";
+                    location.href = "<?php echo url('union/index/index'); ?>";
                 }else{
                     layer.msg(response.msg, { time: 1000, icon: response.icon });
                 }
