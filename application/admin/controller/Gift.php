@@ -32,8 +32,8 @@ class Gift extends Controller{
     public function addDo(){
 
         $data = input('post.');
-        if(empty($data['name'])){
-            echo json_encode(['code' => 1,'msg' => '礼物名称不能为空','icon' => 2]);
+        if(empty($data['name'])) {
+            echo json_encode(['code' => 1, 'msg' => '礼物名称不能为空', 'icon' => 2]);
         }
 
         if(empty($data['price'])){
