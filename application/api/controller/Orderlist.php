@@ -12,10 +12,10 @@ class Orderlist extends Auth{
 		$this->type=input('post.type')?input('post.type'):0;//类别 1为用户展示的  2为陪玩展示的
 		$this->limit=10;
 		$this->url='http://cdn.lanyushiting.com/';
-		$this->checkParam('type');
 	}
 
 	public function index(){
+		$this->checkParam('type');
 		if($this->type==1){
 			$wherelist='uid='.$this->uid;
 		}elseif($this->type==2){

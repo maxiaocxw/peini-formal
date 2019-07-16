@@ -40,8 +40,7 @@ class Pay extends Auth{
                 $this->II('200','请求成功',$result);
                 break;
             case 3:
-                $result = $this->applePay();
-                $this->II('200','请求成功',$result);
+                $this->II('200','请求成功',$tran_no);
                 break;
             default :
                 $this->II('201','请求失败',[]);
@@ -52,11 +51,12 @@ class Pay extends Auth{
     //添加订单
     public function add(){
         //参数验证
-//        $this->checkParam();
-        //token验证
-//        $this->checkToken();
+        $this->checkParam();
+//        token验证
+        $this->checkToken();
         //添加数据到订单列表中
         $post = input('post.');
+
         //根据传递过来的金额id做一下2次校验
         $moneyInfo = Db::name('allow_recharge')->where([
             'aid'   => $post['aid'],
@@ -114,9 +114,5 @@ class Pay extends Auth{
         } else {
             return $result['err_code_des'];
         }
-    }
-
-    public function applePay(){
-
     }
 }

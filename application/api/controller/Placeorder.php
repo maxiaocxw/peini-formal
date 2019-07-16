@@ -47,6 +47,8 @@ class Placeorder extends Auth{
 				));
 				//插入定时 超过多长时间没接单自动取消
 				
+				//添加订单消息
+				$this->addMessage($this->acceptuid,2,'您有一个订单请查看');
 				Db::commit();
 				$this->II('200','成功');
 			} catch (\Exception $e) {

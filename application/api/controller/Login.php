@@ -21,7 +21,7 @@ class Login extends Auth{
 		//手机号登录
 		if($this->type==1){
 			$this->checkCode($this->phone,$this->code);
-			$list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,currency,rongtoken')->where('mobile='.$this->phone)->find();
+			$list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,currency,rongtoken,number')->where('mobile='.$this->phone)->find();
 			if(!$list){	
 				$newuid=$this->addUser();
 				$this->II('200','请求成功',array('type'=>1,'info'=>$this->getUserInfo($newuid)));
@@ -51,7 +51,7 @@ class Login extends Auth{
 			$this->II('200','请求成功',array('type'=>2,'info'=>$list));
 		//微信登录
 		}else{
-			$list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,token,currency,rongtoken')->where('openid='.$this->openid)->find();
+			$list=Db::name('user')->field('uid,username,type,status,sex,mobile,birthday,info,headimg,level,addtime,token,currency,rongtoken,number')->where("openid='".$this->openid."'")->find();
 			if(!$list){
 				$this->II('300','去绑定手机号');
 			}
@@ -71,6 +71,10 @@ class Login extends Auth{
 
 	public function addUser(){
 		$usernmae='陪你'.rand(10000,99999);
+		$number=mt_rand(10000,99999);
+		if(Db::name('user')->where('number='.$number)->value('uid')){
+			$number=mt_rand(100000,999999);
+		}
 		$arr=array(
 			'username'		=>		$usernmae,
 			'mobile'		=>		$this->phone,
@@ -78,7 +82,8 @@ class Login extends Auth{
 			'info'			=>		'这个家伙什么都没写',
 			'addtime'		=>		time(),
 			'ip'			=>		$_SERVER['REMOTE_ADDR'],
-			'token'			=>		md5(time().rand(1000,9999))
+			'token'			=>		md5(time().rand(1000,9999)),
+			'number'		=>		$number
 		);
 		$newuid=Db::name('user')->insertGetId($arr);
 		if($newuid){

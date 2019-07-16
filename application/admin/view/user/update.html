@@ -17,23 +17,33 @@
             <div class="layui-form-item">
                 <input type="hidden" name="uid" value="{$list.uid}">
                 <label for="name" class="layui-form-label">
-                    用户名称
+                    用户编号
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="username" name="username" value="{$list.username}" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                    <input type="text" id="number" name="number" value="{$list.number}" required="" lay-verify="required" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
                 <label for="name" class="layui-form-label">
-                    联系电话（座机）
+                    用户名
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="tel" name="tel" value="{$list.tel}"  lay-verify="required" autocomplete="off" class="layui-input">
+                    <input type="text" id="username" name="username" value="{$list.username}"  lay-verify="required" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
+                <label for="is_hot" class="layui-form-label">
+                    <span class="we-red">*</span>性别
+                </label>
+                <div class="layui-input-block">
+                    <input type="radio" {if $list['sex']==1} checked {/if} name="sex" lay-filter="sex" value="1" title="男"> 
+                    <input type="radio" {if $list['sex']==2} checked {/if} name="sex" lay-filter="sex" value="2" title="女">
+                    <input type="radio" {if $list['sex']==3} checked {/if} name="sex" lay-filter="sex" value="3" title="未知">
+                </div> 
+            </div>
+            <div class="layui-form-item">
                 <label for="name" class="layui-form-label">
-                    联系电话（手机）
+                    手机号
                 </label>
                 <div class="layui-input-inline">
                     <input type="text" id="mobile" name="mobile" value="{$list.mobile}" required="" lay-verify="required" autocomplete="off" class="layui-input">
@@ -41,42 +51,33 @@
             </div>
             <div class="layui-form-item">
                 <label for="name" class="layui-form-label">
-                    qq
+                    出生年月
                 </label>
-                <div class="layui-input-inline">
-                    <input type="text" id="qq" name="qq" value="{$list.qq}"  lay-verify="required" autocomplete="off" class="layui-input">
+                <div class="layui-input-inline-ll">
+                <input type="text" name="birthday" {if (isset($list['birthday']) && !empty($list['birthday']))} value="<?=date('Y-m-d H:i:s',$list['birthday'])?>" {/if} class="layui-input" id="test1-1" placeholder="yyyy-MM-dd">
                 </div>
             </div>
             <div class="layui-form-item">
                 <label for="name" class="layui-form-label">
-                    微信
+                    个人介绍
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="wechat" name="wechat" value="{$list.wechat}"  lay-verify="required" autocomplete="off" class="layui-input">
+                    <textarea type="text" id="info" name="info"  lay-verify="required" autocomplete="off" class="layui-input">{$list.info}</textarea>
+                </div>
+            </div>
+            <div class="layui-input-block">
+                <button type="button" class="layui-btn" id="test1">上传头像</button>
+                <div class="layui-upload-list">
+                    <img class="layui-upload-img" src="http://cdn.lanyushiting.com/{$list['headimg']}" id="demo1" style="height: 200px;">
+                    <input class="headimg" type="hidden" name="headimg" value="{$list['headimg']}" />
                 </div>
             </div>
             <div class="layui-form-item">
                 <label for="name" class="layui-form-label">
-                    邮箱
+                    等级
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="email" name="email" value="{$list.email}" required="" lay-verify="required" autocomplete="off" class="layui-input">
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label for="name" class="layui-form-label">
-                    地址
-                </label>
-                <div class="layui-input-inline">
-                    <input type="text" id="address" name="address" value="{$list.address}"  lay-verify="required" autocomplete="off" class="layui-input">
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label for="name" class="layui-form-label">
-                    允许创建项目数
-                </label>
-                <div class="layui-input-inline">
-                    <input type="text" id="allow" name="allow" value="{$list.allow}" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                    <input type="text" id="level" name="level" value="{$list.level}" required="" lay-verify="required" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
@@ -84,25 +85,28 @@
                     余额
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="money" name="money" value="{$list.money}" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                    <input type="text" id="currency" name="currency" value="{$list.currency}" required="" lay-verify="required" autocomplete="off" class="layui-input">
                 </div>
             </div>
+            {if $list.type==2}
             <div class="layui-form-item">
                 <label for="is_hot" class="layui-form-label">
-                    <span class="we-red">*</span>类型
+                    <span class="we-red">*</span>是否允许无限接单
                 </label>
                 <div class="layui-input-block">
-                    <input type="radio" {if $list['type']==1} checked {/if} name="type" lay-filter="type" value="1" title="用户"> 
-                    <input type="radio" {if $list['type']==2} checked {/if} name="type" lay-filter="type" value="2" title="企业">
+                    <input type="radio" {if $list['isunlimited']==1} checked {/if} name="isunlimited" lay-filter="isunlimited" value="1" title="是"> 
+                    <input type="radio" {if $list['isunlimited']==2} checked {/if} name="isunlimited" lay-filter="isunlimited" value="2" title="否">
                 </div> 
-            </div> 
+            </div>
+            {/if}
             <div class="layui-form-item">
                 <label for="is_hot" class="layui-form-label">
                     <span class="we-red">*</span>状态
                 </label>
                 <div class="layui-input-block">
-                    <input type="radio" {if $list['status']==1} checked {/if} name="status" lay-filter="type" value="1" title="审核通过"> 
+                    <input type="radio" {if $list['status']==1} checked {/if} name="status" lay-filter="type" value="1" title="正常"> 
                     <input type="radio" {if $list['status']==2} checked {/if} name="status" lay-filter="type" value="2" title="禁用">
+                    <input type="radio" {if $list['status']==3} checked {/if} name="status" lay-filter="type" value="3" title="冻结">
                 </div> 
             </div> 
             <div class="layui-form-item">
@@ -119,22 +123,27 @@
     layui.extend({
         admin: '__PUBLIC_ADMIN__/static/js/admin'
     });
-    layui.use(['form', 'layer', 'admin', 'upload'], function() {
+    layui.use(['form', 'layer', 'admin', 'upload','laydate'], function() {
         var form = layui.form,
             admin = layui.admin,
             layer = layui.layer;
-            upload = layui.upload,
-
+            upload = layui.upload;
+            laydate=layui.laydate;
             upload.render({
                 elem: '#test1',
-                url: "/admin/market/editUploadImage",
+                url: "/admin/user/qinui_upload",
                 done: function(res) {
-                    console.log(res.data.src);
-                    $("#demo1").attr('src', res.data.src);
-                    $(".thumb").attr('value', res.data.src);
+                    $("#demo1").attr('src', 'http://cdn.lanyushiting.com/'+res.src);
+                    $(".headimg").attr('value', res.src);
                 }
             });
+        laydate.render({
+            elem: '#test1-1',
+            lang: 'en',
+            type : 'datetime'
+        });
     });
+
     </script>
 </body>
 

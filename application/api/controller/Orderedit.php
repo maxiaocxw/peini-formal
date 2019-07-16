@@ -19,7 +19,9 @@ class OrderEdit extends Auth{
 		//判断是不是陪玩
 		$this->isPeiwan();
 		if(Db::name('game_order')->where('id='.$this->id)->update(array('status'=>2,'receivetime'=>time()))){
+			$uid=Db::name('game_order')->where('id='.$this->id)->value('uid');
 			$num=Db::name('game_order')->where('id='.$this->id)->value('num');
+			$this->addMessage($uid,2,'您有一个订单陪玩已经接单');
 			//添加定时任务
 			$this->push_job('app\api\controller\Update@updateOrderStatus', ['id'=>$this->id,'type'=>1], $queue_name = null, $delay = $num*3600);
 			$this->II('200','接单成功');
