@@ -10,7 +10,7 @@ class Personalcenter extends Auth{
 		$this->url='http://cdn.lanyushiting.com/';
 	}
 	public function index(){
-		$list=Db::name('user')->field('uid,username,birthday,headimg,level,currency,sex')->where('uid='.$this->uid)->find();
+		$list=Db::name('user')->field('uid,username,birthday,headimg,level,currency,sex,number,city,info')->where('uid='.$this->uid)->find();
 		$getgift=Db::name('send_log')->field('sum(amount) as amount')->where('acceptuid='.$this->uid)->find()['amount'];
 		$getgift=$getgift?$getgift:0;
 		$getorder=Db::name('game_order')->field('sum(amount) as amount')->where('pid='.$this->uid.' and status=3 or status=4')->find()['amount'];
@@ -18,6 +18,7 @@ class Personalcenter extends Auth{
 		$list['myincome']=$getorder+$getgift;
 		$list['headimg']=$this->url.$list['headimg'];
 		$list['age']=(date('Y',time()))-(date('Y',$list['birthday']));
+		$list['birthday']=date('Y-m-d',$list['birthday']);
 		$this->II('200','获取成功',$list);
 	}
 }
