@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"D:\phpserver\wwwroot\default\peini-formal\public/../application/admin\view\banner\add_article_banner.html";i:1563353125;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -7,8 +8,8 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/font.css">
-    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/weadmin.css">
+    <link rel="stylesheet" href="/static/admin/static/css/font.css">
+    <link rel="stylesheet" href="/static/admin/static/css/weadmin.css">
     <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
     <!--[if lt IE 9]>
       <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -37,7 +38,7 @@
                     <input type="radio" name="language" lay-filter="language" value="2" title="英文"> 
                 </div> 
             </div> 
-        {if input('banner') eq 1}
+        <?php if(input('banner') == 1): ?>
             <div class="layui-form-item">
                 <label for="name" class="layui-form-label">
                     <span class="we-red">*</span>标题
@@ -55,9 +56,7 @@
                 </div>
             </div>
 
-        {/if}
-
-        {if input('type') eq 3}
+        <?php endif; if(input('type') == 3): ?>
             <div class="layui-form-item">
                 <label class="layui-form-label">
                     分类
@@ -65,14 +64,14 @@
                 <div class="layui-input-inline">
                     <select name="classify">
                             <option value="">请选择分类</option>
-                        {foreach $classify as $key => $value}
-                            <option value="{$value['id']}" >{$value['name']} </option> 
-                        {/foreach} 
+                        <?php foreach($classify as $key => $value): ?>
+                            <option value="<?php echo $value['id']; ?>" ><?php echo $value['name']; ?> </option> 
+                        <?php endforeach; ?> 
                     </select> 
                 </div> 
             </div> 
 
-        {/if}
+        <?php endif; ?>
             <div class="layui-form-item">
                 <label for="language" class="layui-form-label">
                     <span class="we-red">*</span>封面
@@ -98,12 +97,12 @@
                     <span class="we-red">*</span>分类
                 </label>
                 <div class="layui-input-block">
-                {if input('banner') eq 1}
+                <?php if(input('banner') == 1): ?>
                     <input type="radio" name="type" lay-filter="type" value="1" title="lifestyle"> 
                     <input type="radio" name="type" lay-filter="type" value="2" title="market"> 
                     <input type="radio" name="type" lay-filter="type" value="3" title="index">
                     <input type="hidden" name="banner" value='1'>
-                {else}
+                <?php else: ?>
                     <input type="radio" name="type" lay-filter="type" value="1" title="deal"> 
                     <input type="radio" name="type" lay-filter="type" value="2" title="lifestyle"> 
                     <input type="radio" name="type" lay-filter="type" value="3" title="market"> 
@@ -112,27 +111,27 @@
                     <input type="radio" name="local" lay-filter="type" value="2" title="2号位置"> 
                     <input type="radio" name="local" lay-filter="type" value="3" title="详情"> 
                     <input type="radio" name="local" lay-filter="type" value="0" title="market首页"> 
-                {/if}
+                <?php endif; ?>
                 </div> 
             </div> 
             <div class="layui-form-item">
                 <label for="L_repass" class="layui-form-label">
                 </label>
                 <button class="layui-btn" lay-filter="add" lay-submit="">添加</button>
-                {if input('banner') eq 1}
+                <?php if(input('banner') == 1): ?>
                 &nbsp;&nbsp;&nbsp;&nbsp;<a href="/admin/banner/bannerList"><button type="button" class="layui-btn">返回</button></a>
-                {else}
+                <?php else: ?>
                 &nbsp;&nbsp;&nbsp;&nbsp;<a href="/admin/banner/articleBanner"><button type="button" class="layui-btn">返回</button></a>
-                {/if}
+                <?php endif; ?>
                 
             </div>
         </form>
     </div>
-    <script src="__PUBLIC_ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
-    <script src="__PUBLIC_ADMIN__/static/js/jquery.js" charset="utf-8"></script>
+    <script src="/static/admin/lib/layui/layui.js" charset="utf-8"></script>
+    <script src="/static/admin/static/js/jquery.js" charset="utf-8"></script>
     <script type="text/javascript">
     layui.extend({
-        admin: '__PUBLIC_ADMIN__/static/js/admin'
+        admin: '/static/admin/static/js/admin'
     });
     layui.use(['form', 'layer', 'admin', 'upload'], function() {
         var form = layui.form,
@@ -154,7 +153,7 @@
             data.field.thumb = $("#demo1").attr('src');
             delete data.field.file;
             $.ajax({
-                url: "{:url('')}",
+                url: "<?php echo url(''); ?>",
                 type: 'post',
                 data: data.field,
                 dataType: 'json',

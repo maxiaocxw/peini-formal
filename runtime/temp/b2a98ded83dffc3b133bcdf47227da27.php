@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:92:"D:\phpserver\wwwroot\default\peini-formal\public/../application/union\view\union\member.html";i:1563363245;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -7,8 +8,8 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/font.css">
-    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/weadmin.css">
+    <link rel="stylesheet" href="/static/admin/static/css/font.css">
+    <link rel="stylesheet" href="/static/admin/static/css/weadmin.css">
     <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
     <!--[if lt IE 9]>
 	      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -20,7 +21,7 @@
     <div class="weadmin-nav">
         <span class="layui-breadcrumb">
         <a href="">首页</a>
-        <a href="{:url('union/union/member')}">公会管理</a>
+        <a href="<?php echo url('admin/union/member'); ?>">公会管理</a>
         <a>
           <cite>公会成员</cite></a>
       </span>
@@ -30,10 +31,10 @@
     <div class="weadmin-body">
         <div class="weadmin-block">
             <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量踢出</button>
-            <a href="{:url('admin/cate/addGame')}">
+            <a href="<?php echo url('admin/cate/addGame'); ?>">
                 <button class="layui-btn"><i class="layui-icon"></i>邀请</button>
             </a>
-            <span class="fr" style="line-height:40px">共有数据：{$total} 条</span>
+            <span class="fr" style="line-height:40px">共有数据：<?php echo $total; ?> 条</span>
         </div>
         <table class="layui-table">
             <thead>
@@ -59,66 +60,62 @@
                     <th>操作</th>
             </thead>
             <tbody>
-                {foreach $data as $key => $value}
+                <?php foreach($data as $key => $value): ?>
                     <td>
-                        <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id="{$value.uid}"><i class="layui-icon">&#xe605;</i></div>
+                        <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id="<?php echo $value['uid']; ?>"><i class="layui-icon">&#xe605;</i></div>
                     </td>
-                    <td>{$value.number}</td>
-                    <td>{$value.username}</td>
+                    <td><?php echo $value['number']; ?></td>
+                    <td><?php echo $value['username']; ?></td>
                     <td>
                         <div class="layui-upload-list">
-                            <div class='imgBox'><img src="http://cdn.lanyushiting.com/{$value.headimg}" class='wh100 ml2 mr2 screen' style="width: 100px;height: 100px;"></div>
+                            <div class='imgBox'><img src="http://cdn.lanyushiting.com/<?php echo $value['headimg']; ?>" class='wh100 ml2 mr2 screen' style="width: 100px;height: 100px;"></div>
                         </div>
                     </td>
                     <td class="td-status">
-                        {if condition="$value['sex'] eq 1"}
+                        <?php if($value['sex'] == 1): ?>
                         男
-                        {elseif condition="$value['status'] eq 2"}
+                        <?php elseif($value['status'] == 2): ?>
                         女
-                        {else/}
+                        <?php else: ?>
                         保密
-                        {/if}
+                        <?php endif; ?>
                     </td>
                     <td>
                         <?=date('Y-m-d H:i:s',$value['birthday'])?>
                     </td>
-                    <td>{$value.city}</td>
-                    <td>{$value.mobile}</td>
+                    <td><?php echo $value['city']; ?></td>
+                    <td><?php echo $value['mobile']; ?></td>
                 <td class="td-status">
-                    {if condition="$value['type'] eq 1"}
+                    <?php if($value['type'] == 1): ?>
                     普通用户
-                    {else/}
+                    <?php else: ?>
                     陪玩用户
-                    {/if}
+                    <?php endif; ?>
                 </td>
-                    <td>{$value.level}</td>
+                    <td><?php echo $value['level']; ?></td>
                     <td class="td-status">
-                        {if($value['game'] == '')}
+                        <?php if(($value['game'] == '')): ?>
                         暂无游戏
-                        {else/}
-                        {$value.game}
-                        {/if}
+                        <?php else: ?>
+                        <?php echo $value['game']; endif; ?>
                     </td>
                     <td class="td-status">
-                        {if($value['label'] == '')}
+                        <?php if(($value['label'] == '')): ?>
                         暂无标签
-                        {else/}
-                        {$value.label}
-                        {/if}
+                        <?php else: ?>
+                        <?php echo $value['label']; endif; ?>
                     </td>
                     <td class="td-status">
-                        {if($value['num'] == '')}
+                        <?php if(($value['num'] == '')): ?>
                         暂无接单
-                        {else/}
-                        {$value.num}
-                        {/if}
+                        <?php else: ?>
+                        <?php echo $value['num']; endif; ?>
                     </td>
                     <td class="td-status">
-                        {if($value['all_profit'] == 0)}
+                        <?php if(($value['all_profit'] == 0)): ?>
                         暂无收益
-                        {else/}
-                        {$value.all_profit}
-                        {/if}
+                        <?php else: ?>
+                        <?php echo $value['all_profit']; endif; ?>
                     </td>
                     <td>
                         <?=date('Y-m-d H:i:s',$value['uniontime'])?>
@@ -127,21 +124,21 @@
                         <?=date('Y-m-d H:i:s',$value['lasttime'])?>
                     </td>
                     <td class="td-manage">
-                        <a onclick="updateUnion({$value['uid']})" href="javascript:;" title="踢出"><button class="layui-btn layui-btn-danger layui-btn-sm">踢出</button></a>
+                        <a onclick="updateUnion(<?php echo $value['uid']; ?>)" href="javascript:;" title="踢出"><button class="layui-btn layui-btn-danger layui-btn-sm">踢出</button></a>
                     </td>
                 </tr>
-                {/foreach}
+                <?php endforeach; ?>
             </tbody>
         </table>
         <div class="page">
             <div>
-                {$list->render()}
+                <?php echo $list->render(); ?>
             </div>
         </div>
     </div>
-    <script src="__PUBLIC_ADMIN__/static/js/jquery.js" charset="utf-8"></script>
-    <script src="__PUBLIC_ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
-    <script type="text/javascript" src="__PUBLIC_ADMIN__/static/js/weadmin.js"></script>
+    <script src="/static/admin/static/js/jquery.js" charset="utf-8"></script>
+    <script src="/static/admin/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/static/admin/static/js/weadmin.js"></script>
     <script type="text/javascript">
     layui.use(['layer'], function() {
         var layer = layui.layer;
@@ -151,7 +148,7 @@
         var data = tableCheck.getData();
         layer.confirm('确认要踢出选中成员吗？', function(index) {
             // //捉到所有被选中的，发异步进行删除
-            $.post("{:url('union/union/delAllUnion')}", { id: data, table: 'user' }, function(response) {
+            $.post("<?php echo url('union/union/delAllUnion'); ?>", { id: data, table: 'user' }, function(response) {
                 layer.msg(response.msg, { time: 1000, icon: response.icon }, function() {
                     location.reload();
                 })
@@ -160,7 +157,7 @@
     }
     //单个踢出成员
     function updateUnion(id) {
-        $.post("{:url('union/union/updateUnion')}", { uid: id}, function(data) {
+        $.post("<?php echo url('union/union/updateUnion'); ?>", { uid: id}, function(data) {
             layer.msg(data.msg, { time: 1000, icon: data.icon }, function() {
                 location.reload();
             });

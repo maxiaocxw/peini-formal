@@ -11,13 +11,13 @@ class Auth extends Controller{
 		$controller = request()->controller();
 		$action = request()->action();
 		$action_arr = ['login','loginin'];
-		$this->userid=session('admin.id');
-		if(strcmp($controller, 'auth') != 0){
+		$this->unid=cache('unid');
+		if(strcmp($controller, 'Auth') != 0){
 			if(!in_array($action, $action_arr)){
-				if(empty($this->userid)){
+				if(empty($this->unid)){
 					$this->redirect('union/auth/login');
 				}else{
-					$this->userid = session('admin.id');
+                    $this->unid=cache('unid');
 					$this->assign('menu_role',explode(',', session('admin.role')));
 				}
 			}
@@ -33,6 +33,12 @@ class Auth extends Controller{
         $code=mt_rand(100000,999999);
         if(!$phone){
             echo json_encode(['code' => 1,'msg' => '参数错误','icon' => 2]);
+            die;
+        }
+        //判断该手机号是否是用户绑定的
+        $user_res = Db::name('user')->where( [ 'mobile'=>$phone ] )->find();
+        if( !$user_res ){
+            echo json_encode(['code' => 1,'msg' => '手机号未绑定用户','icon' => 2]);
             die;
         }
         $api_auth = new \app\api\controller\Auth();
@@ -53,13 +59,13 @@ class Auth extends Controller{
             echo json_encode(['code' => 1,'msg' => '验证码已过期','icon' => 2]);
             die;
         }
+        //判断该手机号是否是用户绑定的
+//        $user_res = Db::name('user')->where( [ 'mobile'=>$phone ] )->find();
+//        if( !$user_res ){
+//            echo json_encode(['code' => 1,'msg' => '手机号未绑定用户','icon' => 2]);
+//            die;
+//        }
         if(cache($phone)==$code){
-            //判断该手机号是否是用户绑定的
-            $user_res = Db::name('user')->where( [ 'mobile'=>$phone ] )->find();
-            if( !$user_res ){
-                echo json_encode(['code' => 1,'msg' => '手机号不存在','icon' => 2]);
-                die;
-            }
             //通过手机号查找到所属的公会存储到session
             $president = Db::name('union')->where( [ 'mobile'=>$phone ] )->find();
             if( !$president ){
@@ -77,6 +83,7 @@ class Auth extends Controller{
                 die;
             }else{
                 cache( 'unid',$president['unid'] );
+                Session::set('union',$president);
                 echo json_encode(['code' => 0,'msg' => '登陆成功','icon' => 1]);
                 die;
             }

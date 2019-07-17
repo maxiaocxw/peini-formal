@@ -1,21 +1,22 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:93:"D:\phpserver\wwwroot\default\peini-formal\public/../application/admin\view\index\welcome.html";i:1563159989;}*/ ?>
 <!DOCTYPE html>
 <html>
 
 	<head>
 		<meta charset="UTF-8">
-		<title>Norrh  -  USA后台管理系统-1.0</title>
+		<title>陪你后台管理系统-1.0</title>
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		<link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/font.css">
-		<link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/weadmin.css">
+		<link rel="stylesheet" href="/static/admin/static/css/font.css">
+		<link rel="stylesheet" href="/static/admin/static/css/weadmin.css">
 
 
 	</head>
 
 	<body>
 		<div class="weadmin-body">
-			<blockquote class="layui-elem-quote">欢迎使用陪你-会长后台管理系统</blockquote>
+			<blockquote class="layui-elem-quote">欢迎使用陪你后台系统！</blockquote>
 			
 			<div class="layui-col-lg12 layui-collapse" style="border: none;">
 				<div class="layui-col-lg12 layui-col-md12">
@@ -52,10 +53,10 @@
 
 		</div>
 	</body>
-	<script type="text/javascript" src="__PUBLIC_ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/static/admin/lib/layui/layui.js" charset="utf-8"></script>
 	<script type="text/javascript">
 		layui.extend({
-			admin: '__PUBLIC_ADMIN__/static/js/admin',
+			admin: '/static/admin/static/js/admin',
 		});
 		layui.use(['jquery', 'element','util', 'admin', 'carousel'], function() {
 			var element = layui.element,
