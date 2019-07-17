@@ -4,11 +4,12 @@ use app\api\controller\Auth;
 use think\Db;
 class Personalhome extends Auth{
 	public function _initialize(){
-		//$this->checkParam();
-		//$this->checkToken();
+		$this->checkParam();
+		$this->checkToken();
 		$this->uid = input('post.uid')?input('post.uid'):0;//用户id
 		$this->pid = input('post.pid')?input('post.pid'):0;//陪玩id
 		$this->url = 'http://cdn.lanyushiting.com/';
+		$this->checkParam('pid');
 	}
 	public function index(){
 		$list=Db::name('user')->field('uid,username,headimg,birthday,level,sex,info,interestid,workid,city')->where('uid='.$this->pid)->find();
@@ -47,7 +48,7 @@ class Personalhome extends Auth{
 		}
 		//获取兴趣
 		if($list['interestid']){
-			$insert=Db::name('interest')->field('name')->where('nid in('.$list['interestid'].')')->select();
+			/*$insert=Db::name('interest')->field('name')->where('nid in('.$list['interestid'].')')->select();
 			$inserting='';
 			if($insert){
 				foreach($insert as $kk=>$vv){
@@ -56,8 +57,8 @@ class Personalhome extends Auth{
 				$inserting=trim(',',$inserting);
 			}{
 				$inserting='未知';
-			}
-			$list['interest']=$inserting;
+			}*/
+			$list['interest']=$list['interestid'];
 		}else{
 			$list['interest']='未知';
 		}

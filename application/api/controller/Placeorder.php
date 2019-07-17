@@ -5,8 +5,8 @@ use think\Request;
 use think\Db;
 class Placeorder extends Auth{
 	public function _initialize(){
-		$this->checkParam();
-		$this->checkToken();
+		//$this->checkParam();
+		//$this->checkToken();
 		$this->uid = input('post.uid')?input('post.uid'):0;//普通用户id
 		$this->acceptuid = input('post.acceptuid')?input('post.acceptuid'):0;//陪玩用户id
 		$this->price = input('post.price')?input('post.price'):0;//单价
@@ -15,7 +15,7 @@ class Placeorder extends Auth{
 		$this->gid = input('post.gid')?input('post.gid'):0;//游戏id
 		$this->regional = input('post.regional')?input('post.regional'):0;//游戏区域
 		$this->nickname = input('post.nickname')?input('post.nickname'):0;//游戏昵称
-		$this->checkParam('uid,acceptuid,price,amount,num,gid,regional,nickname');
+		$this->checkParam('uid,acceptuid,price,amount,num,gid');
 	}
 	public function index(){
 		//对比价格是否相同
@@ -78,7 +78,7 @@ class Placeorder extends Auth{
 	}
 
 	public function isNum($num){
-		$isnum=Db::name('game_order')->field('id')->where('uid='.$this->uid.' and status=2 or status=1 or status=2')->count();
+		$isnum=Db::name('game_order')->field('id')->where('uid='.$this->uid.' and (status=2 or status=1 or status=2)')->count();
 		if($isnum>=$num){
 			$this->II('201','最多能下'.$num.'单');
 		}else{
