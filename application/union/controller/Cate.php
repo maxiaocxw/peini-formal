@@ -324,16 +324,16 @@ class Cate extends Auth{
         $req=input('post.');
         if( $req ){
             //判断名称是否存在
-            $game_name = Db::name('game')->where(['name'=>$req['name'],'status'=>1])->find();
-            if( $game_name['name']==$req['name'] ){
+            $game_name = Db::name('game')->where(['name'=>$req['name'],'stauts'=>1])->find();
+            if( $game_name ){
+                echo json_encode(['code'=>1,'msg'=>'游戏名称已存在','icon'=>2]);
+            }else{
                 $res = Db::name('game')->where('gid='.$req['gid'])->update($req);
                 if( $res ){
                     echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
                 }else{
                     echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
                 }
-            }else{
-                echo json_encode(['code'=>1,'msg'=>'游戏名称已存在','icon'=>2]);
             }
         }else{
             echo (['code' => 1,'msg' => '参数错误','icon' =>2]);

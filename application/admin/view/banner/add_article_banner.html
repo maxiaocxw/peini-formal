@@ -142,8 +142,9 @@
 
             upload.render({
                 elem: '#test1',
-                url: "/admin/market/editUploadImage",
+                url: "/admin/cate/qinui_upload",
                 done: function(res) {
+                    $("#demo1").attr('src', res.src);
                     console.log(res.data.src);
                     $("#demo1").attr('src', res.data.src)
                 }
@@ -153,7 +154,7 @@
             data.field.thumb = $("#demo1").attr('src');
             delete data.field.file;
             $.ajax({
-                url: "{:url('addArticleBanner')}",
+                url: "{:url('')}",
                 type: 'post',
                 data: data.field,
                 dataType: 'json',

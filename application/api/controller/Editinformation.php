@@ -12,16 +12,16 @@ class EditInformation extends Auth{
 		if($this->params){
             unset($this->params['sign']);
 			$this->params['updatetime']=time();
-            if($this->params['birthday']){
+            if(!empty($this->params['birthday'])){
                 $this->params['birthday']=strtotime($this->params['birthday']);
             }
-            if($this->params['username']){
+            if(!empty($this->params['username'])){
             	if(Db::name('user')->where("username='".$this->params['username']."'")->value('uid')){
             		$this->II('201','已有昵称');
             	}
             }
 			if(Db::name('user')->update($this->params)){
-				$this->II('200','修改成功',array($this->getUserInfo($this->params['uid'])));
+				$this->II('200','修改成功',$this->getUserInfo($this->params['uid']));
 			}else{
 				$this->II('201','修改失败');
 			}
