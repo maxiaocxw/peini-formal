@@ -188,6 +188,10 @@ class Approve extends Auth{
             $ids[] = $val['gameId'];
         }
 
+        //视频连接
+        $videoUrl = $post['videoUrl'];
+        $img = $post['img'];
+
         //拼装数据
         $data = [
             'uid'   => $uid,
@@ -204,7 +208,27 @@ class Approve extends Auth{
         ];
         //添加数据到认证表中
         $res = Db::name('approve')->insert($data);
-        return $res;
+
+        //将视频图片加到视频库中
+        if($res){
+            //拼装数据
+            $videoData = [
+                'uid' => $uid,
+                'videoUrl' => $videoUrl,
+                'img' => $img,
+                'status' => 1,
+                'addtime' => time()
+            ];
+
+            $result = Db::name('video')->insert($videoData);
+            if($result){
+                return $result;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
     }
 
     public function addGameInfo($gameArr,$uid){

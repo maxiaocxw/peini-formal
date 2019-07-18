@@ -18,8 +18,10 @@ class Game extends Auth
         $gameId = input('post.');
         $where['gameid'] = ['like', '%' . $gameId['gid'] . '%'];
         $where['status'] = ['=', '2'];
+        $page = isset($gameId['page']) ? $gameId['page'] : 1;
+        $limit = 10;
         //查询用户认证表中的游戏ids 获取到用户id
-        $userData = Db::name('approve')->where($where)->field('id,uid')->select();
+        $userData = Db::name('approve')->where($where)->field('id,uid')->page($page,$limit)->select();
         $userInfo = [];
         foreach ($userData as $item) {
             //根据用户id查询视频表中的第一帧图片 返回给客户端
@@ -36,7 +38,7 @@ class Game extends Auth
                 'age' => birthday($user['birthday']),
                 'uid' => $user['uid'],
                 'username' => $user['username'],
-                'headimg'  => $user['headimg'],
+                'headimg'  => 'http://cdn.lanyushiting.com/' . $user['headimg'],
                 'sex'      => $user['sex'] == 1 ? '男' : ($user['sex'] == 2 ? '女' : '未知'),
                 'img' => 'http://cdn.lanyushiting.com/' . $img['img']
             ];
