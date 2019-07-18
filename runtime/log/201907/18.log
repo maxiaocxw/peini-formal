@@ -1,0 +1,164 @@
+---------------------------------------------------------------
+[ 2019-07-18T09:35:01+08:00 ] 127.0.0.1 POST /api/Personalhome
+[ info ] www.peini.com/api/Personalhome [运行时间：0.241824s][吞吐率：4.14req/s] [内存消耗：2,214.48kb] [文件加载：38]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Personalhome',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'e7c3ec26-bf99-419e-8bb7-275b83f0aec4',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------622184254320632087022224',
+  'content-length' => '262',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '4',
+  'pid' => '4',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-18T09:35:09+08:00 ] 127.0.0.1 POST /api/Personalhome
+[ info ] www.peini.com/api/Personalhome [运行时间：0.557870s][吞吐率：1.79req/s] [内存消耗：3,315.05kb] [文件加载：46]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Personalhome',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => '4ee37a8e-df06-4e64-936f-631627b047de',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------106446000934909615682310',
+  'content-length' => '262',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '4',
+  'pid' => '4',
+)
+[ info ] [ RUN ] app\api\controller\Personalhome->index[ E:\Project\peini-formal\application\api\controller\Personalhome.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.155583s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.026936s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg`,`birthday`,`level`,`sex`,`info`,`interestid`,`workid`,`city` FROM `pn_user` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.026070s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.027942s ]
+[ sql ] [ SQL ] SELECT `gameid` FROM `pn_approve` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.025265s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.025974s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`img` FROM `pn_game` WHERE  (  gid in(0) ) [ RunTime:0.023894s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_comment` [ RunTime:0.035357s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pn_comment` WHERE  (  pid=4 ) LIMIT 1 [ RunTime:0.024670s ]
+[ sql ] [ SQL ] SELECT AVG(score) as score FROM `pn_comment` WHERE  (  pid=4 ) LIMIT 1 [ RunTime:0.023770s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_work` [ RunTime:0.024156s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_work` WHERE  (  wid=1 ) LIMIT 1 [ RunTime:0.023414s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_like` [ RunTime:0.024206s ]
+[ sql ] [ SQL ] SELECT `lid` FROM `pn_like` WHERE  (  uid=4 and acceptuid=4 ) LIMIT 1 [ RunTime:0.023452s ]
+---------------------------------------------------------------
+[ 2019-07-18T09:35:28+08:00 ] 127.0.0.1 POST /api/Personalhome
+[ info ] www.peini.com/api/Personalhome [运行时间：0.467857s][吞吐率：2.14req/s] [内存消耗：3,315.05kb] [文件加载：46]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Personalhome',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => '85d83fd9-2900-4ec8-8572-cf636d28a094',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------233758847268034131197037',
+  'content-length' => '262',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+  'pid' => '4',
+)
+[ info ] [ RUN ] app\api\controller\Personalhome->index[ E:\Project\peini-formal\application\api\controller\Personalhome.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042678s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.027964s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg`,`birthday`,`level`,`sex`,`info`,`interestid`,`workid`,`city` FROM `pn_user` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.031441s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.025448s ]
+[ sql ] [ SQL ] SELECT `gameid` FROM `pn_approve` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.025424s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.025957s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`img` FROM `pn_game` WHERE  (  gid in(0) ) [ RunTime:0.027795s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_comment` [ RunTime:0.027003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pn_comment` WHERE  (  pid=4 ) LIMIT 1 [ RunTime:0.024760s ]
+[ sql ] [ SQL ] SELECT AVG(score) as score FROM `pn_comment` WHERE  (  pid=4 ) LIMIT 1 [ RunTime:0.024959s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_work` [ RunTime:0.025264s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_work` WHERE  (  wid=1 ) LIMIT 1 [ RunTime:0.025078s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_like` [ RunTime:0.026488s ]
+[ sql ] [ SQL ] SELECT `lid` FROM `pn_like` WHERE  (  uid=3 and acceptuid=4 ) LIMIT 1 [ RunTime:0.042570s ]
+---------------------------------------------------------------
+[ 2019-07-18T09:35:47+08:00 ] 127.0.0.1 POST /api/Personalhome
+[ info ] www.peini.com/api/Personalhome [运行时间：0.486072s][吞吐率：2.06req/s] [内存消耗：3,315.14kb] [文件加载：46]
+[ info ] [ LANG ] E:\Project\peini-formal\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'Personalhome',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'PostmanRuntime/7.15.0',
+  'accept' => '*/*',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'f650c6a4-9cbd-4622-95c6-80c8589ceaca',
+  'host' => 'www.peini.com',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------904602802702150705142711',
+  'content-length' => '262',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '3',
+  'pid' => '4',
+)
+[ info ] [ RUN ] app\api\controller\Personalhome->index[ E:\Project\peini-formal\application\api\controller\Personalhome.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.051278s ] mysql:host=39.98.195.90;dbname=peini;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_user` [ RunTime:0.041180s ]
+[ sql ] [ SQL ] SELECT `uid`,`username`,`headimg`,`birthday`,`level`,`sex`,`info`,`interestid`,`workid`,`city` FROM `pn_user` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.024914s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_approve` [ RunTime:0.040421s ]
+[ sql ] [ SQL ] SELECT `gameid` FROM `pn_approve` WHERE  (  uid=4 ) LIMIT 1 [ RunTime:0.044361s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_game` [ RunTime:0.026704s ]
+[ sql ] [ SQL ] SELECT `gid`,`name`,`img` FROM `pn_game` WHERE  (  gid in(0) ) [ RunTime:0.022772s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_comment` [ RunTime:0.023703s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `pn_comment` WHERE  (  pid=4 ) LIMIT 1 [ RunTime:0.043279s ]
+[ sql ] [ SQL ] SELECT AVG(score) as score FROM `pn_comment` WHERE  (  pid=4 ) LIMIT 1 [ RunTime:0.022682s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_work` [ RunTime:0.023973s ]
+[ sql ] [ SQL ] SELECT `name` FROM `pn_work` WHERE  (  wid=1 ) LIMIT 1 [ RunTime:0.023095s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pn_like` [ RunTime:0.023133s ]
+[ sql ] [ SQL ] SELECT `lid` FROM `pn_like` WHERE  (  uid=3 and acceptuid=4 ) LIMIT 1 [ RunTime:0.023798s ]

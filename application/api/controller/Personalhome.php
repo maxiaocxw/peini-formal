@@ -67,6 +67,11 @@ class Personalhome extends Auth{
 		}else{
 			$list['work']='未知';
 		}
+		if(Db::name('like')->where('uid='.$this->uid.' and acceptuid='.$this->pid.' and status=1')->value('lid')){
+			$list['islike']=1;
+		}else{
+			$list['islike']=0;
+		}
 		$this->II('200','获取成功',$list);
 	}
 }
