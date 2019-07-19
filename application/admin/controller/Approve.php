@@ -56,16 +56,13 @@ class Approve extends Controller {
     public function review($id){
         //查询陪玩数据
         $approve = Db::name('approve')->where('id='.$id)->find();
-
         //获取到标签id添加到用户和标签关联表中
         $labelIds = explode(',',$approve['labelid']);
         try{
             foreach($labelIds as $val){
                 $data = [
                     'uid' => $approve['uid'],
-                    'lid' => $val,
-                    'realname' => $approve['realname'],
-                    'alipay'   => $approve['alipay']
+                    'lid' => $val
                 ];
                 Db::name('label_user')->insert($data);
             }
@@ -73,7 +70,6 @@ class Approve extends Controller {
             $saveData = ['type'=>2];
             $result = Db::name('user')->where('uid='.$approve['uid'])->update($saveData);
             if($result){
-
                 //修改认证表
                 $appData = ['status'=>2];
                 $res = Db::name('approve')->where('id='.$id)->update($appData);

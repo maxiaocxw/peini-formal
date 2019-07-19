@@ -25,7 +25,8 @@ class Qiniu{
 
         //初始化鉴权对象
         $auth = new \Qiniu\Auth($this->qiniuConfig['accessKey'],$this->qiniuConfig['secretKey']);
-        $token = $auth->uploadToken($this->qiniuConfig['bucket']);
+        $time = 60*60*24*365*100;
+        $token = $auth->uploadToken($this->qiniuConfig['bucket'],$time);
         return $token;
     }
 

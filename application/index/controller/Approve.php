@@ -85,6 +85,12 @@ class Approve extends \think\Controller{
             echo json_encode(['code' => 1,'msg' => '身份证格式不正确，请输入正确数据','icon' => 2]);exit;
         }
 
+        //判断是否用户身份证号相不相同
+        $idcode = Db::name('approve')->where('idcode='.$post['idcode'])->find();
+        if(!empty($idcode)){
+            echo json_encode(['code' => 1,'msg' => '经检测您已在我们平台注册，请登录','icon' => 2]);exit;
+        }
+
         //验证支付宝账号不能为空
         if(empty($post['alipay'])){
             echo json_encode(['code' => 1,'msg' => '支付宝账号不能为空','icon' => 2]);exit;

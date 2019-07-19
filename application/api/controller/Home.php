@@ -151,8 +151,6 @@ class Home extends Auth {
     public function addLike(){
         //参数验证
         $this->checkParam();
-        //token验证
-        $this->checkToken();
         //接收参数
         $post = input('post.');
         $data = [
@@ -191,4 +189,20 @@ class Home extends Auth {
         }
     }
 
+    /**
+     * 测试展示提现接口 线上不展示
+     */
+    public function isWithdraw(){
+        //1 测试  2 线上
+        $this->II('200','是否展示提现按钮',1);
+    }
+
+    /**
+     * 栏目banner图
+     */
+    public function banner(){
+        $data = Db::name('banner')->where(['status'=>1])->field('id,thumb,link')->select();
+        
+        $this->II('200','请求成功',$data);
+    }
 }
