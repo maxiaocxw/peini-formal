@@ -4638,3 +4638,243 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `pn_like` [ RunTime:0.023133s ]
 [ sql ] [ SQL ] SELECT `lid` FROM `pn_like` WHERE  (  uid=3 and acceptuid=4 ) LIMIT 1 [ RunTime:0.023798s ]
 >>>>>>> 22f177a2994b2b09f1de0b8d517a11bc5535a9ca
+---------------------------------------------------------------
+[ 2019-07-18T23:31:17+08:00 ] 127.0.0.1 POST /api/auth/putcode
+[ info ] www.csshayudj.com/api/auth/putcode [运行时间：0.026915s][吞吐率：37.15req/s] [内存消耗：1,291.91kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'auth',
+    2 => 'putcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '306',
+  'content-type' => 'multipart/form-data; boundary=--------------------------677122550392704155015987',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '76fa7484-3b32-4d6f-bb2f-dfa1b9512c67',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13263364445',
+  'sign' => 'f66a37425dff2c36d1f99945addcba64',
+)
+[ info ] [ RUN ] app\api\controller\Auth->putCode[ D:\pei\application\api\controller\Auth.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-18T23:31:30+08:00 ] 127.0.0.1 POST /api/auth/putcode
+[ info ] www.csshayudj.com/api/auth/putcode [运行时间：0.034758s][吞吐率：28.77req/s] [内存消耗：1,292.09kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'auth',
+    2 => 'putcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '306',
+  'content-type' => 'multipart/form-data; boundary=--------------------------780290215208139133314225',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '2287dc6f-c6c2-4e36-8266-9acf07768176',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13263364445',
+  'sign' => 'f66a37425dff2c36d1f99945addcba64',
+)
+[ info ] [ RUN ] app\api\controller\Auth->putCode[ D:\pei\application\api\controller\Auth.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-18T23:31:40+08:00 ] 127.0.0.1 POST /api/auth/putcode
+[ info ] www.csshayudj.com/api/auth/putcode [运行时间：0.030329s][吞吐率：32.97req/s] [内存消耗：1,291.16kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'auth',
+    2 => 'putcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '306',
+  'content-type' => 'multipart/form-data; boundary=--------------------------192661401196313877301827',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => 'ba250fde-9730-4d1b-8d52-d75a99f7cce3',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13263364445',
+  'sign' => 'f66a37425dff2c36d1f99945addcba64',
+)
+[ info ] [ RUN ] app\api\controller\Auth->putCode[ D:\pei\application\api\controller\Auth.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-18T23:32:20+08:00 ] 127.0.0.1 POST /api/auth/putcode
+[ info ] www.csshayudj.com/api/auth/putcode [运行时间：0.026718s][吞吐率：37.43req/s] [内存消耗：1,291.82kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'auth',
+    2 => 'putcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '306',
+  'content-type' => 'multipart/form-data; boundary=--------------------------938954672203498311967369',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '702e380d-1ca3-4554-8deb-3d4e07bd1dac',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13263364445',
+  'sign' => 'f66a37425dff2c36d1f99945addcba64',
+)
+[ info ] [ RUN ] app\api\controller\Auth->putCode[ D:\pei\application\api\controller\Auth.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-18T23:32:38+08:00 ] 127.0.0.1 POST /api/auth/putcode
+[ info ] www.csshayudj.com/api/auth/putcode [运行时间：0.032689s][吞吐率：30.59req/s] [内存消耗：1,291.95kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'auth',
+    2 => 'putcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '306',
+  'content-type' => 'multipart/form-data; boundary=--------------------------415270588204486410060410',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '911e84c6-6643-4c50-ac71-967eafb422f1',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13263364445',
+  'sign' => 'f66a37425dff2c36d1f99945addcba64',
+)
+[ info ] [ RUN ] app\api\controller\Auth->putCode[ D:\pei\application\api\controller\Auth.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-18T23:33:18+08:00 ] 127.0.0.1 POST /api/auth/putcode
+[ info ] www.csshayudj.com/api/auth/putcode [运行时间：0.036357s][吞吐率：27.50req/s] [内存消耗：1,291.82kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'auth',
+    2 => 'putcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '306',
+  'content-type' => 'multipart/form-data; boundary=--------------------------733648996117114550375641',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '2257fbfe-4139-436e-85aa-9a977f2f6d0f',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13263364445',
+  'sign' => 'f66a37425dff2c36d1f99945addcba64',
+)
+[ info ] [ RUN ] app\api\controller\Auth->putCode[ D:\pei\application\api\controller\Auth.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-18T23:33:27+08:00 ] 127.0.0.1 POST /api/auth/putcode
+[ info ] www.csshayudj.com/api/auth/putcode [运行时间：0.030223s][吞吐率：33.09req/s] [内存消耗：1,291.82kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'auth',
+    2 => 'putcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '306',
+  'content-type' => 'multipart/form-data; boundary=--------------------------810248690664748986605530',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '0c792f9c-ad49-43bd-98b7-a6c131af1b91',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13263364445',
+  'sign' => 'f66a37425dff2c36d1f99945addcba64',
+)
+[ info ] [ RUN ] app\api\controller\Auth->putCode[ D:\pei\application\api\controller\Auth.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-18T23:34:00+08:00 ] 127.0.0.1 POST /api/auth/putcode
+[ info ] www.csshayudj.com/api/auth/putcode [运行时间：0.028782s][吞吐率：34.74req/s] [内存消耗：1,291.78kb] [文件加载：37]
+[ info ] [ LANG ] D:\pei\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'auth',
+    2 => 'putcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '306',
+  'content-type' => 'multipart/form-data; boundary=--------------------------055340685091511301776346',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.csshayudj.com',
+  'postman-token' => '92e1b8ec-8e92-4684-9dc1-949642e08736',
+  'cache-control' => 'no-cache',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.15.2',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13263364445',
+  'sign' => 'f66a37425dff2c36d1f99945addcba64',
+)
+[ info ] [ RUN ] app\api\controller\Auth->putCode[ D:\pei\application\api\controller\Auth.php ]
+[ info ] [ LOG ] INIT File

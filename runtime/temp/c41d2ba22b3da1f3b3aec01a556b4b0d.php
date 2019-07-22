@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:58:"D:\pei\public/../application/admin\view\index\welcome.html";i:1554967655;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:58:"D:\pei\public/../application/admin\view\index\welcome.html";i:1563463620;}*/ ?>
 <!DOCTYPE html>
 <html>
 
 	<head>
 		<meta charset="UTF-8">
-		<title>Norrh  -  USA后台管理系统-1.0</title>
+		<title>陪你后台管理系统-1.0</title>
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -16,7 +16,7 @@
 
 	<body>
 		<div class="weadmin-body">
-			<blockquote class="layui-elem-quote">欢迎使用Norrh  -  USA 后台模版！</blockquote>
+			<blockquote class="layui-elem-quote">欢迎使用陪你后台系统！</blockquote>
 			
 			<div class="layui-col-lg12 layui-collapse" style="border: none;">
 				<div class="layui-col-lg12 layui-col-md12">

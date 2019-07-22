@@ -13,7 +13,7 @@ class Game extends Auth
 
     public function index()
     {
-        $this->checkParam();
+//        $this->checkParam();
         //获取游戏id
         $gameId = input('post.');
         $where['gameid'] = ['like', '%' . $gameId['gid'] . '%'];
@@ -30,6 +30,7 @@ class Game extends Auth
                 'status' => 1,
                 'type' => 2
             ])->field('uid,username,birthday,headimg,sex')->find();
+
             $img = Db::name('video')->where([
                 'status' => 2,
                 'uid' => $user['uid']
@@ -43,6 +44,7 @@ class Game extends Auth
                 'img' => 'http://cdn.lanyushiting.com/' . $img['img']
             ];
         }
+        var_dump($userInfo);exit;
         $this->II('200','请求成功',$userInfo);
     }
 

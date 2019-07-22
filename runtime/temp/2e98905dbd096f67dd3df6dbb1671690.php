@@ -1,11 +1,12 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"D:\pei\public/../application/index\view\approve\add.html";i:1563520378;}*/ ?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="renderer" content="webkit">
-    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/font.css">
-    <link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/weadmin.css">
+    <link rel="stylesheet" href="/static/admin/static/css/font.css">
+    <link rel="stylesheet" href="/static/admin/static/css/weadmin.css">
     <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
     <!--[if lt IE 9]>
     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -101,9 +102,9 @@
                 <span class="we-red">*</span>标签
             </label>
             <div class="layui-input-inline">
-                {foreach $label as $val}
-                <input type="checkbox" name="label[]" value="{$val['lid']}" title="{$val['name']}">
-                {/foreach}
+                <?php foreach($label as $val): ?>
+                <input type="checkbox" name="label[]" value="<?php echo $val['lid']; ?>" title="<?php echo $val['name']; ?>">
+                <?php endforeach; ?>
             </div>
         </div>
 
@@ -186,8 +187,8 @@
 
     </form>
 </div>
-<script src="__PUBLIC_ADMIN__/static/js/jquery.js" charset="utf-8"></script>
-<script src="__PUBLIC_ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
+<script src="/static/admin/static/js/jquery.js" charset="utf-8"></script>
+<script src="/static/admin/lib/layui/layui.js" charset="utf-8"></script>
 <script type="text/javascript">
     layui.use(['form', 'layer','upload'], function() {
         var form = layui.form,
@@ -287,7 +288,7 @@
             }
 
 
-            $.post("{:url('index/approve/addDo')}", data.field, function(response) {
+            $.post("<?php echo url('index/approve/addDo'); ?>", data.field, function(response) {
                 if (response.code == 0) {
                     layer.alert("添加成功", { icon: 6 }, function() {
                         window.location.href = "http://www.shayudj.com/";

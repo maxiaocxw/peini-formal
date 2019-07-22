@@ -40,6 +40,7 @@ class Home extends Auth {
                 ->join('label la','labelUser.lid = la.lid')
                 ->where(['labelUser.uid'=>$userInfo['uid'],'la.status'=>1])
                 ->field('name')
+                ->limit(3)
                 ->select();
             if(!empty($userInfo)){
                 $userData[] = [
@@ -69,7 +70,6 @@ class Home extends Auth {
             'status' => 2, #查询视频是否正常
             'isrecommend' => 2, #查询是否是推荐
         ])->order('order ASC')->page($page,$limit)->field('uid,videourl,img')->select();
-
         //初始化数组
         $userData = [];
         foreach($data as $val){

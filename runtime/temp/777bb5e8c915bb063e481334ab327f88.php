@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:56:"D:\pei\public/../application/admin\view\index\index.html";i:1553478215;s:46:"D:\pei\application\admin\view\public\menu.html";i:1554888786;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:56:"D:\pei\public/../application/admin\view\index\index.html";i:1563463620;s:46:"D:\pei\application\admin\view\public\menu.html";i:1554888786;}*/ ?>
 <!doctype html>
 <html lang="en">
 
@@ -20,7 +20,7 @@
 		<!-- 顶部开始 -->
 		<div class="container">
 			<div class="logo">
-				<a href="<?php echo url('admin/index/index'); ?>">WeAdmin v1.0</a>
+				<a href="<?php echo url('admin/index/index'); ?>">陪你</a>
 			</div>
 			<div class="left_open">
 				<i title="展开左侧栏" class="iconfont">&#xe699;</i>
