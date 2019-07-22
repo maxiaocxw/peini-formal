@@ -94,7 +94,7 @@ class Union extends Auth{
             echo json_encode(['code' => 1,'msg' =>'禁止非法操作','icon' => 3]);
         }
     }
-    //公会踢出成员
+    //公会踢出成员单个
     public function updateUnion(){
         if(request()->isPost()){
             $data = input('post.');
@@ -115,5 +115,9 @@ class Union extends Auth{
                 }
             }
         }
+    }
+    //会长邀请新的成员
+    public function InviteUnion(){
+
     }
 }

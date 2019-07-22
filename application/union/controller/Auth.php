@@ -38,7 +38,7 @@ class Auth extends Controller{
         //判断该手机号是否是用户绑定的
         $user_res = Db::name('user')->where( [ 'mobile'=>$phone ] )->find();
         if( !$user_res ){
-            echo json_encode(['code' => 1,'msg' => '手机号未绑定用户','icon' => 2]);
+            echo json_encode(['code' => 1,'msg' => '手机号未绑定','icon' => 2]);
             die;
         }
         $api_auth = new \app\api\controller\Auth();
@@ -60,11 +60,11 @@ class Auth extends Controller{
             die;
         }
         //判断该手机号是否是用户绑定的
-//        $user_res = Db::name('user')->where( [ 'mobile'=>$phone ] )->find();
-//        if( !$user_res ){
-//            echo json_encode(['code' => 1,'msg' => '手机号未绑定用户','icon' => 2]);
-//            die;
-//        }
+        $user_res = Db::name('user')->where( [ 'mobile'=>$phone ] )->find();
+        if( !$user_res ){
+            echo json_encode(['code' => 1,'msg' => '手机号未绑定','icon' => 2]);
+            die;
+        }
         if(cache($phone)==$code){
             //通过手机号查找到所属的公会存储到session
             $president = Db::name('union')->where( [ 'mobile'=>$phone ] )->find();
@@ -72,19 +72,25 @@ class Auth extends Controller{
                 echo json_encode(['code' => 1,'msg' => '暂无所属公会','icon' => 2]);
                 die;
             }
-            if( $president['status'] == 0 ){
-                echo json_encode(['code' => 1,'msg' => '公会未通过审核','icon' => 2]);
-                die;
-            }elseif ( $president['status'] == 2 ){
-                echo json_encode(['code' => 1,'msg' => '公会审核被拒！请重新审核','icon' => 2]);
-                die;
-            }elseif ( $president['status'] == 3 ){
-                echo json_encode(['code' => 1,'msg' => '公会已被封禁','icon' => 2]);
-                die;
+            //判断绑定手机号的用户所属公会和手机号查找的公会是否一致
+            if( $user_res['union'] == $president['unid'] ){
+                //一致的话判断公会状态
+                if( $president['status'] == 0 ){
+                    echo json_encode(['code' => 1,'msg' => '公会未通过审核','icon' => 2]);
+                    die;
+                }elseif ( $president['status'] == 2 ){
+                    echo json_encode(['code' => 1,'msg' => '公会审核被拒！请重新审核','icon' => 2]);
+                    die;
+                }elseif ( $president['status'] == 3 ){
+                    echo json_encode(['code' => 1,'msg' => '公会已被封禁','icon' => 2]);
+                    die;
+                }else{
+                    cache( 'unid',$president['unid'] );
+                    echo json_encode(['code' => 0,'msg' => '登陆成功','icon' => 1]);
+                    die;
+                }
             }else{
-                cache( 'unid',$president['unid'] );
-                Session::set('union',$president);
-                echo json_encode(['code' => 0,'msg' => '登陆成功','icon' => 1]);
+                echo json_encode(['code' => 1,'msg' => '禁止非法操作','icon' => 2]);
                 die;
             }
         }else{
