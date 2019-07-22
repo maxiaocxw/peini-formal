@@ -120,4 +120,34 @@ class Union extends Auth{
     public function InviteUnion(){
 
     }
+    //编辑公会基本信息
+    public function updateInfo(){
+        $union_data=Db::name('union')->where('unid='.input('unid'))->find();
+        $this->assign('union',$union_data);
+        return $this->fetch();
+    }
+    public function updateInfoDo(){
+        $req=input('post.');
+        if( $req ){
+            //判断公会名称是否存在
+            $union_name = Db::name('union')->where(['name'=>$req['name']])->whereOr('unid='.$req['unid'])->field('name')->find();
+            if($union_name['name'] == $req['name']){
+                echo json_encode(['code'=>1,'msg'=>'您没有做任何修改','icon'=>2]);exit;
+            }else{
+                $unioName = Db::name('union')->where(['name'=>$req['name']])->field('name')->find();
+                if( $unioName ){
+                    echo json_encode(['code'=>1,'msg'=>'公会名称已存在','icon'=>2]);
+                }else{
+                    $res = Db::name('union')->where('unid='.$req['unid'])->update($req);
+                    if( $res || $res === 0 ){
+                        echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
+                    }else{
+                        echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
+                    }
+                }
+            }
+        }else{
+            echo (['code' => 1,'msg' => '参数错误','icon' =>2]);
+        }
+    }
 }

@@ -327,7 +327,7 @@ class Cate extends Auth{
             $game_name = Db::name('game')->where(['name'=>$req['name'],'status'=>1])->find();
             if( $game_name['name']==$req['name'] ){
                 $res = Db::name('game')->where('gid='.$req['gid'])->update($req);
-                if( $res ){
+                if( $res || $res === 0 ){
                     echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
                 }else{
                     echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);

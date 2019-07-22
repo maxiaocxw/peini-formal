@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:95:"D:\phpserver\wwwroot\default\peini-formal\public/../application/union\view\union\unioninfo.html";i:1563775359;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:95:"D:\phpserver\wwwroot\default\peini-formal\public/../application/union\view\union\unioninfo.html";i:1563777101;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -31,7 +31,7 @@
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
             <legend><?php echo $union['name']; ?>公会信息</legend>
         </fieldset>
-        <form class="layui-form layui-form-pane" action="">
+<!--        <form class="layui-form layui-form-pane" action="">-->
             <div class="layui-form-item">
                 <label class="layui-form-label"><span style="color: red">*</span>公会名称</label>
                 <div class="layui-input-inline">
@@ -97,10 +97,10 @@
                 </div>
             </div>
             <div class="layui-form-item">
-                <a title="修改"  href="/admin/cate/updateGames"><button class="layui-btn layui-btn-normal layui-btn">修改</button></a>
-                <a title="解散"  href="/admin/cate/updateGames"><button class="layui-btn layui-btn-danger layui-btn">解散</button></a>
+                <a title="修改"  href="/union/union/updateInfo/unid/<?php echo $union['unid']; ?>"><button class="layui-btn layui-btn-normal layui-btn">编辑</button></a>
+                <a title="解散"  href="/union/union/unionDismiss/unid/<?php echo $union['unid']; ?>"><button class="layui-btn layui-btn-danger layui-btn">解散</button></a>
             </div>
-        </form>
+<!--        </form>-->
     </div>
     <script src="/static/admin/static/js/jquery.js" charset="utf-8"></script>
     <script src="/static/admin/lib/layui/layui.js" charset="utf-8"></script>
