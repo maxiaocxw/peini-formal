@@ -108,7 +108,22 @@
                     <input type="radio" {if $list['status']==2} checked {/if} name="status" lay-filter="type" value="2" title="禁用">
                     <input type="radio" {if $list['status']==3} checked {/if} name="status" lay-filter="type" value="3" title="冻结">
                 </div> 
-            </div> 
+            </div>
+            {if $list['type']==2}
+            <div class="layui-form-item">
+                <label for="is_hot" class="layui-form-label">
+                    <span class="we-red">*</span>所属公会
+                </label>
+                <div style="width:15%" class="layui-input-block">
+                    <select style="width:15%" name="union" lay-verify="required">
+                        <option value="0">暂无</option>
+                        {foreach $union as $key => $value}
+                        <option {if $list['union']==$value['unid']} selected {/if} value="{$value['unid']}">{$value['name']}</option>
+                        {/foreach}
+                    </select>
+                </div> 
+            </div>
+            {/if}
             <div class="layui-form-item">
                 <label for="L_repass" class="layui-form-label">
                 </label>

@@ -50,7 +50,7 @@ class Orderlist extends Auth{
 	public function orderDetail(){
 		$this->checkParam('id');
 		$id=input('post.id');
-		$info=Db::name('game_order')->field('id,uid,pid,num,gid,status')->where('id='.$id)->find();
+		$info=Db::name('game_order')->field('id,uid,pid,num,gid,status,receivetime')->where('id='.$id)->find();
 		if($info['uid']==$this->uid){
 			$info['type']=1;//下的单
 		}
@@ -62,6 +62,11 @@ class Orderlist extends Auth{
 		$info['headimg']=$this->url.$user['headimg'];
 		$info['age']=(date('Y',time()))-(date('Y',$user['birthday']));
 		$info['sex']=$user['sex'];
+		if($info['receivetime']){
+			$info['receivetime']=date('Y-m-d H:i:s',$info['receivetime']);
+		}else{
+			$info['receivetime']="0";
+		}	
 		$info['game']=Db::name('game')->where('gid='.$info['gid'])->value('name');
 		if($info['status']==4){
 			$comment=Db::name('comment')->field('score,tagids,addtime')->where('orderid='.$info['id'])->find();

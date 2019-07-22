@@ -55,9 +55,9 @@ class OrderEdit extends Auth{
 		$pid = input('post.pid')?input('post.pid'):0;//陪玩id
 		$gid = input('post.gid')?input('post.gid'):0;//游戏id
 		$isanonymity = input('post.isanonymity')?input('post.isanonymity'):1;//是否匿名  1否 2是
-		$this->checkParam('score,tagids,pid,gid,isanonymity');
+		$this->checkParam('score,pid,gid');
 		$score=input('post.score');
-		$tagids=input('post.tagids');
+		$tagids='3,5';
 		//是否评论
 		if(Db::name('comment')->field('cid')->where('orderid='.$this->id)->find()){
 			$this->II('201','已经评论');

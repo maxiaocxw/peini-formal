@@ -25,7 +25,13 @@ class Personalhome extends Auth{
 				$list['games'][$k]['price']=Db::name('playinfo')->where('uid='.$this->pid.' and gameid='.$v['gid'])->value('price');
 				$order=Db::name('game_order')->field('id')->where('pid='.$this->pid.' and gid='.$v['gid'].' and status=3 or status=4')->select();
 				$list['games'][$k]['ordernums']=count($order);
-				$tag=Db::name('label')->field('name')->where('lid in('.Db::name('comment')->where('pid='.$this->pid)->value('tagids').')')->limit(2)->select();
+				$lids=Db::name('comment')->where('pid='.$this->pid)->value('tagids');
+				if($lids){
+					$tag=Db::name('label')->field('name')->where('lid in('.$lids.')')->limit(2)->select();
+				}else{
+					$tag=array();
+				}
+				
 				$list['games'][$k]['tags']=$tag;
 			}
 		}else{

@@ -5,8 +5,8 @@ use think\Request;
 use think\Db;
 class Placeorder extends Auth{
 	public function _initialize(){
-		//$this->checkParam();
-		//$this->checkToken();
+		$this->checkParam();
+		$this->checkToken();
 		$this->uid = input('post.uid')?input('post.uid'):0;//普通用户id
 		$this->acceptuid = input('post.acceptuid')?input('post.acceptuid'):0;//陪玩用户id
 		$this->price = input('post.price')?input('post.price'):0;//单价

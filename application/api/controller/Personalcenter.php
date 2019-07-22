@@ -13,7 +13,7 @@ class Personalcenter extends Auth{
 		$list=Db::name('user')->field('uid,username,birthday,headimg,level,currency,sex,number,city,info')->where('uid='.$this->uid)->find();
 		$getgift=Db::name('send_log')->field('sum(amount) as amount')->where('acceptuid='.$this->uid)->find()['amount'];
 		$getgift=$getgift?$getgift:0;
-		$getorder=Db::name('game_order')->field('sum(amount) as amount')->where('pid='.$this->uid.' and status=3 or status=4')->find()['amount'];
+		$getorder=Db::name('game_order')->field('sum(amount) as amount')->where('pid='.$this->uid.' and (status=3 or status=4)')->find()['amount'];
 		$getorder=$getorder?$getorder:0;
 		$list['myincome']=$getorder+$getgift;
 		$list['headimg']=$this->url.$list['headimg'];
