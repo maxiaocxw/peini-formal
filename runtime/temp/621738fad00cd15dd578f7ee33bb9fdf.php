@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:58:"D:\pei\public/../application/admin\view\approve\index.html";i:1563419195;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:58:"D:\pei\public/../application/admin\view\approve\index.html";i:1563463620;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -74,7 +74,16 @@
                     <div class='imgBox'><img src="http://cdn.lanyushiting.com/<?php echo $value['list']['handidcode']; ?>" class='wh100 ml2 mr2 screen'></div>
                 </div>
             </td>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+            <td><img src="http://cdn.lanyushiting.com/<?php echo $value['list']['idcodefront']; ?>" style="height: 50px;max-width: 180px;" class="pimg"></td>
+            <td><img src="http://cdn.lanyushiting.com/<?php echo $value['list']['idcodereverse']; ?>" style="height: 50px;max-width: 180px;" class="pimg" /></td>
+            <td><img src="http://cdn.lanyushiting.com/<?php echo $value['list']['handidcode']; ?>" style="height: 50px;max-width: 180px;" class="pimg" /></td>
+>>>>>>> 6c3cfaf2761c62b4a5c1ef6086a93820d4c2144d
+>>>>>>> 22f177a2994b2b09f1de0b8d517a11bc5535a9ca
             <td>
             <?php if($value['list']['status'] == 1): ?>
                 <span class="layui-btn layui-btn-danger layui-btn-xs">待审核</span></td>

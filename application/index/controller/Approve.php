@@ -197,7 +197,6 @@ class Approve extends \think\Controller{
                 echo json_encode(['code' => 1,'msg' => '添加失败','icon' => 4]);exit;
             }
         }catch (\Exception $e){
-            var_dump($e);exit;
             echo json_encode(['code' => 1,'msg' => '添加失败','icon' => 3]);exit;
         }
     }
