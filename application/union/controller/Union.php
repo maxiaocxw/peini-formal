@@ -1,6 +1,6 @@
 <?php
 namespace app\union\controller;
-use app\admin\controller\Auth;
+use app\union\controller\Auth;
 use app\api\controller\Qiniu;
 use think\Db;
 use think\Request;

@@ -88,26 +88,10 @@
 
         //监听提交
         form.on('submit(login)', function(data) {
-            // $.ajax({
-            //     url: "{:url('union/auth/checkCode')}",
-            //     type: "post",
-            //     data: data.field,
-            //     dataType: "json",
-            //     success: function(msg) {
-            //         layer.msg(msg.msg, { time: 1000 }, function() {
-            //             if (msg.code == 0) {
-            //                 location.href = "{:url('union/index/index')}";
-            //             } else {
-            //                 layer.msg(response.msg, { time: 1000, icon: response.icon });
-            //             }
-            //         })
-            //     }
-            // })
-
             $.post("{:url('union/auth/checkCode')}", data.field, function(response) {
                 if (response.code == 0) {
-                    layer.msg(response.msg, { time: 1000, icon: response.icon });
-                    location.href = "{:url('union/index/index')}";
+//                    layer.msg(response.msg, { time: 1000, icon: response.icon });
+                    window.location.href = "{:url('union/index/index')}";
                 }else{
                     layer.msg(response.msg, { time: 1000, icon: response.icon });
                 }

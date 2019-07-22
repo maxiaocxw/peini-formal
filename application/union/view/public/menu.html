@@ -3,7 +3,6 @@
 			<div id="side-nav">
 				<ul id="nav">
 					{foreach $menu_list_one as $menu_key => $menu_value}
-					{if($Think.session.admin.type || in_array($menu_value['id'],$menu_role))}
 					<li>
 						<a href="javascript:;">
 							<cite>{$menu_value['title']}</cite>
@@ -11,18 +10,15 @@
 						</a>
 						<ul class="sub-menu">
 							{foreach $menu_list_two as $menu_key_two => $menu_value_two}
-							{if($menu_value_two['mid'] == $menu_value['id'] && ($Think.session.admin.type || in_array($menu_value_two['id'],$menu_role) ))}
 							<li>
 								<a _href="{$menu_value_two.action}">
 									<i class="iconfont">&#xe6a7;</i>
 									<cite>{$menu_value_two.title}</cite>
 								</a>
 							</li>
-							{/if}
 							{/foreach}
 						</ul>
 					</li>
-					{/if}
 					{/foreach}
 				</ul>
 			</div>

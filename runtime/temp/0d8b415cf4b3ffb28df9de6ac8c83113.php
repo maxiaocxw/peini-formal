@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:91:"D:\phpserver\wwwroot\default\peini-formal\public/../application/union\view\index\index.html";i:1563272387;s:81:"D:\phpserver\wwwroot\default\peini-formal\application\union\view\public\menu.html";i:1563269367;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:91:"D:\phpserver\wwwroot\default\peini-formal\public/../application/union\view\index\index.html";i:1563775359;s:81:"D:\phpserver\wwwroot\default\peini-formal\application\union\view\public\menu.html";i:1563775360;}*/ ?>
 <!doctype html>
 <html lang="en">
 
@@ -32,24 +32,24 @@
 		<div class="left-nav">
 			<div id="side-nav">
 				<ul id="nav">
-					<?php foreach($menu_list_one as $menu_key => $menu_value): if((\think\Session::get('admin.type') || in_array($menu_value['id'],$menu_role))): ?>
+					<?php foreach($menu_list_one as $menu_key => $menu_value): ?>
 					<li>
 						<a href="javascript:;">
 							<cite><?php echo $menu_value['title']; ?></cite>
 							<i class="iconfont nav_right">&#xe697;</i>
 						</a>
 						<ul class="sub-menu">
-							<?php foreach($menu_list_two as $menu_key_two => $menu_value_two): if(($menu_value_two['mid'] == $menu_value['id'] && (\think\Session::get('admin.type') || in_array($menu_value_two['id'],$menu_role) ))): ?>
+							<?php foreach($menu_list_two as $menu_key_two => $menu_value_two): ?>
 							<li>
 								<a _href="<?php echo $menu_value_two['action']; ?>">
 									<i class="iconfont">&#xe6a7;</i>
 									<cite><?php echo $menu_value_two['title']; ?></cite>
 								</a>
 							</li>
-							<?php endif; endforeach; ?>
+							<?php endforeach; ?>
 						</ul>
 					</li>
-					<?php endif; endforeach; ?>
+					<?php endforeach; ?>
 				</ul>
 			</div>
 		</div>
@@ -64,7 +64,7 @@
 				</ul>
 				<div class="layui-tab-content">
 					<div class="layui-tab-item layui-show">
-						<iframe src="<?php echo url('admin/index/welcome'); ?>" frameborder="0" scrolling="yes" class="weIframe"></iframe>
+						<iframe src="<?php echo url('union/index/welcome'); ?>" frameborder="0" scrolling="yes" class="weIframe"></iframe>
 					</div>
 				</div>
 			</div>
