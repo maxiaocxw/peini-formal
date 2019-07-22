@@ -100,6 +100,7 @@
                         {/if}
                     </td>
                     <td class="td-manage">
+                        <a href="/admin/union/member/unid/{$value['unid']}"><button class="layui-btn layui-btn-danger layui-btn-sm">查看成员</button></a>
                         {if($value['status'] == 0)}
                         <a onclick="updateUnion({$value['unid']},1)" href="javascript:;" title="审核成功"><button class="layui-btn layui-btn-warm layui-btn-sm">审核成功</button></a>
                         <a onclick="updateUnion({$value['unid']},2)" href="javascript:;" title="审核失败"><button class="layui-btn layui-btn-danger layui-btn-sm">审核失败</button></a>

@@ -15,6 +15,7 @@ class User extends Auth{
 		}
 		$list = Db::name('user')->where($where)->paginate(30,false,['request' => request()->param()]);
 		$data = $list->toArray();
+
 		$this->assign('data',$data['data']);
 		$this->assign('total',$data['total']);
 		$this->assign('list',$list);
@@ -23,6 +24,8 @@ class User extends Auth{
 
 	public function update(){
 		$list=Db::name('user')->where('uid='.input('uid'))->find();
+		$union=Db::name('union')->field('unid,name')->where('status=1')->select();
+		$this->assign('union',$union);
 		$this->assign('list',$list);
 		return $this->fetch();
 	}
