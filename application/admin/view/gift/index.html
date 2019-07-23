@@ -24,7 +24,8 @@
 </div>
 <div class="weadmin-body">
 	<div class="weadmin-block">
-		<button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>删除</button>
+		<button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>物理删除</button>
+		<button class="layui-btn layui-btn-danger" onclick="delAll1()"><i class="layui-icon"></i>彻底删除</button>
 		<a title="修改"  href="/admin/gift/add"><button class="layui-btn admin_add"><i class="layui-icon"></i>添加礼物</button></a>
 		<span class="fr" style="line-height:40px">共有数据：{$total} 条</span>
 	</div>
@@ -54,7 +55,7 @@
 			<td>{$value.price}</td>
 			<td>
 				<div class="layui-upload-list">
-					<div class='imgBox'><img src="{$value.img}" class='wh100 ml2 mr2 screen'></div>
+					<div class='imgBox'><img src="http://cdn.lanyushiting.com/{$value.img}" class='wh100 ml2 mr2 screen'></div>
 				</div>
 			</td>
 			<td>{$value.order}</td>
@@ -71,8 +72,7 @@
 				<?=date('Y-m-d H:i:s',$value['addtime'])?>
 			</td>
 			<td class="td-manage">
-				<span><button class="layui-btn layui-btn-danger layui-btn-sm" onclick="updateWork()">修改</button></span>
-				<a title="修改" href="/admin/gift/update"><button class="layui-btn layui-btn-danger layui-btn-sm">修改</button></a>
+				<a title="修改" href="/admin/gift/update?gid={$value['gid']}"><button class="layui-btn layui-btn-danger layui-btn-sm">修改</button></a>
 			</td>
 
 		</tr>
@@ -102,7 +102,7 @@
 	});
 	function delAll(){
 		var data = tableCheck.getData();
-		layer.confirm('确认要删除吗？',function(index){
+		layer.confirm('您确认要物理删除礼物信息吗？',function(index){
 			$.post("{:url('admin/gift/delAll')}",{id:data,table:'gift'},function(response){
 				layer.msg(response.msg,{time:1000,icon:response.icon},function(){
 					location.reload();
@@ -110,6 +110,17 @@
 			},'json');
 		});
 	}
+
+    function delAll1(){
+        var data = tableCheck.getData();
+        layer.confirm('您确认要彻底删除礼物信息吗？',function(index){
+            $.post("{:url('admin/gift/delAll1')}",{id:data,table:'gift'},function(response){
+                layer.msg(response.msg,{time:1000,icon:response.icon},function(){
+                    location.reload();
+                })
+            },'json');
+        });
+    }
 
 	function updateWork(id, status) {
 		$.post("{:url('admin/gift/update')}", { gid: id, status: status }, function(data) {

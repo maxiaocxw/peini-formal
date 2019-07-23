@@ -62,7 +62,6 @@ class Gift extends Controller{
 
     //删除
     public function delAll(){
-
         if(input('?post.table')){
             $id = input('post.id/a');
             if(empty($id)){
@@ -81,20 +80,61 @@ class Gift extends Controller{
         }else{
             echo json_encode(['code' => 1,'msg' =>'禁止非法操作','icon' => 3]);
         }
-
     }
 
-    //修改
-    public function update(){
-        if(request()->isPost()){
-            $data = input('post.');
-            $where['gid'] = $data['gid'];
-            $result = Db::name('gift')->where($where)->update($data);
-            if($result){
-                echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
+    //彻底删除
+    public function delAll1(){
+        if(input('?post.table')){
+            $id = input('post.id/a');
+            if(empty($id)){
+                echo json_encode(['code' => 1,'msg' => '请选择数据','icon' =>2]);
+                exit;
             }else{
-                echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
+                $where['gid'] = array('IN',implode(',', $id));
+                $result =Db::name(trim(input('post.table')))->where($where)->delete();
+                if($result){
+                    echo json_encode(['code' => 0,'msg' => '删除成功','icon' => 1]);
+                }else{
+                    echo json_encode(['code' => 1,'msg' => '删除失败','icon' => 2]);
+                }
             }
+        }else{
+            echo json_encode(['code' => 1,'msg' =>'禁止非法操作','icon' => 3]);
+        }
+    }
+
+    //渲染修改页面
+    public function update(){
+        $data = input('get.');
+        $where['gid'] = $data['gid'];
+        $result = Db::name('gift')->where($where)->find();
+        $this->assign('data',$result);
+        return $this->fetch();
+    }
+
+    //修改数据库
+    public function updateDo(){
+        //接收post传递过来的值
+        $post = input('post.');
+        //拼装数据
+        $data = [
+            'name'  => $post['name'],
+            'price' => $post['price'],
+            'order' => $post['order'],
+            'status' => $post['status'],
+            'img'   => str_replace('http://cdn.lanyushiting.com/','',$post['img']),
+        ];
+
+        //where条件
+        $where = ['gid' => $post['gid']];
+
+        //修改数据库
+        $result = Db::name('gift')->where($where)->update($data);
+
+        if($result){
+            echo json_encode(['code' => 0,'msg' => '修改成功','icon' => 6]);
+        }else{
+            echo json_encode(['code' => 1,'msg' => '修改失败','icon' => 2]);
         }
     }
 
