@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改礼物信息</title>
+</head>
+<link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/font.css">
+<link rel="stylesheet" href="__PUBLIC_ADMIN__/static/css/weadmin.css">
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<body>
+<div class="weadmin-body">
+<form action="" method="post" class="layui-form layui-form-pane">
+    <div class="layui-form-item">
+        <label for="user_name" class="layui-form-label">
+            <span class="we-red">*</span>礼物名称
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="name" name="name" required="" lay-verify="required" value="{$data['name']}" autocomplete="off" class="layui-input">
+            <input type="hidden" name="gid" value="{$data['gid']}">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label for="user_name" class="layui-form-label">
+            <span class="we-red">*</span>礼物货币
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="price" name="price" required="" lay-verify="required" value="{$data['price']}" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label for="language" class="layui-form-label">
+            <span class="we-red">*</span>礼物封面
+        </label>
+        <div class="layui-input-block">
+            <button type="button" class="layui-btn" id="test1">替换图片</button>
+            <div class="layui-upload-list">
+                <img class="layui-upload-img" src="http://cdn.lanyushiting.com/{$data['img']}" id="demo1" style="height: 200px;">
+                <p id="demoText"></p>
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="user_name" class="layui-form-label">
+            <span class="we-red">*</span>排序
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="order" name="order" required="" value="{$data['order']}" lay-verify="required" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label for="user_name" class="layui-form-label">
+            <span class="we-red">*</span>状态
+        </label>
+        <div class="layui-input-inline">
+            <select name="status" id="status">
+                <?php
+                    if($data['status'] == 1){
+                    ?>
+                    <option value="1" selected="selected">正常</option>
+                    <option value="2" >禁用</option>
+                <?php
+                    }else{
+                    ?>
+                    <option value="1">正常</option>
+                    <option value="2" selected="selected">禁用</option>
+                <?php
+                    }
+                ?>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <button class="layui-btn" lay-submit="" lay-filter="add">修改</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;<a href="/admin/cate/work"><button type="button" class="layui-btn">返回</button></a>
+    </div>
+</form>
+</div>
+<script src="__PUBLIC_ADMIN__/static/js/jquery.js" charset="utf-8"></script>
+<script src="__PUBLIC_ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript">
+    layui.use(['form', 'layer','upload'], function() {
+        var form = layui.form,
+            admin = layui.admin,
+            layer = layui.layer;
+        upload = layui.upload,
+
+            //图片上传
+            upload.render({
+                elem: '#test1',
+                url: "/admin/cate/qinui_upload",
+                done: function(res) {
+                    console.log(res);
+                    if(res.code == 0){
+                        $("#demo1").attr('src', res.src);
+                        layer.msg(res.msg, { time: 1000, icon: res.icon });
+                    }else{
+                        layer.msg(res.msg, { time: 1000, icon: res.icon });
+                    }
+                }
+            });
+
+        //监听提交
+        form.on('submit(add)', function(data) {
+            data.field.img = $("#demo1").attr('src');
+            delete data.field.file;
+
+            $.post("{:url('admin/gift/updateDo')}", data.field, function(response) {
+                if (response.code == 0) {
+                    layer.alert("修改成功", {
+                        icon: response.icon
+                    }, function() {
+                        if(response.code == 0){
+                            location.href = "{:url('admin/gift/index')}";
+                        }else{
+                            return false;
+                        }
+                    });
+                }else{
+                    layer.alert("修改失败", {
+                        icon: response.icon
+                    }, function() {
+                        location.href = "{:url('admin/gift/index')}";
+                    });
+                }
+            }, 'json');
+
+
+            //发异步，把数据提交给php
+            return false;
+        });
+
+    });
+</script>
+</body>
+</html>

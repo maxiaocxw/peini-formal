@@ -413,6 +413,16 @@ function addLog($uid,$tranNo,$type,$content,$msg){
     ];
 
     Db::name('log')->insert($data);
+}
 
-
+function addMessage($uid,$type,$title,$content){
+    $data = [
+        'uid'   => $uid,
+        'type'  => $type,
+        'title' => $title,
+        'content' => $content,
+        'addtime' => time(),
+    ];
+    $res = Db::name('message')->insert($data);
+    return $res;
 }
