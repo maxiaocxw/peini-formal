@@ -117,8 +117,42 @@ class Union extends Auth{
         }
     }
     //会长邀请新的成员
-    public function InviteUnion(){
+    public function inviteUnion(){
+        $username = input('post.username');
+        if(!empty($username)){
+            $where =" username like '%".$username."%' and status = 1 and type = 2";
+            $union_data = Db::name('user')->where($where)->select();
+            //关联查询陪玩的游戏标签和接单数
+            foreach($union_data as $k => $v){
+                //陪玩用户选择的游戏
+                $member_info = Db::name('approve')->field('uid,gameid,labelid')->where('uid',$v['uid'])->find();
+                $gameid_res = Db::name('game')->field('name')->where( 'gid', 'in',$member_info['gameid'])->select();
+                $gameid_name = array_column($gameid_res, 'name');
+                $game = implode( ',', $gameid_name );
+                $union_data[$k]['game'] = $game;
+                //陪玩用户选择的标签
+                $labelid_res = Db::name('label')->field('name')->where( 'lid', 'in',$member_info['labelid'])->select();
+                $labelid_rname = array_column($labelid_res, 'name');
+                $label = implode( ',', $labelid_rname );
+                $union_data[$k]['label'] = $label;
+                //陪玩用户的接单数量
+                $number_sql = 'SELECT COUNT(*) AS tp_count FROM `pn_game_order` WHERE pid = '.$v['uid'].' AND `status` = 3 OR pid = '.$v['uid'].' AND `status` = 4';
+                $number_res = Db::query($number_sql);
+                $union_data[$k]['num'] = intval($number_res[0]['tp_count']);
+                if(!empty($v['union'])){
+                    //判断陪玩是否已有公会
+                    $union_data[$k]['invite'] = 2;
+                }else{
+                    $union_data[$k]['invite'] = 1;
+                }
+            }
+            $this->assign('username',$username);
+        }else{
+            $union_data = [];
+        }
 
+        $this->assign('union_data',$union_data);
+        return $this->fetch();
     }
     //编辑公会基本信息
     public function updateInfo(){
@@ -130,20 +164,16 @@ class Union extends Auth{
         $req=input('post.');
         if( $req ){
             //判断公会名称是否存在
-            $union_name = Db::name('union')->where(['name'=>$req['name']])->whereOr('unid='.$req['unid'])->field('name')->find();
-            if($union_name['name'] == $req['name']){
-                echo json_encode(['code'=>1,'msg'=>'您没有做任何修改','icon'=>2]);exit;
+            $union_sql = 'SELECT name FROM pn_union where unid <> '.$req['unid'].' and name = "'.$req['name'].'"' ;
+            $union_res = Db::query($union_sql);
+            if( $union_res ){
+                echo json_encode(['code'=>1,'msg'=>'公会名称已存在','icon'=>2]);
             }else{
-                $unioName = Db::name('union')->where(['name'=>$req['name']])->field('name')->find();
-                if( $unioName ){
-                    echo json_encode(['code'=>1,'msg'=>'公会名称已存在','icon'=>2]);
+                $res = Db::name('union')->where('unid='.$req['unid'])->update($req);
+                if( $res || $res === 0 ){
+                    echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
                 }else{
-                    $res = Db::name('union')->where('unid='.$req['unid'])->update($req);
-                    if( $res || $res === 0 ){
-                        echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
-                    }else{
-                        echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
-                    }
+                    echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
                 }
             }
         }else{

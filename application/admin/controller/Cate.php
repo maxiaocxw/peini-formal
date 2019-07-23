@@ -114,8 +114,10 @@ class Cate extends Auth{
     public function updateWorksDo(){
         $req=input('post.');
         if( $req ){
-            $work_name = Db::name('work')->where( [ 'name'=>$req['name'], 'status'=>1 ] )->find();
-            if( $work_name ){
+            //判断职业名称是否存在
+            $work_sql = 'SELECT name FROM pn_work where wid <> '.$req['wid'].' and status = 1 and name = "'.$req['name'].'"' ;
+            $work_res = Db::query($work_sql);
+            if( $work_res ){
                 echo json_encode(['code' => 1,'msg' => '职业存在','icon' =>2]);
             }else{
                 $res = Db::name('work')->where('wid='.$req['wid'])->update($req);
@@ -125,11 +127,9 @@ class Cate extends Auth{
                     echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
                 }
             }
-
         }else{
             echo (['code' => 1,'msg' => '参数错误','icon' =>2]);
         }
-
     }
 
 
@@ -215,9 +215,11 @@ class Cate extends Auth{
     public function updateInterestsDo(){
         $req=input('post.');
         if( $req ){
-            $insterest_name = Db::name('work')->where( [ 'name'=>$req['name'], 'status'=>1 ] )->find();
-            if( $insterest_name ){
-                echo json_encode(['code' => 1,'msg' => '兴趣存在','icon' =>2]);
+            //判断兴趣名称是否存在
+            $insterest_sql = 'SELECT name FROM pn_interest where nid <> '.$req['nid'].' and status = 1 and name = "'.$req['name'].'"' ;
+            $insterest_res = Db::query($insterest_sql);
+            if( $insterest_res ){
+                echo json_encode(['code' => 1,'msg' => '兴趣名称存在','icon' =>2]);
             }else{
                 $res = Db::name('interest')->where('nid='.$req['nid'])->update($req);
                 if( $res ){
@@ -323,17 +325,18 @@ class Cate extends Auth{
     public function updateGamesDo(){
         $req=input('post.');
         if( $req ){
-            //判断名称是否存在
-            $game_name = Db::name('game')->where(['name'=>$req['name'],'status'=>1])->find();
-            if( $game_name['name']==$req['name'] ){
+            //判断游戏名称是否存在
+            $game_sql = 'SELECT name FROM pn_game where gid <> '.$req['gid'].' and status = 1 and name = "'.$req['name'].'"' ;
+            $game_res = Db::query($game_sql);
+            if( $game_res ){
+                echo json_encode(['code'=>1,'msg'=>'游戏名称已存在','icon'=>2]);
+            }else{
                 $res = Db::name('game')->where('gid='.$req['gid'])->update($req);
                 if( $res || $res === 0 ){
                     echo json_encode(['code' => 0,'msg' => '修改成功','icon' =>1]);
                 }else{
                     echo json_encode(['code' => 1,'msg' => '修改失败','icon' =>2]);
                 }
-            }else{
-                echo json_encode(['code'=>1,'msg'=>'游戏名称已存在','icon'=>2]);
             }
         }else{
             echo (['code' => 1,'msg' => '参数错误','icon' =>2]);
@@ -423,8 +426,10 @@ class Cate extends Auth{
     public function updateGametypesDo(){
         $req=input('post.');
         if( $req ){
-            $type_name = Db::name('game_type')->where( ['name'=>$req['name'], 'status'=>1] )->find();
-            if( $type_name ){
+            //判断分类名称是否存在
+            $type_sql = 'SELECT name FROM pn_game_type where tid <> '.$req['tid'].' and status = 1 and name = "'.$req['name'].'"' ;
+            $type_res = Db::query($type_sql);
+            if( $type_res ){
                 echo json_encode(['code' => 1,'msg' => '分类已存在','icon' =>2]);
             }else{
                 $res = Db::name('game_type')->where('tid='.$req['tid'])->update($req);
