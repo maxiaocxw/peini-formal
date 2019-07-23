@@ -5,6 +5,7 @@ use app\api\controller\Qiniu;
 use think\Db;
 use think\Request;
 use think\Session;
+use think\cache;
 
 class Union extends Auth{
 
@@ -19,7 +20,7 @@ class Union extends Auth{
     //公会所有成员信息
     public function member(){
         //登陆时获取的公会id
-        $unid = session('union.unid');
+        $unid = cache('unid');
         //查询公会的所有成员
         $union = Db::name('user')->where('union',$unid)->order('uniontime','desc')->paginate(30,false);
         //将结果转换成数组
@@ -178,6 +179,32 @@ class Union extends Auth{
             }
         }else{
             echo (['code' => 1,'msg' => '参数错误','icon' =>2]);
+        }
+    }
+    //解散公会
+    public function unionDismiss(){
+        if(input('?post.table')){
+            $id = input('post.id');
+            if(empty($id)){
+                echo json_encode(['code' => 1,'msg' => '参数错误','icon' =>2]);
+                exit;
+            }else{
+                //将用户表里的所有unid的数据都清为0
+                $user_union['union'] = 0;
+                $user_union['uniontime'] = 0;
+                $user_res =Db::name(trim(input('post.table')))->where('union',$id)->update($user_union);
+                //删除公会表里的数据
+                $union_data['status'] = 7;
+                $union_res= Db::name('union')->where( 'unid', $id )->update($union_data);
+                if($user_res && $union_res){
+                    cache::clear();
+                    echo json_encode(['code' => 0,'msg' => '解散成功','icon' => 1]);
+                }else{
+                    echo json_encode(['code' => 1,'msg' => '系统错误','icon' => 2]);
+                }
+            }
+        }else{
+            echo json_encode(['code' => 1,'msg' =>'禁止非法操作','icon' => 3]);
         }
     }
 }
