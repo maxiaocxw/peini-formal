@@ -73,7 +73,7 @@ class Auth extends Controller{
                 die;
             }
             //判断绑定手机号的用户所属公会和手机号查找的公会是否一致
-            //if( $user_res['union'] == $president['unid'] ){
+            if( $user_res['union'] == $president['unid'] ){
                 //一致的话判断公会状态
                 if( $president['status'] == 0 ){
                     echo json_encode(['code' => 1,'msg' => '公会未通过审核','icon' => 2]);
@@ -89,10 +89,10 @@ class Auth extends Controller{
                     echo json_encode(['code' => 0,'msg' => '登陆成功','icon' => 1]);
                     die;
                 }
-            //}else{
-               // echo json_encode(['code' => 1,'msg' => '禁止非法操作','icon' => 2]);
-               // die;
-            //}
+            }else{
+                echo json_encode(['code' => 1,'msg' => '禁止非法操作','icon' => 2]);
+                die;
+            }
         }else{
             echo json_encode(['code' => 1,'msg' => '验证码错误','icon' => 2]);
             die;
