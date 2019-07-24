@@ -88,7 +88,11 @@ class Approve extends Auth{
         }
 
         //判断是否用户身份证号相不相同
-        $idcode = Db::name('approve')->where('idcode='.$post['idCode'])->find();
+        $where = [
+            'idcode' => $post['idCode'],
+            'uid'    => $post['uid']
+        ];
+        $idcode = Db::name('approve')->where($where)->find();
         if(!empty($idcode)){
             echo json_encode(['code' => 1,'msg' => '经检测您已在我们平台注册，请登录','icon' => 2]);exit;
         }
@@ -173,6 +177,9 @@ class Approve extends Auth{
         $gameArr = $post['game'];
         //将传递过来的字符串分隔成数据
         $data1 = $this->strArr($gameArr);
+        if(!$data1){
+            return false;
+        }
         //游戏ids
         $ids = [];
         foreach($data1 as $key=>$val){
@@ -221,11 +228,7 @@ class Approve extends Auth{
     }
 
     public function addGameInfo($gameArr,$uid){
-
-
         $data1 = $this->strArr($gameArr);
-
-
         foreach($data1 as $val){
             //用户id
             $data['uid'] = $uid;
@@ -256,6 +259,10 @@ class Approve extends Auth{
             $data[][$item[0]] = $item[1];
         }
 
+
+        if(count($data) > 6 || count($data) < 2 ){
+            return false;
+        }
 
         $data1 = [];
         if(count($data) == 2){

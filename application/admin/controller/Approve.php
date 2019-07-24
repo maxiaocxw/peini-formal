@@ -56,6 +56,11 @@ class Approve extends Controller {
     public function review($id){
         //查询陪玩数据
         $approve = Db::name('approve')->where('id='.$id)->find();
+        //查询此用户是否是陪玩用户 是不审核
+        $userType = Db::name('user')->where('uid='.$approve['uid'])->field('type')->find();
+        if($userType['type'] === 2){
+            echo "<script>alert('此用户已经成为陪玩');window.location.href=\"/admin/approve/index\"</script>";
+        }
         //获取到标签id添加到用户和标签关联表中
         $labelIds = explode(',',$approve['labelid']);
         try{
@@ -66,12 +71,17 @@ class Approve extends Controller {
                 ];
                 Db::name('label_user')->insert($data);
             }
+
             //修改用户信息
             $saveData = ['type'=>2];
             $result = Db::name('user')->where('uid='.$approve['uid'])->update($saveData);
+
             if($result){
                 //修改认证表
-                $appData = ['status'=>2];
+                $appData = [
+                    'status'=>2,
+                    'audittime' => time()
+                ];
                 $res = Db::name('approve')->where('id='.$id)->update($appData);
                 if($res){
                     echo "<script>alert('审核成功');window.location.href=\"/admin/approve/index\" </script>";
