@@ -83,7 +83,8 @@ class Login extends Auth{
 			'addtime'		=>		time(),
 			'ip'			=>		$_SERVER['REMOTE_ADDR'],
 			'token'			=>		md5(time().rand(1000,9999)),
-			'number'		=>		$number
+			'number'		=>		$number,
+			'headimg'		=>		'touxiang.png'
 		);
 		$newuid=Db::name('user')->insertGetId($arr);
 		if($newuid){
