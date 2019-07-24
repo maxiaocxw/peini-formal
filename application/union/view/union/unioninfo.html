@@ -31,6 +31,7 @@
             <legend>{$union.name}公会信息</legend>
         </fieldset>
 <!--        <form class="layui-form layui-form-pane" action="">-->
+        <input type="hidden" id="unid" value="{$union.unid}">
             <div class="layui-form-item">
                 <label class="layui-form-label"><span style="color: red">*</span>公会名称</label>
                 <div class="layui-input-inline">
@@ -102,7 +103,7 @@
             </div>
             <div class="layui-form-item">
                 <a title="修改"  href="/union/union/updateInfo/unid/{$union.unid}"><button class="layui-btn layui-btn-normal layui-btn">编辑</button></a>
-                <a title="解散"  href="/union/union/unionDismiss/unid/{$union.unid}"><button class="layui-btn layui-btn-danger layui-btn">解散</button></a>
+                <button class="layui-btn layui-btn-danger" onclick="disMiss()"></i>解散</button>
             </div>
 <!--        </form>-->
     </div>
@@ -113,14 +114,14 @@
     layui.use(['layer'], function() {
         var layer = layui.layer;
     });
-    //批量删除
-    function delAll() {
-        var data = tableCheck.getData();
-        layer.confirm('确认要删除吗？', function(index) {
+    //解散公会
+    function disMiss() {
+        var data = $('#unid').val();
+        layer.confirm('确认要解散公会吗？', function(index) {
             // //捉到所有被选中的，发异步进行删除
-            $.post("{:url('admin/union/delAllUnion')}", { id: data, table: 'union' }, function(response) {
+            $.post("{:url('union/union/unionDismiss')}", { id: data, table: 'user' }, function(response) {
                 layer.msg(response.msg, { time: 1000, icon: response.icon }, function() {
-                    location.reload();
+                    window.location.href={:url('union/union/unionDismiss')};
                 })
             },'json');
         });
