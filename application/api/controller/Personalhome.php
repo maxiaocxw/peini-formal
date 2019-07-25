@@ -31,7 +31,6 @@ class Personalhome extends Auth{
 				}else{
 					$tag=array();
 				}
-				
 				$list['games'][$k]['tags']=$tag;
 			}
 		}else{

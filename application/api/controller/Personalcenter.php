@@ -10,12 +10,13 @@ class Personalcenter extends Auth{
 		$this->url='http://cdn.lanyushiting.com/';
 	}
 	public function index(){
-		$list=Db::name('user')->field('uid,username,birthday,headimg,level,currency,sex,number,city,info')->where('uid='.$this->uid)->find();
-		$getgift=Db::name('send_log')->field('sum(amount) as amount')->where('acceptuid='.$this->uid)->find()['amount'];
-		$getgift=$getgift?$getgift:0;
-		$getorder=Db::name('game_order')->field('sum(amount) as amount')->where('pid='.$this->uid.' and (status=3 or status=4)')->find()['amount'];
-		$getorder=$getorder?$getorder:0;
-		$list['myincome']=$getorder+$getgift;
+		$list=Db::name('user')->field('uid,username,birthday,headimg,level,currency,sex,number,city,info,type,earnings')->where('uid='.$this->uid)->find();
+		if($list['type']==1){
+			if(Db::name('approve')->where('uid='.$list['uid'])->find()){
+				$list['type']=3;
+			}
+		}
+		$list['myincome']=$list['earnings'];
 		$list['headimg']=$this->url.$list['headimg'];
 		$list['age']=(date('Y',time()))-(date('Y',$list['birthday']));
 		$list['birthday']=date('Y-m-d',$list['birthday']);
