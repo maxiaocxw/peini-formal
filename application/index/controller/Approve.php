@@ -140,11 +140,15 @@ class Approve extends \think\Controller{
 
         //增加用户
         $userData = [
-            'username' => $post['phone'],
+            'username' => '陪你'.rand(1000,9999),
             'realname' => $post['username'],
             'type'     => 1,
             'mobile'   => $post['phone'],
             'interestid' => implode(',',$post['label']),
+            'info'     => '这个家伙什么都没有写',
+            'sex'      => 2,
+            'birthday' => time(),
+            'headimg'  => 'touxiang.png'
         ];
         try{
             $user =  Db::name('user')->insert($userData);
@@ -172,7 +176,8 @@ class Approve extends \think\Controller{
                     'username'      => $post['username'],
                     'alipay'        => $post['alipay'],
                     'qq'            => $post['qq'],
-                    'wx'            => $post['wx']
+                    'wx'            => $post['wx'],
+                    'gameid'        => '1,2,3',
                 ];
                 $peiResult = Db::name('approve')->insert($peiData);
                 if($peiResult){
@@ -260,7 +265,9 @@ class Approve extends \think\Controller{
      */
     public function addGameInfo($uid){
         $data1 = [
-            ['gameId'=>1,'price'=>30]
+            ['gameId'=>1,'price'=>30],
+            ['gameId'=>2,'price'=>30],
+            ['gameId'=>3,'price'=>30]
         ];
         foreach($data1 as $val){
             //用户id
