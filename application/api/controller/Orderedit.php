@@ -22,8 +22,12 @@ class OrderEdit extends Auth{
 			$uid=Db::name('game_order')->where('id='.$this->id)->value('uid');
 			$num=Db::name('game_order')->where('id='.$this->id)->value('num');
 			$this->addMessage($uid,2,'您有一个订单陪玩已经接单');
+
+			//暂时改成接单就完成订单
+			$this->updateorder($this->id);
+
 			//添加定时任务
-			$this->push_job('app\api\controller\Update@updateOrderStatus', ['id'=>$this->id,'type'=>1], $queue_name = null, $delay = $num*3600);
+			//$this->push_job('app\api\controller\Update@updateOrderStatus', ['id'=>$this->id,'type'=>1], $queue_name = null, $delay = $num*3600);
 			$this->II('200','接单成功');
 		}else{
 			$this->II('201','接单失败');
@@ -112,6 +116,16 @@ class OrderEdit extends Auth{
 		$type=Db::name('user')->where('uid='.$this->uid)->value('type');
 		if($type==1){
 			$this->II('201','用户不能操作接单');
+		}
+		return true;
+	}
+
+
+	public function updateorder($id){
+		$order=Db::name('game_order')->field('pid,amount')->where('id='.$id)->find();
+		$currency=Db::name('user')->where('uid='.$order['pid'])->value('earnings');
+		if (Db::name('game_order')->where('id='.$id)->update(array('status'=>3))) {
+			Db::name('user')->where('uid='.$order['pid'])->update(array('earnings'=>$currency+$order['amount']));
 		}
 		return true;
 	}
