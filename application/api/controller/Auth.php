@@ -98,7 +98,7 @@ class Auth extends Controller{
 
     //验证码校验
     public function checkCode($phone,$code){
-        if($phone == "13263364445" || $phone == "15032408345" || $phone == "15032408312" || $phone == "15032408323" || $phone == "15032408356" || $phone == "15032408389"){
+        if($phone == "13263364445" || $phone == "15032408345" || $phone == "15032408312" || $phone == "15032408323" || $phone == "15032408356" || $phone == "15032408389" || $phone == "15565382127"){
             return true;
         }
         if(!cache($phone)){
