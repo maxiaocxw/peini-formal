@@ -140,11 +140,15 @@ class Approve extends \think\Controller{
 
         //增加用户
         $userData = [
-            'username' => $post['phone'],
+            'username' => '陪你'.rand(1000,9999),
             'realname' => $post['username'],
             'type'     => 1,
             'mobile'   => $post['phone'],
             'interestid' => implode(',',$post['label']),
+            'info'     => '这个家伙什么都没有写',
+            'sex'      => 2,
+            'birthday' => time(),
+            'headimg'  => 'touxiang.png'
         ];
         try{
             $user =  Db::name('user')->insert($userData);
@@ -172,24 +176,31 @@ class Approve extends \think\Controller{
                     'username'      => $post['username'],
                     'alipay'        => $post['alipay'],
                     'qq'            => $post['qq'],
-                    'wx'            => $post['wx']
+                    'wx'            => $post['wx'],
+                    'gameid'        => '1,2,3',
                 ];
                 $peiResult = Db::name('approve')->insert($peiData);
                 if($peiResult){
-                    //添加视频信息
-                    $videoData = [
-                        'uid'   => $userId,
-                        'videourl' =>str_replace('http://cdn.lanyushiting.com/','',$post['img4']),
-                        'img'      =>str_replace('http://cdn.lanyushiting.com/','',$post['img5']),
-                        'status'   => 1,
-                        'addtime'  => time(),
-                    ];
-                    $videoResult = Db::name('video')->insert($videoData);
-                    if($videoResult){
-                        echo json_encode(['code' => 0,'msg' => '添加成功','icon' => 1]);exit;
+                    $game = $this->addGameInfo($userId);
+                    if($game){
+                        //添加视频信息
+                        $videoData = [
+                            'uid'   => $userId,
+                            'videourl' =>str_replace('http://cdn.lanyushiting.com/','',$post['img4']),
+                            'img'      =>str_replace('http://cdn.lanyushiting.com/','',$post['img5']),
+                            'status'   => 1,
+                            'addtime'  => time(),
+                        ];
+                        $videoResult = Db::name('video')->insert($videoData);
+                        if($videoResult){
+                            echo json_encode(['code' => 0,'msg' => '添加成功','icon' => 1]);exit;
+                        }else{
+                            echo json_encode(['code' => 1,'msg' => '添加失败','icon' => 6]);exit;
+                        }
                     }else{
-                        echo json_encode(['code' => 1,'msg' => '添加失败','icon' => 6]);exit;
+                        echo json_encode(['code' => 1,'msg' => '添加失败','icon' => 5]);exit;
                     }
+
                 }else{
                     echo json_encode(['code' => 1,'msg' => '添加失败','icon' => 5]);exit;
                 }
@@ -244,5 +255,30 @@ class Approve extends \think\Controller{
         }else{
             echo json_encode(['code' => 1,'msg' => '上传错误','icon' => 2]);
         }
+    }
+
+    /**
+     * 添加游戏
+     * @param $gameArr
+     * @param $uid
+     * @return int|string
+     */
+    public function addGameInfo($uid){
+        $data1 = [
+            ['gameId'=>1,'price'=>30],
+            ['gameId'=>2,'price'=>30],
+            ['gameId'=>3,'price'=>30]
+        ];
+        foreach($data1 as $val){
+            //用户id
+            $data['uid'] = $uid;
+            //游戏id
+            $data['gameid'] = $val['gameId'];
+            $data['price'] = $val['price'];
+            //添加数据
+            $res = Db::name('playinfo')->insert($data);
+        }
+        return $res;
+
     }
 }

@@ -17,14 +17,14 @@ class Givegift extends Auth{
 	public function index(){
 		$amount=$this->getAmount();
 		$usable=Db::name('user')->where('uid='.$this->uid)->value('currency');
-		$have=Db::name('user')->where('uid='.$this->acceptuid)->value('currency');
+		$have=Db::name('user')->where('uid='.$this->acceptuid)->value('earnings');
 		if($usable>=$amount){
 			Db::startTrans();
 			try {
 				//扣掉用户余额
 				Db::name('user')->where('uid='.$this->uid)->update(array('currency'=>$usable-$amount));
-				//增加陪玩余额
-				Db::name('user')->where('uid='.$this->acceptuid)->update(array('currency'=>$have+$amount));
+				//增加陪玩收益
+				Db::name('user')->where('uid='.$this->acceptuid)->update(array('earnings'=>$have+$amount));
 				//添加记录
 				Db::name('send_log')->insert(array(
 					'uid'		=>		$this->uid,

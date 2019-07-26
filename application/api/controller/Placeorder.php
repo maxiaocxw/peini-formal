@@ -20,10 +20,12 @@ class Placeorder extends Auth{
 	public function index(){
 		//对比价格是否相同
 		$this->checkPrice();
+		//判断是否同用户下单
+		$this->checkIsequal();
 		//判断陪玩是否还有其他订单没完成
 		//$this->isOver();
 		//判断当前已经下了多少单 限制3单
-		$this->isNum(3);
+		$this->isNum(100);
 		$this->amount=$this->num*$this->price;
 		$usable=Db::name('user')->where('uid='.$this->uid)->value('currency');
 		if($usable>=$this->amount){
@@ -81,6 +83,14 @@ class Placeorder extends Auth{
 		$isnum=Db::name('game_order')->field('id')->where('uid='.$this->uid.' and (status=2 or status=1 or status=2)')->count();
 		if($isnum>=$num){
 			$this->II('201','最多能下'.$num.'单');
+		}else{
+			return true;
+		}
+	}
+
+	public function checkIsequal(){
+		if($this->uid==$this->acceptuid){
+			$this->II('201','不能自己给自己下单');
 		}else{
 			return true;
 		}
