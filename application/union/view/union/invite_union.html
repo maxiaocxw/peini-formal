@@ -34,7 +34,7 @@
 
             <tbody>
             <?php
-                if(!empty($list)){
+                if(!empty($union_data)){
                 ?>
             <thead>
             <tr>
@@ -106,7 +106,11 @@
                 <?=date('Y-m-d H:i:s',$value['lasttime'])?>
             </td>
             <td class="td-manage">
-                <a onclick="updateUnion({$value['uid']})" href="javascript:;" title="邀请"><button class="layui-btn layui-btn-danger layui-btn-sm">邀请</button></a>
+                {if($value['invite'] == 2)}
+                <a onclick="updateUnion({$value['uid']})" href="javascript:;" title="邀请"><button class="layui-btn layui-btn-disabled layui-btn-sm">邀请</button></a>
+                {else/}
+                <a onclick="inviteUnion({$value['uid']})" href="javascript:;" title="邀请"><button class="layui-btn layui-btn-danger layui-btn-sm">邀请</button></a>
+                {/if}
             </td>
             </tr>
             {/foreach}
@@ -151,12 +155,13 @@
         },'json');
     }
 
-    function updateAdmin(id, statu) {
-        $.post("{:url('update')}", { id: id, status: statu }, function(data) {
-            layer.msg(data.msg, { time: 1000 }, function() {
-                location.reload();
-            })
-        }, 'json');
+    function inviteUnion(id, statu) {
+        alert('已发送邀请 等待对方确认');
+        // $.post("{:url('update')}", { id: id, status: statu }, function(data) {
+        //     layer.msg(data.msg, { time: 1000 }, function() {
+        //         location.reload();
+        //     })
+        // }, 'json');
     }
 
     

@@ -35,6 +35,20 @@
             </a>
             <span class="fr" style="line-height:40px">共有数据：{$total} 条</span>
         </div>
+        <div class="layui-from">
+            <div class="layui-form-item">
+                <form class="layui-form layui-col-md12 we-search" action="{:url('union/union/member')}" method="post">
+                    <div class="layui-inline">
+                        <input type="text" name="username" placeholder="请输入用户名" autocomplete="off" class="layui-input" {if(isset($username))}value="{$username}" {/if}></div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">选择日期</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="time_data" class="layui-input" id="test10" placeholder="请选择起始时间" {if(isset($time_data))}value="{$time_data}" {/if}>
+                        </div>
+                    </div><button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+                </form>
+            </div>
+        </div>
         <table class="layui-table">
             <thead>
                 <tr>
@@ -52,7 +66,7 @@
                     <th>账号等级</th>
                     <th>所选游戏</th>
                     <th>标签</th>
-                    <th>接单数量</th>
+                    <th>接单数</th>
                     <th>收益总和</th>
                     <th>入会时间</th>
                     <th>上次登录时间</th>
@@ -143,8 +157,16 @@
     <script src="__PUBLIC_ADMIN__/lib/layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript" src="__PUBLIC_ADMIN__/static/js/weadmin.js"></script>
     <script type="text/javascript">
-    layui.use(['layer'], function() {
+    layui.use(['laydate'], function() {
         var layer = layui.layer;
+        var laydate = layui.laydate;
+
+        //日期时间范围
+        laydate.render({
+            elem: '#test10'
+            ,type: 'datetime'
+            ,range: '~'
+        });
     });
     //批量踢出
     function delAll() {

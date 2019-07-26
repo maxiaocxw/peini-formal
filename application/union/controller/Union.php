@@ -21,14 +21,48 @@ class Union extends Auth{
     public function member(){
         //登陆时获取的公会id
         $unid = cache('unid');
-        //查询公会的所有成员
-        $union = Db::name('user')->where('union',$unid)->order('uniontime','desc')->paginate(30,false);
+        //接受条件 判断是否有条件查询
+        $where_data = input('post.');
+        $where['union'] = $unid;
+        if( $where_data ){
+            $username = $where_data['username'];
+            $time_data = $where_data['time_data'];
+            if($time_data){
+                //根据~号分割成为数组 开始 结束
+                $time = explode('~',$time_data);
+                //开始时间
+                $start_time = strtotime($time[0]);
+                //结束时间
+                $end_time = strtotime($time[1]);
+            }
+            //判断条件是时间还是名称
+            if( !empty($where_data['username']) && !empty($where_data['time_data']) ){
+                //时间和名称
+                $where['username'] = $where_data['username'];
+                $number_profit['receivetime'] = array( 'between', "$start_time,$end_time" );
+            }elseif ( !empty($where_data['username']) && $where_data['time_data'] == '' ){
+                //单独名称
+                $where['username'] = $where_data['username'];
+            }elseif(!empty($where_data['time_data']) && $where_data['username'] == ''){
+                //单独时间
+                $number_profit['receivetime'] = array( 'between', "$start_time,$end_time" );
+            }
+                $union = Db::name('user')->where($where)->order('uniontime','desc')->paginate(15,false);
+
+        }else{
+            $username = '';
+            $time_data = '';
+            //查询公会的所有成员
+            $union = Db::name('user')->where($where)->order('uniontime','desc')->paginate(15,false);
+        }
         //将结果转换成数组
         $union_data = $union->toArray();
         $union_member = $union_data['data'];
 
         //查询成员的游戏标签信息
         foreach ($union_member as $k => $v) {
+            //将用户的手机号变为*号
+            $union_member[$k]['mobile'] = substr_replace($v['mobile'], '****', 3, 4);
             //判断成员是否是陪玩用户  如果是的话 查询所选的游戏和标签
             if( $v['type'] == 2 ){
                 //陪玩用户选择的游戏
@@ -48,14 +82,33 @@ class Union extends Auth{
                 $union_member[$k]['num'] = intval($number_res[0]['tp_count']);
                 //陪玩用户的所有收益
                 //礼物收益
-                $game_profit_res = Db::name('send_log')->where( [ 'acceptuid'=>$v['uid'], 'status'=>2 ] )->sum('amount');
-                $gift_profit = intval($game_profit_res[0]['tp_sum']);
+                $gift_profit_res = Db::name('send_log')->where( [ 'acceptuid'=>$v['uid'], 'status'=>2 ] )->sum('amount');
+                $gift_profit = intval($gift_profit_res[0]['tp_sum']);
                 //接单收益
                 $game_profit_sql = 'SELECT SUM(amount) AS tp_sum FROM `pn_game_order` WHERE pid = '.$v['uid'].' AND `status` = 3 OR pid = '.$v['uid'].' AND `status` = 4';
                 $game_profit_res = Db::query($game_profit_sql);
                 $game_profit = intval($game_profit_res[0]['tp_sum']);
                 //收益总和
                 $union_member[$k]['all_profit'] = $gift_profit + $game_profit;
+                //判断条件里是否有时间选择
+                if( !empty( $number_profit ) ){
+                    $number_profit['pid'] = $v['uid'];
+                    //周期接单数量
+                    $time_number_res = Db::name('game_order')->where($number_profit)->select();
+                    $time_number_count = count($time_number_res);
+                    $union_member[$k]['num'] = intval($time_number_count);
+                    //周期收益总和
+                    //礼物
+                    $whereA = [
+                        'acceptuid'=>$v['uid'],
+                        'status'=>2
+                    ];
+
+                    $time_gift_profit = Db::name('send_log')->where($whereA)->whereTime('addtime', 'between', [$start_time, $end_time])->sum('amount');
+                    //接单
+                    $time_game_profit = Db::name('game_order')->where($number_profit)->sum('amount');
+                    $union_member[$k]['all_profit'] = intval($time_gift_profit + $time_game_profit);
+                }
             }else{
                 $union_member[$k]['game'] = '';
                 $union_member[$k]['label'] = '';
@@ -63,6 +116,8 @@ class Union extends Auth{
                 $union_member[$k]['all_profit'] = 0;
             }
         }
+        $this->assign('username',$username);
+        $this->assign('time_data',$time_data);
         $this->assign('data',$union_member);
         $this->assign('total',$union_data['total']);
         $this->assign('list',$union);

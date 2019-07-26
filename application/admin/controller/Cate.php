@@ -584,7 +584,7 @@ class Cate extends Auth{
         $this->assign('list',$video);
         return $this->fetch();
     }
-    //视频删除
+    //视频假删
     public function delAllVideo(){
         if(input('?post.table')){
             $id = input('post.id/a');
@@ -595,6 +595,26 @@ class Cate extends Auth{
                 $where['vid'] = array('IN',implode(',', $id));
                 $video_data['status'] = -1;
                 $result =Db::name(trim(input('post.table')))->where($where)->update($video_data);
+                if($result){
+                    echo json_encode(['code' => 0,'msg' => '删除成功','icon' => 1]);
+                }else{
+                    echo json_encode(['code' => 1,'msg' => '删除失败','icon' => 2]);
+                }
+            }
+        }else{
+            echo json_encode(['code' => 1,'msg' =>'禁止非法操作','icon' => 3]);
+        }
+    }
+    //视频真删
+    public function delAllVideos(){
+        if(input('?post.table')){
+            $id = input('post.id/a');
+            if(empty($id)){
+                echo json_encode(['code' => 1,'msg' => '请选择数据','icon' =>2]);
+                exit;
+            }else{
+                $where['vid'] = array('IN',implode(',', $id));
+                $result =Db::name(trim(input('post.table')))->where($where)->delete();
                 if($result){
                     echo json_encode(['code' => 0,'msg' => '删除成功','icon' => 1]);
                 }else{
